@@ -12,6 +12,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         node: [20, 22, 24]
     steps:
@@ -28,4 +29,7 @@ jobs:
       - run: pnpm datasets
       - run: pnpm build
       - run: pnpm typecheck
-      - run: pnpm test
+      # The SDK packages support Node 20; the agent zoo's HTTP clients (undici 8) need Node 22.19+.
+      - name: Test
+        run: |
+          if [ "${{ matrix.node }}" = "20" ]; then pnpm -r --filter '!@necterai/zoo' run test; else pnpm test; fi
