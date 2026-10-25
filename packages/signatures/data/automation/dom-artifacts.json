@@ -1,0 +1,424 @@
+[
+  {
+    "selector": "x-pw-glass",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-glass> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-action-cursor",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-action-cursor> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-title",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-title> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-user-overlays",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-user-overlays> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-action-point",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-action-point> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-screencast-highlight",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-screencast-highlight> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-screencast-point",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-screencast-point> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-tooltip",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-tooltip> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-tooltip-line",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-tooltip-line> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-highlight",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-highlight> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "x-pw-dialog",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Custom element <x-pw-dialog> from Playwright's highlight overlay (packages/injected/src/highlight.ts), used by locator.highlight(), the recorder/codegen and Playwright MCP's browser_highlight / video decorations (devtools caps) — NOT present in plain scripted runs. Research does not state whether inner elements sit inside a shadow root of the x-pw-glass host; x-pw-glass is the top-level element. docs/research/raw/automation-stacks.md#2.4, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": ".x-pw-user-overlay",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Class x-pw-user-overlay from Playwright's highlight overlay (highlight.ts); only with highlight/recorder/MCP devtools tools. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_shadow_root_]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_shadow_root_ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_value_]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_value_ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_checked_]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_checked_ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_selected_]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_selected_ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_scroll_top_]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_scroll_top_ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_scroll_left_]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_scroll_left_ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_style_sheet_]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_style_sheet_ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_target__]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_target__ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_custom_elements__]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_custom_elements__ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_current_src__]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_current_src__ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_bounding_rect__]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_bounding_rect__ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_popover_open_]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_popover_open_ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[__playwright_dialog_open_]",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute __playwright_dialog_open_ used by Playwright's trace snapshotter (trace/recorder/snapshotterInjected.ts), only when tracing. Research lists the attribute names but does not state whether they are written onto the live page DOM or only into serialized snapshots. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "selector": "[unique_id]",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "Every interactable element gets unique_id=\"<frame-prefix><id>\" (element.setAttribute(\"unique_id\", fresh) in domUtils.js; lookups document.querySelector('[unique_id=\"…\"]')). docs/research/raw/automation-stacks.md#14, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "[data-skyvern-otp-box]",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "OTP inputs get data-skyvern-otp-box=\"1\" (stampOtpInputBoxes in domUtils.js). docs/research/raw/automation-stacks.md#14, #28 item 3."
+  },
+  {
+    "selector": "[data-skyvern-otp-filled]",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "OTP inputs get data-skyvern-otp-filled once filled (domUtils.js). docs/research/raw/automation-stacks.md#14, #28 item 3."
+  },
+  {
+    "selector": "#boundingBoxContainer",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Bounding-box debug container id=\"boundingBoxContainer\" (drawBoundingBoxes in domUtils.js). docs/research/raw/automation-stacks.md#14, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "#__pw-cursor",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "<div id=\"__pw-cursor\" data-pw-overlay> 20 px red dot, z-index 2147483647, from Skyvern scraper/cursorOverlay.js (video recordings). Deliberately Playwright-like naming (\"only generic __pw-* identifiers\") — attribute to Skyvern, NOT Playwright. Also @keyframes __pw-trail-fade, __pw-click-ring. docs/research/raw/automation-stacks.md#14, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "[data-pw-overlay]",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "data-pw-overlay attribute on Skyvern's recording cursor overlay (#__pw-cursor); Skyvern's scraper skips elements carrying it. Attribute to Skyvern, NOT Playwright. docs/research/raw/automation-stacks.md#14, #28 item 3."
+  },
+  {
+    "selector": "[__elementId]",
+    "stack": "magentic-ui",
+    "provider": "microsoft",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "Magentic-UI page_script.js (main world) does setAttribute(\"__elementId\", \"\" + (nextLabel++)) on every interactive element; document.querySelectorAll('[__elementId]') is a direct detector (HTML attribute names are case-insensitive). docs/research/raw/automation-stacks.md#18, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "[__elementId]",
+    "stack": "autogen-websurfer",
+    "provider": "microsoft",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "AutoGen MultimodalWebSurfer page_script.js (add_init_script) labels interactive elements with __elementId=\"n\". docs/research/raw/automation-stacks.md#18, #0 item 6."
+  },
+  {
+    "selector": "#red-cursor",
+    "stack": "magentic-ui",
+    "provider": "microsoft",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "animate_actions=True appends <div id=\"red-cursor\" style=\"width:10px;height:10px;background-color:red;position:absolute;border-radius:50%;z-index:10000\"> and animates it. docs/research/raw/automation-stacks.md#18, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "#red-cursor",
+    "stack": "autogen-websurfer",
+    "provider": "microsoft",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "uncertain",
+    "notes": "Research attributes #red-cursor to \"Magentic-UI/AutoGen\" in the executive summary; the animate_actions detail was read in Magentic-UI only. docs/research/raw/automation-stacks.md#0 item 6, #18."
+  },
+  {
+    "selector": "[data-browser-use-interaction-highlight]",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "DEFAULT ON (highlight_elements=True, colour rgb(255, 127, 39), 1.0 s): on every click/type Browser Use appends <div data-browser-use-interaction-highlight=\"true\" style=\"position:absolute; … z-index: 2147483647\"> with four animated corner-bracket children to document.body (browser/session.py). Transient — watch with a MutationObserver. docs/research/raw/automation-stacks.md#12.3, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "[data-browser-use-coordinate-highlight]",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "Coordinate clicks add data-browser-use-coordinate-highlight (browser/session.py); transient. docs/research/raw/automation-stacks.md#12.3."
+  },
+  {
+    "selector": "[data-browser-use-highlight]",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "Debug DOM highlights (dom_highlight_elements, default False): data-browser-use-highlight=\"container\" / \"element\" / \"tooltip\" (children also carry data-element-id); cleanup removes [data-browser-use-highlight]. docs/research/raw/automation-stacks.md#12.3."
+  },
+  {
+    "selector": "#browser-use-debug-highlights",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Debug highlight container id=\"browser-use-debug-highlights\" (dom_highlight_elements, default False); also logs console.log('=== BROWSER-USE HIGHLIGHTING ==='). docs/research/raw/automation-stacks.md#12.3, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "#browser-use-demo-panel",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Demo mode panel (demo_mode.py), only when demo mode is enabled. docs/research/raw/automation-stacks.md#12.3, #0 item 6, #28 item 3."
+  },
+  {
+    "selector": "#browser-use-demo-panel-style",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Demo mode <style> element id (demo_mode.py), demo mode only. docs/research/raw/automation-stacks.md#12.3."
+  },
+  {
+    "selector": "#browser-use-demo-toggle",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Demo mode toggle id (demo_mode.py), demo mode only. docs/research/raw/automation-stacks.md#12.3."
+  },
+  {
+    "selector": "[class*=\"browser-use-demo-\"]",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Demo mode classes browser-use-demo-* (demo_mode.py); demo mode also sets attribute data-browser-use-exclude-<SESSION_ID> (not selectable by CSS attribute-name prefix) and CSS var --browser-use-demo-panel-width. docs/research/raw/automation-stacks.md#12.3."
+  },
+  {
+    "selector": "#playwright-highlight-container",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "light-dom",
+    "status": "legacy",
+    "notes": "LEGACY: historic buildDomTree.js highlight container (Browser Use ≤0.4 and forks); gone from current Browser Use (only a test comment remains). Name is Browser Use's, not Playwright's. docs/research/raw/automation-stacks.md#12.2."
+  },
+  {
+    "selector": "[browser-user-highlight-id]",
+    "stack": "browser-use",
+    "provider": "browser-use",
+    "signal": "probe.agent-framework-artifact",
+    "where": "attribute",
+    "status": "legacy",
+    "notes": "LEGACY: historic buildDomTree.js attribute browser-user-highlight-id (Browser Use ≤0.4 and forks); gone from current Browser Use. docs/research/raw/automation-stacks.md#12.2."
+  },
+  {
+    "selector": "[data-nanobrowser-border]",
+    "stack": "nanobrowser",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Nanobrowser page border: <div aria-hidden=\"true\" data-nanobrowser-border style=\"all:initial;position:fixed;inset:0;pointer-events:none;z-index:2147483647;…\"> injected via chrome.scripting.executeScript (isolated world) with a CLOSED shadow root (host.attachShadow({ mode: 'closed' })); the host itself is page-visible via document.querySelector('[data-nanobrowser-border]'). Extension-based stack (Chrome Web Store imbddededgmcgfhfpcjmijokokekbkal). docs/research/raw/automation-stacks.md#17, #0 item 6, #27.2, #28 item 3. Shown while the agent runs (an active-agent indicator; extension.active-agent-indicator also applies).",
+    "provider": "nanobrowser"
+  },
+  {
+    "selector": "#playwright-highlight-container",
+    "stack": "nanobrowser",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "legacy",
+    "notes": "LEGACY: Nanobrowser's old buildDomTree.js port used playwright-highlight-container; gone from the current tree (GitHub code search empty). docs/research/raw/automation-stacks.md#17."
+  }
+]

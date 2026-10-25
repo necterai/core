@@ -1,0 +1,1226 @@
+[
+  {
+    "id": "python-requests",
+    "name": "python-requests / urllib3",
+    "language": "python",
+    "version": "2.34.2 (urllib3 2.8.0)",
+    "uaPattern": "^python-requests/",
+    "uaExample": "python-requests/2.34.2",
+    "headerOrder": [
+      "host",
+      "user-agent",
+      "accept-encoding",
+      "accept",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "User-Agent",
+      "Accept-Encoding",
+      "Accept",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "gzip, deflate",
+      "gzip, deflate, br",
+      "gzip, deflate, br, zstd"
+    ],
+    "connection": "keep-alive",
+    "ja4": [
+      "t13d1713h1_ab0a1bf427ad_8537cf56674e",
+      "t13d1712h1_ab0a1bf427ad_882d495ac381"
+    ],
+    "ja3": [
+      "86dab2109182b6bbaa644647d7db2997",
+      "7291ea5e449f2c7b17582541703e549d"
+    ],
+    "ja4Cipher": [
+      "ab0a1bf427ad"
+    ],
+    "grease": false,
+    "alpnFirst": "h1",
+    "alpn": [
+      "http/1.1"
+    ],
+    "httpVersionDefault": "h1",
+    "notes": "No session_ticket (urllib3 disables tickets); post_handshake_auth present. First JA4/JA3 = Debian CPython 3.12 + OpenSSL 3.5.6 (13 ext incl. compress_certificate); second = macOS Homebrew CPython 3.13 + OpenSSL 3.5.9. br/zstd appear in Accept-Encoding only when brotli/zstandard are installed.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "python-httpx",
+    "name": "httpx",
+    "language": "python",
+    "version": "0.28.1",
+    "uaPattern": "^python-httpx/",
+    "uaExample": "python-httpx/0.28.1",
+    "headerOrder": [
+      "host",
+      "accept",
+      "accept-encoding",
+      "connection",
+      "user-agent"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "Accept",
+      "Accept-Encoding",
+      "Connection",
+      "User-Agent"
+    ],
+    "lowercaseH1": false,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "gzip, deflate",
+      "gzip, deflate, br",
+      "gzip, deflate, br, zstd"
+    ],
+    "connection": "keep-alive",
+    "ja4": [
+      "t13d1712h1_ab0a1bf427ad_8e6e362c5eac"
+    ],
+    "ja3": [
+      "37f7d09ced1a845dc48872abc1a29d7b"
+    ],
+    "ja4Cipher": [
+      "ab0a1bf427ad"
+    ],
+    "grease": false,
+    "akamai": [
+      "1:4096;2:0;4:65535;5:16384;3:100;6:65536|16777216|0|m,a,s,p"
+    ],
+    "pseudoOrder": "m,a,s,p",
+    "alpnFirst": "h1",
+    "alpn": [
+      "http/1.1"
+    ],
+    "httpVersionDefault": "h1",
+    "notes": "With http2=True ALPN is ['http/1.1', 'h2']: JA4 ends h1 while the connection is h2 (strong tell). SETTINGS keys out of numeric order (...5,3,6) = python h2 library. Has session_ticket, no post_handshake_auth.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "aiohttp",
+    "name": "aiohttp",
+    "language": "python",
+    "version": "3.14.5",
+    "uaPattern": "aiohttp/\\d",
+    "uaExample": "Python/3.13 aiohttp/3.14.5",
+    "headerOrder": [
+      "host",
+      "accept",
+      "accept-encoding",
+      "user-agent"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "Accept",
+      "Accept-Encoding",
+      "User-Agent"
+    ],
+    "lowercaseH1": false,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "gzip, deflate",
+      "gzip, deflate, br",
+      "gzip, deflate, br, zstd"
+    ],
+    "ja4": [
+      "t13d1712h1_ab0a1bf427ad_8e6e362c5eac"
+    ],
+    "ja3": [
+      "37f7d09ced1a845dc48872abc1a29d7b"
+    ],
+    "ja4Cipher": [
+      "ab0a1bf427ad"
+    ],
+    "grease": false,
+    "alpnFirst": "h1",
+    "alpn": [
+      "http/1.1"
+    ],
+    "httpVersionDefault": "h1",
+    "notes": "Identical TLS fingerprint to httpx (ssl.create_default_context()); disambiguate by header order (no Connection header).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "python-urllib",
+    "name": "Python urllib (stdlib)",
+    "language": "python",
+    "version": "3.12 / 3.13",
+    "uaPattern": "^Python-urllib/",
+    "uaExample": "Python-urllib/3.13",
+    "headerOrder": [
+      "accept-encoding",
+      "host",
+      "user-agent",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "Accept-Encoding",
+      "Host",
+      "User-Agent",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "acceptEncoding": [
+      "identity"
+    ],
+    "connection": "close",
+    "ja4": [
+      "t13d1713h1_ab0a1bf427ad_89ab6efea773",
+      "t13d1714h1_ab0a1bf427ad_5ae85263eb3b"
+    ],
+    "ja3": [
+      "a1ebe7f90a577e9399eaa60be3c67721",
+      "ebed420a5a445535c05da9e8349f4e4a"
+    ],
+    "ja4Cipher": [
+      "ab0a1bf427ad"
+    ],
+    "grease": false,
+    "alpnFirst": "h1",
+    "alpn": [
+      "http/1.1"
+    ],
+    "httpVersionDefault": "h1",
+    "notes": "Both session_ticket and post_handshake_auth (13/14 ext). First = macOS 3.13, second = Linux 3.12.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "python-urllib3",
+    "name": "urllib3 (direct PoolManager)",
+    "language": "python",
+    "version": "2.8.0",
+    "uaPattern": "^python-urllib3/",
+    "uaExample": "python-urllib3/2.8.0",
+    "headerOrder": [
+      "host",
+      "accept-encoding",
+      "user-agent"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "Accept-Encoding",
+      "User-Agent"
+    ],
+    "lowercaseH1": false,
+    "acceptEncoding": [
+      "identity"
+    ],
+    "ja4": [
+      "t13d1712h1_ab0a1bf427ad_882d495ac381"
+    ],
+    "ja4Cipher": [
+      "ab0a1bf427ad"
+    ],
+    "grease": false,
+    "alpnFirst": "h1",
+    "alpn": [
+      "http/1.1"
+    ],
+    "httpVersionDefault": "h1",
+    "notes": "TLS values identical to python-requests on macOS ('Identical values for direct urllib3.PoolManager').",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "scrapy",
+    "name": "Scrapy (Twisted + pyOpenSSL)",
+    "language": "python",
+    "version": "2.19.0",
+    "uaPattern": "^Scrapy/",
+    "uaExample": "Scrapy/2.19.0 (+https://scrapy.org)",
+    "headerOrder": [
+      "accept",
+      "accept-language",
+      "user-agent",
+      "accept-encoding",
+      "host"
+    ],
+    "h1HeaderOrderRaw": [
+      "Accept",
+      "Accept-Language",
+      "User-Agent",
+      "Accept-Encoding",
+      "Host"
+    ],
+    "lowercaseH1": false,
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "acceptEncoding": [
+      "gzip, deflate, br, zstd"
+    ],
+    "acceptLanguage": "en",
+    "ja4": [
+      "t13d3010_1d37bd780c83_3550537cd59b"
+    ],
+    "ja3": [
+      "33ae362844509ccb28660da3cbfca03d"
+    ],
+    "ja4Cipher": [
+      "1d37bd780c83"
+    ],
+    "grease": false,
+    "alpnFirst": "none",
+    "alpn": null,
+    "httpVersionDefault": "h1",
+    "notes": "30 ciphers, no ALPN, only 10 extensions, SNI sent last; supported_groups include SM2 (41) and ML-KEM hybrids 4587/4590 (raw OpenSSL defaults).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "node-fetch-undici",
+    "name": "Node.js fetch (undici)",
+    "language": "javascript",
+    "version": "Node 22.23.3 / 24.16.0; undici 7.30.1",
+    "uaPattern": "^(node|undici)$",
+    "uaExample": "node",
+    "headerOrder": [
+      "host",
+      "connection",
+      "accept",
+      "accept-language",
+      "sec-fetch-mode",
+      "user-agent",
+      "accept-encoding"
+    ],
+    "h1HeaderOrderRaw": [
+      "host",
+      "connection",
+      "accept",
+      "accept-language",
+      "sec-fetch-mode",
+      "user-agent",
+      "accept-encoding"
+    ],
+    "lowercaseH1": true,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "gzip, deflate",
+      "br, gzip, deflate",
+      "br, gzip, deflate, zstd"
+    ],
+    "acceptLanguage": "*",
+    "connection": "keep-alive",
+    "ja4": [
+      "t13d5212h1_b262b3658495_8e6e362c5eac",
+      "t13d5213h1_b262b3658495_66863fb0a24c"
+    ],
+    "ja3": [
+      "d67b094811e5145139d7cea5f014309f",
+      "30490d79325943f1ebf6750aae4e304c"
+    ],
+    "ja4Cipher": [
+      "b262b3658495"
+    ],
+    "grease": false,
+    "akamai": [
+      "2:0;4:262144|458753|0|a,m,p,s"
+    ],
+    "pseudoOrder": "a,m,p,s",
+    "alpnFirst": "h1",
+    "alpn": [
+      "http/1.1"
+    ],
+    "httpVersionDefault": "h1",
+    "notes": "52 cipher suites (Node bundled OpenSSL). sec-fetch-mode: cors without sec-fetch-site/dest; accept-language: *. 'gzip, deflate' over http; 'br, gzip, deflate' (Node bundled undici) or 'br, gzip, deflate, zstd' (current undici) over https. Second JA4 = npm undici on Node 22 (ALPN + PSK). new Agent({allowH2:true}) offers ['http/1.1','h2'] (h1 JA4 on an h2 connection). user-agent 'node' for Node's built-in fetch, 'undici' for the npm package.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "node-https",
+    "name": "node:http(s).get",
+    "language": "javascript",
+    "version": "Node 22 / 24",
+    "headerOrder": [
+      "host",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "connection": "keep-alive",
+    "ja4": [
+      "t13d5211_b262b3658495_8e6e362c5eac"
+    ],
+    "ja3": [
+      "944d1e1858cd278718f8a46b65d3212f"
+    ],
+    "ja4Cipher": [
+      "b262b3658495"
+    ],
+    "grease": false,
+    "alpnFirst": "none",
+    "alpn": null,
+    "httpVersionDefault": "h1",
+    "notes": "No User-Agent, no Accept; no ALPN extension at all (t13d5211).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "node-fetch",
+    "name": "node-fetch 3",
+    "language": "javascript",
+    "version": "3.3.2",
+    "uaPattern": "^node-fetch(?:/|$)",
+    "uaExample": "node-fetch",
+    "headerOrder": [
+      "accept",
+      "accept-encoding",
+      "user-agent",
+      "host",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "accept",
+      "accept-encoding",
+      "user-agent",
+      "Host",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "gzip, deflate, br"
+    ],
+    "connection": "keep-alive",
+    "ja4": [
+      "t13d5212_b262b3658495_66863fb0a24c"
+    ],
+    "ja3": [
+      "3071e91916919685206127280b6af9bf"
+    ],
+    "ja4Cipher": [
+      "b262b3658495"
+    ],
+    "grease": false,
+    "alpnFirst": "none",
+    "alpn": null,
+    "httpVersionDefault": "h1",
+    "notes": "JA4 measured on a resumed session (pre_shared_key); a fresh connection over the node:https Agent should match node-https (t13d5211_...) [inferred]. Library headers lowercase, Host/Connection added by node in Title-Case.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "axios",
+    "name": "axios",
+    "language": "javascript",
+    "version": "1.20.0",
+    "uaPattern": "^axios/",
+    "uaExample": "axios/1.20.0",
+    "headerOrder": [
+      "accept",
+      "user-agent",
+      "accept-encoding",
+      "host",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "Accept",
+      "User-Agent",
+      "Accept-Encoding",
+      "Host",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "accept": "application/json, text/plain, */*",
+    "acceptEncoding": [
+      "gzip, compress, deflate, br",
+      "gzip, compress, deflate"
+    ],
+    "connection": "keep-alive",
+    "ja4": [
+      "t13d5212_b262b3658495_66863fb0a24c"
+    ],
+    "ja3": [
+      "3071e91916919685206127280b6af9bf"
+    ],
+    "ja4Cipher": [
+      "b262b3658495"
+    ],
+    "grease": false,
+    "alpnFirst": "none",
+    "alpn": null,
+    "httpVersionDefault": "h1",
+    "notes": "br only when brotli is supported; zstd only with transitional.advertiseZstdAcceptEncoding. JA4 measured on a resumed session.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "got",
+    "name": "got",
+    "language": "javascript",
+    "version": "14.6.6",
+    "uaPattern": "^got \\(",
+    "uaExample": "got (https://github.com/sindresorhus/got)",
+    "headerOrder": [
+      "user-agent",
+      "accept-encoding",
+      "host",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "user-agent",
+      "accept-encoding",
+      "Host",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "acceptEncoding": [
+      "gzip, deflate, br, zstd"
+    ],
+    "connection": "keep-alive",
+    "ja4": [
+      "t13d5212_b262b3658495_66863fb0a24c",
+      "t13d5212h2_b262b3658495_8e6e362c5eac"
+    ],
+    "ja3": [
+      "3071e91916919685206127280b6af9bf",
+      "d67b094811e5145139d7cea5f014309f"
+    ],
+    "ja4Cipher": [
+      "b262b3658495"
+    ],
+    "grease": false,
+    "akamai": [
+      "2:0;4:33554432|4128769|0|m,p,a,s"
+    ],
+    "pseudoOrder": "m,p,a,s",
+    "alpnFirst": "none",
+    "alpn": null,
+    "httpVersionDefault": "h1",
+    "notes": "http2: true uses node:http2 with ALPN h2 first (second JA4) and sends an empty SETTINGS ack immediately. .json() adds accept: application/json.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "bun",
+    "name": "Bun fetch",
+    "language": "javascript",
+    "version": "1.4.4",
+    "uaPattern": "^Bun/",
+    "uaExample": "Bun/1.4.4",
+    "headerOrder": [
+      "connection",
+      "user-agent",
+      "accept",
+      "host",
+      "accept-encoding"
+    ],
+    "h1HeaderOrderRaw": [
+      "Connection",
+      "User-Agent",
+      "Accept",
+      "Host",
+      "Accept-Encoding"
+    ],
+    "lowercaseH1": false,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "gzip, deflate, br, zstd"
+    ],
+    "connection": "keep-alive",
+    "ja4": [
+      "t13d1713h1_5b57614c22b0_7f527383e249"
+    ],
+    "ja3": [
+      "1523504b38f0fae0d881d4b6554aac1b"
+    ],
+    "ja4Cipher": [
+      "5b57614c22b0"
+    ],
+    "cipherSharedWithBrowser": "firefox",
+    "grease": false,
+    "alpnFirst": "h1",
+    "alpn": [
+      "http/1.1"
+    ],
+    "httpVersionDefault": "h1",
+    "notes": "BoringSSL hello shares the Firefox cipher-list hash; no GREASE; HTTP/1.1 only (measured).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "deno",
+    "name": "Deno fetch (rustls)",
+    "language": "javascript",
+    "version": "2.9.8",
+    "uaPattern": "^Deno/",
+    "uaExample": "Deno/2.9.8",
+    "headerOrder": [
+      "accept",
+      "accept-language",
+      "user-agent",
+      "accept-encoding",
+      "host"
+    ],
+    "h1HeaderOrderRaw": [
+      "accept",
+      "accept-language",
+      "user-agent",
+      "accept-encoding",
+      "host"
+    ],
+    "lowercaseH1": true,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "gzip,br"
+    ],
+    "acceptLanguage": "*",
+    "ja4": [
+      "t13d1011h2_61a7ad8aa9b6_f9531d972513"
+    ],
+    "ja3": [
+      "23c757883fb1ec2a2dc3b41d29c9959c"
+    ],
+    "ja4Cipher": [
+      "61a7ad8aa9b6"
+    ],
+    "grease": false,
+    "akamai": [
+      "2:0;4:2097152;5:16384;6:262144|5177345|0|m,s,a,p"
+    ],
+    "pseudoOrder": "m,s,a,p",
+    "alpnFirst": "h2",
+    "httpVersionDefault": "h2",
+    "notes": "Same rustls cipher list as reqwest; MAX_HEADER_LIST_SIZE 262144 distinguishes Deno from reqwest.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "go-net-http",
+    "name": "Go net/http (crypto/tls)",
+    "language": "go",
+    "version": "1.26.5",
+    "uaPattern": "^Go-http-client/",
+    "uaExample": "Go-http-client/1.1",
+    "headerOrder": [
+      "host",
+      "user-agent",
+      "accept-encoding"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "User-Agent",
+      "Accept-Encoding"
+    ],
+    "lowercaseH1": false,
+    "acceptEncoding": [
+      "gzip"
+    ],
+    "ja4": [
+      "t13d1312h2_f57a46bbacb6_ab7e3b40a677",
+      "t13d1311_f57a46bbacb6_ab7e3b40a677"
+    ],
+    "ja3": [
+      "03117a8ed39ef02427ebbc39f121275c",
+      "9b7dcdf3f997f1fb7b4409c94cb7ef36"
+    ],
+    "ja4Cipher": [
+      "f57a46bbacb6"
+    ],
+    "grease": false,
+    "akamai": [
+      "2:0;4:4194304;5:16384;6:10485760|1073741824|0|a,m,p,s"
+    ],
+    "pseudoOrder": "a,m,p,s",
+    "alpnFirst": "h2",
+    "alpn": [
+      "h2",
+      "http/1.1"
+    ],
+    "httpVersionDefault": "h2",
+    "notes": "UA Go-http-client/2.0 on h2 (headers accept-encoding: gzip, user-agent). GODEBUG=http2client=0 removes ALPN entirely (second JA4). No session_ticket, no psk_kex_modes; SCT and signature_algorithms_cert present. ALPN list order beyond the first value is not in the research [h2 first measured].",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "rust-reqwest",
+    "name": "Rust reqwest (rustls / hyper)",
+    "language": "rust",
+    "version": "0.12.28 (rustls 0.23.46, h2 0.4.20)",
+    "uaExample": null,
+    "headerOrder": [
+      "accept",
+      "accept-encoding",
+      "host"
+    ],
+    "h1HeaderOrderRaw": [
+      "accept",
+      "accept-encoding",
+      "host"
+    ],
+    "lowercaseH1": true,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "zstd,gzip,deflate,br"
+    ],
+    "ja4": [
+      "t13d1011h2_61a7ad8aa9b6_3fcd1a44f3e3"
+    ],
+    "ja3": [
+      "bedb4cc6143de62715afa3acf4fef9a8"
+    ],
+    "ja4Cipher": [
+      "61a7ad8aa9b6"
+    ],
+    "grease": false,
+    "akamai": [
+      "2:0;4:2097152;5:16384;6:16384|5177345|0|m,s,a,p"
+    ],
+    "pseudoOrder": "m,s,a,p",
+    "alpnFirst": "h2",
+    "httpVersionDefault": "h2",
+    "notes": "No User-Agent by default; Accept-Encoding without spaces.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "curl",
+    "name": "curl",
+    "language": "c",
+    "version": "7.88.1 (Debian, OpenSSL 3.0.22) / 8.7.1 (macOS, SecureTransport)",
+    "uaPattern": "^curl/",
+    "uaExample": "curl/7.88.1",
+    "headerOrder": [
+      "host",
+      "user-agent",
+      "accept"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "User-Agent",
+      "Accept"
+    ],
+    "lowercaseH1": false,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "deflate, gzip, br, zstd"
+    ],
+    "ja4": [
+      "t13d3112h2_e8f1e7e78f70_b26ce05bbdd6",
+      "t13d3112h1_e8f1e7e78f70_b26ce05bbdd6",
+      "t13d497h2_0d8feac7bc37_7395dae3b2f3",
+      "t13d497h1_0d8feac7bc37_7395dae3b2f3"
+    ],
+    "ja3": [
+      "0149f47eabf9a20d0893e2a44e5a6323",
+      "375c6162a492dfbf2795909110ce8424"
+    ],
+    "ja4Cipher": [
+      "e8f1e7e78f70",
+      "0d8feac7bc37"
+    ],
+    "grease": false,
+    "akamai": [
+      "3:100;4:33554432;2:0|33488897|0|m,p,s,a",
+      "3:100;4:10485760;2:0|1048510465|0|m,s,a,p"
+    ],
+    "pseudoOrder": "m,p,s,a",
+    "alpnFirst": "h2",
+    "httpVersionDefault": "h2",
+    "notes": "Accept-Encoding only with --compressed. Pseudo-order m,p,s,a for curl <= 7.88 and m,s,a,p for 8.x (measured; curl source not re-verified). The c hash b26ce05bbdd6 identifies the OpenSSL 3.0 build more than curl. h1 variants = --http1.1.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "wget",
+    "name": "GNU Wget (GnuTLS)",
+    "language": "c",
+    "version": "1.21.3",
+    "uaPattern": "^Wget/",
+    "uaExample": "Wget/1.21.3",
+    "headerOrder": [
+      "host",
+      "user-agent",
+      "accept",
+      "accept-encoding",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "User-Agent",
+      "Accept",
+      "Accept-Encoding",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "accept": "*/*",
+    "acceptEncoding": [
+      "identity"
+    ],
+    "connection": "Keep-Alive",
+    "ja4": [
+      "t13d2913_723694b0fccc_899037bd0b8c"
+    ],
+    "ja3": [
+      "bb4f9fef542ff6b4b29aa653bf0c1d31"
+    ],
+    "ja4Cipher": [
+      "723694b0fccc"
+    ],
+    "grease": false,
+    "alpnFirst": "none",
+    "alpn": null,
+    "httpVersionDefault": "h1",
+    "notes": "No ALPN; CCM suites (GnuTLS tell); record_size_limit, padding. Accept-Encoding gzip when built with zlib and compression enabled.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "java-httpclient",
+    "name": "Java HttpClient (JSSE)",
+    "language": "java",
+    "version": "21.0.12.1",
+    "uaPattern": "^Java-http-client/",
+    "uaExample": "Java-http-client/21.0.12.1",
+    "headerOrder": [
+      "connection",
+      "host",
+      "http2-settings",
+      "upgrade",
+      "user-agent"
+    ],
+    "h1HeaderOrderRaw": [
+      "Connection",
+      "Host",
+      "HTTP2-Settings",
+      "Upgrade",
+      "User-Agent"
+    ],
+    "lowercaseH1": false,
+    "connection": "Upgrade, HTTP2-Settings",
+    "ja4": [
+      "t13d3113h2_1d947a95fc68_7e1102d2036b",
+      "t13d3113_1d947a95fc68_d6a918353cf0"
+    ],
+    "ja3": [
+      "bddb16608b241c89053080cf80771423",
+      "57128db24fb3c2fc035d6a39ccb08cac"
+    ],
+    "ja4Cipher": [
+      "1d947a95fc68"
+    ],
+    "grease": false,
+    "akamai": [
+      "1:16384;2:0;3:0;4:16777216;5:16384;6:393216|33488897|0|a,m,p,s"
+    ],
+    "pseudoOrder": "a,m,p,s",
+    "alpnFirst": "h2",
+    "http2Settings": [
+      "AAEAAEAAAAIAAAAAAAMAAAAAAAQBAAAAAAUAAEAAAAYABgAA"
+    ],
+    "httpVersionDefault": "h2",
+    "notes": "headerOrder is the plaintext (Upgrade: h2c) request; over https with HTTP/1.1 only Host, User-Agent are sent (no Accept). MAX_CONCURRENT_STREAMS = 0 is unique; status_request_v2 (JSSE-only). On h2 the only header is user-agent.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "java-httpurlconnection",
+    "name": "Java HttpURLConnection",
+    "language": "java",
+    "version": "21.0.12.1",
+    "uaPattern": "(?:^|\\s)Java/\\d",
+    "uaExample": "Java/21.0.12.1",
+    "headerOrder": [
+      "user-agent",
+      "host",
+      "accept",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "User-Agent",
+      "Host",
+      "Accept",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "accept": "*/*",
+    "connection": "keep-alive",
+    "ja4": [
+      "t13d3113_1d947a95fc68_d6a918353cf0"
+    ],
+    "ja3": [
+      "57128db24fb3c2fc035d6a39ccb08cac"
+    ],
+    "ja4Cipher": [
+      "1d947a95fc68"
+    ],
+    "grease": false,
+    "alpnFirst": "none",
+    "alpn": null,
+    "httpVersionDefault": "h1",
+    "notes": "UA before Host; optional http.agent prefix on the UA.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "okhttp",
+    "name": "OkHttp",
+    "language": "java",
+    "version": "4.12.0",
+    "uaPattern": "^okhttp/",
+    "uaExample": "okhttp/4.12.0",
+    "headerOrder": [
+      "host",
+      "connection",
+      "accept-encoding",
+      "user-agent"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "Connection",
+      "Accept-Encoding",
+      "User-Agent"
+    ],
+    "lowercaseH1": false,
+    "acceptEncoding": [
+      "gzip"
+    ],
+    "connection": "Keep-Alive",
+    "ja4": [
+      "t13d1114h2_5e2a75874763_89e9e4bb3419"
+    ],
+    "ja3": [
+      "2ca8118b4937369765242b3fbbc2afcf"
+    ],
+    "ja4Cipher": [
+      "5e2a75874763"
+    ],
+    "grease": false,
+    "akamai": [
+      "4:16777216|16711681|0|m,p,a,s"
+    ],
+    "pseudoOrder": "m,p,a,s",
+    "alpnFirst": "h2",
+    "httpVersionDefault": "h2",
+    "notes": "Restricted 11-cipher list; Akamai fingerprint byte-identical to OkHttp 3.6.0 (2017).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "curl-cffi-default",
+    "name": "curl_cffi (no impersonate)",
+    "language": "python",
+    "version": "0.16.3",
+    "headerOrder": [
+      "host",
+      "accept-encoding"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "Accept-Encoding"
+    ],
+    "lowercaseH1": false,
+    "acceptEncoding": [
+      "gzip, deflate, br"
+    ],
+    "ja4": [
+      "t13d2712h2_b4f9224df7c1_cbb9361b6bf9"
+    ],
+    "ja3": [
+      "35c61a611436bd206b042c36810d36ad"
+    ],
+    "ja4Cipher": [
+      "b4f9224df7c1"
+    ],
+    "grease": false,
+    "akamai": [
+      "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p"
+    ],
+    "pseudoOrder": "m,a,s,p",
+    "alpnFirst": "h2",
+    "httpVersionDefault": "h2",
+    "notes": "Chrome's HTTP/2 SETTINGS (plus a second SETTINGS frame 4:1048576) with no User-Agent and no Accept: a unique combination. Groups only X25519, P-256, P-384.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "curl-cffi-chrome",
+    "name": "curl_cffi impersonate=chrome (Chrome 150 profile)",
+    "language": "python",
+    "version": "0.16.3",
+    "uaExample": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.0.0 Safari/537.36",
+    "headerOrder": [
+      "host",
+      "upgrade",
+      "http2-settings",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "upgrade-insecure-requests",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "sec-fetch-user",
+      "sec-fetch-dest",
+      "accept-encoding",
+      "accept-language",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "Upgrade",
+      "HTTP2-Settings",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "Upgrade-Insecure-Requests",
+      "User-Agent",
+      "Accept",
+      "Sec-Fetch-Site",
+      "Sec-Fetch-Mode",
+      "Sec-Fetch-User",
+      "Sec-Fetch-Dest",
+      "Accept-Encoding",
+      "Accept-Language",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "acceptEncoding": [
+      "gzip, deflate, br, zstd"
+    ],
+    "acceptLanguage": "en-US,en;q=0.9",
+    "connection": "Upgrade, HTTP2-Settings",
+    "ja4": [
+      "t13d1516h2_8daaf6152771_806a8c22fdea"
+    ],
+    "ja3": [
+      "843ef3f09ec995bdba386dccc6041b99"
+    ],
+    "ja4Cipher": [
+      "8daaf6152771"
+    ],
+    "cipherSharedWithBrowser": "chromium",
+    "grease": true,
+    "akamai": [
+      "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p"
+    ],
+    "pseudoOrder": "m,a,s,p",
+    "alpnFirst": "h2",
+    "http2Settings": [
+      "AAEAAQAAAAIAAAAAAAQAYAAAAAYABAAA"
+    ],
+    "httpVersionDefault": "h2",
+    "notes": "Looks like Chrome at TLS + h2; leaks Upgrade: h2c + HTTP2-Settings on plaintext and fixed en-US / macOS headers regardless of host. No uaPattern: the UA is a real Chrome string.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/server-fingerprints.md#3.5"
+    ]
+  },
+  {
+    "id": "curl-cffi-safari",
+    "name": "curl_cffi impersonate=safari (Safari 26.0.1 profile)",
+    "language": "python",
+    "version": "0.16.3",
+    "uaExample": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0.1 Safari/605.1.15",
+    "headerOrder": [
+      "host",
+      "upgrade",
+      "http2-settings",
+      "sec-fetch-dest",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "accept-language",
+      "accept-encoding",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "Upgrade",
+      "HTTP2-Settings",
+      "sec-fetch-dest",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "accept-language",
+      "accept-encoding",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "acceptEncoding": [
+      "gzip, deflate, br"
+    ],
+    "acceptLanguage": "en-US,en;q=0.9",
+    "connection": "Upgrade, HTTP2-Settings",
+    "ja4": [
+      "t13d2013h2_a09f3c656075_7f0f34a4126d"
+    ],
+    "ja3": [
+      "ecdf4f49dd59effc439639da29186671"
+    ],
+    "ja4Cipher": [
+      "a09f3c656075"
+    ],
+    "cipherSharedWithBrowser": "safari",
+    "grease": true,
+    "akamai": [
+      "2:0;3:100;4:2097152;9:1|10420225|0|m,s,a,p"
+    ],
+    "pseudoOrder": "m,s,a,p",
+    "alpnFirst": "h2",
+    "http2Settings": [
+      "AAIAAAAAAAMAAABkAAQAIAAAAAkAAAAB"
+    ],
+    "httpVersionDefault": "h2",
+    "notes": "21 ciphers incl. 3DES/CBC legacy suites, no session_ticket. 9:1 = SETTINGS_NO_RFC7540_PRIORITIES (WebKit tell).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/server-fingerprints.md#3.5"
+    ]
+  },
+  {
+    "id": "curl-cffi-firefox",
+    "name": "curl_cffi impersonate=firefox (Firefox 147 profile)",
+    "language": "python",
+    "version": "0.16.3",
+    "uaExample": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:147.0) Gecko/20100101 Firefox/147.0",
+    "headerOrder": [
+      "host",
+      "upgrade",
+      "http2-settings",
+      "user-agent",
+      "accept",
+      "accept-language",
+      "accept-encoding",
+      "upgrade-insecure-requests",
+      "sec-fetch-dest",
+      "sec-fetch-mode",
+      "sec-fetch-site",
+      "sec-fetch-user",
+      "priority",
+      "te",
+      "connection"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "Upgrade",
+      "HTTP2-Settings",
+      "User-Agent",
+      "Accept",
+      "Accept-Language",
+      "Accept-Encoding",
+      "Upgrade-Insecure-Requests",
+      "Sec-Fetch-Dest",
+      "Sec-Fetch-Mode",
+      "Sec-Fetch-Site",
+      "Sec-Fetch-User",
+      "Priority",
+      "Te",
+      "Connection"
+    ],
+    "lowercaseH1": false,
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "acceptEncoding": [
+      "gzip, deflate, br, zstd"
+    ],
+    "acceptLanguage": "en-US,en;q=0.9",
+    "connection": "Upgrade, HTTP2-Settings",
+    "ja4": [
+      "t13d1717h2_5b57614c22b0_3cbfd9057e0d"
+    ],
+    "ja3": [
+      "6f7889b9fb1a62a9577e685c1fcfa919"
+    ],
+    "ja4Cipher": [
+      "5b57614c22b0"
+    ],
+    "cipherSharedWithBrowser": "firefox",
+    "grease": false,
+    "akamai": [
+      "1:65536;2:0;4:131072;5:16384|12517377|0|m,p,a,s"
+    ],
+    "pseudoOrder": "m,p,a,s",
+    "alpnFirst": "h2",
+    "http2Settings": [
+      "AAEAAQAAAAIAAAAAAAQAAgAAAAUAAEAA"
+    ],
+    "httpVersionDefault": "h2",
+    "notes": "Sends no PRIORITY frames (real Firefox historically sends five; whether Firefox 147 still does is uncertain).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/server-fingerprints.md#3.5"
+    ]
+  }
+]

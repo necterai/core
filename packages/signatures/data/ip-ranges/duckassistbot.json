@@ -1,0 +1,18 @@
+{
+  "id": "duckassistbot",
+  "provider": "duckduckgo",
+  "product": "DuckAssistBot",
+  "kind": "agent",
+  "source": "https://duckduckgo.com/duckassistbot.json",
+  "fetchedAt": "2026-10-24",
+  "partial": true,
+  "transcribedFrom": "docs/research/raw/providers-tier2.md#3.11",
+  "agentIds": [
+    "duckassistbot"
+  ],
+  "prefixes": [
+    "104.43.54.127/32",
+    "104.43.55.116/32",
+    "128.203.236.110/32"
+  ]
+}

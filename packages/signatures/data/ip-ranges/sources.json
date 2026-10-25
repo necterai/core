@@ -1,0 +1,721 @@
+[
+  {
+    "id": "openai-gptbot",
+    "provider": "openai",
+    "product": "GPTBot",
+    "url": "https://openai.com/gptbot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "openai_gptbot.json",
+    "agentIds": [
+      "gptbot"
+    ],
+    "notes": "18 IPv4 prefixes (Azure-class). No rDNS. providers-tier1.md#2.1"
+  },
+  {
+    "id": "openai-searchbot",
+    "provider": "openai",
+    "product": "OAI-SearchBot",
+    "url": "https://openai.com/searchbot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "openai_searchbot.json",
+    "agentIds": [
+      "oai-searchbot"
+    ],
+    "notes": "39 IPv4 prefixes. providers-tier1.md#2.3"
+  },
+  {
+    "id": "openai-chatgpt-user",
+    "provider": "openai",
+    "product": "ChatGPT-User",
+    "url": "https://openai.com/chatgpt-user.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "openai_chatgpt_user.json",
+    "agentIds": [
+      "chatgpt-user"
+    ],
+    "notes": "234 prefixes (233 x /28 plus 9.129.0.0/16); served as application/octet-stream. Also covers ChatGPT agent fetches [likely]. providers-tier1.md#2.2"
+  },
+  {
+    "id": "openai-adsbot",
+    "provider": "openai",
+    "product": "OAI-AdsBot",
+    "url": "https://openai.com/adsbot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "openai_adsbot.json",
+    "agentIds": [
+      "oai-adsbot"
+    ],
+    "notes": "2 prefixes. providers-tier1.md#2.4"
+  },
+  {
+    "id": "openai-chatgpt-connectors",
+    "provider": "openai",
+    "product": "ChatGPT connectors / GPT Actions / agentic commerce",
+    "url": "https://openai.com/chatgpt-connectors.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "openai_chatgpt_connectors.json",
+    "agentIds": [
+      "chatgpt-user",
+      "chatgpt-acp-checkout"
+    ],
+    "notes": "283 IPv4 prefixes; 141 overlap with chatgpt-user.json. 'ChatGPT integrations: plugins, connectors, GPT Actions, and agentic commerce'. Seed copied from docs/research/raw/providers-tier1-feeds. providers-tier1.md#2.6"
+  },
+  {
+    "id": "openai-chatgpt-agents",
+    "provider": "openai",
+    "product": "Codex cloud / agent egress",
+    "url": "https://openai.com/chatgpt-agents.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "openai_chatgpt_agents.json",
+    "agentIds": [
+      "codex-cloud"
+    ],
+    "notes": "1,758 IPv4 /28 prefixes (ARIN MSFT). OpenAI maps it to 'Codex cloud: connections to services such as GitHub'; whether the ChatGPT cloud browser egresses here is not stated [uncertain]. Seed copied from docs/research/raw/providers-tier1-feeds. providers-tier1.md#2.6"
+  },
+  {
+    "id": "anthropic-bots",
+    "provider": "anthropic",
+    "product": "ClaudeBot / Claude-User / Claude-SearchBot",
+    "url": "https://claude.com/crawling/bots.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "anthropic_bots.json",
+    "agentIds": [
+      "claudebot",
+      "claude-user",
+      "claude-searchbot",
+      "claude-legacy-tokens"
+    ],
+    "notes": "One shared list of 14 IPv4 prefixes; the file does not say which prefix belongs to which bot. 216.73.216.0/22 is AWS, the /32s are GCP NAT egress. providers-tier1.md#3.1"
+  },
+  {
+    "id": "anthropic-api-outbound",
+    "provider": "anthropic",
+    "product": "Anthropic platform outbound (web_fetch, MCP connector, Claude-User)",
+    "url": "https://platform.claude.com/docs/en/api/ip-addresses",
+    "format": "html-ip-scan",
+    "kind": "agent",
+    "bundled": true,
+    "inlinePrefixes": [
+      "160.79.104.0/21"
+    ],
+    "transcribedFrom": "docs/research/raw/providers-tier1.md#3.1",
+    "agentIds": [
+      "claude-user"
+    ],
+    "notes": "Documented outbound range (whois AP-2440 Anthropic, PBC). The docs page is HTML that also lists inbound ranges (160.79.104.0/23, 2607:6bc0::/48) and phased-out /32s, so it is not auto-synced (sync: false); update by hand.",
+    "sync": false
+  },
+  {
+    "id": "google-common-crawlers",
+    "provider": "google",
+    "product": "Googlebot and common crawlers",
+    "url": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "google_common.json",
+    "agentIds": [
+      "googlebot",
+      "googlebot-media",
+      "storebot-google",
+      "google-inspectiontool",
+      "googleother",
+      "google-cloudvertexbot"
+    ],
+    "notes": "170 IPv4 + 147 IPv6. rDNS crawl-*.googlebot.com / geo-crawl-*.geo.googlebot.com. Legacy path /static/search/apis/ipranges/googlebot.json is identical. providers-tier1.md#4.1"
+  },
+  {
+    "id": "google-special-crawlers",
+    "provider": "google",
+    "product": "AdsBot-Google, Mediapartners-Google, APIs-Google, Google-Safety",
+    "url": "https://developers.google.com/static/crawling/ipranges/special-crawlers.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "google_special.json",
+    "agentIds": [
+      "google-special-crawlers"
+    ],
+    "notes": "136 + 136. rDNS rate-limited-proxy-*.google.com. providers-tier1.md#4.1"
+  },
+  {
+    "id": "google-user-triggered-fetchers",
+    "provider": "google",
+    "product": "Google user-triggered fetchers (user-owned / GAE)",
+    "url": "https://developers.google.com/static/crawling/ipranges/user-triggered-fetchers.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "google_utf.json",
+    "agentIds": [
+      "google-user-triggered-fetchers"
+    ],
+    "notes": "534 + 534. rDNS *.gae.googleusercontent.com. providers-tier1.md#4.1"
+  },
+  {
+    "id": "google-user-triggered-fetchers-google",
+    "provider": "google",
+    "product": "Google user-triggered fetchers (Google-controlled)",
+    "url": "https://developers.google.com/static/crawling/ipranges/user-triggered-fetchers-google.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "google_utf_google.json",
+    "agentIds": [
+      "google-user-triggered-fetchers",
+      "google-bare-ua",
+      "gemini-deep-research"
+    ],
+    "notes": "252 + 252. rDNS google-proxy-*.google.com. providers-tier1.md#4.1"
+  },
+  {
+    "id": "google-user-triggered-agents",
+    "provider": "google",
+    "product": "Google-Agent",
+    "url": "https://developers.google.com/static/crawling/ipranges/user-triggered-agents.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "google_agents.json",
+    "agentIds": [
+      "google-agent",
+      "googleagent-unverified-tokens"
+    ],
+    "notes": "12 IPv4 + 8 IPv6 prefixes that appear in no other Google file; probed rDNS google-proxy-*.google.com. providers-tier1.md#4.1"
+  },
+  {
+    "id": "perplexitybot",
+    "provider": "perplexity",
+    "product": "PerplexityBot",
+    "url": "https://www.perplexity.com/perplexitybot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "perplexitybot.json",
+    "agentIds": [
+      "perplexitybot"
+    ],
+    "notes": "8 prefixes (AWS us-east-1); URL 302s to www.perplexity.ai. providers-tier2.md#3.2"
+  },
+  {
+    "id": "perplexity-user",
+    "provider": "perplexity",
+    "product": "Perplexity-User",
+    "url": "https://www.perplexity.com/perplexity-user.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "perplexity_user.json",
+    "agentIds": [
+      "perplexity-user"
+    ],
+    "notes": "4 prefixes. providers-tier2.md#3.2"
+  },
+  {
+    "id": "bingbot",
+    "provider": "microsoft",
+    "product": "Bingbot",
+    "url": "https://www.bing.com/toolbox/bingbot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "bingbot.json",
+    "agentIds": [
+      "bingbot"
+    ],
+    "notes": "28 prefixes, creationTime 2024-01-03. providers-tier2.md#3.3"
+  },
+  {
+    "id": "applebot",
+    "provider": "apple",
+    "product": "Applebot",
+    "url": "https://search.developer.apple.com/applebot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "applebot.txt",
+    "agentIds": [
+      "applebot"
+    ],
+    "notes": "24 prefixes in 17.0.0.0/8. providers-tier2.md#3.5"
+  },
+  {
+    "id": "commoncrawl-ccbot",
+    "provider": "commoncrawl",
+    "product": "CCBot",
+    "url": "https://index.commoncrawl.org/ccbot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "ccbot.json",
+    "agentIds": [
+      "ccbot"
+    ],
+    "notes": "4 IPv4 + 1 IPv6 prefix; rDNS *.crawl.commoncrawl.org (IPv4 only). The raw/commoncrawl.txt seed is the HTML CCBot page and is a duplicate source (skipped by the normaliser). providers-tier2.md#3.15"
+  },
+  {
+    "id": "duckduckbot",
+    "provider": "duckduckgo",
+    "product": "DuckDuckBot",
+    "url": "https://duckduckgo.com/duckduckbot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "seedFile": "duckduckbot.txt",
+    "agentIds": [
+      "duckduckbot"
+    ],
+    "notes": "The captured seed is the HTML help page (https://duckduckgo.com/duckduckgo-help-pages/results/duckduckbot/), which lists the IPs inline: 346 unique IPv4 addresses, each emitted as /32. The sync script fetches the JSON feed (~500 /32s, creationTime 2026-09-01; providers-tier2.md#3.11).",
+    "seedFormat": "html-ip-scan"
+  },
+  {
+    "id": "duckassistbot",
+    "provider": "duckduckgo",
+    "product": "DuckAssistBot",
+    "url": "https://duckduckgo.com/duckassistbot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "inlinePrefixes": [
+      "104.43.54.127/32",
+      "104.43.55.116/32",
+      "128.203.236.110/32"
+    ],
+    "transcribedFrom": "docs/research/raw/providers-tier2.md#3.11",
+    "partial": true,
+    "agentIds": [
+      "duckassistbot"
+    ],
+    "notes": "486 /32 prefixes published; only the three quoted in the research are bundled until the next sync (partial)."
+  },
+  {
+    "id": "mistralai-user",
+    "provider": "mistral",
+    "product": "MistralAI-User",
+    "url": "https://mistral.ai/mistralai-user-ips.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "inlinePrefixes": [
+      "135.225.57.92/32",
+      "20.240.192.194/32"
+    ],
+    "transcribedFrom": "docs/research/raw/providers-tier2.md#3.8",
+    "agentIds": [
+      "mistralai-user"
+    ],
+    "notes": "Full list (2 prefixes, creationTime 2026-04-19)."
+  },
+  {
+    "id": "mistralai-index",
+    "provider": "mistral",
+    "product": "MistralAI-Index",
+    "url": "https://mistral.ai/mistralai-index-ips.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "inlinePrefixes": [
+      "20.240.160.161/32",
+      "20.240.160.1/32",
+      "20.240.194.83/32",
+      "51.12.243.114/32"
+    ],
+    "transcribedFrom": "docs/research/raw/providers-tier2.md#3.8",
+    "agentIds": [
+      "mistralai-index"
+    ],
+    "notes": "Full list (4 prefixes, creationTime 2025-02-19)."
+  },
+  {
+    "id": "kimibot",
+    "provider": "moonshot",
+    "product": "KimiBot",
+    "url": "https://www.kimi.com/policies/kimibot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "inlinePrefixes": [
+      "47.79.253.42/32",
+      "47.79.253.91/32",
+      "47.79.225.241/32",
+      "47.79.230.254/32"
+    ],
+    "transcribedFrom": "docs/research/raw/providers-tier2.md#3.18",
+    "agentIds": [
+      "kimibot"
+    ],
+    "notes": "All three Kimi files contained the identical 4 prefixes (creationTime 2026-05-18, Alibaba Cloud 47.79.x); Kimi warns it uses 'a dynamic range of IPs'."
+  },
+  {
+    "id": "kimi-user",
+    "provider": "moonshot",
+    "product": "Kimi-User",
+    "url": "https://www.kimi.com/policies/kimi-user.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "inlinePrefixes": [
+      "47.79.253.42/32",
+      "47.79.253.91/32",
+      "47.79.225.241/32",
+      "47.79.230.254/32"
+    ],
+    "transcribedFrom": "docs/research/raw/providers-tier2.md#3.18",
+    "agentIds": [
+      "kimi-user"
+    ]
+  },
+  {
+    "id": "kimi-searchbot",
+    "provider": "moonshot",
+    "product": "Kimi-SearchBot",
+    "url": "https://www.kimi.com/policies/kimi-searchbot.json",
+    "format": "prefixes-json",
+    "kind": "agent",
+    "bundled": true,
+    "inlinePrefixes": [
+      "47.79.253.42/32",
+      "47.79.253.91/32",
+      "47.79.225.241/32",
+      "47.79.230.254/32"
+    ],
+    "transcribedFrom": "docs/research/raw/providers-tier2.md#3.18",
+    "agentIds": [
+      "kimi-searchbot"
+    ]
+  },
+  {
+    "id": "youbot",
+    "provider": "you",
+    "product": "YouBot",
+    "url": "https://you.com/docs/youbot",
+    "format": "html-ip-scan",
+    "kind": "agent",
+    "bundled": true,
+    "inlinePrefixes": [
+      "68.67.112.0/24"
+    ],
+    "transcribedFrom": "docs/research/raw/providers-tier2.md#3.12",
+    "agentIds": [
+      "youbot"
+    ],
+    "notes": "Range documented on the HTML docs page (not a feed); rDNS youbot-<octets>.search.you.com. Not auto-synced (sync: false).",
+    "sync": false
+  },
+  {
+    "id": "amazonbot",
+    "provider": "amazon",
+    "product": "Amazonbot",
+    "url": "https://developer.amazon.com/amazonbot/ip-addresses/",
+    "format": "html-embedded-json",
+    "kind": "agent",
+    "bundled": true,
+    "agentIds": [
+      "amazonbot"
+    ],
+    "notes": "HTML page with inline JSON (~1,290 ipv4Prefix entries, bare IPs without CIDR suffix, normalised to /32). No seed captured; populated by the sync script."
+  },
+  {
+    "id": "amzn-searchbot",
+    "provider": "amazon",
+    "product": "Amzn-SearchBot",
+    "url": "https://developer.amazon.com/amazonbot/searchbot-ip-addresses/",
+    "format": "html-embedded-json",
+    "kind": "agent",
+    "bundled": true,
+    "agentIds": [
+      "amzn-searchbot"
+    ],
+    "notes": "~860 entries with key ip_prefix (different key). No seed captured; populated by the sync script."
+  },
+  {
+    "id": "amzn-user",
+    "provider": "amazon",
+    "product": "Amzn-User",
+    "url": "https://developer.amazon.com/amazonbot/live-ip-addresses/",
+    "format": "html-embedded-json",
+    "kind": "agent",
+    "bundled": true,
+    "agentIds": [
+      "amzn-user"
+    ],
+    "notes": "~1,023 entries, bare IPs. No seed captured; populated by the sync script."
+  },
+  {
+    "id": "checkly",
+    "provider": "checkly",
+    "product": "Checkly synthetic monitoring",
+    "url": "https://api.checklyhq.com/v1/static-ips",
+    "format": "cidr-scan",
+    "kind": "agent",
+    "bundled": true,
+    "agentIds": [
+      "monitor-checkly"
+    ],
+    "notes": "JSON array of IPs ('We update this list very infrequently'). IPv6 at /v1/static-ipv6s. No seed; populated by sync. false-positive-traps.md#12.3"
+  },
+  {
+    "id": "datadog-synthetics",
+    "provider": "datadog",
+    "product": "Datadog Synthetics",
+    "url": "https://ip-ranges.datadoghq.com/synthetics.json",
+    "format": "cidr-scan",
+    "kind": "agent",
+    "bundled": true,
+    "agentIds": [
+      "monitor-datadog"
+    ],
+    "notes": "prefixes_ipv4 / prefixes_ipv6 (version 63, modified 2026-08-12). No seed; populated by sync. false-positive-traps.md#12.3"
+  },
+  {
+    "id": "pingdom",
+    "provider": "pingdom",
+    "product": "Pingdom probes",
+    "url": "https://my.pingdom.com/probes/ipv4",
+    "urls": [
+      "https://my.pingdom.com/probes/ipv6"
+    ],
+    "format": "txt-lines",
+    "kind": "agent",
+    "bundled": true,
+    "agentIds": [
+      "monitor-misc"
+    ],
+    "notes": "Plain-text probe IPs. No seed; populated by sync. false-positive-traps.md#12.3"
+  },
+  {
+    "id": "uptimerobot",
+    "provider": "uptimerobot",
+    "product": "UptimeRobot",
+    "url": "https://cdn.uptimerobot.com/api/IPv4andIPv6.txt",
+    "format": "txt-lines",
+    "kind": "agent",
+    "bundled": true,
+    "agentIds": [
+      "monitor-misc"
+    ],
+    "notes": "Plain-text IPs. No seed; populated by sync. false-positive-traps.md#12.3"
+  },
+  {
+    "id": "gcp-cloud",
+    "provider": "gcp",
+    "product": "Google Cloud customer ranges",
+    "url": "https://www.gstatic.com/ipranges/cloud.json",
+    "format": "prefixes-json",
+    "kind": "hosting",
+    "bundled": true,
+    "seedFile": "gcp_cloud.json",
+    "notes": "1,135 prefixes. Customer VMs: hosted browsers and Anthropic's 34.162.x.x/32 Claude egress live here. server-fingerprints.md#5.1"
+  },
+  {
+    "id": "google-goog",
+    "provider": "google",
+    "product": "All Google-owned ranges (goog.json)",
+    "url": "https://www.gstatic.com/ipranges/goog.json",
+    "format": "prefixes-json",
+    "kind": "hosting",
+    "bundled": true,
+    "seedFile": "gcp_goog.json",
+    "notes": "148 prefixes; 'general Google IP list' (superset incl. non-cloud). Use to verify bare 'Google' UA fetches and Chrome prefetch proxy, not as a datacenter verdict on its own. server-fingerprints.md#5.1"
+  },
+  {
+    "id": "digitalocean",
+    "provider": "digitalocean",
+    "product": "DigitalOcean (AS14061) geofeed",
+    "url": "https://digitalocean.com/geo/google.csv",
+    "format": "csv-geofeed",
+    "kind": "hosting",
+    "bundled": true,
+    "seedFile": "digitalocean.csv",
+    "notes": "RFC 8805 geofeed, prefix,country,region,city,postal. server-fingerprints.md#5.1"
+  },
+  {
+    "id": "vultr",
+    "provider": "vultr",
+    "product": "Vultr / Constant (AS20473) geofeed",
+    "url": "https://geofeed.constant.com/",
+    "format": "csv-geofeed",
+    "kind": "hosting",
+    "bundled": true,
+    "seedFile": "vultr.csv",
+    "notes": "RFC 8805 geofeed. server-fingerprints.md#5.1"
+  },
+  {
+    "id": "fastly",
+    "provider": "fastly",
+    "product": "Fastly edge",
+    "url": "https://api.fastly.com/public-ip-list",
+    "format": "fastly-json",
+    "kind": "cdn",
+    "bundled": true,
+    "seedFile": "fastly.json",
+    "notes": "21 v4 + 3 v6. server-fingerprints.md#5.1"
+  },
+  {
+    "id": "cloudflare",
+    "provider": "cloudflare",
+    "product": "Cloudflare proxy / Workers / Browser Rendering egress",
+    "url": "https://www.cloudflare.com/ips-v6",
+    "urls": [
+      "https://www.cloudflare.com/ips-v4"
+    ],
+    "format": "txt-lines",
+    "kind": "cdn",
+    "bundled": true,
+    "seedFile": "cloudflare_v6.txt",
+    "inlinePrefixes": [
+      "173.245.48.0/20",
+      "103.21.244.0/22",
+      "131.0.72.0/22"
+    ],
+    "transcribedFrom": "docs/research/raw/server-fingerprints.md#5.1",
+    "partial": true,
+    "notes": "Only the IPv6 list was captured as a seed; the research quotes 3 of the 15 IPv4 ranges, which are bundled. Run the sync script to get the full v4 list. Traffic from these is Cloudflare Workers / Browser Rendering / proxying, not a residential user."
+  },
+  {
+    "id": "aws",
+    "provider": "aws",
+    "product": "AWS EC2",
+    "url": "https://ip-ranges.amazonaws.com/ip-ranges.json",
+    "format": "aws-json",
+    "kind": "hosting",
+    "bundled": false,
+    "filter": {
+      "service": "EC2"
+    },
+    "notes": "2.7 MB, 10,684 v4 + 7,005 v6 prefixes, updated continuously. Sync-time download only (too large to bundle). Filter service == EC2 for compute; CLOUDFRONT is not bots."
+  },
+  {
+    "id": "azure",
+    "provider": "azure",
+    "product": "Azure public cloud (Service Tags)",
+    "url": "https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_YYYYMMDD.json",
+    "format": "azure-json",
+    "kind": "hosting",
+    "bundled": false,
+    "filter": {
+      "name": "AzureCloud"
+    },
+    "notes": "Weekly file named by the Monday date (non-Monday dates 404); the sync script tries the last 4 Mondays. 4.87 MB. Sync-time download only. OpenAI's crawler prefixes sit inside Azure, so check agent ranges first."
+  },
+  {
+    "id": "oci",
+    "provider": "oci",
+    "product": "Oracle Cloud Infrastructure",
+    "url": "https://docs.oracle.com/en-us/iaas/tools/public_ip_ranges.json",
+    "format": "oci-json",
+    "kind": "hosting",
+    "bundled": false,
+    "notes": "56 regions, cidrs[].cidr. Sync-time download only."
+  },
+  {
+    "id": "linode",
+    "provider": "linode",
+    "product": "Linode / Akamai Connected Cloud (AS63949) geofeed",
+    "url": "https://geoip.linode.com/",
+    "format": "csv-geofeed",
+    "kind": "hosting",
+    "bundled": false,
+    "notes": "RFC 8805 geofeed, 5,505 rows. Sync-time download only."
+  },
+  {
+    "id": "hetzner",
+    "provider": "hetzner",
+    "product": "Hetzner Online (AS24940)",
+    "url": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/24940/aggregated.json",
+    "urls": [
+      "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/213230/aggregated.json"
+    ],
+    "format": "ipverse-json",
+    "kind": "hosting",
+    "bundled": false,
+    "notes": "No first-party list (api.hetzner.com/ips 404; raw/hetzner_asn.txt is that 404 body and is skipped). ipverse per-ASN prefix sets, CC0, updated daily."
+  },
+  {
+    "id": "ovh",
+    "provider": "ovh",
+    "product": "OVH (AS16276)",
+    "url": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/16276/aggregated.json",
+    "format": "ipverse-json",
+    "kind": "hosting",
+    "bundled": false,
+    "notes": "No first-party list (geofeed.ovh.net unreachable). ipverse."
+  },
+  {
+    "id": "alibaba-cloud",
+    "provider": "alibaba-cloud",
+    "product": "Alibaba Cloud (AS45102, AS37963)",
+    "url": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/45102/aggregated.json",
+    "urls": [
+      "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/37963/aggregated.json"
+    ],
+    "format": "ipverse-json",
+    "kind": "hosting",
+    "bundled": false,
+    "notes": "No first-party list. Kimi's crawler IPs (47.79.x) sit in Alibaba Cloud."
+  },
+  {
+    "id": "tencent-cloud",
+    "provider": "tencent-cloud",
+    "product": "Tencent Cloud (AS132203)",
+    "url": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/132203/aggregated.json",
+    "format": "ipverse-json",
+    "kind": "hosting",
+    "bundled": false,
+    "notes": "No first-party list. ipverse."
+  },
+  {
+    "id": "icloud-private-relay",
+    "provider": "apple",
+    "product": "iCloud Private Relay egress",
+    "url": "https://mask-api.icloud.com/egress-ip-ranges.csv",
+    "format": "csv-geofeed",
+    "kind": "shared-egress",
+    "bundled": false,
+    "notes": "12 MB, 285,106 rows CIDR,country,region,city. Sync-time download only. Apple: treat like carrier-grade NAT, not datacenter; sampled ranges attribute to AS36183 (Akamai)."
+  },
+  {
+    "id": "zscaler",
+    "provider": "zscaler",
+    "product": "Zscaler ZIA egress",
+    "url": "https://config.zscaler.com/api/zscaler.net/cenr/json",
+    "format": "cidr-scan",
+    "kind": "shared-egress",
+    "bundled": false,
+    "notes": "~131 KB of ranges grouped by continent/city (field range). Enterprise proxy: suppress datacenter scoring."
+  },
+  {
+    "id": "tor-exits",
+    "provider": "tor",
+    "product": "Tor exit relays",
+    "url": "https://check.torproject.org/torbulkexitlist",
+    "format": "txt-lines",
+    "kind": "shared-egress",
+    "bundled": false,
+    "notes": "Plain-text exit IPs (~17 KB); changes hourly."
+  },
+  {
+    "id": "mullvad",
+    "provider": "mullvad",
+    "product": "Mullvad VPN relays",
+    "url": "https://api.mullvad.net/www/relays/all/",
+    "format": "cidr-scan",
+    "kind": "shared-egress",
+    "bundled": false,
+    "notes": "~294 KB JSON; ipv4_addr_in / ipv6_addr_in per relay (relay addresses; egress usually equals the relay address [uncertain])."
+  }
+]

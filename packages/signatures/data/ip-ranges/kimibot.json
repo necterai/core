@@ -1,0 +1,18 @@
+{
+  "id": "kimibot",
+  "provider": "moonshot",
+  "product": "KimiBot",
+  "kind": "agent",
+  "source": "https://www.kimi.com/policies/kimibot.json",
+  "fetchedAt": "2026-10-24",
+  "transcribedFrom": "docs/research/raw/providers-tier2.md#3.18",
+  "agentIds": [
+    "kimibot"
+  ],
+  "prefixes": [
+    "47.79.253.42/32",
+    "47.79.253.91/32",
+    "47.79.225.241/32",
+    "47.79.230.254/32"
+  ]
+}

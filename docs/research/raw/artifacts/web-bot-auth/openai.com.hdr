@@ -1,0 +1,28 @@
+HTTP/2 404 
+date: Sat, 24 Oct 2026 22:29:55 GMT
+content-type: text/html; charset=utf-8
+age: 26216
+cache-control: public, max-age=0, must-revalidate
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+content-security-policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googleadservices.com https://www.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://static.cloudflareinsights.com https://snap.licdn.com https://www.redditstatic.com https://bat.bing.com https://connect.facebook.net https://challenges.cloudflare.com https://*.mktoweb.com https://www.youtube.com https://s.ytimg.com https://player.vimeo.com https://cdn.leandata.com https://cdn1.leandata.com https://api.observablehq.com https://cdn.jsdelivr.net; script-src-attr 'none'; style-src 'self' 'unsafe-inline' https://*.mktoweb.com https://cdn.jsdelivr.net; img-src 'self' data: blob: https:; font-src 'self' data: https://cdn.openai.com https://cdn.jsdelivr.net; connect-src 'self' https://app.leandata.com https: wss:; media-src 'self' data: blob: https:; frame-src 'self' https://cdn.openai.com https://gpt5-coding-examples.vercel.app https://docs.google.com https://player.twitch.tv https://player.vimeo.com https://vimeo.com https://www.youtube.com https://m.youtube.com https://youtu.be https://www.youtube-nocookie.com https://w.soundcloud.com https://tidal-rush-paradise-gp.skirano.chatgpt.site https://*.mktoweb.com https://challenges.cloudflare.com https://openai-opco.my.leandata.com https:; worker-src 'self' blob:; manifest-src 'self'; form-action 'self' https://*.mktoweb.com; upgrade-insecure-requests
+etag: W/"rz87r7xvcn2rcz"
+server: cloudflare
+x-content-type-options: nosniff
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch
+vary: accept-encoding
+x-matched-path: /[locale]/[country]/[flags]/[...slug]
+x-nextjs-prerender: 1
+x-nextjs-stale-time: 300
+x-powered-by: Next.js
+x-vercel-cache: HIT
+x-vercel-id: iad1::pdx1::8gx42-1792880995007-81c7d31db546
+cf-cache-status: DYNAMIC
+set-cookie: country=US; Path=/; Expires=Sun, 24 Oct 2027 22:29:55 GMT; Max-Age=31536000
+set-cookie: oai-did=31d03415-b813-4d33-a8d5-0658bdabdc33; Path=/; Expires=Sun, 24 Oct 2027 22:29:55 GMT; Max-Age=31536000; Domain=.openai.com
+set-cookie: locale=%7B%22computedPreferredLocale%22%3A%22en-US%22%2C%22v%22%3A1%7D; Path=/
+set-cookie: __cf_bm=9wAtk95R4I_NFnb_R4OQ1PcSWYROlOTMzBh3vJLq62E-1792880995.00079-1.0.1.1-spwovS7TNnFpl4loQ0SN5X_HfHBUSI5wdA7tsZBea_xiPoAS0TTcCkwHXe7cWAyQe9LxccBOzUVwoncMEFCLZzrUZ7yMqzh3bx8rr8F._ha63IX.U6zix2s7TVzOwO1B; HttpOnly; SameSite=None; Secure; Path=/; Domain=openai.com; Expires=Sat, 24 Oct 2026 22:59:55 GMT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2Bnpg%2B0TEiJEcsH4WSpA%2FnXx%2FfDtxUSLBzsnHLVQ0QsIS7Ksrb7H4iesnWvKoIjwZDqTjFZrytccM4fwflPKaoIyCT4%2FZQidde1M2lKsALzLRfPNhYKIDFHVDv4I%3D"}]}
+cf-ray: a4fc6c4abb13fd66-EWR
+alt-svc: h3=":443"; ma=86400
+

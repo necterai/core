@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Agent Probe</title>
+<style>body{font-family:monospace;margin:16px}#log{white-space:pre-wrap;font-size:11px;border:1px solid #ccc;padding:8px;max-height:60vh;overflow:auto}button,input{font-size:16px;margin:4px}</style></head>
+<body>
+<h1 id="h">Agent Probe</h1>
+<div><button id="btn">CLICK ME</button> <input id="inp" placeholder="type here" /> <a id="lnk" href="#x">a link</a></div>
+<div id="summary"></div>
+<div id="log"></div>
+<script>
+(function(){
+const t0=performance.now();
+const L=[];const logEl=document.getElementById('log');
+function log(k,v){const line=`[${(performance.now()-t0).toFixed(0)}ms] ${k}: ${typeof v==='string'?v:JSON.stringify(v)}`;L.push(line);logEl.textContent=L.join('\n');}
+window.__PROBE_LOG=L;
+// 1. baseline
+log('ua',navigator.userAgent);
+log('uaData',navigator.userAgentData?{brands:navigator.userAgentData.brands,mobile:navigator.userAgentData.mobile,platform:navigator.userAgentData.platform}:null);
+log('webdriver',navigator.webdriver);
+log('dims',{iw:innerWidth,ih:innerHeight,ow:outerWidth,oh:outerHeight,availH:screen.availHeight,dpr:devicePixelRatio,visualH:visualViewport?visualViewport.height:null});
+log('hasFocus',document.hasFocus());
+log('visibility',document.visibilityState);
+log('mainworld_claude_globals',{map:typeof window.__claudeElementMap,gen:typeof window.__generateAccessibilityTree,cnt:typeof window.__claudeRefCounter});
+log('body_children_at_load',[...document.body.children].map(e=>e.tagName+(e.id?'#'+e.id:'')));
+// 2. resize tracking (infobar detection)
+let lastIH=innerHeight;
+addEventListener('resize',()=>{const d=innerHeight-lastIH;log('RESIZE',{iw:innerWidth,ih:innerHeight,ow:outerWidth,oh:outerHeight,delta_ih:d,hasFocus:document.hasFocus()});lastIH=innerHeight;});
+// 3. focus tracking
+['focus','blur','visibilitychange','pageshow','pagehide'].forEach(n=>addEventListener(n,e=>log('EV_'+n,{isTrusted:e.isTrusted,hasFocus:document.hasFocus(),vis:document.visibilityState})));
+let prevFocus=document.hasFocus();
+setInterval(()=>{const f=document.hasFocus();if(f!==prevFocus){log('hasFocus_changed',{from:prevFocus,to:f,vis:document.visibilityState});prevFocus=f;}},250);
+// 4. mutation observer on whole document
+const mo=new MutationObserver(ms=>{for(const m of ms){if(m.type==='childList'){for(const n of m.addedNodes){if(n.nodeType!==1)continue;const cs=getComputedStyle(n);log('DOM_ADDED',{tag:n.tagName,id:n.id||null,attrs:[...n.attributes].map(a=>a.name+'='+a.value.slice(0,60)),parent:m.target.tagName+(m.target.id?'#'+m.target.id:''),display:cs.display,position:cs.position,zIndex:cs.zIndex,openShadow:!!n.shadowRoot,childCount:n.childNodes.length,isLastOfBody:n===document.body.lastElementChild,html:n.outerHTML.slice(0,160)});}
+for(const n of m.removedNodes){if(n.nodeType===1)log('DOM_REMOVED',{tag:n.tagName,id:n.id||null});}}
+else if(m.type==='attributes'){log('ATTR',{tag:m.target.tagName,id:m.target.id||null,attr:m.attributeName,val:(m.target.getAttribute(m.attributeName)||'').slice(0,80)});}}});
+mo.observe(document.documentElement,{childList:true,subtree:true,attributes:true});
+// 5. input event logging
+const evs=['pointerover','pointerenter','pointerdown','pointerup','mousemove','mousedown','mouseup','click','dblclick','keydown','keypress','keyup','input','beforeinput','change','focusin','compositionstart','contextmenu','wheel','touchstart'];
+let moveCount=0,lastMoveLog=0;
+for(const n of evs){document.addEventListener(n,e=>{
+ if(n==='mousemove'||n==='pointerover'||n==='pointerenter'){moveCount++;if(performance.now()-lastMoveLog<300)return;lastMoveLog=performance.now();}
+ const o={isTrusted:e.isTrusted,target:e.target.tagName+(e.target.id?'#'+e.target.id:''),ts:+e.timeStamp.toFixed(1)};
+ if(e instanceof MouseEvent){Object.assign(o,{x:e.clientX,y:e.clientY,sx:e.screenX,sy:e.screenY,mx:e.movementX,my:e.movementY,button:e.button,buttons:e.buttons,detail:e.detail,moveCount});}
+ if(e instanceof PointerEvent){Object.assign(o,{ptype:e.pointerType,pid:e.pointerId,pressure:e.pressure,w:e.width,h:e.height,primary:e.isPrimary});}
+ if(e instanceof KeyboardEvent){Object.assign(o,{key:e.key,code:e.code,keyCode:e.keyCode,repeat:e.repeat,loc:e.location,composed:e.composed});}
+ if(e instanceof InputEvent){Object.assign(o,{inputType:e.inputType,data:e.data,composing:e.isComposing});}
+ if(n==='change'||n==='input'){o.value=(e.target.value||'').slice(0,40);}
+ if(e.sourceCapabilities){o.srcCap_touch=e.sourceCapabilities.firesTouchEvents;}
+ log('EV_'+n,o);},true);}
+// 6. extension resource probes
+const probes=['chrome-extension://fcoeoabgfenejglbffodgkkbkcdhcgfn/assets/accessibility-tree.js-B-oUarrX.js','chrome-extension://fcoeoabgfenejglbffodgkkbkcdhcgfn/assets/agent-visual-indicator.js-uaVFxZ2f.js','chrome-extension://fcoeoabgfenejglbffodgkkbkcdhcgfn/manifest.json','chrome-extension://fcoeoabgfenejglbffodgkkbkcdhcgfn/assets/onboarding-prompts-CJtFEMjA.js','chrome-extension://mmlmfjhmonkocbjadbfplnigmagldckm/manifest.json'];
+for(const u of probes){fetch(u,{mode:'no-cors'}).then(r=>log('FETCH_OK',{u,type:r.type,status:r.status,ok:r.ok})).catch(e=>log('FETCH_FAIL',{u,err:String(e).slice(0,80)}));
+ const img=new Image();img.onload=()=>log('IMG_OK',u);img.onerror=()=>log('IMG_ERR',u);img.src=u;}
+setTimeout(()=>{log('perf_ext_entries',performance.getEntriesByType('resource').filter(e=>e.name.startsWith('chrome-extension')).map(e=>({name:e.name,dur:+e.duration.toFixed(1),size:e.transferSize,proto:e.nextHopProtocol})));},1500);
+// 7. Runtime.enable probes (run repeatedly)
+function probeRuntime(){let a=false,b=false;try{const trap=new Proxy({},{ownKeys(){a=true;return[];}});const obj=Object.create(trap);console.groupEnd(obj);}catch(e){}
+ try{const e=new Error();Object.defineProperty(e,'stack',{get(){b=true;return'';}});console.debug(e);}catch(e){}return {proxyGroupEnd:a,errorStack:b};}
+let lastRT=null;setInterval(()=>{const r=probeRuntime();const k=JSON.stringify(r);if(k!==lastRT){log('RUNTIME_PROBE',r);lastRT=k;}},500);
+// 8. long tasks (content-script work shows up on the main thread)
+try{new PerformanceObserver(list=>{for(const e of list.getEntries()){log('LONGTASK',{dur:+e.duration.toFixed(0),attr:e.attribution&&e.attribution.map(a=>a.containerType+':'+a.name).join(',')});}}).observe({type:'longtask',buffered:true});}catch(e){}
+// 9. periodic body tail inspection
+setInterval(()=>{const l=document.body.lastElementChild;if(l&&l.tagName==='DIV'&&l.attributes.length===0&&!l.shadowRoot){const cs=getComputedStyle(l);if(cs.display==='contents')log('BARE_DIV_DISPLAY_CONTENTS',{childNodes:l.childNodes.length,rect:l.getBoundingClientRect().height});}},1000);
+document.getElementById('btn').addEventListener('click',e=>{document.getElementById('h').textContent='CLICKED isTrusted='+e.isTrusted;});
+log('ready',true);
+})();
+</script></body></html>

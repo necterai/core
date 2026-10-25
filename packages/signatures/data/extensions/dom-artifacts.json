@@ -1,0 +1,281 @@
+[
+  {
+    "selector": "body > div:last-child:empty:not([id]):not([class]):not([style])",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Best CSS approximation of the indicator host (CSS cannot express \"zero attributes\"). Confirm with JS: tagName DIV, attributes.length === 0, childNodes.length === 0, shadowRoot === null (closed shadow), getComputedStyle(el).display === \"contents\", parent BODY (or HTML if no body), el === document.body.lastElementChild (re-appended to stay last). Appears ~47 ms after the agent takes the tab, top frame only, persists for the page lifetime. v1.0.102. See host-shapes.json."
+  },
+  {
+    "selector": "#claude-agent-glow-border",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. Orange \"Claude is acting\" frame (position fixed, inset 0, z-index 2147483646)."
+  },
+  {
+    "selector": "#claude-agent-glow-border-inner",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. Pulsing inset box-shadow rgba(217,119,87,…), keyframes claude-pulse."
+  },
+  {
+    "selector": "#claude-agent-stop-container",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. Bottom-centred stop button container."
+  },
+  {
+    "selector": "#claude-agent-stop-button",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. Text \"Stop Claude\", background #FAF9F5, color #141413, z-index 2147483647; click handler honours only isTrusted."
+  },
+  {
+    "selector": "#claude-phantom-cursor",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. Phantom cursor moved with translate3d on UPDATE_PHANTOM_CURSOR (aria-hidden)."
+  },
+  {
+    "selector": "#claude-phantom-cursor-plain",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. SVG arrow (white/#111) inside the phantom cursor."
+  },
+  {
+    "selector": "#claude-phantom-cursor-styled",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. SVG arrow (#D97757 fill, #FAF9F5 stroke) inside the phantom cursor."
+  },
+  {
+    "selector": "#claude-static-indicator-container",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. Pill \"Claude is active in this tab group\", heartbeat every 5 s."
+  },
+  {
+    "selector": "#claude-static-chat-button",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. Static pill button (tooltip \"Open chat\")."
+  },
+  {
+    "selector": "#claude-static-close-button",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Inside the indicator host's CLOSED shadow root in v1.0.102 — not queryable from page JS; useful for screenshot/visual classifiers. Static pill button (tooltip \"Dismiss\")."
+  },
+  {
+    "selector": "#claude-screenshot-overlay",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Injected with chrome.scripting.executeScript from the side panel; light DOM but only during user-driven screenshot/element-picker flows, not autonomous actions. Region screenshot picker (position fixed, 100vw)."
+  },
+  {
+    "selector": "#claude-prompt-overlay",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Injected with chrome.scripting.executeScript from the side panel; light DOM but only during user-driven screenshot/element-picker flows, not autonomous actions. Prompt overlay."
+  },
+  {
+    "selector": "#claude-prompt-container",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Injected with chrome.scripting.executeScript from the side panel; light DOM but only during user-driven screenshot/element-picker flows, not autonomous actions. Prompt overlay container."
+  },
+  {
+    "selector": "#claude-element-overlay",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Injected with chrome.scripting.executeScript from the side panel; light DOM but only during user-driven screenshot/element-picker flows, not autonomous actions. Element picker; flow also runs a MAIN-world script and posts window.postMessage CLAUDE_ELEMENT_SELECTION / CLAUDE_ELEMENT_SELECTION_CLEANUP."
+  },
+  {
+    "selector": "#claude-element-highlight",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "uncertain",
+    "notes": "Side-panel element-picker overlay id listed only in providers-tier1 §3.4 (bundle ids); light-DOM placement assumed like the other picker overlays."
+  },
+  {
+    "selector": "#claude-element-prompt-container",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "uncertain",
+    "notes": "Side-panel element-picker overlay id listed only in providers-tier1 §3.4 (bundle ids); light-DOM placement assumed like the other picker overlays."
+  },
+  {
+    "selector": "style#claude-agent-animation-styles",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "uncertain",
+    "notes": "Persisting <style> reported by CHEQ (Feb 2026, third-party). In v1.0.102 the animation CSS (claude-pulse) lives inside the closed shadow root, so this is probably legacy."
+  },
+  {
+    "selector": "[id^=\"claude-agent-\"]",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "where": "light-dom",
+    "status": "legacy",
+    "notes": "Selector recommended by CHEQ (Feb 2026, MutationObserver on document.body). In v1.0.102 these ids are inside a closed shadow root and no longer match from page JS; keep for older versions."
+  },
+  {
+    "selector": "#codex-agent-overlay-root",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "signal": "extension.active-agent-indicator",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Agent overlay root injected on demand into controlled tabs by content-scripts/codex.js (ChatGPT extension 1.26.1020.11845). Exact tag and whether it is shadow-hosted are uncertain."
+  },
+  {
+    "selector": "link[rel=\"icon\"][data-codex-favicon-badge=\"true\"]",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "signal": "extension.active-agent-indicator",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Favicon badge in controlled tabs; its SVG data-URL contains data-codex-favicon-badge=\"codex-favicon-badge\"; states active / deliverable / handoff (#22c55e, #facc15, black)."
+  },
+  {
+    "selector": "[data-codex-favicon-badge-created]",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "signal": "extension.agent-dom-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute name derived from the dataset key codexFaviconBadgeCreated seen in the bundle; element it is set on not recorded."
+  },
+  {
+    "selector": "[data-codex-original-favicon-href]",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "signal": "extension.agent-dom-artifact",
+    "where": "attribute",
+    "status": "uncertain",
+    "notes": "Attribute name derived from the dataset key codexOriginalFaviconHref seen in the bundle; element it is set on not recorded."
+  },
+  {
+    "selector": "html > div:empty:not([id]):not([class])",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "uncertain",
+    "notes": "Codex driver WebMCP probe host appended to document.documentElement (not body), closed shadow root containing the probe iframe; code sets style.display = \"none !important\" (note: CSSOM ignores \"!important\" in a property assignment, so the inline style may not apply — verify live). Also watch window.frames.length increase with an unreadable frame name. See host-shapes.json."
+  },
+  {
+    "selector": "iframe[name=\"codex-webmcp-probe-97adecab-75be-4770-bbe4-654cac643843\"]",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "signal": "extension.agent-dom-artifact",
+    "where": "closed-shadow",
+    "status": "current",
+    "notes": "Fixed iframe name inside the WebMCP probe host's closed shadow root (Codex browser plugin 26.1021.31345, browser-service.mjs); not queryable from page JS."
+  },
+  {
+    "selector": "x-pw-user-overlay",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "uncertain",
+    "notes": "Playwright injected-script string bundled in the Codex driver; whether it is ever inserted into pages by this driver is uncertain."
+  },
+  {
+    "selector": "#pplx-agent-overlay",
+    "stack": "perplexity-comet",
+    "provider": "perplexity",
+    "signal": "extension.active-agent-indicator",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Comet Assistant agent-mode overlay (Castle/Security Boulevard code excerpt, Aug 2025): position fixed, inset -1em, opacity 0, cursor progress; blocks user interaction while the agent works."
+  },
+  {
+    "selector": "#pplx-agent-overlay-stop-button",
+    "stack": "perplexity-comet",
+    "provider": "perplexity",
+    "signal": "extension.active-agent-indicator",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Text \"Stop Comet Assistant\", appended via document.body.appendChild while acting. Passive test that works even when idle: create div#pplx-agent-overlay-stop-button with background-color blue; getComputedStyle(div).backgroundColor === \"rgb(255, 254, 251)\" means Comet's injected stylesheet is present. As of Aug 2025; selectors may change."
+  },
+  {
+    "selector": "[data-cursor-ref]",
+    "stack": "cursor-browser-automation",
+    "provider": "cursor",
+    "signal": "extension.agent-dom-artifact",
+    "where": "attribute",
+    "status": "current",
+    "notes": "Values match /^e\\d+$/ (e.g. data-cursor-ref=\"e12\"); set on page elements (also inside open shadow roots) by Cursor's injected main-world script, top frame only."
+  },
+  {
+    "selector": "[data-cursor-overlay]",
+    "stack": "cursor-browser-automation",
+    "provider": "cursor",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "Overlay element drawn by Cursor Browser Automation (area-screenshot UI); exact tag not recorded."
+  },
+  {
+    "selector": "#genspark-float-bar",
+    "stack": "genspark",
+    "provider": "genspark",
+    "signal": "extension.agent-dom-artifact",
+    "where": "light-dom",
+    "status": "current",
+    "notes": "<div id=\"genspark-float-bar\"> on every page Genspark's (Playwright-driven, cloud) agent opens — OBSERVED by HUMAN Security (third-party). Not an extension; included because it is a page-visible agent artifact. Pair with UA suffix Genspark/1.0.200."
+  }
+]

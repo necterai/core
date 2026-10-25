@@ -1,0 +1,54 @@
+{
+  "name": "@necterai/core",
+  "version": "0.1.0",
+  "description": "Necter core: the shared agent taxonomy, signal catalog, explainable scoring engine, policy engine and session event schema. Isomorphic, zero dependencies.",
+  "keywords": [
+    "necter",
+    "ai-agents",
+    "bot-detection",
+    "agent-detection",
+    "scoring",
+    "policy-engine"
+  ],
+  "homepage": "https://github.com/necterai/core/tree/main/packages/core#readme",
+  "bugs": {
+    "url": "https://github.com/necterai/core/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/necterai/core.git",
+    "directory": "packages/core"
+  },
+  "license": "MIT",
+  "author": "Necter (https://necter.ai)",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsx scripts/gen-lite.ts && tsup src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "gen:lite": "tsx scripts/gen-lite.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

@@ -1,0 +1,10 @@
+HTTP/2 200 
+server: nginx
+date: Sat, 24 Oct 2026 22:29:55 GMT
+content-type: application/http-message-signatures-directory+json
+cache-control: max-age=86340
+server-timing: total;dur=2;desc="Backend Total [n]"
+signature: sig1=:42w9L8OACXNI4FFhU3E3dhTEoVlRqRMGINBhI04zZmmTW5W5uVoAwlkjQD1x1837RHPhRF7AFLYx16SypwjyCg==:
+signature-input: sig1=("@authority";req);alg="ed25519";keyid="Ov3HDsa8JQ39dPEYFvFFN-cUpnz9yNI8LDvr-5LeiBM";nonce="H7nOAOSoyci_LzdzW1EOG4qJorAydCH4ayZ6txFUbJA";tag="http-message-signatures-directory";created=1792880995;expires=1792967395
+strict-transport-security: max-age=31536000
+

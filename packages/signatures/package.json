@@ -1,0 +1,61 @@
+{
+  "name": "@necterai/signatures",
+  "version": "0.1.0",
+  "description": "Necter signatures: a maintained knowledge base of AI agents, AI crawlers and automation stacks (user agents, IP ranges, rDNS, Web Bot Auth, automation artifacts).",
+  "keywords": [
+    "necter",
+    "ai-agents",
+    "bot-detection",
+    "ai-crawlers",
+    "user-agents",
+    "ip-ranges",
+    "gptbot",
+    "claudebot"
+  ],
+  "homepage": "https://github.com/necterai/core/tree/main/packages/signatures#readme",
+  "bugs": {
+    "url": "https://github.com/necterai/core/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/necterai/core.git",
+    "directory": "packages/signatures"
+  },
+  "license": "MIT",
+  "author": "Necter (https://necter.ai)",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "data",
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "normalise": "tsx scripts/normalise-ip-ranges.ts",
+    "sync": "tsx scripts/sync-ip-ranges.ts"
+  },
+  "dependencies": {
+    "@necterai/core": "workspace:*"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

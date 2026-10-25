@@ -1,0 +1,10 @@
+**/node_modules
+**/dist
+apps/zoo
+apps/console
+apps/collector/data
+docs/research/raw
+.taste-skill
+.claude
+.agents
+*.log

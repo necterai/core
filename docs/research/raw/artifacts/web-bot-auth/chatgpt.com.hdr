@@ -1,0 +1,23 @@
+HTTP/2 200 
+date: Sat, 24 Oct 2026 22:29:54 GMT
+content-type: application/http-message-signatures-directory+json
+content-length: 243
+server: cloudflare
+cache-control: no-store, no-transform
+content-digest: sha-256=:RCdb7jfV1deA1W6TDqbDamL0ejoYuNa7HROME+C9+2w=:
+signature-input: sig1=("@authority";req "content-digest");created=1792880994;expires=1792967394;keyid="ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY";tag="http-message-signatures-directory";alg="ed25519"
+signature: sig1=:gbyFXnuY5t9NC/iFS9qtIjU/JswEodq20M2Za9jlPYtIAYpmBrBMQHiQF6N2cH86xgQYZmocjXSjI8ujme0AAg==:
+openai-version: 2020-10-01
+x-request-id: req_efff22f346174ef5bcbe58b937459752
+openai-processing-ms: 15
+x-openai-proxy-wasm: v0.1
+cross-origin-opener-policy: same-origin-allow-popups
+cf-cache-status: DYNAMIC
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-content-type-options: nosniff
+set-cookie: __cf_bm=LpipvzADj0sIIeYl_1gw9zFWR6pMJvZ7TowlgvpKcf0-1792880994.5942569-1.0.1.1-hQWjFJbzk2eIwbKgtU8zXaJbPI5760vZBX.w0dvcXrEsRodc7GxhNNkwxaG8b9vyDEN3wricCPU_4kbkHmNmg4YvS3eACB9z1JfmTtGotK9S9Bz8rYAmozb0TLQjk.Jk; HttpOnly; SameSite=None; Secure; Path=/; Domain=chatgpt.com; Expires=Sat, 24 Oct 2026 22:59:54 GMT
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=LXPOS0GHD2%2BL52oNyIgBxngV1aenaZyiRrcIt3TN2vgA%2BkUoNJ%2BS79e2YkJSbthHMorqXTYHczSkL%2FPZv0q1%2F5LWniyHCq%2BY8p9V9J4xkTpzkQo%2FGoQtfrB5U9w%2BdTgSnerUP3SBFC2y"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+referrer-policy: strict-origin-when-cross-origin
+cf-ray: a4fc6c48382e0d33-EWR
+

@@ -1,0 +1,24 @@
+HTTP/2 200 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+cache-control: public, max-age=86400
+content-digest: sha-256=:BN5WwCXVbsQlsfUN8MwaU0efXzc0H89ltGQhVXw7oVc=:
+content-security-policy: default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'
+content-type: application/http-message-signatures-directory+json
+date: Sat, 24 Oct 2026 22:38:58 GMT
+etag: W/"9a-NNtXSguYu+yyl4bYqJ3n1mIuO3o"
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+signature: binding=:/0+lmGvup1bUi2SeWKEtI2vjeFLybOlciQgJDMhJvwk77TLDdzbk1w1cM6KzmeUXVnFV5Dk991uPl/Npxf+gCg==:
+signature-input: binding=("@authority";req "content-digest");created=1792881538;expires=1793054338;keyid="YePX0F4cxl-0mgI3Z18LFJT8WB8KfTeKXF7oQnzqjBs";tag="http-message-signatures-directory"
+strict-transport-security: max-age=63072000
+vary: Origin
+via: 1.1 google
+x-cloud-trace-context: 336866a1479546d30e44f851af72f5a9
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-vercel-cache: MISS
+x-vercel-id: iad1::jg5zc-1792881538230-5521f0657c06
+content-length: 154
+

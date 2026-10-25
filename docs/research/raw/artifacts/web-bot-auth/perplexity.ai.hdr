@@ -1,0 +1,12 @@
+HTTP/2 301 
+date: Sat, 24 Oct 2026 22:29:56 GMT
+content-type: text/html
+content-length: 134
+location: https://www.perplexity.ai:443/.well-known/http-message-signatures-directory
+server: cloudflare
+cf-cache-status: DYNAMIC
+set-cookie: __cf_bm=KsCg5ZiqiW9.HRzI.yhrP.F1JyrAG4FRZGhXzSISvTE-1792880996.4535668-1.0.1.1-IwigIFs1RsOcIfpsjWTBXG6AMAQYxAV9w98qKo.bA6f8vKfCVneH7wNW2Vfz49uZ2RV.WwSJDvRnBeV.YysPBsM0Ht9gImF8ZyEdMBtpNuB2j8GL2rh9R0vX_o9RWwcw; HttpOnly; SameSite=None; Secure; Path=/; Domain=perplexity.ai; Expires=Sat, 24 Oct 2026 22:59:56 GMT
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+cf-ray: a4fc6c53de96762c-EWR
+alt-svc: h3=":443"; ma=86400
+

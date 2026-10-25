@@ -1,0 +1,22 @@
+{
+  "id": "cloudflare",
+  "provider": "cloudflare",
+  "product": "Cloudflare proxy / Workers / Browser Rendering egress",
+  "kind": "cdn",
+  "source": "https://www.cloudflare.com/ips-v6",
+  "fetchedAt": "2026-10-24",
+  "partial": true,
+  "transcribedFrom": "docs/research/raw/server-fingerprints.md#5.1",
+  "prefixes": [
+    "2400:cb00::/32",
+    "2606:4700::/32",
+    "2803:f800::/32",
+    "2405:b500::/32",
+    "2405:8100::/32",
+    "2a06:98c0::/29",
+    "2c0f:f248::/32",
+    "173.245.48.0/20",
+    "103.21.244.0/22",
+    "131.0.72.0/22"
+  ]
+}

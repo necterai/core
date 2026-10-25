@@ -1,0 +1,12 @@
+HTTP/1.1 301 Redirect
+Date: Sat, 24 Oct 2026 22:29:57 GMT
+Connection: close
+Via: http/1.1 usewr1-edge-bx-020.ts.apple.com (acdn/25.17695)
+Cache-Control: no-store
+Location: https://www.apple.com/.well-known/http-message-signatures-directory
+Content-Type: text/html
+Content-Language: en
+X-Cache: none
+CDNUUID: efbbbac3-23ea-4ff0-8407-a16f86904504-4298763164
+Content-Length: 349
+

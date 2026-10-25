@@ -1,0 +1,166 @@
+[
+  {
+    "id": "chromium-navigation",
+    "family": "chromium",
+    "version": "150 (curl_cffi chrome profile) / Chrome reference",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "acceptEncoding": "gzip, deflate, br, zstd",
+    "navigationOrder": [
+      "host",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "upgrade-insecure-requests",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "sec-fetch-user",
+      "sec-fetch-dest",
+      "accept-encoding",
+      "accept-language"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "sec-ch-ua",
+      "sec-ch-ua-mobile",
+      "sec-ch-ua-platform",
+      "Upgrade-Insecure-Requests",
+      "User-Agent",
+      "Accept",
+      "Sec-Fetch-Site",
+      "Sec-Fetch-Mode",
+      "Sec-Fetch-User",
+      "Sec-Fetch-Dest",
+      "Accept-Encoding",
+      "Accept-Language"
+    ],
+    "pseudoOrder": "m,a,s,p",
+    "akamai": [
+      "1:65536;2:0;4:6291456;6:262144|15663105|0|m,a,s,p"
+    ],
+    "ja4Cipher": [
+      "8daaf6152771"
+    ],
+    "ja4": [
+      "t13d1516h2_8daaf6152771_806a8c22fdea"
+    ],
+    "titleCaseH1": false,
+    "grease": true,
+    "clientHints": true,
+    "priorityHeader": true,
+    "notes": "Derived from the curl_cffi chrome (Chrome 150) capture with the h2c artefacts (Upgrade, HTTP2-Settings, Connection: Upgrade) removed; where Connection: keep-alive sits in a real Chrome h1 request is not in the research. Casing is mixed (sec-ch-ua* lowercase, others Title-Case), hence titleCaseH1 false. Chrome always GREASEs and offers ECH(65037), ALPS(17613), X25519MLKEM768; client hints sec-ch-ua/-mobile/-platform on every request; priority: u=0, i on navigations (C9).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/server-fingerprints.md#4"
+    ]
+  },
+  {
+    "id": "firefox-navigation",
+    "family": "firefox",
+    "version": "147 (curl_cffi firefox profile)",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "acceptEncoding": "gzip, deflate, br, zstd",
+    "navigationOrder": [
+      "host",
+      "user-agent",
+      "accept",
+      "accept-language",
+      "accept-encoding",
+      "upgrade-insecure-requests",
+      "sec-fetch-dest",
+      "sec-fetch-mode",
+      "sec-fetch-site",
+      "sec-fetch-user",
+      "priority",
+      "te"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "User-Agent",
+      "Accept",
+      "Accept-Language",
+      "Accept-Encoding",
+      "Upgrade-Insecure-Requests",
+      "Sec-Fetch-Dest",
+      "Sec-Fetch-Mode",
+      "Sec-Fetch-Site",
+      "Sec-Fetch-User",
+      "Priority",
+      "Te"
+    ],
+    "pseudoOrder": "m,p,a,s",
+    "akamai": [
+      "1:65536;2:0;4:131072;5:16384|12517377|0|m,p,a,s",
+      "1:65536;4:131072;5:16384|12517377|3:0:0:201,5:0:0:101,7:0:0:1,9:0:7:1,11:0:3:1|m,p,a,s"
+    ],
+    "ja4Cipher": [
+      "5b57614c22b0"
+    ],
+    "ja4": [
+      "t13d1717h2_5b57614c22b0_3cbfd9057e0d"
+    ],
+    "titleCaseH1": true,
+    "grease": false,
+    "clientHints": false,
+    "priorityHeader": true,
+    "notes": "From the curl_cffi firefox capture (h2c artefacts removed) plus Akamai 2017's Firefox 53 value with PRIORITY frames. contract: knowledge.ts's fallback Accept for Firefox ('...image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8') is not in the research; the measured profile value is used here. Firefox does not GREASE; NSS set includes delegated_credentials (34) and record_size_limit (28). Bun shares this cipher hash.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#2.4",
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/server-fingerprints.md#4"
+    ]
+  },
+  {
+    "id": "safari-navigation",
+    "family": "safari",
+    "version": "26.0.1 (curl_cffi safari profile)",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "acceptEncoding": "gzip, deflate, br",
+    "navigationOrder": [
+      "host",
+      "sec-fetch-dest",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "accept-language",
+      "accept-encoding"
+    ],
+    "h1HeaderOrderRaw": [
+      "Host",
+      "sec-fetch-dest",
+      "user-agent",
+      "accept",
+      "sec-fetch-site",
+      "sec-fetch-mode",
+      "accept-language",
+      "accept-encoding"
+    ],
+    "pseudoOrder": "m,s,a,p",
+    "akamai": [
+      "2:0;3:100;4:2097152;9:1|10420225|0|m,s,a,p"
+    ],
+    "ja4Cipher": [
+      "a09f3c656075"
+    ],
+    "ja4": [
+      "t13d2013h2_a09f3c656075_7f0f34a4126d"
+    ],
+    "titleCaseH1": false,
+    "grease": true,
+    "clientHints": false,
+    "priorityHeader": false,
+    "notes": "From the curl_cffi safari capture (h2c artefacts removed). Safari sends no zstd; 9:1 (NO_RFC7540_PRIORITIES) is the WebKit h2 tell; GREASE + legacy CBC suites.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/server-fingerprints.md#4"
+    ]
+  }
+]

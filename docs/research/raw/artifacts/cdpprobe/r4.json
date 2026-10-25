@@ -1,0 +1,802 @@
+{
+ "label": "cft156_puppeteer_default",
+ "binary": "/Users/dev/.cache/puppeteer/chrome/mac_arm-156.0.8078.47/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+ "extra_args": [],
+ "date": "2026-10-24T18:51:50-0400",
+ "version": {
+  "Browser": "Chrome/156.0.8078.47",
+  "Protocol-Version": "1.3",
+  "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "V8-Version": "15.6.75.19",
+  "WebKit-Version": "537.36 (@1d17a2e2ee147bb7d6ae2ab6abdb3a2510c17775)"
+ },
+ "env": {
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "appVersion": "5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "webdriver": true,
+  "webdriverIn": true,
+  "webdriverDesc": {
+   "getter": "function get webdriver() { [native code] }",
+   "enumerable": true,
+   "configurable": true
+  },
+  "platform": "MacIntel",
+  "vendor": "Google Inc.",
+  "productSub": "20030107",
+  "languages": [
+   "en-US"
+  ],
+  "language": "en-US",
+  "hardwareConcurrency": 18,
+  "deviceMemory": 32,
+  "maxTouchPoints": 0,
+  "connection": {
+   "rtt": 100,
+   "downlink": 1.7,
+   "effectiveType": "4g",
+   "saveData": false
+  },
+  "timeZone": "America/New_York",
+  "tzOffset": 240,
+  "inner": [
+   756,
+   413
+  ],
+  "outer": [
+   756,
+   556
+  ],
+  "screenXY": [
+   22,
+   22,
+   22,
+   22
+  ],
+  "screen": {
+   "w": 800,
+   "h": 600,
+   "aw": 800,
+   "ah": 600,
+   "at": 0,
+   "al": 0,
+   "cd": 24,
+   "pd": 24,
+   "isExtended": false,
+   "orientation": "landscape-primary"
+  },
+  "dpr": 1,
+  "hasFocus": false,
+  "visibilityState": "visible",
+  "chromeKeys": [
+   "loadTimes",
+   "csi",
+   "app"
+  ],
+  "chromeRuntime": "undefined",
+  "chromeCsi": "function",
+  "chromeLoadTimes": "function",
+  "chromeApp": "object",
+  "csiToString": "function () { [native code] }",
+  "loadTimesToString": "function () { [native code] }",
+  "notificationPermission": "default",
+  "plugins": 5,
+  "pluginNames": [
+   "PDF Viewer",
+   "Chrome PDF Viewer",
+   "Chromium PDF Viewer",
+   "Microsoft Edge PDF Viewer",
+   "WebKit built-in PDF"
+  ],
+  "mimeTypes": 2,
+  "pluginsIsPluginArray": true,
+  "pdfViewerEnabled": true,
+  "anyPointer": [
+   "fine"
+  ],
+  "anyHover": [
+   "hover"
+  ],
+  "pointer": [
+   "fine"
+  ],
+  "prefersDark": true,
+  "reducedMotion": false,
+  "colorGamut": [
+   "srgb"
+  ],
+  "webgl": {
+   "vendor": "WebKit",
+   "renderer": "WebKit WebGL",
+   "unmaskedVendor": "Google Inc. (Apple)",
+   "unmaskedRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Pro, Unspecified Version)",
+   "version": "WebGL 1.0 (OpenGL ES 2.0 Chromium)",
+   "glsl": "WebGL GLSL ES 1.0 (OpenGL ES GLSL ES 1.0 Chromium)",
+   "maxTex": 16384,
+   "exts": 39
+  },
+  "webgl2": true,
+  "audio": {
+   "state": "suspended",
+   "sampleRate": 48000,
+   "baseLatency": 0.005333333333333333,
+   "outputLatency": 0,
+   "maxChannelCount": 2
+  },
+  "voicesSync": 0,
+  "uaData": {
+   "brands": [
+    {
+     "brand": "Not:A-Brand",
+     "version": "8"
+    },
+    {
+     "brand": "Chromium",
+     "version": "156"
+    }
+   ],
+   "mobile": false,
+   "platform": "macOS"
+  },
+  "docAttrs": [],
+  "suspiciousGlobals": [],
+  "emptyNameNativeFns": [],
+  "perfNowMinDelta": 0.09999996423721313,
+  "getBattery": "function",
+  "codecs": {
+   "h264": "probably",
+   "hevc": "probably",
+   "aac": "probably",
+   "mp3": "probably",
+   "webm": "probably",
+   "mseH264": true
+  },
+  "fonts": [
+   "Arial",
+   "Helvetica Neue",
+   "Menlo",
+   "Monaco",
+   "Tahoma",
+   "Times New Roman",
+   "PingFang SC",
+   "Hiragino Sans",
+   "Courier New",
+   "Verdana",
+   "Georgia"
+  ],
+  "canvasHash": 1478785612,
+  "errorStackFromPage": "Error: x\n    at pageFn (<anonymous>:38:54)\n    at <anonymous>:38:78\n    at <anonymous>:44:3",
+  "permissionsQueryToString": "function query() { [native code] }",
+  "userAgentGetterToString": "function get userAgent() { [native code] }",
+  "sharedArrayBuffer": "undefined",
+  "crossOriginIsolated": false,
+  "history": 2
+ },
+ "env_async": {
+  "permNotifications": "prompt",
+  "permGeolocation": "prompt",
+  "permCamera": "prompt",
+  "permMicrophone": "prompt",
+  "permClipboardRead": "prompt",
+  "permPush": "prompt",
+  "mediaDevices": [
+   "audioinput:nolabel:noid",
+   "videoinput:nolabel:noid",
+   "audiooutput:nolabel:noid"
+  ],
+  "voices": {
+   "count": 180,
+   "sample": [
+    "Samantha|en-US|true",
+    "Albert|en-US|true",
+    "Alice|it-IT|true"
+   ],
+   "googleVoices": 0,
+   "viaEvent": true
+  },
+  "battery": {
+   "charging": true,
+   "level": 0.97,
+   "chargingTime": 840,
+   "dischargingTime": null
+  },
+  "uaHigh": {
+   "architecture": "arm",
+   "bitness": "64",
+   "brands": [
+    {
+     "brand": "Not:A-Brand",
+     "version": "8"
+    },
+    {
+     "brand": "Chromium",
+     "version": "156"
+    }
+   ],
+   "formFactors": [
+    "Desktop"
+   ],
+   "fullVersionList": [
+    {
+     "brand": "Not:A-Brand",
+     "version": "8.0.0.0"
+    },
+    {
+     "brand": "Chromium",
+     "version": "156.0.8078.47"
+    }
+   ],
+   "mobile": false,
+   "model": "",
+   "platform": "macOS",
+   "platformVersion": "26.6.2",
+   "uaFullVersion": "156.0.8078.47",
+   "wow64": false
+  },
+  "raf": {
+   "n": 40,
+   "min": 16.6,
+   "median": 16.7,
+   "max": 16.8,
+   "mean": 16.668,
+   "first10": [
+    16.6,
+    16.6,
+    16.6,
+    16.6,
+    16.6,
+    16.6,
+    16.6,
+    16.6,
+    16.6,
+    16.6
+   ]
+  },
+  "rafVsWallclock": 499.9,
+  "setTimeout0": 0.1,
+  "gpu": {
+   "vendor": "apple",
+   "architecture": "metal-3",
+   "device": "",
+   "description": ""
+  },
+  "hasFocusAfterAwait": false,
+  "idleDetector": "function",
+  "storageEstimate": 10737418240
+ },
+ "console_probe_runtime_disabled": {
+  "stackHits": 0,
+  "prepareStackTraceHits": 0,
+  "nameHits": 1,
+  "msgHits": 1,
+  "ownKeysHits_groupEnd": 0,
+  "ownKeysHits_debug": 0,
+  "getTrapHits": 1,
+  "plainGetter": 0,
+  "tagHits": 1,
+  "mapHits": 0,
+  "tsHits": 0,
+  "arrHits": 1,
+  "dateHits": 1,
+  "lateHits": 0,
+  "causeHits": 0,
+  "dirHits": 0
+ },
+ "console_probe_runtime_enabled": {
+  "stackHits": 0,
+  "prepareStackTraceHits": 1,
+  "nameHits": 3,
+  "msgHits": 2,
+  "ownKeysHits_groupEnd": 0,
+  "ownKeysHits_debug": 0,
+  "getTrapHits": 1,
+  "plainGetter": 0,
+  "tagHits": 1,
+  "mapHits": 0,
+  "tsHits": 0,
+  "arrHits": 1,
+  "dateHits": 1,
+  "lateHits": 0,
+  "causeHits": 0,
+  "dirHits": 0
+ },
+ "consoleAPICalled_count_during_enabled_probe": 18,
+ "consoleAPICalled_samples": [
+  {
+   "type": "debug",
+   "args": [
+    {
+     "type": "object",
+     "subtype": "error",
+     "className": "Error",
+     "description": "Error: probeA",
+     "previewKeys": [
+      "stack",
+      "message"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "debug",
+   "args": [
+    {
+     "type": "object",
+     "subtype": "error",
+     "className": "Error",
+     "description": "Error: probeB",
+     "previewKeys": [
+      "stack",
+      "message"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "debug",
+   "args": [
+    {
+     "type": "object",
+     "subtype": "error",
+     "className": "LeakErr",
+     "description": "LeakErr: probeC\n    at <anonymous>:15:17\n    at <anonymous>:47:3",
+     "previewKeys": [
+      "stack",
+      "message"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "debug",
+   "args": [
+    {
+     "type": "object",
+     "subtype": "error",
+     "className": "LeakErr2",
+     "description": "LeakErr2: probeD\n    at <anonymous>:18:17\n    at <anonymous>:47:3",
+     "previewKeys": [
+      "stack"
+     ]
+    }
+   ]
+  }
+ ],
+ "console_probe_after_runtime_disable": {
+  "stackHits": 0,
+  "prepareStackTraceHits": 0,
+  "nameHits": 1,
+  "msgHits": 1,
+  "ownKeysHits_groupEnd": 0,
+  "ownKeysHits_debug": 0,
+  "getTrapHits": 1,
+  "plainGetter": 0,
+  "tagHits": 1,
+  "mapHits": 0,
+  "tsHits": 0,
+  "arrHits": 1,
+  "dateHits": 1,
+  "lateHits": 0,
+  "causeHits": 0,
+  "dirHits": 0
+ },
+ "stack_evaluate_plain": "Error: t\n    at probeFrames (<anonymous>:1:33)\n    at <anonymous>:1:56",
+ "stack_evaluate_sourceURL_pptr": "Error: t\n    at probeFrames (pptr:internal:1:33)\n    at pptr:internal:1:56",
+ "stack_evaluate_sourceURL_legacy": "Error: t\n    at probeFrames (__puppeteer_evaluation_script__:1:33)\n    at __puppeteer_evaluation_script__:1:56",
+ "stack_evaluate_sourceURL_bare_filename": "Error: t\n    at probeFrames (app.js:1:33)\n    at app.js:1:56",
+ "stack_callFunctionOn": "Error: cfo\n    at cfoFn (<anonymous>:1:27)",
+ "stack_callFunctionOn_sourceURL": null,
+ "callsites_evaluate": [
+  {
+   "fn": "inner",
+   "file": "",
+   "url": "",
+   "isEval": false,
+   "line": 2,
+   "col": 519,
+   "isNative": false,
+   "isToplevel": true,
+   "scriptHash": "",
+   "typeName": null
+  },
+  {
+   "fn": null,
+   "file": "",
+   "url": "",
+   "isEval": false,
+   "line": 2,
+   "col": 544,
+   "isNative": false,
+   "isToplevel": true,
+   "scriptHash": "",
+   "typeName": null
+  },
+  {
+   "fn": null,
+   "file": "",
+   "url": "",
+   "isEval": false,
+   "line": 2,
+   "col": 658,
+   "isNative": false,
+   "isToplevel": true,
+   "scriptHash": "",
+   "typeName": null
+  }
+ ],
+ "injected_main_world": {
+  "typeofInjected": "function",
+  "stack": "Error: inj\n    at injectedFn (<anonymous>:1:57)\n    at <anonymous>:1:92",
+  "typeofIso": "undefined",
+  "isoAttr": null,
+  "currentScriptAtInject": "n/a"
+ },
+ "isolated_world_eval": {
+  "qsResult": true,
+  "seesPageGlobal": "undefined",
+  "seesInjectedMain": "undefined",
+  "stack": "Error: iso\n    at isoFn (<anonymous>:1:169)\n    at <anonymous>:1:194",
+  "uaSame": true,
+  "webdriver": true
+ },
+ "main_world_hook_count_after_isolated_call": 0,
+ "main_world_hook_count_after_main_call": 1,
+ "addBinding_result": {},
+ "addBinding_visible": {
+  "t": "function",
+  "name": "",
+  "src": "function () { [native code] }",
+  "desc": "{\"value\":\"fn\",\"writable\":true,\"enumerable\":true,\"configurable\":true}",
+  "emptyNameNatives": [
+   "__necter_binding"
+  ]
+ },
+ "input_events": {
+  "events": [
+   {
+    "type": "pointermove",
+    "isTrusted": true,
+    "clientX": 120,
+    "clientY": 80,
+    "pageX": 120,
+    "pageY": 80,
+    "screenX": 142,
+    "screenY": 245,
+    "movementX": 0,
+    "movementY": 0,
+    "buttons": 0,
+    "detail": 0,
+    "pointerType": "mouse",
+    "pressure": 0,
+    "width": 1,
+    "height": 1,
+    "isPrimary": true,
+    "coalesced": 1,
+    "sourceCapabilities": "none",
+    "timeStamp": 225
+   },
+   {
+    "type": "mousemove",
+    "isTrusted": true,
+    "clientX": 120,
+    "clientY": 80,
+    "pageX": 120,
+    "pageY": 80,
+    "screenX": 142,
+    "screenY": 245,
+    "movementX": 0,
+    "movementY": 0,
+    "buttons": 0,
+    "detail": 0,
+    "sourceCapabilities": false,
+    "timeStamp": 225
+   },
+   {
+    "type": "pointermove",
+    "isTrusted": true,
+    "clientX": 135,
+    "clientY": 90,
+    "pageX": 135,
+    "pageY": 90,
+    "screenX": 157,
+    "screenY": 255,
+    "movementX": 15,
+    "movementY": 10,
+    "buttons": 0,
+    "detail": 0,
+    "pointerType": "mouse",
+    "pressure": 0,
+    "width": 1,
+    "height": 1,
+    "isPrimary": true,
+    "coalesced": 1,
+    "sourceCapabilities": "none",
+    "timeStamp": 231.60000002384186
+   },
+   {
+    "type": "mousemove",
+    "isTrusted": true,
+    "clientX": 135,
+    "clientY": 90,
+    "pageX": 135,
+    "pageY": 90,
+    "screenX": 157,
+    "screenY": 255,
+    "movementX": 15,
+    "movementY": 10,
+    "buttons": 0,
+    "detail": 0,
+    "sourceCapabilities": false,
+    "timeStamp": 231.60000002384186
+   },
+   {
+    "type": "pointerdown",
+    "isTrusted": true,
+    "clientX": 135,
+    "clientY": 90,
+    "pageX": 135,
+    "pageY": 90,
+    "screenX": 157,
+    "screenY": 255,
+    "movementX": 0,
+    "movementY": 0,
+    "buttons": 1,
+    "detail": 0,
+    "pointerType": "mouse",
+    "pressure": 0,
+    "width": 1,
+    "height": 1,
+    "isPrimary": true,
+    "coalesced": 0,
+    "sourceCapabilities": "none",
+    "timeStamp": 247.69999998807907
+   },
+   {
+    "type": "mousedown",
+    "isTrusted": true,
+    "clientX": 135,
+    "clientY": 90,
+    "pageX": 135,
+    "pageY": 90,
+    "screenX": 157,
+    "screenY": 255,
+    "movementX": 0,
+    "movementY": 0,
+    "buttons": 1,
+    "detail": 1,
+    "sourceCapabilities": false,
+    "timeStamp": 247.69999998807907
+   },
+   {
+    "type": "mouseup",
+    "isTrusted": true,
+    "clientX": 135,
+    "clientY": 90,
+    "pageX": 135,
+    "pageY": 90,
+    "screenX": 157,
+    "screenY": 255,
+    "movementX": 0,
+    "movementY": 0,
+    "buttons": 0,
+    "detail": 1,
+    "sourceCapabilities": false,
+    "timeStamp": 249.19999998807907
+   },
+   {
+    "type": "click",
+    "isTrusted": true,
+    "clientX": 135,
+    "clientY": 90,
+    "pageX": 135,
+    "pageY": 90,
+    "screenX": 157,
+    "screenY": 255,
+    "movementX": 0,
+    "movementY": 0,
+    "buttons": 0,
+    "detail": 1,
+    "pointerType": "mouse",
+    "pressure": 0,
+    "width": 1,
+    "height": 1,
+    "isPrimary": false,
+    "coalesced": 0,
+    "sourceCapabilities": false,
+    "timeStamp": 249.19999998807907
+   }
+  ],
+  "windowScreenXY": [
+   22,
+   22
+  ],
+  "outerMinusInner": [
+   0,
+   143
+  ]
+ },
+ "debugger_stmt_ms_no_debugger_domain": 0.1,
+ "debugger_stmt_ms_with_Debugger_enabled_paused": {
+  "paused": true,
+  "reason": "other",
+  "elapsed_ms": 503.6
+ },
+ "hasFocus_before_focus_emulation": true,
+ "hasFocus_after_focus_emulation": true,
+ "webdriver_before_automationOverride": true,
+ "webdriver_after_automationOverride": true,
+ "webdriver_after_automationOverride_off": true,
+ "metrics_after_setDeviceMetricsOverride_1280x720": {
+  "inner": [
+   1280,
+   720
+  ],
+  "outer": [
+   756,
+   556
+  ],
+  "screen": [
+   800,
+   600,
+   800,
+   600,
+   0,
+   0
+  ],
+  "dpr": 1,
+  "screenXY": [
+   22,
+   22
+  ]
+ },
+ "metrics_after_setDeviceMetricsOverride_with_screen_1920x1080": {
+  "inner": [
+   1280,
+   720
+  ],
+  "outer": [
+   756,
+   556
+  ],
+  "screen": [
+   1920,
+   1080,
+   1920,
+   1080,
+   0,
+   0
+  ],
+  "dpr": 1,
+  "screenXY": [
+   22,
+   22
+  ]
+ },
+ "ua_override_no_metadata": {
+  "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "platform": "MacIntel",
+  "brands": [],
+  "uaDataPlatform": "",
+  "appVersion": "5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+ },
+ "ua_override_no_metadata_high": {
+  "architecture": "",
+  "brands": [],
+  "fullVersionList": [],
+  "mobile": false,
+  "platform": "",
+  "platformVersion": ""
+ },
+ "ua_override_with_metadata": {
+  "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "platform": "MacIntel",
+  "brands": [
+   {
+    "brand": "Chromium",
+    "version": "155"
+   },
+   {
+    "brand": "Google Chrome",
+    "version": "155"
+   },
+   {
+    "brand": "Not=A?Brand",
+    "version": "24"
+   }
+  ],
+  "uaDataPlatform": "Windows",
+  "webglRenderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M5 Pro, Unspecified Version)",
+  "fontsSampleWindows": false
+ },
+ "nav_timing_normal": {
+  "nextHopProtocol": "http/1.0",
+  "transferSize": 454,
+  "encodedBodySize": 154,
+  "decodedBodySize": 154,
+  "deliveryType": "",
+  "workerStart": 0,
+  "responseStatus": 200,
+  "type": "navigate",
+  "serverTiming": 0,
+  "rt": 0.30000001192092896
+ },
+ "nav_timing_fulfilled_by_Fetch": {
+  "nextHopProtocol": "",
+  "transferSize": 366,
+  "encodedBodySize": 66,
+  "decodedBodySize": 66,
+  "deliveryType": "",
+  "workerStart": 0,
+  "responseStatus": 200,
+  "type": "navigate",
+  "serverTiming": 0,
+  "rt": 1.4000000357627869,
+  "protocolViaResource": null
+ },
+ "popup_without_gesture": {
+  "opened": false
+ },
+ "history_flood": {
+  "attempted": 300,
+  "noThrow": 300,
+  "finalHash": "#f200",
+  "err": null
+ },
+ "worker_probe_with_worker_Runtime_enabled": {
+  "attached_worker_sessions": [
+   "worker"
+  ],
+  "result": {
+   "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+   "platform": "MacIntel",
+   "languages": [
+    "en-US"
+   ],
+   "hc": 18,
+   "dm": 32,
+   "uaBrands": [
+    {
+     "brand": "Not:A-Brand",
+     "version": "8"
+    },
+    {
+     "brand": "Chromium",
+     "version": "156"
+    }
+   ],
+   "stackHits": 0,
+   "prepareStackTraceHits": 1,
+   "nameHits": 3
+  }
+ },
+ "worker_probe_without_worker_session": {
+  "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "platform": "MacIntel",
+  "languages": [
+   "en-US"
+  ],
+  "hc": 18,
+  "dm": 32,
+  "uaBrands": [
+   {
+    "brand": "Not:A-Brand",
+    "version": "8"
+   },
+   {
+    "brand": "Chromium",
+    "version": "156"
+   }
+  ],
+  "stackHits": 0,
+  "prepareStackTraceHits": 0,
+  "nameHits": 1
+ },
+ "argv": [
+  "/Users/dev/.cache/puppeteer/chrome/mac_arm-156.0.8078.47/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+  "--user-data-dir=/private/tmp/claude-501/-Users-dev-Projects-necter/3044e935-0f92-4a55-99e9-6a0b4223c15f/scratchpad/cdpprobe/udd-taxl35no",
+  "--remote-debugging-port=0",
+  "--no-first-run",
+  "--no-default-browser-check",
+  "--headless",
+  "about:blank"
+ ]
+}

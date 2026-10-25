@@ -1,0 +1,15 @@
+{
+  "id": "youbot",
+  "provider": "you",
+  "product": "YouBot",
+  "kind": "agent",
+  "source": "https://you.com/docs/youbot",
+  "fetchedAt": "2026-10-24",
+  "transcribedFrom": "docs/research/raw/providers-tier2.md#3.12",
+  "agentIds": [
+    "youbot"
+  ],
+  "prefixes": [
+    "68.67.112.0/24"
+  ]
+}

@@ -1,0 +1,17 @@
+HTTP/2 404 
+date: Sat, 24 Oct 2026 22:29:58 GMT
+content-type: text/html; charset=utf-8
+cache-control: no-cache
+cache-status: "Netlify Durable"; fwd=bypass
+cache-status: "Netlify Edge"; fwd=miss; fwd-status=404
+set-cookie: __cf_bm=De9FbldJooNnpZFKu7wNGLAqfDsNtK8UBGCr9sFxjrA-1792880997.9333415-1.0.1.1-2IMueOjy72R2TUpB7ZvRuGDjw3_X7mFoio_5D_gKMNTtrO7c90EqLvE8H_5i4XLleuu22QISdH_qMrBe83OVKuxUZfyXRh1U2MlnArUs3xwHeSjFGRwIrLlWWo3VfhLf; HttpOnly; SameSite=None; Secure; Path=/; Domain=mistral.ai; Expires=Sat, 24 Oct 2026 22:59:58 GMT
+netlify-vary: query
+server: cloudflare
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+vary: Accept-Encoding
+x-content-type-options: nosniff
+x-nf-request-id: 01M5R0HXJDMTSADE1A56EZN0VQ
+cf-cache-status: EXPIRED
+cf-ray: a4fc6c5d1abd41e9-EWR
+alt-svc: h3=":443"; ma=86400
+

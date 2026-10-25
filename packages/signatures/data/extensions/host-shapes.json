@@ -1,0 +1,31 @@
+[
+  {
+    "id": "claude-in-chrome.indicator-host",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "signal": "extension.active-agent-indicator",
+    "tag": "div",
+    "attributes": 0,
+    "childNodes": 0,
+    "openShadowRoot": false,
+    "computedDisplay": "contents",
+    "parent": "body",
+    "position": "last-child",
+    "timingMs": 47,
+    "notes": "agent-visual-indicator.js (v1.0.102, isolated world, top frame, document_idle) creates a div with a CLOSED shadow root whose style sets `:host { all: initial !important; display: contents !important; }`, strips all attributes, appends to document.body (falls back to document.documentElement -> parent \"html\") and re-appends itself so it stays body.lastElementChild (re-check on later mutations). getBoundingClientRect() all zeros. Live: DOM_ADDED {tag:\"DIV\", attrs:[], parent:\"BODY\", display:\"contents\", openShadow:false, childCount:0, isLastOfBody:true} 47 ms after the tab became visible; never removed (still present 5 min later, after the agent went idle). Use MutationObserver + getComputedStyle; page-world attachShadow hooks miss it."
+  },
+  {
+    "id": "chatgpt-extension.webmcp-probe-host",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "signal": "extension.agent-dom-artifact",
+    "tag": "div",
+    "attributes": 0,
+    "childNodes": 0,
+    "openShadowRoot": false,
+    "computedDisplay": "none",
+    "parent": "html",
+    "position": "any",
+    "notes": "Codex browser plugin (26.1021.31345) WebMCP discovery host: div appended to document.documentElement (not body) with a CLOSED shadow root containing <iframe name=\"codex-webmcp-probe-97adecab-75be-4770-bbe4-654cac643843\">; state cached on document.__codexNativeWebMcpState. Research describes it as attribute-less with display none (code: style.display = \"none !important\"); caveat: CSSOM drops a value containing \"!important\" in a property assignment, so the host may actually be display \"block\" with no style attribute — verify live. Not re-appended, so not guaranteed last child. Timing not measured (ChatGPT extension not installed during research)."
+  }
+]

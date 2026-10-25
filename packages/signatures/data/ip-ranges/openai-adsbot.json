@@ -1,0 +1,16 @@
+{
+  "id": "openai-adsbot",
+  "provider": "openai",
+  "product": "OAI-AdsBot",
+  "kind": "agent",
+  "source": "https://openai.com/adsbot.json",
+  "fetchedAt": "2026-10-24",
+  "creationTime": "2026-05-12T03:00:00.000000",
+  "agentIds": [
+    "oai-adsbot"
+  ],
+  "prefixes": [
+    "130.131.229.128/25",
+    "20.168.90.128/25"
+  ]
+}

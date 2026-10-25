@@ -1,0 +1,679 @@
+[
+  {
+    "pattern": "^__playwright__binding__$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "window.__playwright__binding__: native CDP binding created by Runtime.addBinding (page.ts:1058 `static kBindingName = '__playwright__binding__'`) only when exposeFunction/exposeBinding/init-script-with-function-args are used; own enumerable writable window property, function name === \"\". docs/research/raw/automation-stacks.md#2.4, docs/research/raw/automation-stacks.md#2.3; docs/research/raw/cdp-leak-techniques.md#0 item 8, #4.1, #3.2."
+  },
+  {
+    "pattern": "^__playwright__binding__controller__$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "globalThis['__playwright__binding__controller__'] = new BindingsController(globalThis, '__playwright__binding__') (packages/isomorphic/utilityScriptSerializers.ts:24 kBindingsControllerProperty); each exposeFunction(name) adds window[name] = (...args) => this.callBinding(name, ...args). docs/research/raw/automation-stacks.md#2.4, #28 item 2."
+  },
+  {
+    "pattern": "^__pwInitScripts$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "HISTORIC: window.__pwInitScripts existed only in Playwright 1.46–1.52 InitScript wrapper (gone in 1.53; not present in current main). Still checked by rebrowser pwInitScripts / Brotector PWinitScript. docs/research/raw/automation-stacks.md#2.4, #27.1; docs/research/raw/cdp-leak-techniques.md#0 item 8, #4.1."
+  },
+  {
+    "pattern": "^__pwSnapshotGlobals$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "window.__pwSnapshotGlobals (javascript.ts:390 saveGlobalsSnapshotSource) injected into the main world only when the delegate has noUtilityWorld() (non-Chromium/webview paths: Firefox/WebKit), not for Chromium. docs/research/raw/automation-stacks.md#2.4; docs/research/raw/cdp-leak-techniques.md#3.2."
+  },
+  {
+    "pattern": "^__pw_recorder(State|ElementPicked|SetMode|SetOverlayState|PerformAction|RecordAction)$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Recorder/codegen bindings (recorder.ts): __pw_recorderState, __pw_recorderElementPicked, __pw_recorderSetMode, __pw_recorderSetOverlayState, __pw_recorderPerformAction, __pw_recorderRecordAction — only with page.pause()/codegen. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "pattern": "^__pw_resume$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Recorder binding __pw_resume (recorder.ts) — only with page.pause()/codegen. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "pattern": "^__pw_refreshOverlay$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "window.__pw_refreshOverlay() (recorder.ts) — only with page.pause()/codegen. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "pattern": "^__playwright_snapshot_streamer_.+$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Trace snapshotter global __playwright_snapshot_streamer_<guid> (snapshotterInjected.ts) — only when tracing. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "pattern": "^__pw_devtools__$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Binding __pw_devtools__ (crDevTools.ts:21) — only with PWDEBUG devtools integration. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "pattern": "^__playwright_run$",
+    "scope": "window",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "globalThis.__playwright_run defined by Playwright's Electron loader — Electron apps only, not web pages driven by Chromium. docs/research/raw/automation-stacks.md#2.4."
+  },
+  {
+    "pattern": "UtilityScript\\.",
+    "scope": "function-source",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.automation-stack-frame",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Stack frame marker: code evaluated via page.evaluate (main world by default) runs through class UtilityScript (packages/injected/src/utilityScript.ts:68-75, this.global.eval(expression)), so a hooked DOM API sees 'UtilityScript.evaluate' frames in new Error().stack; rebrowser sourceUrlLeak checks error.stack.includes('UtilityScript.'). Renamed to a random per-process name by rebrowser-patches. docs/research/raw/automation-stacks.md#2.5, #0 item 7, #27.1; docs/research/raw/cdp-leak-techniques.md#0 item 7, #3.2."
+  },
+  {
+    "pattern": "exposeBindingHandle supports a single argument",
+    "scope": "function-source",
+    "stack": "playwright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Text in the toString() of exposeFunction wrappers in Playwright 1.59 or older (rebrowser exposeFunctionLeak: \"Playwright 1.59 or older, or Patchright\"); current Playwright wrapper is an arrow (...args) => this.callBinding(name, ...args). Detector also looks for functions with __installed === true (not expressible as a name rule). docs/research/raw/automation-stacks.md#2.4, #27.1; docs/research/raw/cdp-leak-techniques.md#4.1."
+  },
+  {
+    "pattern": "exposeBindingHandle supports a single argument",
+    "scope": "function-source",
+    "stack": "patchright",
+    "provider": "playwright",
+    "signal": "probe.playwright-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Patchright exposeFunction wrappers still contain the text 'exposeBindingHandle supports a single argument' (rebrowser exposeFunctionLeak reports Patchright failing). Only when exposeFunction is used. docs/research/raw/automation-stacks.md#7, #2.4, #27.2."
+  },
+  {
+    "pattern": "^puppeteer_.+$",
+    "scope": "window",
+    "stack": "puppeteer",
+    "provider": "puppeteer",
+    "signal": "probe.puppeteer-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "exposeFunction native CDP binding window.puppeteer_<name> (cdp/utils.ts:309 CDP_BINDING_PREFIX = 'puppeteer_'); detector: for (key in window) key.startsWith('puppeteer_'). Also re-added after navigation by rebrowser's Puppeteer patch. docs/research/raw/automation-stacks.md#4.4, #0 item 5, #27.1; docs/research/raw/cdp-leak-techniques.md#4.1."
+  },
+  {
+    "pattern": "This is the Puppeteer binding",
+    "scope": "function-source",
+    "stack": "puppeteer",
+    "provider": "puppeteer",
+    "signal": "probe.puppeteer-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "window.<name>.toString() of the exposeFunction JS wrapper contains the comment '// This is the Puppeteer binding.'; the wrapper also gets .args/.callbacks/.lastSeq properties. Only after page.exposeFunction(). docs/research/raw/automation-stacks.md#4.4, #27.1."
+  },
+  {
+    "pattern": "pptr:",
+    "scope": "function-source",
+    "stack": "puppeteer",
+    "provider": "puppeteer",
+    "signal": "probe.automation-stack-frame",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Stack frame marker: every Runtime.evaluate expression / Runtime.callFunctionOn declaration gets '//# sourceURL=pptr:${functionName};${encodeURIComponent(site)}' (e.g. 'pptr:evaluate;file%3A%2F%2F%2Fhome%2Fuser%2Fbot.js%3A12%3A20') or 'pptr:internal' (cdp/ExecutionContext.ts:396-440; PuppeteerURL.INTERNAL_URL). Measured frame: 'at pptr:evaluate;Page.evaluate:1:10'. Not stripped by puppeteer-extra-stealth; removed by rebrowser-patches. docs/research/raw/automation-stacks.md#4.3, #0 item 7; docs/research/raw/cdp-leak-techniques.md#3.1, #3.2."
+  },
+  {
+    "pattern": "__puppeteer_evaluation_script__",
+    "scope": "function-source",
+    "stack": "puppeteer",
+    "provider": "puppeteer",
+    "signal": "probe.automation-stack-frame",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "LEGACY sourceURL marker (Puppeteer v13-era EVALUATION_SCRIPT_URL, '//# sourceURL=__puppeteer_evaluation_script__'); obsolete in current Puppeteer (replaced by pptr:). Measured frame 'at __puppeteer_evaluation_script__:1:10'. Only old Puppeteer versions. docs/research/raw/automation-stacks.md#4.3, #5; docs/research/raw/cdp-leak-techniques.md#3.1, #3.2."
+  },
+  {
+    "pattern": "__pyppeteer_evaluation_script__",
+    "scope": "function-source",
+    "stack": "pyppeteer",
+    "signal": "probe.automation-stack-frame",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "pyppeteer sourceURL marker; known only from Brotector's stack.signature regex (not read in pyppeteer source). docs/research/raw/cdp-leak-techniques.md#3.2, #10.1."
+  },
+  {
+    "pattern": "newHandler\\.<computed> \\[as apply\\]",
+    "scope": "function-source",
+    "stack": "puppeteer-extra-stealth",
+    "provider": "puppeteer",
+    "signal": "probe.automation-stack-frame",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "puppeteer-extra-plugin-stealth Proxy-based overrides leave frames like 'newHandler.<computed> [as apply] (<anonymous>...)' in the stack of any hooked native (Brotector regex 'at newHandler\\.<computed> \\[as apply\\] \\(...'); this is really a tamper tell (probe.prototype-tampered is the corroborating signal). docs/research/raw/cdp-leak-techniques.md#0 item 7, #3.2."
+  },
+  {
+    "pattern": "^cdc_adoQpoasnfa76pfcZLmcfl_(Array|Object|Promise|Proxy|ShadowRoot|Symbol|JSON|Window)$",
+    "scope": "window",
+    "stack": "selenium-chromedriver",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Eight window.cdc_adoQpoasnfa76pfcZLmcfl_{Array,Object,Promise,Proxy,ShadowRoot,Symbol,JSON,Window} globals installed on every page/frame by chromedriver DevToolsClientImpl::SetUpDevTools via Page.addScriptToEvaluateOnNewDocument and Runtime.evaluate (devtools_client_impl.cc); read back by call_function.js. docs/research/raw/automation-stacks.md#8.1, #0 item 5; docs/research/raw/cdp-leak-techniques.md#0 item 8, #4.1."
+  },
+  {
+    "pattern": "^cdc_[a-zA-Z0-9]{22}_(Array|Object|Promise|Proxy|ShadowRoot|Symbol|JSON|Window)$",
+    "scope": "window",
+    "stack": "selenium-chromedriver",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Prefix-randomised form of the chromedriver cdc_ globals (detector hook from research: /^cdc_[a-zA-Z0-9]{22}_(Array|...|Window)$/). The suffix pattern survives cdc_ prefix renaming (undetected-chromedriver gen_random_cdc, other binary patchers) unless the whole block is patched out (current UC patch_exe replaces it with console.log). docs/research/raw/automation-stacks.md#8.1, #9."
+  },
+  {
+    "pattern": "^([a-z]){3}_.*_(Array|Promise|Symbol)$",
+    "scope": "window",
+    "stack": "selenium-chromedriver",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "BotD distinctiveProperties regex for renamed chromedriver globals (/^([a-z]){3}_.*_(Array|Promise|Symbol)$/); broader than the exact name, weight accordingly. docs/research/raw/cdp-leak-techniques.md#4.1, #10.1."
+  },
+  {
+    "pattern": "^ret_nodes$",
+    "scope": "window",
+    "stack": "selenium-chromedriver",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Implicit (sloppy-mode) global ret_nodes assigned by chromedriver call_function.js on every executeScript/element interaction (Castle: window.ret_nodes appears after driver.executeScript()). docs/research/raw/cdp-leak-techniques.md#0 item 8, #4.1, #14."
+  },
+  {
+    "pattern": "^\\$cdc_asdjflasutopfhvcZLmcfl?_?$",
+    "scope": "document",
+    "stack": "selenium-chromedriver",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "LEGACY: document.$cdc_asdjflasutopfhvcZLmcfl_ (and BotD's variant $cdc_asdjflasutopfhvcZLmcf) from older chromedriver; NOT found in current chromedriver source (uncertain/historic). docs/research/raw/automation-stacks.md#8.1; docs/research/raw/cdp-leak-techniques.md#4.1, #10.1."
+  },
+  {
+    "pattern": "^\\$chrome_asyncScriptInfo$",
+    "scope": "document",
+    "stack": "selenium-legacy",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "LEGACY older Selenium document property $chrome_asyncScriptInfo (BotD distinctive_properties.ts). docs/research/raw/cdp-leak-techniques.md#4.1, #10.1."
+  },
+  {
+    "pattern": "^__webdriver_evaluate$",
+    "scope": "document",
+    "stack": "selenium-legacy",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "LEGACY older Selenium document property __webdriver_evaluate (BotD distinctive_properties.ts). docs/research/raw/cdp-leak-techniques.md#4.1, #10.1."
+  },
+  {
+    "pattern": "^__selenium_evaluate$",
+    "scope": "document",
+    "stack": "selenium-legacy",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "LEGACY older Selenium document property __selenium_evaluate (BotD distinctive_properties.ts). docs/research/raw/cdp-leak-techniques.md#4.1, #10.1."
+  },
+  {
+    "pattern": "^__fxdriver_",
+    "scope": "document",
+    "stack": "selenium-legacy",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "LEGACY older Selenium (FirefoxDriver) __fxdriver_* document property family (BotD distinctive_properties.ts; exact member names not listed in research). docs/research/raw/cdp-leak-techniques.md#4.1, #10.1."
+  },
+  {
+    "pattern": "^__driver_",
+    "scope": "document",
+    "stack": "selenium-legacy",
+    "provider": "selenium",
+    "signal": "probe.selenium-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "LEGACY older Selenium __driver_* document property family (BotD distinctive_properties.ts; exact member names not listed in research). docs/research/raw/cdp-leak-techniques.md#4.1, #10.1."
+  },
+  {
+    "pattern": "^_attachShadow$",
+    "scope": "prototype",
+    "stack": "nodriver",
+    "signal": "probe.prototype-tampered",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Element.prototype._attachShadow saved by nodriver expert mode (expert=True) init script, which also replaces Element.prototype.attachShadow with a non-native function forcing mode \"open\" and logs console.log(\"hooking attachShadow\") / 'calling hooked attachShadow'. Expert mode only. docs/research/raw/automation-stacks.md#10, #28 item 2."
+  },
+  {
+    "pattern": "^elementIdCounter$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.elementIdCounter set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). Generic-sounding name: corroborate with GlobalSkyvernFrameIndex / buildTreeFromBody. docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^GlobalSkyvernFrameIndex$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.GlobalSkyvernFrameIndex set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^GlobalEnableAllTextualElements$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.GlobalEnableAllTextualElements set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^globalHoverStylesMap$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.globalHoverStylesMap set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^globalOneTimeIncrementElements$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.globalOneTimeIncrementElements set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^globalIncrementalJobCount$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.globalIncrementalJobCount set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^globalDomDepthMap$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.globalDomDepthMap set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^globalParsedElementCounter$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.globalParsedElementCounter set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^globalObserverForDOMIncrement$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.globalObserverForDOMIncrement set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). Value is a MutationObserver. docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^globalListnerFlag$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.globalListnerFlag set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). (sic: 'Listner'). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^globalIncrementalSession$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Explicit window.globalIncrementalSession set by Skyvern domUtils.js (JS_FUNCTION_DEFS), evaluated in the main world during scraping (utils/page.py:772-779 / main_world_eval.py). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^buildTreeFromBody$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration buildTreeFromBody in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^buildElementTree$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration buildElementTree in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^buildElementObject$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration buildElementObject in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^drawBoundingBoxes$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration drawBoundingBoxes in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^buildElementsAndDrawBoundingBoxes$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration buildElementsAndDrawBoundingBoxes in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^getDOMElementBySkyvenElement$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration getDOMElementBySkyvenElement in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). (sic: 'Skyven'). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^stampOtpInputBoxes$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration stampOtpInputBoxes in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^groupElementsVisually$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration groupElementsVisually in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^getCaptchaSolves$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration getCaptchaSolves in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^expectHitTarget$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration expectHitTarget in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^ownUniqueId$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "reported",
+    "notes": "Top-level function declaration ownUniqueId in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^captchaSolvedCallback$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "uncertain",
+    "notes": "Top-level function declaration captchaSolvedCallback in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). Generic name that ordinary sites may define: only use as corroboration. docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^isElementVisible$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "uncertain",
+    "notes": "Top-level function declaration isElementVisible in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). Generic name that ordinary sites may define: only use as corroboration. docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^isInteractable$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "uncertain",
+    "notes": "Top-level function declaration isInteractable in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). Generic name that ordinary sites may define: only use as corroboration. docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^uniqueId$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "uncertain",
+    "notes": "Top-level function declaration uniqueId in Skyvern domUtils.js; LIKELY a window global because Playwright string-evaluate is an indirect eval (inferred from code, not observed at runtime). Generic name that ordinary sites may define: only use as corroboration. docs/research/raw/automation-stacks.md#14, #2.5."
+  },
+  {
+    "pattern": "^__PW_CURSOR_VIS__$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "window.__PW_CURSOR_VIS__ from Skyvern scraper/cursorOverlay.js (video-recording cursor overlay, deliberately Playwright-like naming; treat as Skyvern, NOT Playwright). docs/research/raw/automation-stacks.md#14, #0 item 5, #28 item 2."
+  },
+  {
+    "pattern": "^__pw_trails$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "window.__pw_trails from Skyvern scraper/cursorOverlay.js (recording cursor overlay; treat as Skyvern, NOT Playwright). docs/research/raw/automation-stacks.md#14, #0 item 5."
+  },
+  {
+    "pattern": "^__pwCursor(Init|Move)$",
+    "scope": "window",
+    "stack": "skyvern",
+    "provider": "skyvern",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "conditional",
+    "confidence": "reported",
+    "notes": "Functions __pwCursorInit, __pwCursorMove in Skyvern scraper/cursorOverlay.js; research lists them as functions — whether they are window globals is not stated (likely). Recording overlay only. docs/research/raw/automation-stacks.md#14."
+  },
+  {
+    "pattern": "^WebSurfer$",
+    "scope": "window",
+    "stack": "magentic-ui",
+    "provider": "microsoft",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Global 'var WebSurfer = …' from Magentic-UI page_script.js evaluated in the main world (await page.evaluate(self._page_script), webpage_text_utils.py); exposes getInteractiveRects, getVisualViewport, getFocusedElementId, getPageMetadata. docs/research/raw/automation-stacks.md#18, #0 item 5."
+  },
+  {
+    "pattern": "^MultimodalWebSurfer$",
+    "scope": "window",
+    "stack": "autogen-websurfer",
+    "provider": "microsoft",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Global 'var MultimodalWebSurfer = …' from AutoGen MultimodalWebSurfer page_script.js injected with page.add_init_script(path=page_script.js). docs/research/raw/automation-stacks.md#18, #0 item 5."
+  },
+  {
+    "pattern": "^__stagehandExtensionWorld$",
+    "scope": "window",
+    "stack": "stagehand",
+    "provider": "browserbase",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "Stagehand Runtime extension content script (ISOLATED world) defines __stagehandExtensionWorld = { name: \"stagehand\", version: \"stagehand.v4\" } — not visible to page JS. docs/research/raw/automation-stacks.md#13."
+  },
+  {
+    "pattern": "^__stagehandLocatorScripts$",
+    "scope": "window",
+    "stack": "stagehand",
+    "provider": "browserbase",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "__stagehandLocatorScripts in the Stagehand extension's isolated world / locator world — not visible to page JS. docs/research/raw/automation-stacks.md#13."
+  },
+  {
+    "pattern": "^__stagehandLocatorWorld$",
+    "scope": "window",
+    "stack": "stagehand",
+    "provider": "browserbase",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "__stagehandLocatorWorld { kind, closedShadowRoots } in the Stagehand extension's isolated world — not visible to page JS. docs/research/raw/automation-stacks.md#13."
+  },
+  {
+    "pattern": "^__stagehandInjected$",
+    "scope": "window",
+    "stack": "stagehand",
+    "provider": "browserbase",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "uncertain",
+    "notes": "LEGACY/UNCERTAIN: window.__stagehandInjected from historic Playwright-based Stagehand v1/v2; NOT found in the current repo (GitHub code search empty). docs/research/raw/automation-stacks.md#13."
+  },
+  {
+    "pattern": "^getScrollableElementXpaths$",
+    "scope": "window",
+    "stack": "stagehand",
+    "provider": "browserbase",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "uncertain",
+    "notes": "LEGACY/UNCERTAIN: getScrollableElementXpaths from historic Stagehand v1/v2; NOT found in the current repo. docs/research/raw/automation-stacks.md#13."
+  },
+  {
+    "pattern": "^processDom$",
+    "scope": "window",
+    "stack": "stagehand",
+    "provider": "browserbase",
+    "signal": "probe.agent-framework-artifact",
+    "visibility": "main",
+    "confidence": "uncertain",
+    "notes": "LEGACY/UNCERTAIN: processDom from historic Stagehand v1/v2; NOT found in the current repo. Generic name: corroborate. docs/research/raw/automation-stacks.md#13."
+  },
+  {
+    "pattern": "^__nbProbe$",
+    "scope": "window",
+    "stack": "nanobrowser",
+    "signal": "probe.main-world-agent-global",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "globalThis.__nbProbe defined in Nanobrowser's isolated probe world (PROBE_WORLD_NAME = 'nanobrowser-probe') — not visible to page JS. docs/research/raw/automation-stacks.md#17."
+  }
+]

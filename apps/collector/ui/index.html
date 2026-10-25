@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>necter · Sessions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23131416'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%23e5484d'/%3E%3C/svg%3E">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#/sessions" aria-label="necter home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--text)"/><circle cx="16" cy="16" r="7" fill="none" stroke="#fff" stroke-width="3"/><circle cx="16" cy="16" r="2.5" fill="var(--negative)"/></svg>
+      <span>necter</span>
+    </a>
+    <label class="scope">
+      <span class="scope-label">Site</span>
+      <select id="site-select" aria-label="Site"><option value="">All sites</option></select>
+    </label>
+    <nav class="nav" aria-label="Main">
+      <a href="#/sessions" data-route="sessions">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.5h12M2 8h12M2 12.5h8" /></svg>Sessions
+      </a>
+      <a href="#/install" data-route="install">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 4 1.5 8 5 12M11 4l3.5 4-3.5 4" /></svg>Install
+      </a>
+      <a href="/test" target="_blank" rel="noopener" id="nav-test">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M9 2.5h4.5V7M13.5 2.5 7 9M11 9.5v4H2.5V5h4" /></svg>Test page
+      </a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="mode" id="mode-row"></div>
+    </div>
+  </aside>
+
+  <header class="topbar">
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12" /></svg>
+    </button>
+    <label class="search">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5" /><path d="m10.5 10.5 3 3" /></svg>
+      <input id="search" type="search" placeholder="Search sessions, pages, user agents, IPs" aria-label="Search sessions" autocomplete="off">
+      <kbd>/</kbd>
+    </label>
+    <div class="live" id="live"><span class="dot"></span><span id="live-text">Connecting</span></div>
+  </header>
+
+  <main class="sheet" id="sheet">
+    <section id="view-sessions" class="view" hidden>
+      <div class="title-row">
+        <div>
+          <h1>Sessions</h1>
+          <p class="finding" id="finding">Waiting for the first visitor.</p>
+        </div>
+        <div class="title-actions">
+          <button class="btn secondary" id="clear-btn" type="button">Clear</button>
+          <a class="btn primary" href="#/install">Install on a site</a>
+        </div>
+      </div>
+
+      <div class="kpis" id="kpis" aria-label="Totals"></div>
+
+      <div class="tabs" role="tablist" id="tabs"></div>
+
+      <div class="table-wrap">
+        <table class="sessions" id="table">
+          <thead>
+            <tr>
+              <th scope="col" class="c-visitor">Visitor</th>
+              <th scope="col" class="c-page">Site and page</th>
+              <th scope="col" class="c-verdict">Verdict</th>
+              <th scope="col" class="c-score num">Agent score</th>
+              <th scope="col" class="c-evidence">Strongest evidence</th>
+              <th scope="col" class="c-seen num">Last seen</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <div class="empty" id="empty" hidden></div>
+      </div>
+    </section>
+
+    <section id="view-install" class="view" hidden>
+      <div class="title-row">
+        <div>
+          <h1>Install</h1>
+          <p class="finding">Add detection to any website. Visitors show up under Sessions within a few seconds.</p>
+        </div>
+      </div>
+
+      <div class="install-grid">
+        <div class="method main-method">
+          <h2>Add one script tag</h2>
+          <p>Paste this into the <code>&lt;head&gt;</code> of every page, as high as you can. It works on any stack: plain HTML, WordPress, Shopify, Webflow, Next.js, or a tag manager.</p>
+          <div class="field-row">
+            <label for="site-name">Site name</label>
+            <input id="site-name" value="my-site" spellcheck="false" autocomplete="off">
+            <label class="check"><input type="checkbox" id="opt-enforce"> Block agents (enforce mode)</label>
+            <label class="check"><input type="checkbox" id="opt-debug"> Show the on-page debug panel</label>
+          </div>
+          <div class="code" data-copy-target>
+            <pre><code id="snippet"></code></pre>
+            <button class="btn secondary copy" type="button" data-copy="snippet">Copy</button>
+          </div>
+          <p class="note" id="local-note" hidden>This address only works on this computer. To use it on a public site, or to let a cloud agent reach it, run <code>ngrok http <span id="port"></span></code> and open this dashboard from the https address it prints. The snippet then updates itself.</p>
+          <div class="status" id="install-status"></div>
+        </div>
+
+        <div class="method">
+          <h2>Or put it in front of a site, with no code changes</h2>
+          <p>Proxy mode serves an existing site through necter, adds the script to every page and also catches agents that never run JavaScript, such as fetch tools and crawlers.</p>
+          <div class="code">
+            <pre><code id="proxy-cmd">corepack pnpm collector --upstream https://example.com</code></pre>
+            <button class="btn secondary copy" type="button" data-copy="proxy-cmd">Copy</button>
+          </div>
+        </div>
+
+        <div class="method">
+          <h2>Or test on any page you visit</h2>
+          <p>Drag this to your bookmarks bar, open any website and click it. It loads detection into that page only, for you. Sites with a strict content security policy will refuse it.</p>
+          <p><a class="bookmarklet" id="bookmarklet" href="#">necter test</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="Session detail" hidden>
+  <div class="drawer-head">
+    <div>
+      <h2 id="d-title">Session</h2>
+      <p class="mono muted" id="d-id"></p>
+    </div>
+    <button class="icon-btn" id="d-close" aria-label="Close detail">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8" /></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="d-body"></div>
+</aside>
+<div class="scrim" id="scrim" hidden></div>
+
+<script>window.__NECTER__ = __CONFIG__;</script>
+<script src="app.js"></script>
+</body>
+</html>

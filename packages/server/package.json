@@ -1,0 +1,68 @@
+{
+  "name": "@necterai/server",
+  "version": "0.1.0",
+  "description": "Necter for servers and the edge: identify AI agents, crawlers and fetch bots on every request and block, challenge or label them. Express, Hono, Next.js, Node and Cloudflare Workers.",
+  "keywords": [
+    "necter",
+    "ai-agents",
+    "bot-detection",
+    "agent-detection",
+    "middleware",
+    "express",
+    "hono",
+    "nextjs",
+    "cloudflare-workers",
+    "web-bot-auth",
+    "ai-crawlers"
+  ],
+  "homepage": "https://github.com/necterai/core/tree/main/packages/server#readme",
+  "bugs": {
+    "url": "https://github.com/necterai/core/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/necterai/core.git",
+    "directory": "packages/server"
+  },
+  "license": "MIT",
+  "author": "Necter (https://necter.ai)",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./adapters/*": {
+      "types": "./dist/adapters/*.d.ts",
+      "import": "./dist/adapters/*.js",
+      "require": "./dist/adapters/*.cjs"
+    }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@necterai/browser": "workspace:*",
+    "@necterai/core": "workspace:*",
+    "@necterai/signatures": "workspace:*"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

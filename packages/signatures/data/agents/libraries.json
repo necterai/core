@@ -1,0 +1,756 @@
+[
+  {
+    "id": "lib-python-requests",
+    "provider": "unknown",
+    "product": "python-requests",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^python-requests/"
+    ],
+    "uaExamples": [
+      "python-requests/2.34.2"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Default UA python-requests/<version>; HTTP/1.1 header order Host, User-Agent, Accept-Encoding, Accept, Connection; TLS cipher hash ab0a1bf427ad (CPython ssl). Also the default of LlamaIndex SimpleWebPageReader and LangChain RecursiveUrlLoader (automation-stacks.md#26).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/automation-stacks.md#26"
+    ]
+  },
+  {
+    "id": "lib-python-httpx",
+    "provider": "unknown",
+    "product": "python-httpx",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^python-httpx/"
+    ],
+    "uaExamples": [
+      "python-httpx/0.28.1"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Order Host, Accept, Accept-Encoding, Connection, User-Agent (UA last). The MCP reference fetch server uses httpx but sets its own UA (see mcp-server-fetch).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-aiohttp",
+    "provider": "unknown",
+    "product": "aiohttp",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "aiohttp/\\d"
+    ],
+    "uaExamples": [
+      "Python/3.13 aiohttp/3.14.5"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "UA = SERVER_SOFTWARE (\"Python/<ver> aiohttp/<ver>\"); TLS identical to httpx.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-python-urllib",
+    "provider": "unknown",
+    "product": "Python-urllib",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^Python-urllib/"
+    ],
+    "uaExamples": [
+      "Python-urllib/3.13"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Accept-Encoding: identity first, Connection: close.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-python-urllib3",
+    "provider": "unknown",
+    "product": "python-urllib3",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^python-urllib3/"
+    ],
+    "uaExamples": [
+      "python-urllib3/2.8.0"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Direct urllib3 PoolManager: Host, Accept-Encoding: identity, User-Agent.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-scrapy",
+    "provider": "unknown",
+    "product": "Scrapy",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^Scrapy/"
+    ],
+    "uaExamples": [
+      "Scrapy/2.19.0 (+https://scrapy.org)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "USER_AGENT = \"Scrapy/{version} (+https://scrapy.org)\"; default headers Accept text/html,... and Accept-Language: en; TLS has 30 ciphers and no ALPN. ROBOTSTXT_OBEY is False in library defaults (True in startproject templates).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/server-fingerprints.md#3.6",
+      "docs/research/raw/providers-tier2.md#3.26"
+    ]
+  },
+  {
+    "id": "lib-node-fetch-undici",
+    "provider": "unknown",
+    "product": "Node.js fetch (undici)",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^node$",
+      "^undici$"
+    ],
+    "uaExamples": [
+      "node",
+      "undici"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Node's built-in fetch sends user-agent: node (undici from npm sends 'undici'); lowercase h1 headers host, connection, accept, accept-language: *, sec-fetch-mode: cors, user-agent, accept-encoding. Cloudflare rejects such generic UAs for verified bots.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/server-fingerprints.md#5.5"
+    ]
+  },
+  {
+    "id": "lib-node-fetch-pkg",
+    "provider": "unknown",
+    "product": "node-fetch",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^node-fetch(?:/|$)"
+    ],
+    "uaExamples": [
+      "node-fetch"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "node-fetch 3: accept: */*, accept-encoding: gzip, deflate, br, user-agent: node-fetch.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-axios",
+    "provider": "unknown",
+    "product": "axios",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^axios/"
+    ],
+    "uaExamples": [
+      "axios/1.20.0",
+      "axios/1.8.4"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Accept: application/json, text/plain, */*; Accept-Encoding: gzip, compress, deflate, br. axios/1.8.4 was reported as the Claude Code WebFetch UA (third-party, providers-tier1.md#3.3).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/providers-tier1.md#3.3"
+    ]
+  },
+  {
+    "id": "lib-got",
+    "provider": "unknown",
+    "product": "got",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^got \\(https://github\\.com/sindresorhus/got\\)"
+    ],
+    "uaExamples": [
+      "got (https://github.com/sindresorhus/got)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "got 14: 'user-agent': 'got (https://github.com/sindresorhus/got)'.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-bun",
+    "provider": "unknown",
+    "product": "Bun fetch",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^Bun/"
+    ],
+    "uaExamples": [
+      "Bun/1.4.4"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Bun fetch; BoringSSL hello shares the Firefox cipher hash 5b57614c22b0, no GREASE, HTTP/1.1 only.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.1",
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-deno",
+    "provider": "unknown",
+    "product": "Deno fetch",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^Deno/"
+    ],
+    "uaExamples": [
+      "Deno/2.9.8"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Deno/<version> (+<git hash> on canary); lowercase headers; accept-language: *; accept-encoding: gzip,br.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-go",
+    "provider": "unknown",
+    "product": "Go net/http",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^Go-http-client/"
+    ],
+    "uaExamples": [
+      "Go-http-client/1.1",
+      "Go-http-client/2.0"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Go-http-client/1.1 on HTTP/1.1, Go-http-client/2.0 on h2. Also observed as a forged UA from Baidu ERNIE fetches (providers-tier2.md#3.20).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.2",
+      "docs/research/raw/server-fingerprints.md#3.4",
+      "docs/research/raw/providers-tier2.md#3.20"
+    ]
+  },
+  {
+    "id": "lib-java-httpclient",
+    "provider": "unknown",
+    "product": "Java HttpClient",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^Java-http-client/"
+    ],
+    "uaExamples": [
+      "Java-http-client/21.0.12.1"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "java.net.http.HttpClient: sends Upgrade: h2c + HTTP2-Settings on plaintext; no Accept.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-java-urlconnection",
+    "provider": "unknown",
+    "product": "Java HttpURLConnection",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "(?:^|\\s)Java/\\d"
+    ],
+    "uaExamples": [
+      "Java/21.0.12.1"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "HttpURLConnection: \"Java/\"+version with optional http.agent prefix (hence not anchored); UA sent before Host.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-okhttp",
+    "provider": "unknown",
+    "product": "OkHttp",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^okhttp/"
+    ],
+    "uaExamples": [
+      "okhttp/4.12.0"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "okhttp/<version>; Host, Connection: Keep-Alive, Accept-Encoding: gzip, User-Agent.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-curl",
+    "provider": "unknown",
+    "product": "curl",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^curl/"
+    ],
+    "uaExamples": [
+      "curl/7.88.1",
+      "curl/8.7.1"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Host, User-Agent, Accept: */*; Accept-Encoding only with --compressed.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-wget",
+    "provider": "unknown",
+    "product": "GNU Wget",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^Wget/"
+    ],
+    "uaExamples": [
+      "Wget/1.21.3"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Wget/<version>; Accept-Encoding: identity; Connection: Keep-Alive; no ALPN (GnuTLS).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.4"
+    ]
+  },
+  {
+    "id": "lib-dart",
+    "provider": "unknown",
+    "product": "Dart HTTP client",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^Dart/"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "reported",
+    "runsWhere": "unknown",
+    "uaMatchConfidence": 0.8,
+    "notes": "Cloudflare's verified-bot policy names 'Dart' among generic UA patterns it rejects; exact default string not captured in the research [uncertain format].",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.5"
+    ]
+  },
+  {
+    "id": "lib-langchain-default",
+    "provider": "langchain",
+    "product": "LangChain WebBaseLoader default UA",
+    "class": "fetch-agent",
+    "kind": "http-library",
+    "uaPatterns": [
+      "^DefaultLangchainUserAgent$"
+    ],
+    "uaExamples": [
+      "DefaultLangchainUserAgent"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "langchain-community get_user_agent() returns os.environ['USER_AGENT'] or 'DefaultLangchainUserAgent' (with a logged warning); headers Accept text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8 and Accept-Language en-US,en;q=0.5.",
+    "sources": [
+      "docs/research/raw/automation-stacks.md#26"
+    ]
+  },
+  {
+    "id": "headless-chrome",
+    "provider": "unknown",
+    "product": "HeadlessChrome",
+    "class": "browser-agent",
+    "kind": "headless",
+    "uaPatterns": [
+      "HeadlessChrome/"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.headless-ua",
+    "evidence": "confirmed",
+    "runsWhere": "unknown",
+    "notes": "Chromium inserts \"Headless\" before the product token whenever --headless is set (old shell or new headless) unless the UA is overridden; chrome-headless-shell sends the full version (HeadlessChrome/156.0.8078.47) and a HeadlessChrome UA-CH brand. Prerender.io and stock Playwright/Firecrawl send it too.",
+    "sources": [
+      "docs/research/raw/automation-stacks.md#1.2",
+      "docs/research/raw/cdp-leak-techniques.md#9.1",
+      "docs/research/raw/platform-standards.md"
+    ]
+  },
+  {
+    "id": "headless-legacy-engines",
+    "provider": "unknown",
+    "product": "PhantomJS / Electron headless",
+    "class": "scripted-automation",
+    "kind": "headless",
+    "uaPatterns": [
+      "PhantomJS",
+      "HeadlessFirefox"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.headless-ua",
+    "evidence": "reported",
+    "runsWhere": "unknown",
+    "uaMatchConfidence": 0.9,
+    "notes": "UA tokens tested by open detector inventories (cdp-leak-techniques.md#10.1: /PhantomJS/i, /Electron/i). Electron alone is a normal desktop-app UA and is deliberately not matched. HeadlessFirefox is carried over from the server fallback list [uncertain, not in research].",
+    "sources": [
+      "docs/research/raw/cdp-leak-techniques.md#10.1"
+    ]
+  },
+  {
+    "id": "lightpanda",
+    "provider": "lightpanda",
+    "product": "Lightpanda",
+    "class": "browser-agent",
+    "kind": "headless",
+    "uaPatterns": [
+      "Lightpanda/"
+    ],
+    "uaExamples": [
+      "Lightpanda/1.0"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Lightpanda"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.headless-ua",
+    "evidence": "confirmed",
+    "runsWhere": "customer-env",
+    "notes": "Zig headless browser (not Chromium): user_agent_base \"Lightpanda/1.0\" (+ optional suffix) on the wire and in navigator.userAgent. Its CDP server reports \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36\" to automation clients only.",
+    "sources": [
+      "docs/research/raw/automation-stacks.md#24"
+    ]
+  }
+]

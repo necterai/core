@@ -1,0 +1,420 @@
+[
+  {
+    "id": "mcp-server-fetch",
+    "provider": "modelcontextprotocol",
+    "product": "MCP reference fetch server (mcp-server-fetch)",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "ModelContextProtocol/\\d"
+    ],
+    "uaExamples": [
+      "ModelContextProtocol/1.0 (Autonomous; +https://github.com/modelcontextprotocol/servers)",
+      "ModelContextProtocol/1.0 (User-Specified; +https://github.com/modelcontextprotocol/servers)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "customer-env",
+    "notes": "Autonomous UA for tool calls, User-Specified UA for the prompt. Only User-Agent is set, so the rest of the header set is httpx (Accept: */*, Accept-Encoding: gzip, deflate[, br, zstd], Connection: keep-alive) in httpx order with UA last. Fetches /robots.txt with the Autonomous UA and refuses on 401/403 unless ignore_robots_txt.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.6",
+      "docs/research/raw/automation-stacks.md#26"
+    ]
+  },
+  {
+    "id": "crawl4ai",
+    "provider": "crawl4ai",
+    "product": "Crawl4AI",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "^Mozilla/5\\.0 \\(X11; Linux x86_64\\) AppleWebKit/537\\.36 Chrome/116\\.0\\.0\\.0 Safari/537\\.36$",
+      "\\bCrawl4AI\\b"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/116.0.0.0 Safari/537.36"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Crawl4AI"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "customer-env",
+    "notes": "BrowserConfig default user_agent is frozen at Chrome/116 and lacks the '(KHTML, like Gecko)' token (a malformed, outdated UA). Playwright Chromium, headless=True, viewport 1080x600. 'Crawl4AI' is an ai.robots.txt / robots token, not a documented UA token.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#3.6",
+      "docs/research/raw/automation-stacks.md#21"
+    ]
+  },
+  {
+    "id": "firecrawl",
+    "provider": "firecrawl",
+    "product": "Firecrawl",
+    "class": "fetch-agent",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "FirecrawlAgent"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "FireCrawlAgent",
+      "FirecrawlAgent"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.6,
+    "evidence": "reported",
+    "runsWhere": "operator-cloud",
+    "notes": "Firecrawl publishes no crawler UA or egress IPs; robots.txt is evaluated for the tokens FireCrawlAgent / FirecrawlAgent. Its Playwright service uses a random UA from the user-agents npm package (UA/platform/UA-CH mismatch expected), viewport 1280x800; the fetch engine uses undici with no explicit UA.",
+    "sources": [
+      "docs/research/raw/automation-stacks.md#22",
+      "docs/research/raw/server-fingerprints.md#3.6"
+    ]
+  },
+  {
+    "id": "mozilla-tabstack",
+    "provider": "mozilla",
+    "product": "Mozilla Tabstack",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "Mozilla-Tabstack/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla-Tabstack/1.0 (+https://tabstack.ai)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Mozilla-Tabstack"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "'Direct fetches identify Tabstack with the User-Agent ...'; runs on Google Cloud Platform; uses a server-side browser when needed; no IP list.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.26"
+    ]
+  },
+  {
+    "id": "ai2bot",
+    "provider": "ai2",
+    "product": "AI2Bot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "AI2Bot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible) AI2Bot (+https://www.allenai.org/crawler)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "AI2Bot",
+      "Ai2Bot-Dolma",
+      "AI2Bot-DeepResearchEval"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "allenai.org/crawler: 'always makes requests with' this header. Variants Ai2Bot-Dolma and AI2Bot-DeepResearchEval are reported only (the 'AI2Bot' pattern matches both case-insensitively). No IP list.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.26"
+    ]
+  },
+  {
+    "id": "imagesiftbot",
+    "provider": "hive",
+    "product": "ImagesiftBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "ImagesiftBot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; ImagesiftBot; +imagesift.com)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "ImagesiftBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Imagesift by Hive; supports Crawl-delay; falls back to Googlebot rules. No IP list.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.26"
+    ]
+  },
+  {
+    "id": "webz-omgili",
+    "provider": "webz",
+    "product": "Webz.io (omgili / Webzio)",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "omgili",
+      "Webzio"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "omgili",
+      "omgilibot",
+      "Webzio",
+      "Webzio-Extended"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "uaMatchConfidence": 0.7,
+    "evidence": "reported",
+    "notes": "webz.io/bot.html names Omgilibot, Webzio and Webzio-extended but prints no UA strings; tokens matched as substrings.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.26"
+    ]
+  },
+  {
+    "id": "timpibot",
+    "provider": "timpi",
+    "product": "Timpibot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Timpibot"
+    ],
+    "uaExamples": [
+      "Timpibot/1.0 (+http://timpi.io/crawler)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Timpibot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "reported",
+    "notes": "UA reported (timpi.io/crawler 404).",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.26"
+    ]
+  },
+  {
+    "id": "kangaroo-bot",
+    "provider": "kangaroo",
+    "product": "Kangaroo Bot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Kangaroo Bot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; Kangaroo Bot; +https://www.kangaroo.com)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Kangaroo Bot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "reported",
+    "notes": "UA reported (official page empty).",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.26"
+    ]
+  },
+  {
+    "id": "search-api-fetcher-tokens",
+    "provider": "unknown",
+    "product": "AI search-API fetchers (Tavily, Linkup, Exa, Parallel)",
+    "class": "fetch-agent",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "TavilyBot",
+      "LinkupBot",
+      "ExaUser",
+      "ExaSearchBot",
+      "Shap-User",
+      "ShapBot"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "TavilyBot",
+      "LinkupBot",
+      "ExaUser",
+      "ExaSearchBot",
+      "Shap-User",
+      "ShapBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.7,
+    "evidence": "reported",
+    "notes": "Token vocabulary from ai.robots.txt (ShapBot/Shap-User = Parallel); no operator-published UA strings. Exa signs with Web Bot Auth at crawler.exa.ai (survey).",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#1.5",
+      "docs/research/raw/server-fingerprints.md#6",
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "id": "coding-agent-tokens",
+    "provider": "unknown",
+    "product": "Coding-agent fetch tokens (Devin, Claude-Code, Codex, Cursor)",
+    "class": "fetch-agent",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "\\bDevin\\b",
+      "Claude-Code",
+      "(?:^|[\\s;(])Codex(?:/|;|\\)|\\s|$)",
+      "cursor-server"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Devin",
+      "Claude-Code",
+      "Codex",
+      "Cursor"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.5,
+    "evidence": "reported",
+    "notes": "ai.robots.txt tokens (Claude-Code, Codex, Cursor, Devin); Vercel's directory lists cursor-server ('connects to MCP servers on behalf of a Cursor user'). None is a vendor-published UA. Note 'claude-code/<ver>' also appears inside the Claude-User UA variant, where the longer/higher-ranked claude-user record wins.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#6",
+      "docs/research/raw/server-fingerprints.md#3.6"
+    ]
+  },
+  {
+    "id": "openai-agent-tokens",
+    "provider": "openai",
+    "product": "ChatGPT Agent / Operator tokens",
+    "class": "computer-use-agent",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "ChatGPT Agent",
+      "(?:^|[\\s;(])Operator(?:/|;|\\)|$)"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "ChatGPT Agent",
+      "Operator"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.4,
+    "evidence": "reported",
+    "notes": "ai.robots.txt tokens. OpenAI publishes no UA or robots token for the cloud browser; the real identity is the Signature-Agent \"https://chatgpt.com\" (see chatgpt-agent).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#6",
+      "docs/research/raw/providers-tier1.md#2.5"
+    ]
+  }
+]

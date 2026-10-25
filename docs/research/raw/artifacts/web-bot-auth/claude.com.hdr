@@ -1,0 +1,24 @@
+HTTP/2 404 
+date: Sat, 24 Oct 2026 22:29:56 GMT
+content-type: application/json
+content-length: 68
+cf-ray: a4fc6c565e61c54a-EWR
+cf-cache-status: DYNAMIC
+cache-control: public, max-age=0, must-revalidate
+link: </docs/llms.txt>; rel="llms-txt", </docs/llms-full.txt>; rel="llms-full-txt", </docs/.well-known/api-catalog>; rel="api-catalog", </docs/.well-known/mcp/server-card.json>; rel="mcp-server-card", </docs/.well-known/agent-card.json>; rel="agent-card", </docs/.well-known/agent-skills/index.json>; rel="agent-skills"
+server: cloudflare
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: RSC, Accept
+content-security-policy: worker-src 'self' blob:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests; frame-ancestors 'self' https://dashboard.mintlify.com https://app.mintlify.com; form-action 'self'; default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; media-src 'self' data: blob: https:; frame-src 'self' blob: https:; connect-src 'self' data: https: wss:;
+content-security-policy-report-only: default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: blob: https:; font-src 'self' data: https:; media-src 'self' data: blob: https:; frame-src 'self' blob: https:; connect-src 'self' data: https: wss:; worker-src 'self' blob:; object-src 'none'; report-uri /docs/_mintlify/api/csp-report; report-to mintlify-csp;
+reporting-endpoints: mintlify-csp="/docs/_mintlify/api/csp-report"
+x-content-type-options: nosniff
+x-llms-txt: /docs/llms.txt
+x-mintlify-client-version: 0.0.3965
+x-vercel-error: NOT_FOUND
+x-vercel-id: iad1::25bm4-1792880996948-d5392a314e6b
+x-vercel-project-id: prj_ekSYngkqMLMUb1wdarxNSixTj2nj
+x-version: dpl_CKzG9FTTY7DrsK1tjh847FhYzEt9
+set-cookie: __cf_bm=Tr7b0DUk2dolWDvwbAaNTdNeMWVvFs45f75hfBp0Ex8-1792880996.8598523-1.0.1.1-XrmJf.DbA70yu8EKJEgtqOfcvJVHX3z6RpuHhgmySsYBDnCQvJsDktjfZBFUbtwx7VZRd1PCXMwSifjror62XisWSpJJ7tPk_Iz1rd6d9QD7ssdLLKWC1q_0IDNoZerB; HttpOnly; SameSite=None; Secure; Path=/; Domain=claude.com; Expires=Sat, 24 Oct 2026 22:59:56 GMT
+alt-svc: h3=":443"; ma=86400
+

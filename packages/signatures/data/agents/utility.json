@@ -1,0 +1,702 @@
+[
+  {
+    "id": "unfurl-slack",
+    "provider": "slack",
+    "product": "Slackbot link expanding",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Slackbot",
+      "Slack-ImgProxy"
+    ],
+    "uaExamples": [
+      "Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)",
+      "Slack-ImgProxy 0.19 (+https://api.slack.com/robots)",
+      "Slackbot 1.0 (+https://api.slack.com/robots)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "'We do not currently honor robots.txt files'; no IP list; fetches only part of the page.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.2"
+    ]
+  },
+  {
+    "id": "unfurl-twitter",
+    "provider": "twitter",
+    "product": "Twitterbot",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Twitterbot"
+    ],
+    "uaExamples": [
+      "Twitterbot/1.0"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Likely (vendor page returned HTTP 402).",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.2"
+    ]
+  },
+  {
+    "id": "unfurl-linkedin",
+    "provider": "linkedin",
+    "product": "LinkedInBot",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "LinkedInBot"
+    ],
+    "uaExamples": [
+      "LinkedInBot/1.0 (compatible; Mozilla/5.0; Apache-HttpClient +http://www.linkedin.com)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Likely (LinkedIn help page has no string). Post Inspector.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.2"
+    ]
+  },
+  {
+    "id": "unfurl-discord",
+    "provider": "discord",
+    "product": "Discordbot",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Discordbot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; Discordbot/2.0; +https://discordapp.com)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Likely.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.2"
+    ]
+  },
+  {
+    "id": "unfurl-whatsapp",
+    "provider": "meta",
+    "product": "WhatsApp link preview",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "^WhatsApp/\\d"
+    ],
+    "uaExamples": [
+      "WhatsApp/2.12.15/i"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "runsWhere": "user-device",
+    "notes": "Likely; shapes 'WhatsApp/2.x.y A' and 'WhatsApp/2.12.15/i'. Fetches from the user's device or Meta infra depending on platform (uncertain).",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.2"
+    ]
+  },
+  {
+    "id": "unfurl-telegram",
+    "provider": "telegram",
+    "product": "TelegramBot",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "TelegramBot(?: \\(like TwitterBot\\))?"
+    ],
+    "uaExamples": [
+      "TelegramBot (like TwitterBot)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Likely. The pattern captures '(like TwitterBot)' so the Telegram match is longer than the Twitterbot one.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.2"
+    ]
+  },
+  {
+    "id": "link-previewers",
+    "provider": "unknown",
+    "product": "Link previewers (Pinterest, Reddit, Skype, Snapchat, Bluesky, Mastodon, Embedly, Iframely)",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Pinterestbot",
+      "redditbot",
+      "SkypeUriPreview",
+      "Snap URL Preview Service",
+      "Bluesky",
+      "Mastodon/\\d",
+      "Embedly",
+      "Iframely"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; Pinterestbot/1.0; +http://www.pinterest.com/bot.html)",
+      "Mozilla/5.0 (compatible; redditbot/1.0; +http://www.reddit.com/feedback)",
+      "Snap URL Preview Service; bot; snapchat; https://developers.snap.com/robots",
+      "http.rb/2.2.2 (Mastodon/1.5.1; +https://instance)",
+      "Mozilla/5.0 (compatible; Embedly/0.2; +http://support.embed.ly/)",
+      "Iframely/1.3.1 (+https://iframely.com/docs/about)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Strings 'likely' (list instances). Skype shape '... SkypeUriPreview Preview/0.5', Bluesky 'Bluesky/...'. Mastodon previews are fetched by every federated instance (bursts from many IPs seconds after a post) - not a scraper.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.2"
+    ]
+  },
+  {
+    "id": "mail-image-proxies",
+    "provider": "unknown",
+    "product": "Mail image proxies (Yahoo, Gmail)",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "YahooMailProxy",
+      "GoogleImageProxy"
+    ],
+    "uaExamples": [
+      "YahooMailProxy; https://help.yahoo.com/kb/yahoo-mail-proxy-SLN28749.html"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Likely. Gmail shape '... (via ggpht.com GoogleImageProxy)'. Image proxies for humans reading mail.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.2"
+    ]
+  },
+  {
+    "id": "monitor-checkly",
+    "provider": "checkly",
+    "product": "Checkly",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Checkly"
+    ],
+    "uaExamples": [
+      "Checkly/1.0 (https://www.checklyhq.com)",
+      "Checkly, https://www.checklyhq.com"
+    ],
+    "ipRangeUrls": [
+      "https://api.checklyhq.com/v1/static-ips"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "API/multistep 'Checkly/1.0 (...)'; Playwright browser checks append '(Checkly, https://www.checklyhq.com)'; allowlist on 'Checkly/<UUID>'; optional Cookie 'checkly-account:<UUID>'; registered with Cloudflare as a verified bot.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.3"
+    ]
+  },
+  {
+    "id": "monitor-datadog",
+    "provider": "datadog",
+    "product": "Datadog Synthetics",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "DatadogSynthetics",
+      "Datadog/Synthetics"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.7204.168 Safari/537.36 DatadogSynthetics",
+      "Datadog/Synthetics"
+    ],
+    "ipRangeUrls": [
+      "https://ip-ranges.datadoghq.com/synthetics.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "Browser tests always end with 'DatadogSynthetics'; headers 'sec-datadog: Request sent by a Datadog Synthetics ...' and 'x-datadog-origin: synthetics'.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.3"
+    ]
+  },
+  {
+    "id": "monitor-pingdom",
+    "provider": "pingdom",
+    "product": "Pingdom",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Pingdom"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; Pingdom.com_bot_version_1.4_(http://www.pingdom.com/))"
+    ],
+    "ipRangeUrls": [
+      "https://my.pingdom.com/probes/ipv4",
+      "https://my.pingdom.com/probes/ipv6"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Keyword 'pingdom' in UA; classic string likely; transaction/page-speed checks use a real Chrome from AWS.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.3"
+    ]
+  },
+  {
+    "id": "monitor-uptimerobot",
+    "provider": "uptimerobot",
+    "product": "UptimeRobot",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "UptimeRobot/"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0+(compatible; UptimeRobot/2.0; http://www.uptimerobot.com/)"
+    ],
+    "ipRangeUrls": [
+      "https://cdn.uptimerobot.com/api/IPv4andIPv6.txt"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Likely (help page omits the UA).",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.3"
+    ]
+  },
+  {
+    "id": "monitor-misc",
+    "provider": "unknown",
+    "product": "Uptime / performance monitors",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "StatusCake_Uptime_Checker",
+      "Site24x7",
+      "Better Uptime Bot",
+      "BetterUptimeBot",
+      "Uptime-Kuma/",
+      "HetrixTools",
+      "FreshpingBot",
+      "cron-job\\.org",
+      "EasyCron/",
+      "GTmetrix",
+      "Chrome-Lighthouse"
+    ],
+    "uaExamples": [
+      "StatusCake_Uptime_Checker/1.0",
+      "HetrixTools Uptime Monitoring Bot. https://hetrix.tools/uptime-monitoring-bot.html",
+      "FreshpingBot/1.0 (+https://freshping.io/)",
+      "cron-job.org monitor",
+      "EasyCron/1.0 (https://www.easycron.com/)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "List instances ('likely'). GTmetrix appends a suffix to a Chrome UA. 'Chrome-Lighthouse' only in old fixtures: Lighthouse dropped its identifier in v10 (Jan 2023) and now sends a plain moto g power / Chrome 136 UA.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.3",
+      "docs/research/raw/false-positive-traps.md#12.4"
+    ]
+  },
+  {
+    "id": "seo-screamingfrog",
+    "provider": "screamingfrog",
+    "product": "Screaming Frog SEO Spider",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Screaming Frog SEO Spider"
+    ],
+    "uaExamples": [
+      "Screaming Frog SEO Spider/5.1"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "Own UA by default; ships Googlebot/Bingbot/browser presets (verify Googlebot claims with rDNS); respects robots.txt by default.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.5"
+    ]
+  },
+  {
+    "id": "prerender-io",
+    "provider": "prerender",
+    "product": "Prerender.io",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Prerender \\(\\+https://github\\.com/prerender/prerender\\)"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/W.X.Y.Z Safari/537.36 Prerender (+https://github.com/prerender/prerender)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "Wanted renderer; carries HeadlessChrome as well, the longer Prerender match wins. Rendertron has no token (injects customElements.forcePolyfill / ShadyDOM / ShadyCSS).",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.5"
+    ]
+  },
+  {
+    "id": "ads-quality-snapchat",
+    "provider": "snap",
+    "product": "SnapchatAds",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "SnapchatAds/"
+    ],
+    "uaExamples": [
+      "SnapchatAds/1.0"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Likely. Ads landing-page checker; blocking breaks the owner's campaigns.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.5"
+    ]
+  },
+  {
+    "id": "security-scanners",
+    "provider": "unknown",
+    "product": "Internet security scanners",
+    "class": "scripted-automation",
+    "kind": "utility",
+    "uaPatterns": [
+      "\\bNessus\\b",
+      "compatible; Qualys",
+      "CensysInspect",
+      "\\bzgrab/",
+      "\\bExpanse\\b"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; Nessus; http://www.nessus.org)",
+      "Mozilla/5.0 (compatible; Qualys; +https://www.qualys.com/)",
+      "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)",
+      "Mozilla/5.0 zgrab/0.x"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "observed",
+    "notes": "List instances (likely). Owner-commissioned scanners should be allowlisted by IP; third-party scanners are policy decisions, not AI agents. Palo Alto Expanse shape not captured.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.5"
+    ]
+  },
+  {
+    "id": "feed-readers",
+    "provider": "unknown",
+    "product": "Feed readers (Feedly, Inoreader, NewsBlur)",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Feedly/[^\\s;)]*(?: \\([^)]*\\))?",
+      "inoreader\\.com",
+      "NewsBlur Feed Fetcher"
+    ],
+    "uaExamples": [
+      "Feedly/1.0 (+http://www.feedly.com/fetcher.html; like FeedFetcher-Google)",
+      "Mozilla/5.0 (compatible; inoreader.com; 1 subscribers)",
+      "NewsBlur Feed Fetcher - 1 subscriber - ..."
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "observed",
+    "notes": "Likely. Feedly's UA contains 'FeedFetcher-Google' ('like FeedFetcher-Google'): the Feedly match is longer and wins; never verify it against Google ranges. The Feedly pattern captures the whole '(... like FeedFetcher-Google)' comment so that it out-ranks the FeedFetcher-Google token on specificity.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.5"
+    ]
+  },
+  {
+    "id": "chrome-prefetch-proxy",
+    "provider": "google",
+    "product": "Chrome Privacy Preserving Prefetch Proxy",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Chrome Privacy Preserving Prefetch Proxy"
+    ],
+    "uaExamples": [
+      "Chrome Privacy Preserving Prefetch Proxy"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "reported",
+    "runsWhere": "operator-cloud",
+    "notes": "Used for /.well-known/traffic-advice probing (crawler-user-agents list, likely). Prefetches arrive from Google IPs without cookies and are then consumed by a real person: never attribute as a bot session.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#8.4"
+    ]
+  },
+  {
+    "id": "yandexbot",
+    "provider": "yandex",
+    "product": "YandexBot",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "YandexBot/",
+      "YandexImages",
+      "YandexMobileBot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [
+      ".yandex.ru",
+      ".yandex.net",
+      ".yandex.com"
+    ],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "rdns"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "reported",
+    "notes": "UA and rDNS suffixes 'likely' (not verified in this research). YandexImages/YandexMobileBot carried over from the server fallback list [uncertain].",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.1"
+    ]
+  },
+  {
+    "id": "search-engines-misc",
+    "provider": "unknown",
+    "product": "Other search crawlers (Kagi, Qwant, Mojeek, Seznam, Sogou)",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Kagibot",
+      "Qwantify",
+      "MojeekBot",
+      "SeznamBot",
+      "Sogou"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; Kagibot/1.0; +https://kagi.com/bot)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "reported",
+    "notes": "Instances from the monperrus crawler list (likely). Anubis allowlists Google, Apple, Bing, DuckDuckGo, Qwant, Internet Archive, Kagi, Marginalia, Mojeek, Arquivo.pt as a minimal wanted-search set.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#12.1"
+    ]
+  }
+]

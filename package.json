@@ -1,0 +1,36 @@
+{
+  "name": "necter",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Necter: open-source firewall for AI agents. Identify, attribute and intervene against browser agents, computer-use agents, agentic browser extensions, fetch agents and AI crawlers.",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "pnpm -r --filter './packages/**' run build",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test",
+    "test:unit": "pnpm --filter './packages/**' run test",
+    "demo": "pnpm --filter @necterai/demo run dev",
+    "zoo": "pnpm --filter @necterai/zoo run zoo",
+    "sync:signatures": "pnpm --filter @necterai/signatures run sync",
+    "collector": "pnpm --filter @necterai/collector run start",
+    "version:set": "node scripts/set-version.mjs",
+    "datasets": "node scripts/fetch-datasets.mjs"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^24.19.2",
+    "jsdom": "^28",
+    "tsup": "^9.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/necterai/core.git"
+  }
+}

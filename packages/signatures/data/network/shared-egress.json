@@ -1,0 +1,103 @@
+[
+  {
+    "id": "icloud-private-relay",
+    "name": "iCloud Private Relay",
+    "kind": "relay",
+    "provider": "apple",
+    "prefixes": [
+      "172.224.226.0/27",
+      "172.224.226.32/31",
+      "2a02:26f7:b784:4dc7::/64"
+    ],
+    "asns": [
+      36183
+    ],
+    "partial": true,
+    "treatment": "suppress-datacenter",
+    "listUrl": "https://mask-api.icloud.com/egress-ip-ranges.csv",
+    "format": "csv-geofeed",
+    "dnsNames": [
+      "mask.icloud.com",
+      "mask-h2.icloud.com"
+    ],
+    "notes": "285,106 rows (12 MB) - sync-time download (ip source icloud-private-relay). Bundled prefixes are the rows quoted in the research only. Apple: \"Consider treating these addresses like larger carrier-grade NAT\"; relay IP stable per browsing session; Private Access Tokens recommended over CAPTCHAs.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.4",
+      "docs/research/raw/false-positive-traps.md#8.1"
+    ]
+  },
+  {
+    "id": "cloudflare-warp",
+    "name": "Cloudflare WARP / Zero Trust Gateway",
+    "kind": "vpn",
+    "provider": "cloudflare",
+    "prefixes": [],
+    "asns": [
+      13335
+    ],
+    "partial": true,
+    "treatment": "suppress-datacenter",
+    "ingressPrefixes": [
+      "162.159.192.0/24",
+      "162.159.193.0/24",
+      "162.159.197.0/24",
+      "162.159.239.0/24",
+      "2606:4700:100::/48",
+      "2606:4700:102::/48",
+      "2606:4700:105::/48"
+    ],
+    "notes": "Cloudflare \"does not publish One Client egress ranges\"; users egress from the shared AS13335 pool. Only ingress ranges are documented (WireGuard 162.159.193.0/24, MASQUE 162.159.197.0/24, FedRAMP 162.159.239.0/24, consumer 162.159.192.0/24): these never appear as client IPs at an origin, so they are kept in ingressPrefixes, not prefixes. Anubis penalises AS13335 (false-positive trap).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.4",
+      "docs/research/raw/false-positive-traps.md#8.2"
+    ]
+  },
+  {
+    "id": "zscaler",
+    "name": "Zscaler ZIA",
+    "kind": "enterprise-proxy",
+    "provider": "zscaler",
+    "prefixes": [
+      "159.254.250.0/23"
+    ],
+    "partial": true,
+    "treatment": "suppress-datacenter",
+    "listUrl": "https://config.zscaler.com/api/zscaler.net/cenr/json",
+    "format": "cidr-scan",
+    "notes": "~131 KB JSON grouped by continent/city; bundled prefix is the research example (\"Abu Dhabi II\"). Reverse/zero-trust proxies obscure bot signals (Vercel/Zscaler incident).",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#8.3",
+      "docs/research/raw/false-positive-traps.md#14.3"
+    ]
+  },
+  {
+    "id": "tor-exits",
+    "name": "Tor exit relays",
+    "kind": "vpn",
+    "provider": "tor",
+    "prefixes": [],
+    "partial": true,
+    "treatment": "tag-only",
+    "listUrl": "https://check.torproject.org/torbulkexitlist",
+    "format": "txt-lines",
+    "notes": "Plain-text exit list (~17 KB), sync-time only.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#8.3"
+    ]
+  },
+  {
+    "id": "mullvad",
+    "name": "Mullvad VPN",
+    "kind": "vpn",
+    "provider": "mullvad",
+    "prefixes": [],
+    "partial": true,
+    "treatment": "tag-only",
+    "listUrl": "https://api.mullvad.net/www/relays/all/",
+    "format": "cidr-scan",
+    "notes": "Relay list JSON (~294 KB) with ipv4_addr_in / ipv6_addr_in; sync-time only.",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#8.3"
+    ]
+  }
+]

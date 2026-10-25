@@ -1,0 +1,16 @@
+HTTP/2 404 
+server: Apple
+content-type: text/html; charset=iso-8859-1
+content-length: 196
+x-nxid: ca9eb82c0bdef275b75c18306723867d
+x-shred: 02a7c5d5a67469c8793e519b1eede7ea
+server-timing: app;dur=0.007401, dc;desc=ucp5
+access-control-allow-origin: https://www.apple.com
+cache-control: max-age=0
+expires: Sat, 24 Oct 2026 22:38:59 GMT
+date: Sat, 24 Oct 2026 22:38:59 GMT
+server-timing: edge; dur=14
+server-timing: origin; dur=91
+server-timing: cdn-cache; desc=MISS
+server-timing: ak_p; desc="1792881539402_399005959_233323658_10548_2643_9_16_15";dur=1
+

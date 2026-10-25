@@ -1,0 +1,19 @@
+{
+  "name": "@necterai/demo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@necterai/browser": "workspace:*",
+    "@necterai/core": "workspace:*",
+    "@necterai/server": "workspace:*",
+    "@necterai/signatures": "workspace:*",
+    "@hono/node-server": "^2.1.5",
+    "hono": "^4.13.13"
+  }
+}

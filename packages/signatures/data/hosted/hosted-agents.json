@@ -1,0 +1,811 @@
+[
+  {
+    "id": "openai-chatgpt-agent-cloud-browser",
+    "provider": "openai",
+    "product": "ChatGPT Work Cloud browser (formerly ChatGPT agent / Operator)",
+    "class": "computer-use-agent",
+    "features": {
+      "screen": { "width": 1280, "height": 960 },
+      "hardwareConcurrency": 13,
+      "uaPattern": "^Mozilla/5\\.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537\\.36 \\(KHTML, like Gecko\\) Chrome/\\d+\\.0\\.0\\.0 Safari/537\\.36$",
+      "uaExample": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
+      "platformHint": "Sec-CH-UA-Platform: \"Linux\" with a macOS UA (Aug 2025); navigator.platform differs between the main thread and a Web Worker (Castle; exact values not published)",
+      "uaPlatformMismatch": true,
+      "brandsChromiumOnly": true,
+      "fonts": "font list \"only Calibri\" (FP-Agent arXiv 2605.01247 via competitors.md; secondary summary)",
+      "cookies": "reused",
+      "network": "1 ASN; \"always visited our honeysites from the Cloudflare infrastructure located in the European Union\" (IP hosting proportion 0.88, abuser proportion 0.14, Jan-Feb 2026). Aug 2025 observation: Cf-Connecting-Ip 2a09:bac5:665f:1541::21e:154 (Cf-Ipcountry: US), Cloudflare 2a09:bac5::/32-area space [likely]. No published IP list for the cloud browser; whether it egresses from openai.com/chatgpt-agents.json is not stated [uncertain].",
+      "webBotAuth": "Signature-Agent: \"https://chatgpt.com\" (quoted sf-string, include the quotes); Signature-Input: sig1=(\"@authority\" \"@method\" \"@path\" \"signature-agent\");created=…;expires=…;keyid=\"…\";nonce=\"…\";tag=\"web-bot-auth\";alg=\"ed25519\" (validity ~1 h); directory https://chatgpt.com/.well-known/http-message-signatures-directory (1 Ed25519 key, kid ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY, \"signature_agent\":\"https://chatgpt.com\", \"purpose\":\"ai\", cache-control no-store, rolling exp - re-fetch, do not pin)",
+      "permissions": "the majority of navigator.permissions.query calls fail (arXiv 2606.30119 Table 11: NS for 12 of 13 permissions, 'd' for the last)",
+      "tls": "TCP only (no QUIC); 28 cipher suites, 12 TLS extensions; dominant JA4 (index 18) unique to it - \"perfectly classified using only its JA4 fingerprint\"",
+      "input": "Undocumented custom stack (not Playwright per arXiv); pixels in, virtual mouse/keyboard out. Castle: navigator.webdriver not set, \"No CDP artifacts\", TLS and JS environment match stock Chrome. HUMAN (via providers-tier2 §5): straight-line pointer paths and 0.25-px coordinate steps [reported].",
+      "coordinateGrid": "1280×960 screen; whether the model sees a downscaled frame is unknown",
+      "timing": "HUMAN: \"Right now, that process isn't faster than a human\"",
+      "other": [
+        "Chromium 141.0.7390.122 (tests 2026-01-28, 02-08, 02-09); \"exposes a unique Chrome version and platform combination\"",
+        "Aug 2025 (Simon Willison) and mid-2025 (Castle): Chrome/138 Mac UA; Sec-Ch-Ua: \"Not)A;Brand\";v=\"8\", \"Chromium\";v=\"138\"; Sec-Ch-Ua-Mobile: ?0",
+        "Early 2025 (Seer/CHEQ): Operator identified as Linux Chrome; quirk described as obsolete",
+        "Headers on requests: signature, signature-input, signature-agent",
+        "Anti-bot outcomes: passed robots.txt, UA filtering, reCAPTCHA v3, Prosopo, Anubis, Cloudflare BFM & Block AI Bots; blocked by Turnstile; on Turnstile sometimes navigates to sibling/alternative sites",
+        "May try to read its own UA via an external website or by opening a terminal; does not adapt UA/headers when prompted",
+        "Terminal/text-browser tools may send signed requests with UAs Python-urllib/3.12, python-requests/2.34.2, curl/8.5.0 [uncertain, single community thread]",
+        "\"at launch, Cloud browser cannot sign in to websites or complete payments\" - a signed session at checkout is anomalous",
+        "Vendor labels: Cloudflare bot tag chatgpt-agent / Detection ID 129220581 / dashboard \"ChatGPT Operator\"; Akamai \"ChatGPT Agent\"; HUMAN \"ChatGPT Agent\"; Vercel chatgpt-operator; Fingerprint bot_info.name \"ChatGPT Agent\"",
+        "HUMAN profile: \"Useragent: Generic Chrome\", \"robots.txt Compliance: No\"",
+        "DataDome Q3-2026: 27.4 million requests in September 2026 [likely]"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Environment bundle measured by Fayolle et al. (arXiv 2606.30119) on 2026-01-28/02-08/02-09 against the then 'ChatGPT agent'; the product has since been renamed ChatGPT Work Cloud browser (agent mode removed ~Aug 2026) and its current screen/OS/UA version/egress are not published (computer-use-agents.md §13 item 2) - treat screen 1280×960, 13 cores and Chrome 141 as dated values that will drift. Signature-Agent and directory re-verified live 2026-10-24. uaPattern deliberately accepts any Chrome major with the frozen Mac token; on its own it matches every Mac Chrome, so it is only meaningful combined with the Linux client hint / signature.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#3.2",
+      "docs/research/raw/computer-use-agents.md#3.3",
+      "docs/research/raw/computer-use-agents.md#11.5",
+      "docs/research/raw/providers-tier1.md#2.5",
+      "docs/research/raw/competitors.md",
+      "https://arxiv.org/pdf/2606.30119",
+      "https://help.openai.com/en/articles/11845367-chatgpt-works-cloud-browser-allowlisting",
+      "https://chatgpt.com/.well-known/http-message-signatures-directory",
+      "https://simonwillison.net/2025/Aug/4/chatgpt-agents-user-agent/",
+      "https://blog.castle.io/from-detection-to-trust-the-evolving-challenge-of-ai-bot-authentication/",
+      "https://www.humansecurity.com/ai-agent/chatgpt-agent/",
+      "https://cloudless.sh/log/web-bot-auth-in-the-wild/",
+      "https://community.openai.com/t/python-user-agents-coming-with-proper-web-bot-auth-signature-headers/1409085"
+    ]
+  },
+  {
+    "id": "anthropic-computer-use-demo",
+    "provider": "anthropic",
+    "product": "computer-use-demo reference container (anthropic-quickstarts)",
+    "class": "computer-use-agent",
+    "features": {
+      "screen": { "width": 1024, "height": 768 },
+      "uaPattern": "\\bLinux\\b.*\\bFirefox/\\d+",
+      "platformHint": "Linux (Ubuntu 22.04 container, Xvfb; architecture = platform.machine() of the host)",
+      "webglRenderer": null,
+      "timezone": "UTC",
+      "fonts": "no font packages installed; inherits distro defaults (inference: DejaVu/Liberation)",
+      "cookies": "fresh",
+      "network": "customer's (wherever the container runs); no Anthropic egress",
+      "webBotAuth": "none (claude.ai, www.anthropic.com, api.anthropic.com directories 404 on 2026-10-24)",
+      "input": "OS-level X11 XTEST via xdotool on Xvfb - fully trusted events. mouse_move: `xdotool mousemove --sync {x} {y}` (single warp, no intermediate motion); clicks: `xdotool [mousemove --sync x y] click 1|2|3` (mousedown→mouseup ≈12 ms, very low variance); double/triple: `click --repeat 2|3 --delay 10 1`; drag: `mousemove --sync sx sy mousedown 1 mousemove --sync ex ey mouseup 1`; scroll: `click --repeat {scroll_amount} {4|5|6|7}` (N discrete wheel notches back-to-back); type: `xdotool type --delay 12 -- '{chunk}'` (TYPING_DELAY_MS = 12, TYPING_GROUP_SIZE = 50 → uniform 12 ms keystrokes); key: `xdotool key -- {text}`; hold_key: `keydown {k} sleep {duration} keyup {k}`",
+      "coordinateGrid": "Screenshots scaled to MAX_SCALING_TARGETS XGA 1024x768 / WXGA 1280x800 / FWXGA 1366x768 (chosen when |aspect - target| < 0.02 and target width < display width); API coords mapped back with round(x / factor). 1920×1080 display → 1366×768 frame, stride ≈1.4056 px (reachable columns alternate 1/2 px); 2560×1600 → 1280×800, only even pixels; 1024×768 / 1280×800 / 1366×768 displays: factor 1, no lattice. Toolset models accept up to 2576 px long edge, so newer harnesses may send unscaled frames (no lattice).",
+      "timing": "fixed _screenshot_delay = 2.0 s after every action + model round trip → multi-second per step; actions batched in one turn fire back-to-back",
+      "other": [
+        "Dockerfile: FROM docker.io/ubuntu:22.04; ARG DISPLAY_NUM=1, HEIGHT=768, WIDTH=1024; user computeruse (/home/computeruse)",
+        "Packages: xvfb, xdotool, mutter, tint2, firefox-esr, scrot, imagemagick, libreoffice, x11vnc, noVNC 1.5.0 (no gnome-screenshot; no font/locale/timezone packages)",
+        "Xvfb $DISPLAY -ac -screen 0 ${WIDTH}x${HEIGHT}x24 -retro -dpi 96 -nolisten tcp -nolisten unix (24-bit, DPI 96)",
+        "Browser: Firefox ESR (system prompt: \"Note, firefox-esr is what is installed on your system.\")",
+        "GPU: none / software WebGL (exact renderer string not measured)",
+        "Locale: container default, inferred C.UTF-8/POSIX (navigator.language value not measured)",
+        "hardwareConcurrency: the host's (not fixed by the image)",
+        "Ports 5900 (VNC), 6080 (noVNC), 8501 (Streamlit), 8080 (combined UI)",
+        "Earlier tool entry: {\"type\": \"computer_20251124\", \"name\": \"computer\", \"display_width_px\": 1024, \"display_height_px\": 768, \"display_number\": 1}",
+        "README pads small displays with black to 1024×768; Claude refuses CAPTCHAs (20/20 refusals on Prosopo for Claude in Chrome)"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Source-code facts from anthropic-quickstarts main read 2026-10-24. Timezone UTC, locale and font set are INFERENCES from the absence of tz/locale/font packages, not measurements; the exact Firefox ESR UA string, WebGL renderer and xdotool wheel deltaY/deltaMode in Firefox are lab items (§13). uaPattern is a derived generic Linux-Firefox matcher, not a measured UA - weak on its own; combine with 1024×768 screen and 12 ms cadence. Customers commonly change WIDTH/HEIGHT (resolution guidance 1024x768, 1280x720, 1280x800, 1366x768).",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#2.1",
+      "docs/research/raw/computer-use-agents.md#2.2",
+      "docs/research/raw/computer-use-agents.md#11.2",
+      "docs/research/raw/computer-use-agents.md#11.3",
+      "docs/research/raw/computer-use-agents.md#11.5",
+      "docs/research/raw/automation-stacks.md#20",
+      "https://raw.githubusercontent.com/anthropics/anthropic-quickstarts/main/computer-use-demo/Dockerfile",
+      "https://raw.githubusercontent.com/anthropics/anthropic-quickstarts/main/computer-use-demo/image/xvfb_startup.sh",
+      "https://raw.githubusercontent.com/anthropics/anthropic-quickstarts/main/computer-use-demo/computer_use_demo/tools/computer.py",
+      "https://raw.githubusercontent.com/anthropics/anthropic-quickstarts/main/computer-use-demo/README.md",
+      "https://platform.claude.com/docs/en/docs/agents-and-tools/tool-use/computer-use-tool",
+      "https://man.archlinux.org/man/xdotool.1"
+    ]
+  },
+  {
+    "id": "anthropic-browser-toolset-cdp-reference",
+    "provider": "anthropic",
+    "product": "Browser use tool reference CDP driver (claude-quickstarts browser-toolset cdp_browser.py)",
+    "class": "browser-agent",
+    "features": {
+      "cookies": "fresh",
+      "network": "executor's own (\"the sites Claude visits see your executor's network identity\"); nothing runs on Anthropic's side",
+      "webBotAuth": "none",
+      "input": "CDP Input.dispatchMouseEvent: left_click sends exactly one {type: mouseMoved, x, y} then mousePressed and mouseReleased (button left, clickCount 1) - isTrusted true, one teleport move, 0-10 ms press→release. Ref clicks first run el.scrollIntoView({ block: 'center', inline: 'center', behavior: 'instant' }) in page JS (scroll without wheel events). read_page / get_page_text use Runtime.evaluate over document.querySelectorAll / document.body.innerText. Runtime.enable is enabled (CDP leak surface).",
+      "coordinateGrid": "\"Coordinates are viewport pixels\"; ref clicks land at exact element centers after centering scroll. SDK scaling example SCREENSHOT_SIZE = (1280, 720), DISPLAY_SIZE = (2560, 1440) → stride 2.0",
+      "other": [
+        "Chromium launched with --remote-debugging-port=0, --user-data-dir=..., --window-size=1280,720, --disable-extensions, optional --headless=new",
+        "Page.enable, Page.setLifecycleEventsEnabled, Runtime.enable",
+        "Partner drivers: Browser Use, Browserbase (Stagehand stagehand-claude-sdk, repo browserbase/claude-cua-toolset), Daytona, E2B"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Reference driver (\"isn't production code\") read from source 2026-10-24. --window-size=1280,720 sets the window, not the measured viewport, so viewport is omitted. Production deployments use partner drivers whose environment is the partner's (see browserbase/steel records).",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#2.3",
+      "docs/research/raw/computer-use-agents.md#11.2",
+      "docs/research/raw/computer-use-agents.md#11.3",
+      "docs/research/raw/providers-tier1.md#3.5",
+      "https://platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-tool",
+      "https://platform.claude.com/docs/en/agents-and-tools/tool-use/browser-use-sdk",
+      "https://raw.githubusercontent.com/anthropics/claude-quickstarts/main/browser-toolset/python/cdp_browser.py"
+    ]
+  },
+  {
+    "id": "openai-cua-sample-app-playwright-2025",
+    "provider": "openai",
+    "product": "openai-cua-sample-app LocalPlaywrightComputer (commit a8a75a30, 2025-04-08)",
+    "class": "browser-agent",
+    "features": {
+      "viewport": { "width": 1024, "height": 768 },
+      "network": "customer's",
+      "webBotAuth": "none",
+      "input": "Playwright: click → page.mouse.click(x, y, button) (single mousemove at destination, delay 0); double_click → page.mouse.dblclick; scroll → page.mouse.move(x, y) then page.evaluate(window.scrollBy(scroll_x, scroll_y)) - programmatic scroll with NO wheel event; type → page.keyboard.type(text) (no per-key delay); keypress → keyboard.down for each key then keyboard.up in reverse; drag → mouse.move/down/move.../up",
+      "coordinateGrid": "integer screenshot pixels = viewport pixels, no scaling (1024×768)",
+      "timing": "wait() default 1000 ms",
+      "other": [
+        "chromium.launch(chromium_sandbox=True, headless=False, args=[\"--window-size=1024,768\", \"--disable-extensions\", \"--disable-file-system\"], env={\"DISPLAY\": \":0\"})",
+        "get_dimensions() = (1024, 768); page.set_viewport_size",
+        "start URL https://bing.com",
+        "no UA override (stock Playwright Chromium UA)",
+        "tool: {\"type\": \"computer-preview\", \"display_width\", \"display_height\", \"environment\" ∈ windows|mac|linux|browser}, model computer-use-preview"
+      ]
+    },
+    "signal": "env.default-automation-viewport",
+    "confidence": "confirmed",
+    "notes": "Developer-run sample, not an OpenAI-hosted deployment; read from source at pinned commit. Current docs' Playwright examples still use viewport { width: 1024, height: 768 }. Playwright globals / navigator.webdriver apply unless patched.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#3.5",
+      "docs/research/raw/computer-use-agents.md#11.2",
+      "docs/research/raw/computer-use-agents.md#11.3",
+      "https://raw.githubusercontent.com/openai/openai-cua-sample-app/a8a75a301304137656c6b56168c521bfc326d17d/computers/default/local_playwright.py",
+      "https://raw.githubusercontent.com/openai/openai-cua-sample-app/a8a75a301304137656c6b56168c521bfc326d17d/computers/shared/base_playwright.py",
+      "https://developers.openai.com/api/docs/guides/tools-computer-use"
+    ]
+  },
+  {
+    "id": "openai-cua-sample-app-docker",
+    "provider": "openai",
+    "product": "openai-cua-sample-app DockerComputer (xdotool, commit a8a75a30)",
+    "class": "computer-use-agent",
+    "features": {
+      "network": "customer's; README runs the container with --dns=1.1.1.3 \"to restrict accessible websites to a smaller, safer set\"",
+      "webBotAuth": "none",
+      "input": "xdotool: `xdotool mousemove {x} {y} click {b}` (button_map left 1, middle 2, right 3); double click `click --repeat 2 1`; scroll = `xdotool click 4|5` repeated abs(scroll_y) times (scroll_x ignored); `xdotool type -- '{text}'` with no --delay (xdotool default 12 ms); `xdotool key {combo}`; drag `mousemove sx sy mousedown 1 ... mouseup 1`",
+      "coordinateGrid": "integer screen pixels, no scaling",
+      "timing": "wait() 1000 ms; uniform 12 ms keystrokes; ≈12 ms click hold",
+      "other": [
+        "default dimensions (1280, 720) replaced by `xdotool getdisplaygeometry`",
+        "screenshot via `import -window root png:- | base64 -w 0`"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Developer-run sample read from source at pinned commit. Screen size depends on the container's display geometry (default fallback 1280×720), so screen is omitted. Same X11/XTEST page-visible signature class as the Anthropic demo.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#3.5",
+      "docs/research/raw/computer-use-agents.md#11.2",
+      "https://raw.githubusercontent.com/openai/openai-cua-sample-app/a8a75a301304137656c6b56168c521bfc326d17d/computers/default/docker.py"
+    ]
+  },
+  {
+    "id": "openai-cua-sample-app-2026",
+    "provider": "openai",
+    "product": "openai-cua-sample-app current python-app (computer tool)",
+    "class": "browser-agent",
+    "features": {
+      "viewport": { "width": 1440, "height": 900 },
+      "network": "customer's",
+      "webBotAuth": "none",
+      "input": "connect_over_cdp to a headful Chromium; desktop runtime is a PyAutoGUI worker (OS-level input, 60 s execution timeout; PyAutoGUI moveTo default duration 0 → warp [library default, uncertain per vendor])",
+      "coordinateGrid": "integer screenshot pixels (1440×900), no scaling in the sample",
+      "other": [
+        "Chromium flags: --remote-debugging-address=127.0.0.1 --remote-debugging-port=0 --no-startup-window --no-first-run --no-default-browser-check --window-size=1440,900",
+        "DEFAULT_VIEWPORT = {\"width\": 1440, \"height\": 900}; headful only (\"Local PyAutoGUI requires a visible browser.\")",
+        "tool { type: \"computer\" }; actions click, double_click, drag, move, scroll, keypress, type, wait, screenshot; docs: \"Use a fresh browser profile or isolated desktop\"",
+        "JavaScript code-execution tool: \"The context viewport is 1440x900\""
+      ]
+    },
+    "signal": "env.default-automation-viewport",
+    "confidence": "confirmed",
+    "notes": "Developer-run sample read 2026-10-24 (python-app/app/browser.py). Not OpenAI-hosted; traffic carries the developer's identity.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#3.5",
+      "docs/research/raw/computer-use-agents.md#11.2",
+      "https://raw.githubusercontent.com/openai/openai-cua-sample-app/main/python-app/app/browser.py",
+      "https://developers.openai.com/api/docs/guides/tools-computer-use"
+    ]
+  },
+  {
+    "id": "google-agent-hosted",
+    "provider": "google",
+    "product": "Google-Agent hosted agents (Project Mariner cloud successors: Gemini agent / Spark, AI Mode agentic features)",
+    "class": "browser-agent",
+    "features": {
+      "uaPattern": "compatible; Google-Agent; \\+https://developers\\.google\\.com/crawling/docs/crawlers-fetchers/google-agent",
+      "uaExample": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; compatible; Google-Agent; +https://developers.google.com/crawling/docs/crawlers-fetchers/google-agent) Chrome/W.X.Y.Z Safari/537.36",
+      "platformHint": "X11; Linux x86_64 (desktop UA); Linux; Android 6.0.1; Nexus 5X Build/MMB29P (mobile UA)",
+      "network": "Google infrastructure; IP feed https://developers.google.com/static/crawling/ipranges/user-triggered-agents.json (2026-10-23/24: 12 IPv4 + 8 IPv6 - IPv6 2001:4860:c::/124 … 2001:4860:c::70/124; IPv4 136.121.16.0/24, 136.121.24.0/21, 136.121.40.0/21, 136.122.0.0/16, 74.125.232.0/28 … 74.125.232.112/28); rDNS google-proxy-***-***-***-***.google.com (probed) or ***-***-***-***.gae.googleusercontent.com; whois 136.112.0.0/12 Google LLC",
+      "webBotAuth": "experimental, subset of requests: Signature-Agent: g=\"https://agent.bot.goog\" (sf-dictionary form); directory https://agent.bot.goog/.well-known/http-message-signatures-directory (5 Ed25519 keys, short non-thumbprint kids mhxuPw, cYSMkA, bUCe2A, DYiMjA, Ggh50g; cache-control public, max-age=3600; label g= not sig1=) - match keyid to kid literally",
+      "other": [
+        "\"these fetchers generally ignore robots.txt rules\"; \"The user agent string can be spoofed.\"",
+        "Mobile UA: Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; Google-Agent; +https://developers.google.com/crawling/docs/crawlers-fetchers/google-agent)",
+        "Project Mariner (hosted VMs from 2025-05-20, up to ~10 simultaneous tasks, discontinued 2026-05-04): HUMAN \"User Agent: Generic Chrome\", \"Authentication: No\", \"presents as a normal Chrome browser from Google infrastructure or end-user environments\"",
+        "Google-Agent added to Google's docs 2026-03-20 (nohacks.co); executes JavaScript (Chromium-based)",
+        "Gemini Spark \"may use a separate remote browser instance when the device is unavailable\"; whether it sends Google-Agent is not documented [likely/uncertain]",
+        "Tokens GoogleAgent-Mariner / GoogleAgent-URLContext appear only in aggregator lists [uncertain]"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "UA template, IP feed and directory are Google-documented and were probed 2026-10-23/24. uaExample is Google's published template with the literal placeholder Chrome/W.X.Y.Z, not a captured request. Google does not say which products emit Google-Agent (Mariner first per nohacks.co [likely]); no screen/viewport/WebGL/cores have been measured for the hosted browsers. centinelanalytica: not all requests are signed.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#4.2",
+      "docs/research/raw/computer-use-agents.md#4.3",
+      "docs/research/raw/providers-tier1.md#4.1",
+      "docs/research/raw/providers-tier1.md#4.5",
+      "docs/research/raw/providers-tier1.md#4.6",
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-agent",
+      "https://developers.google.com/static/crawling/ipranges/user-triggered-agents.json",
+      "https://agent.bot.goog/.well-known/http-message-signatures-directory",
+      "https://www.humansecurity.com/ai-agent/google-mariner/",
+      "https://en.wikipedia.org/wiki/Project_Mariner",
+      "https://www.centinelanalytica.com/blog/ai-browser-agents"
+    ]
+  },
+  {
+    "id": "google-gemini-computer-use-reference",
+    "provider": "google",
+    "product": "Gemini Computer Use API Playwright sample (developer-run)",
+    "class": "browser-agent",
+    "features": {
+      "viewport": { "width": 1440, "height": 900 },
+      "network": "developer's/partner's (local Playwright or cloud VM on Browserbase); not Google's",
+      "webBotAuth": "none",
+      "input": "Playwright: page.mouse.click(actual_x, actual_y) (button right|middle), page.mouse.dblclick, page.mouse.move; type_text_at = optional click → page.keyboard.press(\"Meta+A\") → page.keyboard.press(\"Backspace\") → page.keyboard.type(text) → page.keyboard.press(\"Enter\") if press_enter; page.goto / go_back / go_forward. The sample does not implement scroll (no page.mouse.wheel).",
+      "coordinateGrid": "model emits 0-999 normalized coordinates (\"based on a 1000x1000 grid and are scaled to the screen dimensions\"), denormalized int(x / 1000 * screen_width) (JS Math.floor) → floor-truncated lattice, stride 1.44 px at 1440 wide, 1.92 px at 1920; bias toward top-left by up to one stride",
+      "timing": "wait / wait_5_seconds; sample time.sleep(args.get(\"seconds\", 1)) → 1 s default",
+      "other": [
+        "Sample screen sizes 1440×900 (ai.google.dev) and 1920×1080 (Cloud docs)",
+        "Legacy scroll_at magnitude=800; newer scroll magnitude_in_pixels=300",
+        "Sample system instruction: \"You MUST NEVER attempt to solve or bypass\" CAPTCHAs; safety_decision require_confirmation incl. USER_CONSENT_MANAGEMENT (cookie banners)"
+      ]
+    },
+    "signal": "env.default-automation-viewport",
+    "confidence": "confirmed",
+    "notes": "Developer-run reference; read from Google docs/sample 2026-10-24. Viewport 1440×900 is the ai.google.dev sample size; the Cloud docs sample uses 1920×1080. Docs are internally inconsistent about pixel vs 0-999 coordinates for the newer action set; the sample uses 0-999.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#4.1",
+      "docs/research/raw/computer-use-agents.md#11.3",
+      "docs/research/raw/providers-tier1.md#4.6",
+      "https://ai.google.dev/gemini-api/docs/interactions/computer-use",
+      "https://ai.google.dev/gemini-api/docs/generate-content/computer-use",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/computer-use"
+    ]
+  },
+  {
+    "id": "manus-cloud-browser",
+    "provider": "manus",
+    "product": "Manus cloud browser (cloud agent)",
+    "class": "browser-agent",
+    "features": {
+      "uaPattern": "Manus-User/\\d",
+      "uaExample": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36; Manus-User/1.0",
+      "platformHint": "Linux (X11; Linux x86_64 in the reported UA; \"a dedicated VM with a complete Linux environment\")",
+      "network": "\"Cloud Browser operates from data center IP addresses, not residential IPs\" (documented); \"may cause additional verification (CAPTCHA, security checks)\"",
+      "webBotAuth": "directory at api.manus.im (independent survey 2026-10-19); manus.im and www.manus.im well-known paths 404; Cloudflare Radar lists Manus as verified Agent, Operator Manus, Access Intermediary [reported, Radar 403]; Fingerprint lists \"Manus Agent\" as Signed",
+      "input": "\"A real Chromium browser\" (headed, not headless); Manus \"only implemented the browser communication protocol layer\" of browser-use [likely, ZenML talk]",
+      "timing": "\"an average Manus task requires 30-50 steps\"; a Tokyo office search took ≈24 min end-to-end (≈30-50 s per step) [likely]",
+      "other": [
+        "\"a separate, isolated browser instance\" per user; \"Manus doesn't store your passwords\"",
+        "Take Over hand-off for \"SMS codes, CAPTCHA, multi-factor authentication\" → long idle then human-like input",
+        "FP-Agent: Cloudflare free tier + Block AI Bots blocked only Manus (\"Manus Bot\" rule; it self-identifies); agent reports Meta as provider in FP-Agent table",
+        "Amazon robots.txt disallows Manus-User; ai.robots.txt lists Manus-User (operator Butterfly Effect)",
+        "E2B/Firecracker microVM claims are uncertain"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "observed",
+    "notes": "Datacenter egress and isolated per-user instance are documented by Manus; the UA example is REPORTED (knownagents; manus.im/help/Manus-user now 404) and Manus docs say nothing on UA, headers or screen size. Signing host api.manus.im comes from a third-party survey (2026-10-19), not a Manus doc. No screen/cores/WebGL measured. The local Manus Browser Operator extension (user's Chrome, extension mljmkmodkfigdopcpgboaalildgijkoc) is not a hosted deployment and is excluded here.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#6",
+      "docs/research/raw/providers-tier2.md#3.21",
+      "docs/research/raw/providers-tier2.md#4",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/competitors.md",
+      "https://manus.im/docs/features/cloud-browser.md",
+      "https://www.zenml.io/llmops-database/building-an-ai-agent-platform-with-cloud-based-virtual-machines-and-extended-context"
+    ]
+  },
+  {
+    "id": "amazon-nova-act-default",
+    "provider": "amazon",
+    "product": "Amazon Nova Act SDK (default browsing environment)",
+    "class": "browser-agent",
+    "features": {
+      "uaPattern": "NovaAct",
+      "cookies": "fresh",
+      "network": "customer's machine, or AWS when attached to AgentCore Browser via cdp_endpoint_url; no IP list published",
+      "webBotAuth": "none for the SDK itself (\"NovaAct does not publish a verification method\" - knownagents); signing only via AgentCore Browser when enabled",
+      "input": "Playwright (Chrome preferred, chrome_channel default \"chrome\"; headless defaults to False) → Playwright input semantics (single mousemove at destination, 0 ms click delay); developers can drive nova.page directly, so credentials are often typed via Playwright fill() outside the model loop",
+      "other": [
+        "\"Nova Act comes with Playwright's Chrome and Chromium browsers. These use the default User Agent set by Playwright.\"",
+        "\"If you are using our browsing environment defaults, look for NovaAct in the user agent string to identify our agent.\"; user_agent override available",
+        "\"Nova Act is optimized for resolutions between 864×1296 and 1536×2304\" (README pair order); screen_width/screen_height accepted, e.g. 1920×1080",
+        "user_data_dir cloned per instance; proxy unsupported with a CDP endpoint or default Chrome; storage_state cookie restore"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "README facts (aws/nova-act). The exact UA token format (e.g. NovaAct/<version>) is UNCERTAIN - not printed anywhere found; match NovaAct as a substring. No uaExample because none was captured. Default runs on the developer's machine; hosted variant is the AgentCore Browser record.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#7",
+      "docs/research/raw/providers-tier2.md#3.4",
+      "docs/research/raw/providers-tier2.md#4",
+      "https://raw.githubusercontent.com/aws/nova-act/main/README.md"
+    ]
+  },
+  {
+    "id": "amazon-bedrock-agentcore-browser",
+    "provider": "amazon",
+    "product": "Amazon Bedrock AgentCore Browser",
+    "class": "browser-agent",
+    "features": {
+      "network": "AWS (managed container); egress ranges not published",
+      "webBotAuth": "Web Bot Auth (Preview), disabled by default (`--browser-signing '{\"enabled\": true}'` at browser creation); adds Signature, Signature-Agent, Signature-Input; key directories on 9 regional hosts https://<id>.keydirectory.signer.{us-east-1,us-east-2,us-west-2,eu-west-1,eu-central-1,ap-south-1,ap-southeast-1,ap-southeast-2,ap-northeast-1}.on.aws (e.g. xhah6q48pbxb4.keydirectory.signer.us-east-1.on.aws), 1 Ed25519 key each; verifiers Cloudflare, HUMAN Security, Akamai Technologies, DataDome, F5",
+      "input": "CDP automation endpoint (agent framework decides input semantics, e.g. Nova Act → Playwright)",
+      "other": [
+        "\"containerised managed Chromium\" with Live View and session recording (DOM changes, actions, console, network) to S3",
+        "sessions default 15 min, max 8 h",
+        "AWS WAF emits bot:account:{hash} for AgentCore agents (WorkOS secondary)"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "AWS docs facts; directory hosts observed live 2026-10-24 (server-fingerprints §7.4). The Signature-Agent value AWS uses is not printed in the doc [uncertain]. No UA, screen or GPU facts published or measured.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.4",
+      "docs/research/raw/providers-tier2.md#4",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/competitors.md"
+    ]
+  },
+  {
+    "id": "browserbase-standard",
+    "provider": "browserbase",
+    "product": "Browserbase hosted browser (standard / non-Verified session)",
+    "class": "browser-agent",
+    "features": {
+      "platformHint": "linux (\"non-Verified sessions always use linux\"); Castle basic-stealth test: navigator.platform \"Mac\" in the main thread but \"Linux\" in a Worker",
+      "uaPlatformMismatch": true,
+      "timezone": "UTC",
+      "network": "datacenter unless residential/datacenter proxy enabled; region default us-west-2",
+      "webBotAuth": "beta; directory https://www.browserbase.com/.well-known/http-message-signatures-directory (2 Ed25519 keys NVhTndQWodGQ47Kmhm1bhTdt0swWS7EHmUEMo-opsXU, DJuTDnlBxNZzalQhhvktwvkF3lWss-T56g7s4xubuhU; \"purpose\":\"rag\"; directory signed twice binding0/binding1, components (\"@authority\") without ;req, expires = created + 3600; cache-control public, max-age=3600). \"A valid signature doesn't grant access or sign your agent into a user account.\"",
+      "input": "CDP/Playwright driven by the agent framework (e.g. Stagehand / Open Operator)",
+      "other": [
+        "window.playwright__binding present (Playwright global)",
+        "CDP leak detected; navigator.webdriver absent; no self-identification (Castle)",
+        "solveCaptchas defaults to true; recordSession/logSession default true",
+        "os values windows, mac, linux, mobile, tablet; no default viewport documented",
+        "Founding Cloudflare Signed Agent (2025-08-28); Fingerprint partner"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Castle's basic-stealth test (date not given in research) for the JS facts; Browserbase docs for OS defaults; directory probed live 2026-10-24. Screen, cores and WebGL not measured.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#10",
+      "docs/research/raw/computer-use-agents.md#11.1",
+      "docs/research/raw/computer-use-agents.md#11.5",
+      "docs/research/raw/automation-stacks.md#25",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://docs.browserbase.com/features/stealth-mode",
+      "https://browserbase.mintlify.app/platform/identity/overview",
+      "https://www.browserbase.com/.well-known/http-message-signatures-directory",
+      "https://blog.castle.io/from-detection-to-trust-the-evolving-challenge-of-ai-bot-authentication/"
+    ]
+  },
+  {
+    "id": "browserbase-verified",
+    "provider": "browserbase",
+    "product": "Browserbase Verified session (Scale plan)",
+    "class": "browser-agent",
+    "features": {
+      "platformHint": "windows (\"Verified sessions default to the windows operating system\")",
+      "network": "datacenter unless proxy enabled; region default us-west-2",
+      "webBotAuth": "same Browserbase directory (beta) as standard sessions",
+      "other": [
+        "\"purpose-built Chromium browser with real browser fingerprints\" - \"Real browser fingerprints - not randomly generated configurations\"",
+        "enabled with browserSettings.verified: true; advancedStealth \"Deprecated: use verified instead\""
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Docs-only facts; no measured fingerprint. Designed to look like real Windows Chrome, so env matching is expected to be weak; rely on signature/ASN.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#10",
+      "docs/research/raw/automation-stacks.md#25",
+      "https://docs.browserbase.com/features/stealth-mode"
+    ]
+  },
+  {
+    "id": "steel-hosted-browser",
+    "provider": "steel",
+    "product": "Steel hosted browser (steel-browser)",
+    "class": "browser-agent",
+    "features": {
+      "screen": { "width": 1920, "height": 1080 },
+      "devicePixelRatio": 1,
+      "platformHint": "linux (FingerprintGenerator operatingSystems ['linux'])",
+      "locale": "en-US",
+      "network": "browsers run only in us-east; default \"your requests originate from the datacenter/machine's IP addresses\"; useProxy: true → residential (\"Hundreds of millions of IP addresses\")",
+      "webBotAuth": "none (no directory; steel 404 on 2026-10-24)",
+      "input": "Puppeteer/CDP; stealthConfig.humanizeInteractions \"simulates human pointer movements and keystrokes\"; Claude integration converts scroll_amount to delta_y with \"100 per step\" (click_mouse, type_text, press_key Input API)",
+      "other": [
+        "FingerprintGenerator({ devices:['desktop'], operatingSystems:['linux'], browsers:[{name:'chrome', minVersion:146}], locales:['en-US','en'], screen 1920x1080 })",
+        "UA from generated fingerprint via page.setUserAgent(ua, metadata); fallback fixedUaFullVersion \"131.0.6778.86\", fixedPlatformVersion \"15.0.0\"",
+        "flags --use-gl=swiftshader --in-process-gpu (software WebGL; exact renderer string not measured), --force-device-scale-factor=1, --window-size=1920,1080, --ozone-platform=x11, --remote-debugging-port=9222, --disable-gpu, --webrtc-ip-handling-policy=disable_non_proxied_udp; headless adds --headless=new --disable-blink-features=AutomationControlled",
+        "ignoreDefaultArgs [\"--enable-automation\"], defaultViewport null; --kiosk when fullscreen (1920×1080); mobile 508×1074",
+        "desktop, headful session, default timeout 5 minutes; autoCaptchaSolving, skipFingerprintInjection options",
+        "Claude computer-use examples use 1024×768 / 1280×768"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "From steel-browser open-source code (api/src/services/cdp/cdp.service.ts) and Steel docs read 2026-10-24; the managed Steel cloud may differ from the OSS defaults. devicePixelRatio 1 follows directly from --force-device-scale-factor=1. Fingerprint values are generated per session, so UA is not fixed (Linux Chrome ≥146).",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#10",
+      "docs/research/raw/automation-stacks.md#25",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://docs.steel.dev/overview/sessions-api/configuration.md",
+      "https://docs.steel.dev/overview/stealth/proxies.md",
+      "https://docs.steel.dev/integrations/claude-computer-use.md",
+      "https://docs.steel.dev/cookbook/claude-computer-use.md"
+    ]
+  },
+  {
+    "id": "hyperbrowser-hosted-browser",
+    "provider": "hyperbrowser",
+    "product": "Hyperbrowser session",
+    "class": "browser-agent",
+    "features": {
+      "screen": { "width": 1280, "height": 720 },
+      "network": "useProxy with proxyCountry (default US); otherwise datacenter",
+      "webBotAuth": "directory https://www.hyperbrowser.ai/.well-known/http-message-signatures-directory observed 2026-10-24 (1 Ed25519 key; directory signed binding=(\"@authority\";req \"content-digest\") with no alg; max-age=86400); apex hyperbrowser.ai → 307",
+      "other": [
+        "useStealth default false; useUltraStealth enterprise-only",
+        "solveCaptchas, adblock, trackers, annoyances default false; acceptCookies option",
+        "enableWebRecording default true (rrweb)"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Docs facts (session screen default 1280x720). CONFLICT: computer-use-agents.md §10 says \"no Web Bot Auth\" (from Hyperbrowser docs), but server-fingerprints.md §7.4 found a live directory on www.hyperbrowser.ai on 2026-10-24 - treat signing as possible, not documented.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#10",
+      "docs/research/raw/automation-stacks.md#25",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://hyperbrowser.ai/docs/sessions/create.md",
+      "https://hyperbrowser.ai/docs/sessions/stealth.md"
+    ]
+  },
+  {
+    "id": "browserless-hosted-browser",
+    "provider": "browserless",
+    "product": "Browserless hosted browser",
+    "class": "browser-agent",
+    "features": {
+      "webBotAuth": "https://www.browserless.io/.well-known/http-message-signatures-directory returns 200 but Content-Type application/http-message-signatures-directory; charset=utf-8 (missing +json) and \"keys\": [] - non-conformant; treat as \"claims to sign, cannot verify\""
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "observed",
+    "notes": "Only the key-directory probe (2026-10-24) is in the research; no environment fingerprint (screen, UA, network) was characterised.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "id": "kernel-hosted-browser",
+    "provider": "kernel",
+    "product": "Kernel cloud browser",
+    "class": "browser-agent",
+    "features": {
+      "viewport": { "width": 1920, "height": 1080 },
+      "network": "stealth: true adds a default ISP proxy (static exit IP per session); otherwise datacenter",
+      "webBotAuth": "opt-in (Startup/Enterprise plans); directories www.kernel.sh and search.bot.kernel.sh, 1 Ed25519 key with nbf/exp 1-hour window (short-lived; refetch often); agents sign \"only on destinations confirmed to verify signatures\"",
+      "other": [
+        "\"Kernel browsers ship in headful mode by default\"; default viewport \"1920x1080 at 25Hz\"",
+        "\"Every Kernel browser launches with anti-detection chrome configuration applied\"; \"Kernel automatically applies Patchright\" → documentInterception and storagePartitioning leak signals",
+        "stealth adds an automatic CAPTCHA solver",
+        "Chromium in per-browser unikernel VMs",
+        "Vercel/bots.fyi slugs kernel, kernel-searchbot"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Kernel docs facts; directory observed 2026-10-24. 25 Hz refresh is from the viewport doc (a screen refresh rate, could show up in requestAnimationFrame cadence - not measured).",
+    "sources": [
+      "docs/research/raw/automation-stacks.md#25",
+      "docs/research/raw/automation-stacks.md#28",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/competitors.md"
+    ]
+  },
+  {
+    "id": "anchor-hosted-browser",
+    "provider": "anchor",
+    "product": "Anchor Browser",
+    "class": "browser-agent",
+    "features": {
+      "network": "session.proxy.active (extra stealth requires it: \"if the proxy is disabled, extra stealth is automatically disabled\")",
+      "webBotAuth": "Cloudflare Signed Agents launch cohort (2025-08-28); directory on api.anchorbrowser.io (survey 2026-10-19); apex anchorbrowser.io 404",
+      "input": "sessions connect over CDP",
+      "other": [
+        "browser.extra_stealth.active: true (\"specialized Chrome browser environment\", Growth plan)",
+        "\"When extra stealth mode is enabled, page.on('console') events are disabled by default\"",
+        "browser.captcha_solver.active; LinkedIn warm-up feature"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Docs + signed-agent cohort; directory host from a third-party survey. No environment fingerprint (screen, UA, WebGL) characterised.",
+    "sources": [
+      "docs/research/raw/automation-stacks.md#25",
+      "docs/research/raw/computer-use-agents.md#11.1",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://blog.cloudflare.com/signed-agents/"
+    ]
+  },
+  {
+    "id": "skyvern-cloud",
+    "provider": "skyvern",
+    "product": "Skyvern cloud",
+    "class": "browser-agent",
+    "features": {
+      "screen": { "width": 1920, "height": 1080 },
+      "hardwareConcurrency": 32,
+      "uaPattern": "\\(X11; Linux x86_64\\) AppleWebKit/537\\.36 \\(KHTML, like Gecko\\) Chrome/\\d+\\.0\\.0\\.0 Safari/537\\.36 Edg/\\d+\\.0\\.0\\.0",
+      "uaExample": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+      "platformHint": "Linux (Edge UA on Linux)",
+      "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "locale": "en-US",
+      "fonts": "failed emoji / uncommon-font canvas test",
+      "cookies": "rotating",
+      "network": "\"high-quality US residential and ISP proxies\" (34 ASNs)",
+      "webBotAuth": "none (no identifying headers)",
+      "tls": "two dominant JA4s (with/without PSK)",
+      "input": "Playwright input signatures; no navigator.webdriver, no CDP artifacts",
+      "other": [
+        "Edge 143/144 in 2026 measurements (arXiv); Edge 138 in Castle's test",
+        "overrides timezone/screen (competitors.md summary of arXiv)",
+        "framework artifacts: main-world domUtils.js globals (elementIdCounter, GlobalSkyvernFrameIndex, buildTreeFromBody), unique_id attributes, __pw-cursor overlay",
+        "behaviour: loops/reloads on challenges"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "Castle (2025, UA with Chrome/Edg 138) plus arXiv 2606.30119 (Jan-Feb 2026: Edge 143/144, 32 cores, 1920×1080, SwiftShader, rotating cookies, 34 residential ASNs). uaPattern accepts any Edge major on Linux.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#10",
+      "docs/research/raw/computer-use-agents.md#11.5",
+      "docs/research/raw/automation-stacks.md#27.2",
+      "docs/research/raw/competitors.md",
+      "https://arxiv.org/pdf/2606.30119",
+      "https://blog.castle.io/from-detection-to-trust-the-evolving-challenge-of-ai-bot-authentication/"
+    ]
+  },
+  {
+    "id": "browser-use-cloud",
+    "provider": "browser-use",
+    "product": "Browser Use cloud",
+    "class": "browser-agent",
+    "features": {
+      "screen": { "width": 1512, "height": 982 },
+      "hardwareConcurrency": 10,
+      "uaPattern": "\\(Macintosh; Intel Mac OS X [0-9_]+\\) AppleWebKit/537\\.36 \\(KHTML, like Gecko\\) Chrome/\\d+",
+      "platformHint": "macOS (Mac Chrome/144 UA)",
+      "cookies": "rotating",
+      "network": "35 ASNs of US residential proxies; stealth mode \"directly connects from low-reputation datacenter IP addresses\" (hosting proportion 0.98)",
+      "webBotAuth": "none",
+      "permissions": "permission queries mostly denied",
+      "tls": "unique JA4 (index 10)",
+      "timing": "inter-key interval ~5.31 ms (arXiv, via competitors.md)",
+      "other": [
+        "FP-Agent: Atlas, Browser Use and Claude for Chrome share a macOS fingerprint",
+        "framework-level tells (automation-stacks §27.2, may apply to cloud): DOM corner-bracket highlights on each click, synthetic input/change/blur after typing, fixed 50/80 ms click timing, synthesizeScrollGesture speed 50000",
+        "advertises cookie blocking, CAPTCHA solving, country proxies; custom CDP interface"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "arXiv 2606.30119 honeysite measurements (Jan-Feb 2026). Exact UA string not reproduced in the research (only \"Mac Chrome/144\"), so no uaExample; uaPattern is a generic Mac-Chrome matcher and only useful combined with 1512×982 / 10 cores.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#10",
+      "docs/research/raw/computer-use-agents.md#11.5",
+      "docs/research/raw/automation-stacks.md#27.2",
+      "docs/research/raw/competitors.md",
+      "https://arxiv.org/pdf/2606.30119"
+    ]
+  },
+  {
+    "id": "genspark-cloud-agent",
+    "provider": "genspark",
+    "product": "Genspark agent (cloud, Playwright)",
+    "class": "browser-agent",
+    "features": {
+      "uaPattern": "Genspark/\\d+(\\.\\d+)*",
+      "network": "Genspark cloud / datacenter",
+      "webBotAuth": "none (genspark.ai directory 404)",
+      "input": "actions executed through Playwright (Genspark says so during execution)",
+      "other": [
+        "UA token Genspark/1.0.200 appended to a Chrome-style UA on every request",
+        "every page opened gets <div id=\"genspark-float-bar\">",
+        "genspark.ai returns 403 to fetchers; no official crawler/agent doc"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "observed",
+    "notes": "Single source: HUMAN \"AI Agent Detection: Signals, Tools & Best Practices\". computer-use-agents.md §9 marks Genspark internals unknown. The base Chrome UA in front of the token was not captured, so no uaExample.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.22",
+      "docs/research/raw/providers-tier2.md#4",
+      "docs/research/raw/computer-use-agents.md#9",
+      "https://www.humansecurity.com/learn/blog/ai-agent-signals-traffic-detection/"
+    ]
+  },
+  {
+    "id": "meta-muse-secure-vm",
+    "provider": "meta",
+    "product": "Meta Muse (Muse Secure VM browser)",
+    "class": "browser-agent",
+    "features": {
+      "network": "cloud/CDN infrastructure (DataDome: 99.3% of sampled requests); Meta AS32934 or a cloud ASN expected [unverified]",
+      "webBotAuth": "none published; Amazon: agent \"did not identify itself while browsing\"; Meta has an unlinked directory at https://www.meta.com/.well-known/http-message-signatures-directory (5 Ed25519 keys, no kid) - which product signs with it is unknown",
+      "other": [
+        "\"Muse Secure VM, a dedicated secure computer with its own browser\"; \"a real up-to-date Chromium based browser\"; separate VM per user",
+        "\"Sentinel\" agent approves anything sent to the internet; checkout via Link (Stripe) one-time cards",
+        "Reported tokens: Muse (knownagents, ai.robots.txt), muse- (Cloudflare Radar via aicrawlercheck) [uncertain]",
+        "19.5 M requests in first nine days; 8.9% reached login/payment/account-creation/forms pages (DataDome Q3-2026)",
+        "Stops at Amazon's anti-bot wall rather than pushing past it"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "reported",
+    "notes": "Launched 2026-09-08. No UA, IP range, header or Signature-Agent published by Meta (checked 2026-10-24); environment beyond 'datacenter + real Chromium' is not characterised.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.1",
+      "docs/research/raw/providers-tier2.md#4",
+      "docs/research/raw/computer-use-agents.md#9",
+      "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "https://mediacopilot.ai/ai-agent-traffic-datadome-muse/"
+    ]
+  },
+  {
+    "id": "xai-grok-bot-cursor-vm",
+    "provider": "xai",
+    "product": "xAI Grok Bot (Cursor-hosted cloud computer)",
+    "class": "computer-use-agent",
+    "features": {
+      "cookies": "reused",
+      "network": "\"Hosted computers reach the internet through shared static egress IP addresses by default\", shared across Grok Bot customers, ranges only \"available from your account team\" (unpublished); US-hosted; optional routing through the member's desktop IP",
+      "webBotAuth": "directory https://cursorusercontent.com/.well-known/http-message-signatures-directory (1 Ed25519 key) listed by Cloudflare Radar as Grok Bot [uncertain attribution]; x.ai and grok.com 404",
+      "other": [
+        "\"Grok Bot runs only on Cursor-hosted cloud computers\"; \"Each user gets a dedicated Firecracker microVM\"",
+        "each Bot has \"a persistent cloud computer with a browser, filesystem, and terminal\"",
+        "hosted-computer domains match *.*.cursorvm.com (visible only to the operator)",
+        "on CAPTCHAs / checks that \"explicitly require a human\" the Bot will \"pause and notify you rather than attempting to bypass the check\""
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "docs.x.ai facts for infrastructure; no UA, screen or browser fingerprint characterised. Cookies \"reused\": browser cookies and signed-in sessions are shared across a user's Bots.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.6",
+      "docs/research/raw/providers-tier2.md#4",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://docs.x.ai/grok-bot",
+      "https://docs.x.ai/grok-bot/security",
+      "https://docs.x.ai/grok-bot/computer-and-apps"
+    ]
+  },
+  {
+    "id": "h-company-cloud-browser",
+    "provider": "h-company",
+    "product": "H Company Agents API cloud browser",
+    "class": "browser-agent",
+    "features": {
+      "viewport": { "width": 1200, "height": 1200 },
+      "network": "H cloud; managed_proxy or proxy_url options",
+      "webBotAuth": "none",
+      "input": "CDP",
+      "other": [
+        "environment {\"kind\": \"web\", \"host\": \"cloud\"}; start_url default https://www.bing.com",
+        "secrets filled by fill_secret_at (\"The value goes straight into the page, never into the agent's context\"); browser profiles and vaults",
+        "user_device mode attaches to the user's Chrome on port 9222 (not hosted)"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "hub.hcompany.ai docs (2026-10-24): visual viewport default width 1200, height 1200. No UA or identity statements.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#1",
+      "docs/research/raw/computer-use-agents.md#9",
+      "https://hub.hcompany.ai/computer-use-agents/browser/configuration",
+      "https://hub.hcompany.ai/computer-use-agents/browser/local-control"
+    ]
+  },
+  {
+    "id": "microsoft-magentic-ui",
+    "provider": "microsoft",
+    "product": "Magentic-UI / MagenticLite (Playwright in local Docker / Quicksand VM)",
+    "class": "browser-agent",
+    "features": {
+      "viewport": { "width": 1440, "height": 900 },
+      "network": "customer's",
+      "webBotAuth": "none",
+      "input": "page.mouse.click(x, y, delay=10) (10 ms press); hover page.mouse.move; fill: click → 50 ms → optional Ctrl/Cmd+A, Backspace → keyboard.type with 100 ms per key under 100 chars, 10 ms otherwise → Enter; scroll page.mouse.wheel 400 px default (page scroll = viewport height − 50); drag mouse.down → mouse.move(end) → mouse.up",
+      "other": [
+        "hardcoded Windows 10 x64 Chrome/Edge 122 UA in the non-persistent path (exact string not captured)",
+        "launch flags --disable-extensions, --disable-file-system; channel chrome/msedge optional",
+        "DOM artifacts with animation on: div#red-cursor (10 px dot, radial-gradient(circle at center, #fff 20%, #f00 100%), zIndex 10000, transition left 0.05s linear, top 0.05s linear) moved in 10-20 linear steps with 20-50 ms sleeps; elm.style.border = '2px solid red' on [__elementId='...']",
+        "browser-use model \"Fara\"; sessions \"run inside a lightweight VM sandbox\" (Quicksand)"
+      ]
+    },
+    "signal": "env.default-automation-viewport",
+    "confidence": "confirmed",
+    "notes": "Open-source reference harness read from source 2026-10-24; runs on the operator's host, not a vendor cloud. The hardcoded Win10/Edge 122 UA on a Linux container would be a UA/platform mismatch, but that combination was not measured.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#8.1",
+      "docs/research/raw/computer-use-agents.md#11.2",
+      "https://raw.githubusercontent.com/microsoft/magentic-ui/main/src/magentic_ui/tools/playwright/playwright_controller_fara.py",
+      "https://raw.githubusercontent.com/microsoft/magentic-ui/main/src/magentic_ui/tools/playwright/utils/animation_utils.py",
+      "https://raw.githubusercontent.com/microsoft/magentic-ui/main/src/magentic_ui/tools/playwright/browser/local_playwright_browser.py"
+    ]
+  },
+  {
+    "id": "cloudflare-browser-rendering",
+    "provider": "cloudflare",
+    "product": "Cloudflare Browser Rendering",
+    "class": "browser-agent",
+    "features": {
+      "network": "Cloudflare",
+      "webBotAuth": "Cloudflare Signed Agents launch cohort (2025-08-28); directories web-bot-auth.cloudflare-browser-rendering-085.workers.dev and web-bot-auth-crawl.cloudflare-browser-rendering-085.workers.dev (3 keys)",
+      "other": [
+        "Browser Rendering always gets bot score 1 at Cloudflare"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "observed",
+    "notes": "Only identity facts are in the research (directories observed 2026-10-24); no environment fingerprint characterised.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#11.1",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://blog.cloudflare.com/signed-agents/",
+      "https://developers.cloudflare.com/bots/concepts/bot/verified-bots/"
+    ]
+  },
+  {
+    "id": "simular-hosted-computer",
+    "provider": "simular",
+    "product": "Simular Sai (Simular-hosted cloud computer)",
+    "class": "computer-use-agent",
+    "features": {
+      "network": "Simular-hosted",
+      "webBotAuth": "none",
+      "input": "OS-level screen → click/type on a Windows or Linux desktop (trusted events, model-paced cadence)",
+      "other": [
+        "sign-ins and phone checks \"go to the human as an approval link\" (takeover pattern)",
+        "POST https://api.simular.ai/v1/agents/message with autonomous flag and approval events (approvalType: \"exec\")"
+      ]
+    },
+    "signal": "env.hosted-agent-profile",
+    "confidence": "confirmed",
+    "notes": "platform.simular.ai facts only; Simular's browser UA is unknown (§13 item 12). Thin profile.",
+    "sources": [
+      "docs/research/raw/computer-use-agents.md#9",
+      "https://platform.simular.ai/"
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "fetchedAt": "2026-10-24",
+  "notes": "Provider-published IP range snapshots captured on 2026-10-24 by the research phase (docs/research/raw/server-fingerprints.md section 5, providers-tier1.md, providers-tier2.md). openai_chatgpt_agents.json and openai_chatgpt_connectors.json were copied from docs/research/raw/providers-tier1-feeds (snapshot 2026-10-24T22:41:40Z). Seeds are converted to ../<id>.json by scripts/normalise-ip-ranges.ts using data/ip-ranges/sources.json.",
+  "skipped": {
+    "commoncrawl.txt": "HTML CCBot page; duplicate of ccbot.json (source commoncrawl-ccbot).",
+    "hetzner_asn.txt": "Body of the 404 returned by api.hetzner.com/ips (Hetzner publishes no first-party list; use the ipverse ASN source 'hetzner')."
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "@necterai/browser",
+  "version": "0.1.0",
+  "description": "Necter for the browser: detect and stop AI agents (browser automation, computer use, agentic browser extensions) on any web page. One script tag or one import.",
+  "keywords": [
+    "necter",
+    "ai-agents",
+    "bot-detection",
+    "agent-detection",
+    "browser",
+    "fingerprinting",
+    "playwright-detection",
+    "puppeteer-detection",
+    "computer-use"
+  ],
+  "homepage": "https://github.com/necterai/core/tree/main/packages/browser#readme",
+  "bugs": {
+    "url": "https://github.com/necterai/core/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/necterai/core.git",
+    "directory": "packages/browser"
+  },
+  "license": "MIT",
+  "author": "Necter (https://necter.ai)",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/necter.iife.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./script-source": {
+      "types": "./dist/script-source.d.ts",
+      "import": "./dist/script-source.js",
+      "require": "./dist/script-source.cjs"
+    },
+    "./necter.iife.js": "./dist/necter.iife.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup && node scripts/gen-script-source.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@necterai/core": "workspace:*",
+    "@necterai/signatures": "workspace:*"
+  },
+  "jsdelivr": "./dist/necter.iife.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

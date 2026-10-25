@@ -1,0 +1,46 @@
+name: Release
+
+# Publishes @necterai/core, signatures, browser and server to npm when a version tag is pushed:
+#   pnpm version:set 0.2.0 && git commit -am "v0.2.0" && git tag v0.2.0 && git push --follow-tags
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write   # create the GitHub release
+  id-token: write   # npm provenance
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - run: pnpm install --frozen-lockfile
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: '1'
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+      - name: Check the tag matches the package versions
+        run: |
+          tag="${GITHUB_REF_NAME#v}"
+          for p in core signatures browser server; do
+            v=$(node -p "require('./packages/$p/package.json').version")
+            [ "$v" = "$tag" ] || { echo "packages/$p is $v, tag is $tag"; exit 1; }
+          done
+      - run: pnpm datasets
+      - run: pnpm build
+      - run: pnpm test
+      - name: Publish to npm
+        run: pnpm -r --filter './packages/**' publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: 'true'
+      - name: GitHub release
+        run: gh release create "$GITHUB_REF_NAME" --generate-notes --verify-tag
+        env:
+          GH_TOKEN: ${{ github.token }}

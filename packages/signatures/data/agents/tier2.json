@@ -1,0 +1,2072 @@
+[
+  {
+    "id": "facebookexternalhit",
+    "provider": "meta",
+    "product": "FacebookExternalHit",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "facebookexternalhit/\\d"
+    ],
+    "uaExamples": [
+      "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
+      "facebookexternalhit/1.1"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "facebookexternalhit"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "partial",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "Link previews for Facebook, Instagram, Messenger; 'might bypass robots.txt when performing security or integrity checks'. Meta publishes no IP list; practice is AS32934 (uncertain).",
+    "sources": [
+      "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers"
+    ]
+  },
+  {
+    "id": "meta-webindexer",
+    "provider": "meta",
+    "product": "Meta-WebIndexer",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "meta-webindexer/\\d"
+    ],
+    "uaExamples": [
+      "meta-webindexer/1.1 (+/documentation/sharing/webmasters/web-crawlers)",
+      "meta-webindexer/1.1"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "meta-webindexer"
+    ],
+    "webBotAuth": {
+      "signs": false,
+      "directoryUrl": "https://www.meta.com/.well-known/http-message-signatures-directory",
+      "coverage": "unknown"
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Meta AI search citations index. Observed fetching a robots-disallowed canary from Meta IPs (June 2026). The '+/documentation/...' URL in the UA is a relative path (a spoofer who 'fixes' it is wrong). Which Meta product signs with the www.meta.com directory is unknown.",
+    "sources": [
+      "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "docs/research/raw/providers-tier2.md#3.1"
+    ]
+  },
+  {
+    "id": "meta-externalads",
+    "provider": "meta",
+    "product": "Meta-ExternalAds",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "meta-externalads/\\d"
+    ],
+    "uaExamples": [
+      "meta-externalads/1.1 (+/documentation/sharing/webmasters/web-crawlers)",
+      "meta-externalads/1.1"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "meta-externalads"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "Advertising / business products crawler.",
+    "sources": [
+      "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers"
+    ]
+  },
+  {
+    "id": "meta-externalagent",
+    "provider": "meta",
+    "product": "Meta-ExternalAgent",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "meta-externalagent/\\d"
+    ],
+    "uaExamples": [
+      "meta-externalagent/1.1 (+/documentation/sharing/webmasters/web-crawlers)",
+      "meta-externalagent/1.1",
+      "meta-externalagent/1.1 (+https://developers.facebook.com/docs/sharing/webmasters/crawler)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "meta-externalagent"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "'Training foundation AI models or improving products by indexing content directly'. The absolute-URL variant is an older reported form.",
+    "sources": [
+      "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers"
+    ]
+  },
+  {
+    "id": "meta-externalfetcher",
+    "provider": "meta",
+    "product": "Meta-ExternalFetcher",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "meta-externalfetcher/\\d"
+    ],
+    "uaExamples": [
+      "meta-externalfetcher/1.1 (+/documentation/sharing/webmasters/web-crawlers)",
+      "meta-externalfetcher/1.1"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "meta-externalfetcher"
+    ],
+    "webBotAuth": {
+      "signs": false,
+      "directoryUrl": "https://www.meta.com/.well-known/http-message-signatures-directory",
+      "coverage": "unknown"
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "notes": "'Fetches individual links at a user's request' incl. 'helping AI navigate sites to complete tasks'; 'may bypass robots.txt'.",
+    "sources": [
+      "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers"
+    ]
+  },
+  {
+    "id": "facebookbot",
+    "provider": "meta",
+    "product": "FacebookBot (legacy)",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "FacebookBot"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "FacebookBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "reported",
+    "notes": "Speech-recognition training crawler, no longer on Meta's crawler page (its doc URL now serves the web-crawlers page); status legacy/unknown.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.1"
+    ]
+  },
+  {
+    "id": "meta-muse",
+    "provider": "meta",
+    "product": "Muse",
+    "class": "computer-use-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Muse"
+    ],
+    "webBotAuth": {
+      "signs": false,
+      "directoryUrl": "https://www.meta.com/.well-known/http-message-signatures-directory",
+      "coverage": "unknown"
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "reported",
+    "runsWhere": "operator-cloud",
+    "notes": "Personal agent (Sep 2026) in a 'Muse Secure VM' with its own Chromium browser; Amazon said it 'did not identify itself while browsing' and blocked it with an anti-bot wall. No UA/IP/header published; tokens 'Muse' / 'muse-' are directory hearsay (ai.robots.txt, Radar via aicrawlercheck). Expect datacenter egress (AS32934 or cloud), current Chrome UA, real JS, Stripe Link one-time cards at checkout, possibly signatures against the www.meta.com keys.",
+    "sources": [
+      "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "https://www.theregister.com/ai-and-ml/2026/09/21/amazon-shows-metas-muse-ai-shopping-agent-the-door/5297777",
+      "docs/research/raw/providers-tier2.md#3.1"
+    ]
+  },
+  {
+    "id": "perplexitybot",
+    "provider": "perplexity",
+    "product": "PerplexityBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "PerplexityBot/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)"
+    ],
+    "ipRangeUrls": [
+      "https://www.perplexity.ai/perplexitybot.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "PerplexityBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Search index crawler ('not used to crawl content for AI foundation models'). 8 prefixes (AWS us-east-1), creationTime 2025-02-07. www.perplexity.com/perplexitybot.json 302s to .ai. Cloudflare de-listed Perplexity in 2025 for stealth crawling: any Perplexity-attributable traffic outside the two lists is evasive.",
+    "sources": [
+      "https://docs.perplexity.ai/guides/bots",
+      "https://www.perplexity.ai/perplexitybot.json"
+    ]
+  },
+  {
+    "id": "perplexity-user",
+    "provider": "perplexity",
+    "product": "Perplexity-User",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "Perplexity-User/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user)"
+    ],
+    "ipRangeUrls": [
+      "https://www.perplexity.ai/perplexity-user.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Perplexity-User"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "notes": "'Since a user requested the fetch, this fetcher generally ignores robots.txt rules'. 4 prefixes (44.208.221.197/32, 34.193.163.52/32, 18.97.21.0/30, 18.97.43.80/29). Observed header From: crawler-support@perplexity.ai.",
+    "sources": [
+      "https://docs.perplexity.ai/guides/bots",
+      "https://www.perplexity.ai/perplexity-user.json"
+    ]
+  },
+  {
+    "id": "perplexity-undeclared-crawler",
+    "provider": "perplexity",
+    "product": "Perplexity undeclared fallback crawler (observed 2025)",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "^Mozilla/5\\.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537\\.36 \\(KHTML, like Gecko\\) Chrome/124\\.0\\.0\\.0 Safari/537\\.36$"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-crawler-ua",
+    "uaMatchConfidence": 0.3,
+    "evidence": "observed",
+    "notes": "Cloudflare (Aug 2025) documented Perplexity rotating a generic Chrome/124 macOS UA across many IPs/ASNs when its declared crawler was blocked. A genuine (old) Chrome sends the identical string, so this record only corroborates request.crawl-pattern (many IPs, no JS, no subresources); never emit it alone. Provider hint confidence 0.3.",
+    "sources": [
+      "https://blog.cloudflare.com/perplexity-is-using-stealth-undeclared-crawlers-to-evade-website-no-crawl-directives/",
+      "docs/research/raw/server-fingerprints.md#6"
+    ]
+  },
+  {
+    "id": "perplexity-comet",
+    "provider": "perplexity",
+    "product": "Comet (agentic browser)",
+    "class": "extension-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "observed",
+    "runsWhere": "user-device",
+    "notes": "Chromium fork on the user's machine (residential IP, Chrome-identical UA and brands, Google TTS voices present). Agent mode runs a hidden internal extension npclhjbddhklpbnacpjloidibaggcgon (comet-extension:// scheme) injecting overlay.js: #pplx-agent-overlay, #pplx-agent-overlay-stop-button ('Stop Comet Assistant'); clicks via CDP Input.dispatchMouseEvent with no mousemove.",
+    "sources": [
+      "https://securityboulevard.com/2025/08/from-detection-to-trust-the-evolving-challenge-of-ai-bot-authentication/",
+      "https://www.humansecurity.com/learn/blog/chatgpt-atlas-vs-perplexity-comet-agentic-browsers/"
+    ]
+  },
+  {
+    "id": "bingbot",
+    "provider": "microsoft",
+    "product": "bingbot",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "bingbot/\\d",
+      "adidxbot/\\d",
+      "BingPreview/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm) Chrome/W.X.Y.Z Safari/537.36",
+      "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+      "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+      "Mozilla/5.0 (compatible; adidxbot/2.0; +http://www.bing.com/bingbot.htm)",
+      "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b"
+    ],
+    "ipRangeUrls": [
+      "https://www.bing.com/toolbox/bingbot.json"
+    ],
+    "rdnsSuffixes": [
+      ".search.msn.com"
+    ],
+    "robotsTokens": [
+      "bingbot",
+      "adidxbot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range",
+      "rdns"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "bingbot.json: 28 prefixes, creationTime 2024-01-03 (stale: also accept rDNS msnbot-<ip>.search.msn.com, uncertain since Bing help pages are JS-only). 'Bingbot powers Copilot answers'; noarchive meta opts out of Bing Chat/training; robots no-training token targeted early 2027. BingPreview now uses the bingbot token.",
+    "sources": [
+      "https://blogs.bing.com/webmaster/2022/4/Announcing-user-agent-change-for-Bing-crawler-bingbot/",
+      "https://www.bing.com/toolbox/bingbot.json",
+      "docs/research/raw/providers-tier2.md#3.3"
+    ]
+  },
+  {
+    "id": "microsoftpreview",
+    "provider": "microsoft",
+    "product": "MicrosoftPreview",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "MicrosoftPreview/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MicrosoftPreview/2.0; +https://aka.ms/MicrosoftPreview) Chrome/W.X.Y.Z Safari/537.36"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "MicrosoftPreview"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "reported",
+    "notes": "Link previews across Teams/Outlook/SharePoint/Copilot. Robots compliance disputed between directories (knownagents: no; Bing page: yes).",
+    "sources": [
+      "https://botcrawl.com/bots/microsoft-preview/",
+      "https://knownagents.com/agents/microsoftpreview"
+    ]
+  },
+  {
+    "id": "copilot-tokens",
+    "provider": "microsoft",
+    "product": "Copilot / CopilotNative / CopilotSapphire (unverified tokens)",
+    "class": "fetch-agent",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "CopilotNative",
+      "CopilotSapphire",
+      "(^|[ ;(])Copilot/\\d"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Copilot",
+      "CopilotNative",
+      "CopilotSapphire"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.5,
+    "evidence": "uncertain",
+    "notes": "Tokens appear only in Amazon's robots.txt; Microsoft documents no Copilot crawler token ('Sapphire' is the Bing/Copilot mobile app's internal name, so CopilotSapphire is plausible). Observed Copilot live fetches instead arrive as plain Linux Chrome from Diffbot infrastructure (AS6939) with no token.",
+    "sources": [
+      "https://www.amazon.com/robots.txt",
+      "docs/research/raw/providers-tier2.md#2"
+    ]
+  },
+  {
+    "id": "copilot-diffbot-fetch",
+    "provider": "microsoft",
+    "product": "Copilot live page fetch via Diffbot (observed)",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "observed",
+    "runsWhere": "operator-cloud",
+    "notes": "June 2026 canary test: Copilot's fetch for a user prompt used a plain Linux Chrome UA with no bot token from Diffbot, AS6939 (Hurricane Electric), ignoring robots.txt. Attribute via ASN + no-JS single fetch, not UA.",
+    "sources": [
+      "https://www.searchengineworld.com/do-ai-assistants-actually-respect-your-robots-txt-we-put-12-of-them-to-the-test"
+    ]
+  },
+  {
+    "id": "edge-copilot-actions",
+    "provider": "microsoft",
+    "product": "Edge Copilot Mode / Copilot Actions / Edge for Business agentic browsing",
+    "class": "extension-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "user-device",
+    "notes": "Runs in the user's Edge with the current session; no UA, header or client hint published. Edge ships WebMCP (document.modelContext.registerTool/getTools/executeTool) behind a flag: a decoy registered tool that gets executed is a zero-false-positive agent signal.",
+    "sources": [
+      "https://explore.microsoft.com/en-us/edge/copilot-mode",
+      "https://blogs.windows.com/msedgedev/2026/09/21/new-in-edge-for-developers-create-better-components-and-make-your-site-agent-ready/"
+    ]
+  },
+  {
+    "id": "magentic-ui",
+    "provider": "microsoft",
+    "product": "Magentic-UI / AutoGen MultimodalWebSurfer",
+    "class": "browser-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "customer-env",
+    "notes": "Open-source Playwright web agent (QEMU 'quicksand' VM or Docker). 1440x900 viewport; main-world global WebSurfer / MultimodalWebSurfer; every interactive element gets a __elementId attribute; #red-cursor when animate_actions; clicks page.mouse.click(x,y,delay=10), typing delay 100 ms (<100 chars) else 10 ms, wheel viewport_height-50. A hardcoded Win10 Chrome/Edg 122 UA was reported for the non-persistent path (string not captured).",
+    "sources": [
+      "https://github.com/microsoft/magentic-ui",
+      "docs/research/raw/automation-stacks.md#18"
+    ]
+  },
+  {
+    "id": "amazonbot",
+    "provider": "amazon",
+    "product": "Amazonbot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Amazonbot/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amazonbot/0.1) Chrome/W.X.Y.Z Safari/537.36",
+      "Mozilla/5.0 (compatible; Amazonbot/0.1; +https://developer.amazon.com/support/amazonbot) Chrome/119.0.6045.214 Safari/537.36"
+    ],
+    "ipRangeUrls": [
+      "https://developer.amazon.com/amazonbot/ip-addresses/"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Amazonbot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "'May be used to train Amazon AI models'; RFC 9309, robots cached 30 days, no crawl-delay, noarchive = do not use for training. IP list is an HTML page with embedded JSON: ~1,290 'ipv4Prefix' entries that are bare IPs without a CIDR suffix (3.x AWS us-east-1). rDNS crawl.amazonbot.amazon is uncertain (not on the fetched page).",
+    "sources": [
+      "https://developer.amazon.com/amazonbot",
+      "https://developer.amazon.com/amazonbot/ip-addresses/"
+    ]
+  },
+  {
+    "id": "amzn-searchbot",
+    "provider": "amazon",
+    "product": "Amzn-SearchBot",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Amzn-SearchBot/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amzn-SearchBot/0.1) Chrome/W.X.Y.Z Safari/537.36"
+    ],
+    "ipRangeUrls": [
+      "https://developer.amazon.com/amazonbot/searchbot-ip-addresses/"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Amzn-SearchBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Search experiences incl. Alexa, not generative training. IP page uses key 'ip_prefix' (not ipv4Prefix) with /32 CIDRs, ~860 entries.",
+    "sources": [
+      "https://developer.amazon.com/amazonbot",
+      "https://developer.amazon.com/amazonbot/searchbot-ip-addresses/"
+    ]
+  },
+  {
+    "id": "amzn-user",
+    "provider": "amazon",
+    "product": "Amzn-User",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "Amzn-User/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Amzn-User/0.1) Chrome/W.X.Y.Z Safari/537.36"
+    ],
+    "ipRangeUrls": [
+      "https://developer.amazon.com/amazonbot/live-ip-addresses/"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Amzn-User"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "partial",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "notes": "'Fetches live information to answer user requests, such as Alexa queries'; 'may not follow all robots.txt directives'. Live-crawl IP page: ~1,023 bare-IP entries, creationTime 2025-11-04.",
+    "sources": [
+      "https://developer.amazon.com/amazonbot",
+      "https://developer.amazon.com/amazonbot/live-ip-addresses/"
+    ]
+  },
+  {
+    "id": "novaact",
+    "provider": "amazon",
+    "product": "Nova Act",
+    "class": "browser-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "NovaAct"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "NovaAct"
+    ],
+    "webBotAuth": {
+      "signs": false,
+      "coverage": "optional"
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "customer-env",
+    "notes": "Playwright-based SDK (Chrome channel preferred, headed by default, clean cloned profile per run): 'look for NovaAct in the user agent string' with default browsing environment; user_agent overridable. Exact default UA not printed anywhere found: match the substring. Hosted option = Bedrock AgentCore Browser (Web Bot Auth preview, off by default, directories *.keydirectory.signer.<region>.on.aws). (Self-identification is partial: see notes; contract field is boolean.)",
+    "sources": [
+      "https://github.com/aws/nova-act",
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/browser-web-bot-auth.html"
+    ]
+  },
+  {
+    "id": "amazon-agentcore-browser",
+    "provider": "amazon",
+    "product": "Bedrock AgentCore Browser",
+    "class": "browser-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [
+      "https://ip-ranges.amazonaws.com/ip-ranges.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "bedrockbot"
+    ],
+    "webBotAuth": {
+      "signs": false,
+      "directoryUrl": "https://<id>.keydirectory.signer.<region>.on.aws/.well-known/http-message-signatures-directory",
+      "coverage": "optional"
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "web-bot-auth"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Managed Chromium container with CDP endpoint; Web Bot Auth (Preview) adds Signature/Signature-Agent/Signature-Input but 'is disabled by default and must be explicitly enabled during browser creation' (--browser-signing). Nine regional key-directory hosts observed with 1 Ed25519 key each. 'bedrockbot' (Bedrock knowledge-base crawler), amazon-kendra, amazon-QBusiness are reported tokens. (Self-identification is partial: see notes; contract field is boolean.)",
+    "sources": [
+      "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/browser-web-bot-auth.html",
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "id": "amazon-buy-for-me",
+    "provider": "amazon",
+    "product": "Buy for Me",
+    "class": "computer-use-agent",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "AmazonBuyForMe"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "AmazonBuyForMe"
+    ],
+    "webBotAuth": {
+      "signs": false,
+      "coverage": "unknown"
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.6,
+    "evidence": "reported",
+    "runsWhere": "operator-cloud",
+    "notes": "Shops third-party retailers and fills checkout forms (Nova + Claude models). Amazon says it identifies itself and lets retailers opt out, mechanism unspecified; token AmazonBuyForMe is community-reported. (Self-identification is partial: see notes; contract field is boolean.)",
+    "sources": [
+      "https://techcrunch.com/2025/04/03/amazons-new-ai-agent-will-shop-third-party-stores-for-you/",
+      "https://knownagents.com/agents/amazonbuyforme"
+    ]
+  },
+  {
+    "id": "applebot",
+    "provider": "apple",
+    "product": "Applebot",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Applebot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15 (Applebot/0.1; +http://www.apple.com/go/applebot)",
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1 (Applebot/0.1; +http://www.apple.com/go/applebot)",
+      "Mozilla/5.0 (compatible; Applebot/0.3; +http://www.apple.com/go/applebot)"
+    ],
+    "ipRangeUrls": [
+      "https://search.developer.apple.com/applebot.json"
+    ],
+    "rdnsSuffixes": [
+      ".applebot.apple.com"
+    ],
+    "robotsTokens": [
+      "Applebot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Falls back to Googlebot rules when no Applebot group; ignores crawl-delay; 'may render pages in a browser'. 24 prefixes in 17.0.0.0/8 (creationTime 2026-09-15); rDNS e.g. 17-58-101-179.applebot.apple.com. Separate UA 'iTMS' for Apple Podcasts URLs ignores robots. Cloudflare 'Accountable' designation. Pattern is the bare token so that 'Applebot-Extended' also matches here and the longer applebot-extended match wins on specificity. The 'compatible; Applebot/0.3' example is 'likely' (false-positive-traps.md#12.1).",
+    "sources": [
+      "https://support.apple.com/en-us/119829",
+      "https://search.developer.apple.com/applebot.json",
+      "docs/research/raw/false-positive-traps.md#12.1"
+    ]
+  },
+  {
+    "id": "applebot-extended",
+    "provider": "apple",
+    "product": "Applebot-Extended",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Applebot-Extended"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [
+      "https://search.developer.apple.com/applebot.json"
+    ],
+    "rdnsSuffixes": [
+      ".applebot.apple.com"
+    ],
+    "robotsTokens": [
+      "Applebot-Extended"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "uaMatchConfidence": 0.5,
+    "evidence": "confirmed",
+    "notes": "robots.txt token only: 'does not crawl pages'; disallowing opts out of Apple foundation-model training. A UA carrying this token is therefore a spoof or misconfiguration.",
+    "sources": [
+      "https://support.apple.com/en-us/119829"
+    ]
+  },
+  {
+    "id": "apple-itms",
+    "provider": "apple",
+    "product": "iTMS (Apple Podcasts fetcher)",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "^iTMS$"
+    ],
+    "uaExamples": [
+      "iTMS"
+    ],
+    "ipRangeUrls": [
+      "https://search.developer.apple.com/applebot.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "Fetches URLs submitted to Apple Podcasts; ignores robots.txt.",
+    "sources": [
+      "https://support.apple.com/en-us/119829"
+    ]
+  },
+  {
+    "id": "safari-mcp",
+    "provider": "apple",
+    "product": "Safari MCP / safaridriver automation",
+    "class": "browser-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "user-device",
+    "notes": "Safari 27 'Allow remote automation and external agents' + `/usr/bin/safaridriver --mcp`: the user's Safari on the user's IP, driven over WebDriver (expect navigator.webdriver === true; inference). 'Notify Me' background checks produce periodic unattended Safari fetches from residential IPs.",
+    "sources": [
+      "https://webkit.org/blog/18325/webkit-features-for-safari-27-0/"
+    ]
+  },
+  {
+    "id": "grokbot-tokens",
+    "provider": "xai",
+    "product": "GrokBot / xAI-Grok / Grok-DeepSearch (unverified)",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "GrokBot/\\d",
+      "GrokBot",
+      "xAI-Grok",
+      "Grok-DeepSearch",
+      "xAI-SearchBot",
+      "xAI-Bot",
+      "GrokAppAndroid",
+      "GrokAgent"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; GrokBot/1.0; +https://x.ai/)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "GrokBot",
+      "xAI-Grok",
+      "Grok-DeepSearch",
+      "xAI-Bot",
+      "xAI-SearchBot",
+      "GrokAppAndroid",
+      "Grok Bot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-crawler-ua",
+    "uaMatchConfidence": 0.6,
+    "evidence": "reported",
+    "notes": "xAI publishes no crawler docs, UA or IPs ('xAI has not confirmed any of this'). Amazon blocks GrokBot, xAI-Grok, Grok-DeepSearch. A Feb 2026 analysis found none of these names ever in logs: real Grok retrieval is undeclared (see grok-stealth-retrieval).",
+    "sources": [
+      "https://knownagents.com/agents/grokbot",
+      "docs/research/raw/providers-tier2.md#3.6"
+    ]
+  },
+  {
+    "id": "grok-stealth-retrieval",
+    "provider": "xai",
+    "product": "Grok web retrieval (undeclared, proxy swarm)",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "observed",
+    "notes": "Faked Mac Chrome / iPhone Safari UAs from 17-59 distinct IPs per test (hosting + residential + commercial proxy, bursts of 9-12 IPs within seconds), robots.txt never requested, no subresources. Detectable only behaviourally (request.crawl-pattern).",
+    "sources": [
+      "https://southasiadigital.com/which-ai-crawlers-respect-robots-txt/",
+      "https://www.searchengineworld.com/do-ai-assistants-actually-respect-your-robots-txt-we-put-12-of-them-to-the-test"
+    ]
+  },
+  {
+    "id": "grok-bot-hosted",
+    "provider": "xai",
+    "product": "Grok Bot (Cursor-hosted cloud computer)",
+    "class": "computer-use-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false,
+      "directoryUrl": "https://cursorusercontent.com/.well-known/http-message-signatures-directory",
+      "coverage": "unknown"
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Per docs.x.ai: persistent Firecracker microVM in Cursor's cloud (US) with browser, 'shared static egress IP addresses' available only from the account team, optional routing through the user's desktop; hands off on CAPTCHAs. No UA/header/robots statement. Cloudflare Radar reportedly attributes the cursorusercontent.com key directory to Grok Bot (uncertain).",
+    "sources": [
+      "https://docs.x.ai/grok-bot",
+      "https://docs.x.ai/grok-bot/security",
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "id": "bytespider",
+    "provider": "bytedance",
+    "product": "Bytespider",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Bytespider"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; Bytespider; spider-feedback@bytedance.com)",
+      "Mozilla/5.0 (compatible; Bytespider; https://zhanzhang.toutiao.com/) AppleWebKit/537.36"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Bytespider"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "reported",
+    "notes": "LLM training crawler; ai.robots.txt 'respect: No'; very large IP pools reported; no IP list or rDNS, so a spoofed Bytespider is indistinguishable from a real one. No reachable official page.",
+    "sources": [
+      "https://knownagents.com/agents/bytespider",
+      "docs/research/raw/providers-tier2.md#3.7"
+    ]
+  },
+  {
+    "id": "tiktokspider",
+    "provider": "bytedance",
+    "product": "TikTokSpider",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "TikTokSpider"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (Linux; Android 5.0) AppleWebKit/537.36 (KHTML, like Gecko) Mobile Safari/537.36 (compatible; TikTokSpider; ttspider-feedback@tiktok.com)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "TikTokSpider"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "reported",
+    "notes": "Link-preview fetcher per knownagents; ai.robots.txt says LLM training. Purpose uncertain.",
+    "sources": [
+      "https://knownagents.com/agents/tiktokspider"
+    ]
+  },
+  {
+    "id": "doubaobot",
+    "provider": "bytedance",
+    "product": "DoubaoBot",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "DoubaoBot",
+      "Doubaobot"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "DoubaoBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "reported",
+    "notes": "Doubao assistant training/fetching; token only, no official page (doubao.com/bot is a placeholder).",
+    "sources": [
+      "https://knownagents.com/agents/doubaobot"
+    ]
+  },
+  {
+    "id": "mistralai-user",
+    "provider": "mistral",
+    "product": "MistralAI-User",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "MistralAI-User/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-User/1.0; +https://docs.mistral.ai/robots)"
+    ],
+    "ipRangeUrls": [
+      "https://mistral.ai/mistralai-user-ips.json"
+    ],
+    "rdnsSuffixes": [
+      ".crawlers.mistral.ai"
+    ],
+    "robotsTokens": [
+      "MistralAI-User"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range",
+      "rdns"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "notes": "User-initiated visits (product 'Vibe'). 2 prefixes 135.225.57.92/32, 20.240.192.194/32 (Azure, creationTime 2026-04-19). Observed fetching a disallowed canary (June 2026) with rDNS crawlers.mistral.ai (observed, not documented).",
+    "sources": [
+      "https://docs.mistral.ai/robots",
+      "https://mistral.ai/mistralai-user-ips.json"
+    ]
+  },
+  {
+    "id": "mistralai-index",
+    "provider": "mistral",
+    "product": "MistralAI-Index",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "MistralAI-Index/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-Index/1.0; +https://docs.mistral.ai/robots)"
+    ],
+    "ipRangeUrls": [
+      "https://mistral.ai/mistralai-index-ips.json"
+    ],
+    "rdnsSuffixes": [
+      ".crawlers.mistral.ai"
+    ],
+    "robotsTokens": [
+      "MistralAI-Index"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Indexing only, 'not used for generative AI training'. 4 prefixes 20.240.160.161/32, 20.240.160.1/32, 20.240.194.83/32, 51.12.243.114/32 (creationTime 2025-02-19).",
+    "sources": [
+      "https://docs.mistral.ai/robots",
+      "https://mistral.ai/mistralai-index-ips.json"
+    ]
+  },
+  {
+    "id": "mistralai-training",
+    "provider": "mistral",
+    "product": "MistralAI-Training",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "MistralAI-Training/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-Training/1.0; +https://docs.mistral.ai/robots)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [
+      ".crawlers.mistral.ai"
+    ],
+    "robotsTokens": [
+      "MistralAI-Training"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Training-dataset crawler; no IP list published.",
+    "sources": [
+      "https://docs.mistral.ai/robots"
+    ]
+  },
+  {
+    "id": "deepseekbot",
+    "provider": "deepseek",
+    "product": "DeepSeekBot / DeepSeek-User (unverified)",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "DeepSeekBot",
+      "DeepSeek-User"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; DeepSeekBot/1.0; +https://www.deepseek.com/)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "DeepSeekBot",
+      "DeepSeek-User"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "reported",
+    "notes": "DeepSeek publishes no crawler UA (deepseek.com/bot 404). Observed live fetch: faked Firefox-on-Linux UA from Huawei Cloud, robots ignored (June 2026). Token match catches only cooperative or spoofed traffic; the real signature is Huawei Cloud ASN + Firefox/Linux UA + single no-subresource fetch.",
+    "sources": [
+      "https://knownagents.com/agents/deepseekbot",
+      "https://www.xseek.io/docs/deepseek-user-agents"
+    ]
+  },
+  {
+    "id": "cohere-tokens",
+    "provider": "cohere",
+    "product": "cohere-ai / cohere-training-data-crawler (unconfirmed by Cohere)",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "cohere-training-data-crawler",
+      "cohere-ai",
+      "Coherebot"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "cohere-ai",
+      "cohere-training-data-crawler"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-crawler-ua",
+    "uaMatchConfidence": 0.5,
+    "evidence": "uncertain",
+    "notes": "Cohere's page: 'We do not use Cohere bots or user agents for the purpose of crawling or scraping web content ... to train generative AI foundation models at this time'; active-crawler table is N/A; 'Coherebot' is a hypothetical example. Traffic carrying these tokens is unverified third-party or spoofed.",
+    "sources": [
+      "https://docs.cohere.com/docs/cohere-web-crawlers"
+    ]
+  },
+  {
+    "id": "duckduckbot",
+    "provider": "duckduckgo",
+    "product": "DuckDuckBot",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "DuckDuckBot"
+    ],
+    "uaExamples": [
+      "DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)",
+      "Mozilla/5.0 (compatible; DuckDuckBot-Https/1.1; https://duckduckgo.com/duckduckbot)"
+    ],
+    "ipRangeUrls": [
+      "https://duckduckgo.com/duckduckbot.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "DuckDuckBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Unusual UA shape (no Mozilla/5.0, semicolon before the URL). IP list ~500 /32s (Azure), creationTime 2026-09-01; the help page lists the same IPs in HTML. The DuckDuckBot-Https example is 'likely' (false-positive-traps.md#12.1).",
+    "sources": [
+      "https://duckduckgo.com/duckduckgo-help-pages/results/duckduckbot/",
+      "docs/research/raw/false-positive-traps.md#12.1"
+    ]
+  },
+  {
+    "id": "duckassistbot",
+    "provider": "duckduckgo",
+    "product": "DuckAssistBot",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "DuckAssistBot/\\d"
+    ],
+    "uaExamples": [
+      "DuckAssistBot/1.2; (+http://duckduckgo.com/duckassistbot.html)"
+    ],
+    "ipRangeUrls": [
+      "https://duckduckgo.com/duckassistbot.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "DuckAssistBot"
+    ],
+    "webBotAuth": {
+      "signs": true,
+      "directoryUrl": "https://assistbot.duckduckgo.com/.well-known/http-message-signatures-directory",
+      "coverage": "all"
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range",
+      "web-bot-auth"
+    ],
+    "respectsRobots": "partial",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "notes": "'Crawls pages in real-time for our AI-assisted answers'; not used for training; robots opt-out takes effect after 72 hours. duckassistbot.json: 486 /32 prefixes (same leading entries/timestamp as duckduckbot.json). Key directory at assistbot.duckduckgo.com (1 Ed25519 key, kid Ov3HDsa8JQ39dPEYFvFFN-cUpnz9yNI8LDvr-5LeiBM, max-age 86340).",
+    "sources": [
+      "https://duckduckgo.com/duckduckgo-help-pages/results/duckassistbot",
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "id": "youbot",
+    "provider": "you",
+    "product": "YouBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "YouBot/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; YouBot/1.0; +https://docs.you.com/youbot; env:prod) Chrome/X.X.X.X Safari/537.36"
+    ],
+    "ipRangeUrls": [
+      "https://you.com/docs/youbot"
+    ],
+    "rdnsSuffixes": [
+      ".search.you.com"
+    ],
+    "robotsTokens": [
+      "YouBot"
+    ],
+    "webBotAuth": {
+      "signs": true,
+      "directoryUrl": "https://you.com/.well-known/http-message-signatures-directory",
+      "coverage": "all"
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range",
+      "rdns",
+      "web-bot-auth"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Documented IP range 68.67.112.0/24 (bundled as research snapshot), rDNS youbot-{octets}.search.you.com, Web Bot Auth keys (1 Ed25519). Honours robots.txt and crawl-delay, backs off on 429. Note the 'env:prod' token.",
+    "sources": [
+      "https://you.com/docs/youbot",
+      "https://you.com/.well-known/http-message-signatures-directory"
+    ]
+  },
+  {
+    "id": "brave-search-crawler",
+    "provider": "brave",
+    "product": "Brave Search crawler (undifferentiated)",
+    "class": "search-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "Bravebot/\\d"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "partial",
+    "signal": "declared.search-crawler-ua",
+    "uaMatchConfidence": 0.3,
+    "evidence": "confirmed",
+    "notes": "Brave's crawler 'does not advertise a differentiated user agent' and follows Googlebot's robots rules; partially fed by the opt-in Web Discovery Project. Third-party 'Bravebot/1.0' strings conflict with the official page: a Bravebot UA is likely spurious/spoofed.",
+    "sources": [
+      "https://search.brave.com/help/brave-search-crawler"
+    ]
+  },
+  {
+    "id": "diffbot",
+    "provider": "diffbot",
+    "product": "Diffbot / Diffbot-User",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Diffbot-User",
+      "Diffbot"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Diffbot",
+      "Diffbot-User"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "partial",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Adheres to robots.txt by default but customers with agreements can override; no full UA string, no IP list. Also the fetch back-end for Microsoft Copilot's live page reads (AS6939, plain Linux Chrome UA, no token). (Self-identification is partial: see notes; contract field is boolean.)",
+    "sources": [
+      "https://www.diffbot.com/docs/crawl/",
+      "docs/research/raw/providers-tier2.md#3.14"
+    ]
+  },
+  {
+    "id": "ccbot",
+    "provider": "commoncrawl",
+    "product": "CCBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "CCBot/\\d"
+    ],
+    "uaExamples": [
+      "CCBot/2.0 (https://commoncrawl.org/faq/)"
+    ],
+    "ipRangeUrls": [
+      "https://index.commoncrawl.org/ccbot.json"
+    ],
+    "rdnsSuffixes": [
+      ".crawl.commoncrawl.org"
+    ],
+    "robotsTokens": [
+      "CCBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range",
+      "rdns"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Monthly archive crawl feeding many training sets; dedicated ranges 3.41.188.32/29, 18.97.9.168/29, 18.97.14.80/29, 18.97.14.88/30, 2600:1f28:365:8000::/56 with rDNS 18-97-14-84.crawl.commoncrawl.org (IPv4 only). Any CCBot UA outside those 5 prefixes is a spoof.",
+    "sources": [
+      "https://commoncrawl.org/ccbot",
+      "https://index.commoncrawl.org/ccbot.json"
+    ]
+  },
+  {
+    "id": "petalbot",
+    "provider": "huawei",
+    "product": "PetalBot",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "PetalBot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (Linux; Android 7.0;) AppleWebKit/537.36 (HTML, like Gecko) Mobile Safari/537.36 (compatible; PetalBot;+https://webmaster.petalsearch.com/site/petalbot)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [
+      ".petalsearch.com",
+      ".aspiegel.com"
+    ],
+    "robotsTokens": [
+      "PetalBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "reported",
+    "notes": "Petal Search + Huawei Assistant/AI recommendations; official page is JS-only. Printed UA has the odd '(HTML, like Gecko)'. rDNS suffix variously claimed (petalsearch.com, aspiegel.com, huawei.com): uncertain.",
+    "sources": [
+      "https://knownagents.com/agents/petalbot"
+    ]
+  },
+  {
+    "id": "pangubot",
+    "provider": "huawei",
+    "product": "PanguBot",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "PanguBot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible;PanguBot;pangubot@huawei.com)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "PanguBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "reported",
+    "notes": "PanGu LLM training data; UA has no spaces after semicolons. One directory lists Huawei Cloud 114.119.128.0/18 (unverified). Huawei Cloud ASN alone is not attribution (DeepSeek fetches come from it too).",
+    "sources": [
+      "https://knownagents.com/agents/pangubot"
+    ]
+  },
+  {
+    "id": "alibaba-qwen-tokens",
+    "provider": "alibaba",
+    "product": "QwenBot / TongyiBot / Qwen-User / Quark-Agent / Quark-Spider / AliyunSecBot (reported)",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "Qwenbot",
+      "TongyiBot",
+      "Qwen-User",
+      "Quark-Agent",
+      "Quark-Spider",
+      "AliyunSecBot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; Qwenbot/1.0; +https://qwen.alibaba.com/)",
+      "Mozilla/5.0 (compatible; QwenBot/1.0; +https://tongyi.aliyun.com/bot)",
+      "Mozilla/5.0 (compatible; TongyiBot/1.0; +https://tongyi.aliyun.com)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "QwenBot",
+      "Qwenbot",
+      "TongyiBot",
+      "Qwen-User",
+      "Quark-Agent",
+      "Quark-Spider"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "reported",
+    "notes": "No reachable official page (tongyi.aliyun.com/bot -> 404); strings are mutually inconsistent across directories, match case-insensitively. Observed Qwen live fetch: faked Chrome UA via country-rotating proxies (Norway, Turkey), robots ignored (June 2026).",
+    "sources": [
+      "https://www.tryrankly.com/agent-directory/operator/alibaba",
+      "https://knownagents.com/agents/qwenbot"
+    ]
+  },
+  {
+    "id": "kimibot",
+    "provider": "moonshot",
+    "product": "KimiBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "KimiBot/\\d",
+      "MoonshotBot",
+      "Kimibot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; KimiBot/1.0; +https://www.kimi.com/policies/kimi-crawlers"
+    ],
+    "ipRangeUrls": [
+      "https://www.kimi.com/policies/kimibot.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "KimiBot",
+      "MoonshotBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "'Potentially used to train Kimi's foundation models'. GPTBot-style punctuation '(KHTML, like Gecko); compatible;'. All three Kimi JSON files hold the same 4 prefixes 47.79.253.42/32, 47.79.253.91/32, 47.79.225.241/32, 47.79.230.254/32 (Alibaba Cloud, creationTime 2026-05-18); page warns of 'a dynamic range of IPs'. Legacy MoonshotBot/Kimibot under kimi.moonshot.cn.",
+    "sources": [
+      "https://www.kimi.ai/policies/kimi-crawlers",
+      "https://www.kimi.ai/policies/kimibot.json"
+    ]
+  },
+  {
+    "id": "kimi-user",
+    "provider": "moonshot",
+    "product": "Kimi-User",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "Kimi-User/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Kimi-User/1.0; +https://www.kimi.com/policies/kimi-crawlers"
+    ],
+    "ipRangeUrls": [
+      "https://www.kimi.com/policies/kimi-user.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Kimi-User"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "notes": "User-initiated; 'robots.txt rules may not directly apply'. Despite the clean policy, Kimi's chat fetch of a canary used faked browser UAs (incl. 'Windows NT 11.0') from a 10-IP proxy swarm (June 2026).",
+    "sources": [
+      "https://www.kimi.ai/policies/kimi-crawlers"
+    ]
+  },
+  {
+    "id": "kimi-searchbot",
+    "provider": "moonshot",
+    "product": "Kimi-SearchBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Kimi-SearchBot/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; Kimi-SearchBot/1.0; +https://www.kimi.com/policies/kimi-crawlers"
+    ],
+    "ipRangeUrls": [
+      "https://www.kimi.com/policies/kimi-searchbot.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Kimi-SearchBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Search index crawler; same 4 IPs as KimiBot.",
+    "sources": [
+      "https://www.kimi.ai/policies/kimi-crawlers"
+    ]
+  },
+  {
+    "id": "kimi-agent",
+    "provider": "moonshot",
+    "product": "Kimi-Agent / OK Computer",
+    "class": "computer-use-agent",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "Kimi-Agent/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 Kimi-Agent/2.5"
+    ],
+    "ipRangeUrls": [
+      "https://www.kimi.com/policies/kimi-user.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Kimi-Agent"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.7,
+    "evidence": "reported",
+    "runsWhere": "operator-cloud",
+    "notes": "Hosted agent; UA reported by knownagents only ('official' link is the product page). (Self-identification is partial: see notes; contract field is boolean.)",
+    "sources": [
+      "https://knownagents.com/agents/kimi-agent"
+    ]
+  },
+  {
+    "id": "chatglm-spider",
+    "provider": "zhipu",
+    "product": "ChatGLM-Spider",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "ChatGLM-Spider"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; ChatGLM-Spider/1.0; +https://chatglm.cn/)",
+      "Mozilla/5.0 (compatible; ChatGLM-Spider/2.0; +https://zhipu.ai/spider)"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "ChatGLM-Spider"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "reported",
+    "notes": "No official doc; reported strings disagree on the contact URL; no IP ranges. Amazon blocks the token.",
+    "sources": [
+      "https://knownagents.com/agents/chatglm-spider"
+    ]
+  },
+  {
+    "id": "china-misc-tokens",
+    "provider": "tencent",
+    "product": "Hunyuan (Tencent) / ERNIEBot, YiyanBot (Baidu) / YiBot (01.ai) (reported)",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "Hunyuan",
+      "ERNIEBot",
+      "YiyanBot",
+      "YiBot"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Hunyuan",
+      "ERNIEBot",
+      "YiyanBot",
+      "YiBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-crawler-ua",
+    "uaMatchConfidence": 0.6,
+    "evidence": "reported",
+    "notes": "ai.robots.txt tokens only. Observed: ERNIE's assistant sent Baiduspider to an allowed page and forged strings ('Go-http-client/1.1', 'pc') to the blocked page from Baidu IPs plus third-party Chinese hosting. Provider id 'tencent' is a placeholder for the group; see notes for Baidu / 01.ai.",
+    "sources": [
+      "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.json",
+      "docs/research/raw/providers-tier2.md#3.20"
+    ]
+  },
+  {
+    "id": "baiduspider",
+    "provider": "baidu",
+    "product": "Baiduspider",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Baiduspider"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)",
+      "Baiduspider-render/2.0"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [
+      ".baidu.com",
+      ".baidu.jp"
+    ],
+    "robotsTokens": [
+      "Baiduspider"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "rdns"
+    ],
+    "respectsRobots": "partial",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "reported",
+    "notes": "Classic search crawler; rDNS *.baidu.com / *.baidu.jp verification is well known but was not re-verified in this research. Also used by ERNIE's assistant for allowed pages. Example strings are 'likely' (false-positive-traps.md#12.1).",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.20",
+      "docs/research/raw/false-positive-traps.md#12.1"
+    ]
+  },
+  {
+    "id": "manus-user",
+    "provider": "manus",
+    "product": "Manus cloud agent",
+    "class": "computer-use-agent",
+    "kind": "agent",
+    "classes": {
+      "computer-use-agent": 2,
+      "fetch-agent": 1
+    },
+    "uaPatterns": [
+      "Manus-User/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36; Manus-User/1.0"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Manus-User"
+    ],
+    "webBotAuth": {
+      "signs": true,
+      "directoryUrl": "https://api.manus.im/.well-known/http-message-signatures-directory",
+      "coverage": "partial"
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "web-bot-auth"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "reported",
+    "runsWhere": "operator-cloud",
+    "notes": "Linux VM with headed Chromium (browser-use protocol layer), datacenter IPs; token appended after a semicolon to a Linux Chrome UA (knownagents; manus.im/help/Manus-user 404). Cloudflare Radar reportedly lists Manus as a signed Intermediary agent; directory found at api.manus.im (survey), manus.im apex 404. Hands off ('Take Over') on CAPTCHA/MFA. (Self-identification is partial: see notes; contract field is boolean.)",
+    "sources": [
+      "https://knownagents.com/agents/manus-user",
+      "docs/research/raw/providers-tier2.md#3.21",
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "id": "manus-browser-operator",
+    "provider": "manus",
+    "product": "Manus Browser Operator / Manus Helper extension",
+    "class": "extension-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "observed",
+    "runsWhere": "user-device",
+    "notes": "Chrome/Edge extension mljmkmodkfigdopcpgboaalildgijkoc in the user's browser (user IP/cookies): fetch('chrome-extension://mljmkmodkfigdopcpgboaalildgijkoc/content.ts.js') returns 200 when present; console log 'Manus helper started'; CDP attach ('real, unmodified Chrome').",
+    "sources": [
+      "https://www.humansecurity.com/learn/blog/ai-agent-signals-traffic-detection/",
+      "https://www.arkoselabs.com/blog/standalone-agentic-browser-didnt-win"
+    ]
+  },
+  {
+    "id": "genspark",
+    "provider": "genspark",
+    "product": "Genspark agent",
+    "class": "browser-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "Genspark/\\d"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Genspark"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "observed",
+    "runsWhere": "operator-cloud",
+    "notes": "HUMAN: UA token 'Genspark/1.0.200' appended to a Chrome-style UA on every request; every page gets <div id=\"genspark-float-bar\">; actions via Playwright. No official doc; genspark.ai key directory 404. Observed token: 'Genspark/1.0.200' appended to a Chrome-style UA (base UA not captured).",
+    "sources": [
+      "https://www.humansecurity.com/learn/blog/ai-agent-signals-traffic-detection/"
+    ]
+  },
+  {
+    "id": "opera-neon",
+    "provider": "opera",
+    "product": "Opera Neon (Neon Do local / Neon Make cloud)",
+    "class": "extension-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "user-device",
+    "notes": "Browser Operator / Neon Do run locally (user IP, regular Opera UA with OPR/ token identifying Opera, not the agent); Neon Make agents run in a cloud VM with unknown egress. Nothing to match; behavioural only.",
+    "sources": [
+      "https://press.opera.com/2025/05/28/opera-neon-the-first-ai-agentic-browser/",
+      "https://aiagentindex.mit.edu/2025/opera-neon"
+    ]
+  },
+  {
+    "id": "dia-browser",
+    "provider": "browser-company",
+    "product": "Dia",
+    "class": "human-assisted",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "user-device",
+    "notes": "Chromium-based macOS browser (Chromium 144 at v1.14.0); assistant reads open tabs including authenticated sessions but does not click around on the user's behalf. Plain Chrome UA; human-assisted class.",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.24"
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+HTTP/2 200 
+date: Sat, 24 Oct 2026 22:29:57 GMT
+content-type: application/http-message-signatures-directory+json; charset=utf-8
+content-length: 176
+vary: Origin
+access-control-allow-credentials: true
+access-control-expose-headers: Grpc-Status, Grpc-Message, Grpc-Status-Details-Bin, Content-Encoding, Connect-Content-Encoding, traceparent, backend-traceparent, x-amzn-trace-id, x-request-id
+cache-control: public, max-age=86400
+signature: sig1=:p+46BmJzFcxCuLCSVyb39z2g60shJ3olJBRQUa4uCHtqJ5LML68DCT/WjDGQu0JCklGh42tmS9Yu/Li+2CjsDw==:
+signature-input: sig1=("@authority";req);created=1792873176;expires=1793477976;keyid="Vuxu4khgzIe0b30Nd6hq2envAuVBFMTDqorSNIUb_Oo";alg="ed25519";tag="http-message-signatures-directory"
+x-request-id: serverGenReqId_258757e4-7f23-43d6-8b94-a1456fd52104
+

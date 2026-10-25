@@ -1,0 +1,24 @@
+HTTP/2 404 
+date: Sat, 24 Oct 2026 22:29:56 GMT
+content-type: text/html; charset=UTF-8
+content-length: 15755
+content-security-policy: object-src 'none'; base-uri 'self'; form-action 'self' perplexity-app: https://onedrive.live.com https://*.sharepoint.com https://*.paypal.com https://*.venmo.com; frame-ancestors 'self' https://onedrive.live.com https://*.sharepoint.com https://app.athina.ai; upgrade-insecure-requests
+cross-origin-opener-policy: unsafe-none
+cross-origin-resource-policy: same-origin
+origin-agent-cluster: ?1
+permissions-policy: accelerometer=(), ambient-light-sensor=(), autoplay=(self "https://www.youtube.com"), battery=(), bluetooth=(), camera=(self), clipboard-read=(self), clipboard-write=(self "https://js.stripe.com"), compute-pressure=(), display-capture=(self), encrypted-media=(self "https://www.youtube.com"), fullscreen=(self "https://www.youtube.com"), geolocation=(self), gyroscope=(), hid=(), identity-credentials-get=(self "https://accounts.google.com"), idle-detection=(), magnetometer=(), microphone=(self), midi=(), payment=(self "https://js.stripe.com" "https://checkout.link.com" "https://www.paypal.com" "https://www.sandbox.paypal.com" "https://www.test28.stage.paypal.com"), picture-in-picture=(self "https://www.youtube.com"), publickey-credentials-get=(self "https://js.stripe.com" "https://checkout.link.com" "https://www.paypal.com" "https://www.sandbox.paypal.com" "https://www.test28.stage.paypal.com" "https://acs.capitalone.com" "https://capitalone.com"), publickey-credentials-create=(self "https://js.stripe.com" "https://checkout.link.com" "https://www.paypal.com" "https://www.sandbox.paypal.com" "https://www.test28.stage.paypal.com"), screen-wake-lock=(), serial=(), speaker-selection=(), usb=(), web-share=(), window-management=(), xr-spatial-tracking=()
+referrer-policy: strict-origin
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+x-content-type-options: nosniff
+x-dns-prefetch-control: off
+x-download-options: noopen
+x-frame-options: DENY
+x-permitted-cross-domain-policies: none
+x-xss-protection: 0
+cf-cache-status: DYNAMIC
+set-cookie: __cf_bm=UOHuBEHgcJqQeHPynKa5pzMjwmU3kSv_FVPyYD59N_A-1792880996.562339-1.0.1.1-8uBOMlR76wIgGFDw.BhcxQi7GuzcShIsorkXs424v8C8nfKQ4hEwwc0H9BHU9pCcqnoezvKSecvE95vv72AaHFme8DqrtWvZTYDaNXEPx.DXJC_XZzn7DuSE0JI0aAfO; HttpOnly; SameSite=None; Secure; Path=/; Domain=perplexity.ai; Expires=Sat, 24 Oct 2026 22:59:56 GMT
+set-cookie: __cflb=02DiuDyvFMmK5p9jVbVnMNSKYZhUL9aGmUVHq6gZ5vx3E; HttpOnly; SameSite=None; Secure; Path=/; Expires=Sun, 25 Oct 2026 21:29:56 GMT
+server: cloudflare
+cf-ray: a4fc6c548dd64b9f-EWR
+alt-svc: h3=":443"; ma=86400
+

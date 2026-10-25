@@ -1,0 +1,1119 @@
+[
+  {
+    "id": "gptbot",
+    "provider": "openai",
+    "product": "GPTBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "GPTBot/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.4; +https://openai.com/gptbot"
+    ],
+    "ipRangeUrls": [
+      "https://openai.com/gptbot.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "GPTBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Training crawler. Token sits outside the parentheses ('; compatible; GPTBot/1.4; +url'); robots.txt fetches may add a '; robots.txt;' marker. 18 IPv4 prefixes (Azure), no rDNS. JS not rendered (Vercel/MERJ 2024).",
+    "sources": [
+      "https://developers.openai.com/api/docs/bots",
+      "https://openai.com/gptbot.json",
+      "docs/research/raw/providers-tier1.md#2.1"
+    ]
+  },
+  {
+    "id": "chatgpt-user",
+    "provider": "openai",
+    "product": "ChatGPT-User",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "ChatGPT-User/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot"
+    ],
+    "ipRangeUrls": [
+      "https://openai.com/chatgpt-user.json",
+      "https://openai.com/chatgpt-connectors.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "ChatGPT-User"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "partial",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "User-initiated fetcher for ChatGPT, Custom GPTs and GPT Actions; 'robots.txt rules may not apply'. chatgpt-user.json has 234 prefixes (233 x /28 + 9.129.0.0/16); 141 of them overlap chatgpt-connectors.json. Observed honouring robots in the June 2026 canary test.",
+    "sources": [
+      "https://developers.openai.com/api/docs/bots",
+      "https://openai.com/chatgpt-user.json",
+      "docs/research/raw/providers-tier1.md#2.2"
+    ]
+  },
+  {
+    "id": "oai-searchbot",
+    "provider": "openai",
+    "product": "OAI-SearchBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "OAI-SearchBot/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.4; +https://openai.com/searchbot",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.4; robots.txt; +https://openai.com/searchbot"
+    ],
+    "ipRangeUrls": [
+      "https://openai.com/searchbot.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "OAI-SearchBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Search index crawler (ChatGPT search). Browser-shaped UA followed by '; compatible; OAI-SearchBot/1.4; +url' outside parentheses: parsers that only read inside '(...)' miss it. 39 IPv4 prefixes.",
+    "sources": [
+      "https://developers.openai.com/api/docs/bots",
+      "https://openai.com/searchbot.json"
+    ]
+  },
+  {
+    "id": "oai-adsbot",
+    "provider": "openai",
+    "product": "OAI-AdsBot",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "OAI-AdsBot/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-AdsBot/1.0; +https://openai.com/adsbot"
+    ],
+    "ipRangeUrls": [
+      "https://openai.com/adsbot.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "OAI-AdsBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Checks landing pages submitted as ChatGPT ads; only visits submitted pages; not used for training. 2 prefixes: 130.131.229.128/25, 20.168.90.128/25.",
+    "sources": [
+      "https://developers.openai.com/api/docs/bots",
+      "https://openai.com/adsbot.json"
+    ]
+  },
+  {
+    "id": "chatgpt-agent",
+    "provider": "openai",
+    "product": "ChatGPT agent / ChatGPT Work cloud browser",
+    "class": "computer-use-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": true,
+      "directoryUrl": "https://chatgpt.com/.well-known/http-message-signatures-directory",
+      "signatureAgent": "\"https://chatgpt.com\"",
+      "coverage": "all"
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "web-bot-auth"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Lineage Operator (operator.openai.com, dead) -> ChatGPT agent -> ChatGPT Work 'Cloud browser'; probably also dots and the Agents-API openai_hosted browser (uncertain). Plain Chrome UA claiming macOS with Sec-CH-UA-Platform \"Linux\" and a Chromium-only brand list; signs with Signature-Agent \"https://chatgpt.com\", label sig1, components (\"@authority\" \"@method\" \"@path\" \"signature-agent\"), alg ed25519. No published UA, robots token or IP feed (observed IPv6 2a09:bac5::/32 Cloudflare space, all OpenAI feeds are IPv4-only). Hosted profile: 1280x960 screen, 13 cores; see hostedAgentProfiles. (Self-identification is partial: see notes; contract field is boolean.)",
+    "sources": [
+      "https://simonwillison.net/2025/Aug/4/chatgpt-agents-user-agent/",
+      "https://chatgpt.com/.well-known/http-message-signatures-directory",
+      "docs/research/raw/providers-tier1.md#2.5",
+      "docs/research/raw/computer-use-agents.md#3.3"
+    ]
+  },
+  {
+    "id": "chatgpt-acp-checkout",
+    "provider": "openai",
+    "product": "ChatGPT Agentic Commerce Protocol client",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "^ChatGPT/\\d+\\.\\d+ \\("
+    ],
+    "uaExamples": [
+      "ChatGPT/2.0 (Mac OS X 15.0.1; arm64; build 0)"
+    ],
+    "ipRangeUrls": [
+      "https://openai.com/chatgpt-connectors.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Checkout API calls of the OpenAI x Stripe Agentic Commerce Protocol: headers Authorization Bearer, API-Version: 2025-09-12, Idempotency-Key, Request-Id, Signature (body signature), Timestamp. UA value is the spec's example; treat the shape (ChatGPT/<ver> (<os>; <arch>; build N)) as the match. Agentic-commerce egress is covered by chatgpt-connectors.json per OpenAI.",
+    "sources": [
+      "https://developers.openai.com/commerce/specs/checkout",
+      "docs/research/raw/server-fingerprints.md#9"
+    ]
+  },
+  {
+    "id": "chatgpt-atlas-favicon-fetcher",
+    "provider": "openai",
+    "product": "ChatGPT Atlas native fetcher (retired browser)",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "ChatGPT(%20| )Atlas/"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "uncertain",
+    "runsWhere": "user-device",
+    "notes": "Atlas (macOS Chromium fork, 2025-10-21 to 2026-08-09, retired) served page requests with a stock Chrome UA and no signing; a separate CFNetwork favicon/logo fetcher carried a 'ChatGPT Atlas' token (third-party logs; exact build format uncertain). Kept for log forensics only. Observed shape: 'ChatGPT%20Atlas/<build> CFNetwork/<ver> Darwin/<ver>' (version numbers were placeholders in the source).",
+    "sources": [
+      "docs/research/raw/providers-tier1.md#2.7",
+      "https://en.wikipedia.org/wiki/ChatGPT_Atlas"
+    ]
+  },
+  {
+    "id": "chatgpt-chrome-extension",
+    "provider": "openai",
+    "product": "ChatGPT Chrome extension / Codex browser driver",
+    "class": "extension-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "user-device",
+    "notes": "Extension hehggadaopoacecdllhhajmbjkdcmajg (Edge odlomjlbamekndcpllcnffbgeohgkmjh) drives the user's real Chrome over chrome.debugger; user's UA, cookies, IP. Optional declarativeNetRequest header 'x-browser-agent: ChatGPT/<sessionId>' on controlled tabs when the turn carries agent_request_header_enabled (production status unknown). DOM: #codex-agent-overlay-root, link[data-codex-favicon-badge=\"true\"]; main-world globals __browserUseClipboardBridge / __browserUseClipboard_<32hex>; hidden WebMCP probe host appended to <html>. See agentExtensions. (Self-identification is partial: see notes; contract field is boolean.)",
+    "sources": [
+      "docs/research/raw/providers-tier1.md#2.8",
+      "docs/research/raw/extension-agents.md#4"
+    ]
+  },
+  {
+    "id": "codex-cloud",
+    "provider": "openai",
+    "product": "Codex cloud sandbox egress",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [
+      "https://openai.com/chatgpt-agents.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Codex"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": false,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "No User-Agent documented: traffic is whatever the sandbox tool uses (curl, python-requests, node/undici) through an egress proxy; 'Computer and browser use' unsupported in cloud envs. chatgpt-agents.json = 1,758 IPv4 /28 prefixes (ARIN MSFT), no rDNS. An IP in chatgpt-agents.json only is 'Codex cloud (or other cloud agent env)'. Codex robots token is community-reported (ai.robots.txt).",
+    "sources": [
+      "https://learn.chatgpt.com/docs/cloud/internet-access",
+      "https://developers.openai.com/api/docs/guides/ip-addresses",
+      "docs/research/raw/providers-tier1.md#2.9"
+    ]
+  },
+  {
+    "id": "claudebot",
+    "provider": "anthropic",
+    "product": "ClaudeBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "ClaudeBot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",
+      "ClaudeBot (https://www.anthropic.com)"
+    ],
+    "ipRangeUrls": [
+      "https://claude.com/crawling/bots.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "ClaudeBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Training crawler; honours robots.txt incl. Crawl-delay; 'will not bypass CAPTCHAs'. Anthropic publishes only the token: full UA strings are third-party captures (contact suffix varies), match the token. bots.json (14 prefixes, shared by all three bots, max-age 3600) = AWS 216.73.216.0/22 + GCP /32s reversing to *.bc.googleusercontent.com: no Anthropic-branded rDNS. Legacy tokens Claude-Web / anthropic-ai are unconfirmed.",
+    "sources": [
+      "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "https://claude.com/crawling/bots.json",
+      "docs/research/raw/providers-tier1.md#3.1"
+    ]
+  },
+  {
+    "id": "claude-user",
+    "provider": "anthropic",
+    "product": "Claude-User",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "Claude-User"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-User/1.0; +Claude-User@anthropic.com)",
+      "Claude-User (claude-code/2.1.86; +https://support.anthropic.com/)"
+    ],
+    "ipRangeUrls": [
+      "https://claude.com/crawling/bots.json",
+      "https://platform.claude.com/docs/en/api/ip-addresses"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Claude-User"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "User-triggered fetcher behind claude.ai and the API web_fetch / web_search server tools (web_fetch enforces robots.txt server-side via url_not_allowed; does not render JavaScript; results cached). Token inside the '(KHTML, like Gecko; compatible; ...)' parentheses, unlike OpenAI. Outbound tool calls also documented from 160.79.104.0/21 (AP-2440 Anthropic, PBC). Second example (Claude Code WebFetch variant) is 'likely' per false-positive-traps.md#12.6, not confirmed. API web_fetch / MCP outbound egress is the documented range 160.79.104.0/21.",
+    "sources": [
+      "https://simonwillison.net/2025/Sep/10/claude-web-fetch-tool/",
+      "https://platform.claude.com/docs/en/api/ip-addresses",
+      "docs/research/raw/providers-tier1.md#3.1",
+      "docs/research/raw/false-positive-traps.md#12.6"
+    ]
+  },
+  {
+    "id": "claude-searchbot",
+    "provider": "anthropic",
+    "product": "Claude-SearchBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Claude-SearchBot"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-SearchBot/1.0; +searchbot@anthropic.com)"
+    ],
+    "ipRangeUrls": [
+      "https://claude.com/crawling/bots.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Claude-SearchBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Search-quality indexer. Contact suffix in the UA varies across third-party directories (+searchbot@, +Claude-SearchBot@, +claudebot@anthropic.com): match the token only.",
+    "sources": [
+      "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+      "https://knownagents.com/agents/claude-searchbot"
+    ]
+  },
+  {
+    "id": "claude-legacy-tokens",
+    "provider": "anthropic",
+    "product": "Claude-Web / anthropic-ai (legacy, unconfirmed)",
+    "class": "ai-crawler",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "Claude-Web",
+      "anthropic-ai"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [
+      "https://claude.com/crawling/bots.json"
+    ],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Claude-Web",
+      "anthropic-ai"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-crawler-ua",
+    "uaMatchConfidence": 0.6,
+    "evidence": "reported",
+    "notes": "Tokens still present in community lists; knownagents marks anthropic-ai 'unconfirmed' and Claude-Web 'undocumented'. Treat a UA carrying them as claimed-unverifiable; verify by bots.json IP.",
+    "sources": [
+      "docs/research/raw/providers-tier1.md#3.1",
+      "https://raw.githubusercontent.com/ai-robots-txt/ai.robots.txt/main/robots.json"
+    ]
+  },
+  {
+    "id": "claude-in-chrome",
+    "provider": "anthropic",
+    "product": "Claude in Chrome",
+    "class": "extension-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "user-device",
+    "notes": "Extension fcoeoabgfenejglbffodgkkbkcdhcgfn v1.0.102 (also Claude Code --chrome and Claude Desktop/Cowork). chrome.debugger CDP input (Input.dispatchMouseEvent force 0.5, insertText), Emulation.setFocusEmulationEnabled; no header added to third-party sites; user's UA/cookies/IP. Probe: chrome-extension://fcoeoabgfenejglbffodgkkbkcdhcgfn/assets/accessibility-tree.js-B-oUarrX.js; active indicator = attribute-less <div> with closed shadow root, display:contents, last child of body.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#2",
+      "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+    ]
+  },
+  {
+    "id": "claude-code-webfetch",
+    "provider": "anthropic",
+    "product": "Claude Code WebFetch (local CLI)",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [
+      "axios/1.8.4"
+    ],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Claude-Code"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.http-library-ua",
+    "evidence": "uncertain",
+    "runsWhere": "user-device",
+    "notes": "Runs on the user's machine (user's IP) after a preflight to https://claude.ai/api/web/domain_info; users reported UA axios/1.8.4 (Feb 2026) or an empty UA. Matched via the axios / empty-UA library records; this entry documents attribution only. Cloud sessions use an Anthropic-managed VM with no published egress range or UA.",
+    "sources": [
+      "https://github.com/anthropics/claude-code/issues/22846",
+      "docs/research/raw/providers-tier1.md#3.3"
+    ]
+  },
+  {
+    "id": "googlebot",
+    "provider": "google",
+    "product": "Googlebot",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Googlebot/\\d",
+      "^Googlebot/"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +http://www.google.com/bot.html) Chrome/W.X.Y.Z Safari/537.36",
+      "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+      "Googlebot/2.1 (+http://www.google.com/bot.html)"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    ],
+    "rdnsSuffixes": [
+      ".googlebot.com",
+      ".geo.googlebot.com"
+    ],
+    "robotsTokens": [
+      "Googlebot",
+      "Googlebot-News"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "Renders JS (WRS). rDNS masks crawl-***-***-***-***.googlebot.com and geo-crawl-***.geo.googlebot.com; forward-confirm. Google-Extended training control has no UA of its own: it arrives as Googlebot/GoogleOther. Cloudflare 'Accountable' mixed-use designation (Sep 2026).",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/verify-google-requests"
+    ]
+  },
+  {
+    "id": "googlebot-media",
+    "provider": "google",
+    "product": "Googlebot-Image / Googlebot-Video",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Googlebot-Image/\\d",
+      "Googlebot-Video/\\d"
+    ],
+    "uaExamples": [
+      "Googlebot-Image/1.0",
+      "Googlebot-Video/1.0"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    ],
+    "rdnsSuffixes": [
+      ".googlebot.com",
+      ".geo.googlebot.com"
+    ],
+    "robotsTokens": [
+      "Googlebot-Image",
+      "Googlebot-Video"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": false,
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Media crawlers of the common-crawler group.",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"
+    ]
+  },
+  {
+    "id": "storebot-google",
+    "provider": "google",
+    "product": "Storebot-Google",
+    "class": "search-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Storebot-Google/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (X11; Linux x86_64; Storebot-Google/1.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Safari/537.36"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    ],
+    "rdnsSuffixes": [
+      ".googlebot.com",
+      ".geo.googlebot.com"
+    ],
+    "robotsTokens": [
+      "Storebot-Google"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.search-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Shopping crawler; desktop and Pixel 2 mobile wrappers.",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"
+    ]
+  },
+  {
+    "id": "google-inspectiontool",
+    "provider": "google",
+    "product": "Google-InspectionTool",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "Google-InspectionTool/\\d"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (compatible; Google-InspectionTool/1.0)"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    ],
+    "rdnsSuffixes": [
+      ".googlebot.com",
+      ".geo.googlebot.com"
+    ],
+    "robotsTokens": [
+      "Google-InspectionTool"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "Search Console URL inspection / Rich Results test.",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"
+    ]
+  },
+  {
+    "id": "googleother",
+    "provider": "google",
+    "product": "GoogleOther",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "GoogleOther-Image/\\d",
+      "GoogleOther-Video/\\d",
+      "GoogleOther"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GoogleOther) Chrome/W.X.Y.Z Safari/537.36",
+      "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; GoogleOther)",
+      "GoogleOther-Image/1.0"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    ],
+    "rdnsSuffixes": [
+      ".googlebot.com",
+      ".geo.googlebot.com"
+    ],
+    "robotsTokens": [
+      "GoogleOther",
+      "GoogleOther-Image",
+      "GoogleOther-Video"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Generic crawler 'used by various product teams for fetching publicly accessible content' (R&D crawls, incl. AI); does not affect Search. Blocked by Amazon's robots.txt.",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"
+    ]
+  },
+  {
+    "id": "google-cloudvertexbot",
+    "provider": "google",
+    "product": "Google-CloudVertexBot",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [
+      "Google-CloudVertexBot"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/common-crawlers.json"
+    ],
+    "rdnsSuffixes": [
+      ".googlebot.com",
+      ".geo.googlebot.com"
+    ],
+    "robotsTokens": [
+      "Google-CloudVertexBot"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "Crawls sites 'requested by the site owners' to build Vertex AI Agents; Google documents only the substring.",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers"
+    ]
+  },
+  {
+    "id": "google-extended",
+    "provider": "google",
+    "product": "Google-Extended",
+    "class": "ai-crawler",
+    "kind": "crawler",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [
+      "Google-Extended"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "yes",
+    "signal": "declared.ai-crawler-ua",
+    "evidence": "confirmed",
+    "notes": "robots.txt control token only (Gemini training and grounding). It has NO user-agent string; requests arrive as Googlebot/GoogleOther. Cannot be detected on the wire.",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers",
+      "https://developers.google.com/search/docs/appearance/ai-features"
+    ]
+  },
+  {
+    "id": "google-special-crawlers",
+    "provider": "google",
+    "product": "APIs-Google / AdsBot-Google / Mediapartners-Google / Google-Safety",
+    "class": "utility-bot",
+    "kind": "utility",
+    "uaPatterns": [
+      "AdsBot-Google-Mobile",
+      "AdsBot-Google",
+      "Mediapartners-Google",
+      "APIs-Google",
+      "Google-Safety"
+    ],
+    "uaExamples": [
+      "APIs-Google (+https://developers.google.com/webmasters/APIs-Google.html)",
+      "AdsBot-Google (+http://www.google.com/adsbot.html)",
+      "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; AdsBot-Google-Mobile; +http://www.google.com/mobile/adsbot.html)",
+      "Mediapartners-Google"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/special-crawlers.json"
+    ],
+    "rdnsSuffixes": [
+      ".google.com"
+    ],
+    "robotsTokens": [
+      "APIs-Google",
+      "AdsBot-Google",
+      "AdsBot-Google-Mobile",
+      "Mediapartners-Google",
+      "Google-Safety"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "partial",
+    "signal": "declared.utility-bot-ua",
+    "evidence": "confirmed",
+    "notes": "Special-case crawlers: ignore the robots '*' group (Google-Safety ignores robots entirely). rDNS mask rate-limited-proxy-***-***-***-***.google.com. Retired tokens: DuplexWeb-Google, googleweblight, AdsBot-Google-Mobile-Apps, 'Google Favicon'.",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-special-case-crawlers"
+    ]
+  },
+  {
+    "id": "google-user-triggered-fetchers",
+    "provider": "google",
+    "product": "Google user-triggered fetchers",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "FeedFetcher-Google",
+      "GoogleProducer",
+      "Google-Site-Verification/\\d",
+      "Google-Read-Aloud",
+      "Google-GeminiNotebook",
+      "Google-NotebookLM",
+      "Google-CWS",
+      "^GoogleMessages$",
+      "^Google-Pinpoint$"
+    ],
+    "uaExamples": [
+      "FeedFetcher-Google; (+http://www.google.com/feedfetcher.html)",
+      "GoogleProducer; (+https://developers.google.com/search/docs/crawling-indexing/google-producer)",
+      "Mozilla/5.0 (compatible; Google-Site-Verification/1.0)",
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 (compatible; Google-Read-Aloud; +https://support.google.com/webmasters/answer/1061943)",
+      "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Mobile Safari/537.36 (compatible; Google-GeminiNotebook; +https://developers.google.com/crawling/docs/crawlers-fetchers/google-gemininotebook)",
+      "Mozilla/5.0 (compatible; Google-CWS)",
+      "GoogleMessages",
+      "Google-Pinpoint"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/user-triggered-fetchers-google.json",
+      "https://developers.google.com/static/crawling/ipranges/user-triggered-fetchers.json"
+    ],
+    "rdnsSuffixes": [
+      ".google.com",
+      ".gae.googleusercontent.com"
+    ],
+    "robotsTokens": [
+      "FeedFetcher-Google",
+      "GoogleProducer",
+      "Google-Site-Verification",
+      "Google-Read-Aloud",
+      "Google-GeminiNotebook",
+      "Google-NotebookLM",
+      "Google-CWS",
+      "GoogleMessages",
+      "Google-Pinpoint"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "rdns",
+      "ip-range"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "notes": "'Generally ignore robots.txt rules'. Google-GeminiNotebook replaced Google-NotebookLM (old token supported until Aug 2026); Read-Aloud and GeminiNotebook carry fixed Chrome 137/138 versions, not the W.X.Y.Z placeholder. rDNS google-proxy-***.google.com (Google-owned) or ***.gae.googleusercontent.com (user-owned App Engine).",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers"
+    ]
+  },
+  {
+    "id": "google-agent",
+    "provider": "google",
+    "product": "Google-Agent",
+    "class": "computer-use-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "Google-Agent"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; Google-Agent; +https://developers.google.com/crawling/docs/crawlers-fetchers/google-agent)",
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko; compatible; Google-Agent; +https://developers.google.com/crawling/docs/crawlers-fetchers/google-agent) Chrome/W.X.Y.Z Safari/537.36"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/user-triggered-agents.json"
+    ],
+    "rdnsSuffixes": [
+      ".google.com",
+      ".gae.googleusercontent.com"
+    ],
+    "robotsTokens": [
+      "Google-Agent"
+    ],
+    "webBotAuth": {
+      "signs": true,
+      "directoryUrl": "https://agent.bot.goog/.well-known/http-message-signatures-directory",
+      "signatureAgent": "g=\"https://agent.bot.goog\"",
+      "coverage": "partial"
+    },
+    "executesJs": true,
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range",
+      "rdns",
+      "web-bot-auth"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "operator-cloud",
+    "notes": "'Used by agents hosted on Google infrastructure to navigate the web and perform actions upon user request' (Project Mariner / Gemini agent mode, likely). user-triggered-agents.json = 12 IPv4 + 8 IPv6 prefixes that appear in no other Google file; probed rDNS google-proxy-*.google.com. Web Bot Auth experimental: Dictionary-form Signature-Agent g=\"https://agent.bot.goog\" (label g), 5 keys with 6-char kids (not thumbprints), only 'a subset of requests' signed. Emit declared.ai-agent-ua with a computer-use-agent class boost.",
+    "sources": [
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/google-user-triggered-fetchers",
+      "https://developers.google.com/crawling/docs/crawlers-fetchers/web-bot-auth",
+      "docs/research/raw/providers-tier1.md#4.5"
+    ]
+  },
+  {
+    "id": "google-bare-ua",
+    "provider": "google",
+    "product": "Gemini bare 'Google' fetcher (observed)",
+    "class": "fetch-agent",
+    "kind": "agent",
+    "uaPatterns": [
+      "^Google$"
+    ],
+    "uaExamples": [
+      "Google"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/user-triggered-fetchers-google.json",
+      "https://www.gstatic.com/ipranges/goog.json"
+    ],
+    "rdnsSuffixes": [
+      ".google.com"
+    ],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range",
+      "rdns"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.8,
+    "evidence": "observed",
+    "notes": "Two independent 2026 canary tests saw Gemini's live fetch arrive with a bare 'Google' User-Agent from Google proxy infrastructure outside the published crawler ranges, ignoring robots.txt. Undocumented by Google. (Self-identification is partial: see notes; contract field is boolean.)",
+    "sources": [
+      "https://www.searchengineworld.com/do-ai-assistants-actually-respect-your-robots-txt-we-put-12-of-them-to-the-test",
+      "https://southasiadigital.com/which-ai-crawlers-respect-robots-txt/"
+    ]
+  },
+  {
+    "id": "gemini-deep-research",
+    "provider": "google",
+    "product": "Gemini-Deep-Research (unverified)",
+    "class": "fetch-agent",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "Gemini-Deep-Research"
+    ],
+    "uaExamples": [
+      "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Gemini-Deep-Research; +https://gemini.google/overview/deep-research/) Chrome/135.0.0.0 Safari/537.36"
+    ],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/user-triggered-fetchers-google.json"
+    ],
+    "rdnsSuffixes": [
+      ".google.com"
+    ],
+    "robotsTokens": [
+      "Gemini-Deep-Research"
+    ],
+    "webBotAuth": {
+      "signs": false
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.6,
+    "evidence": "reported",
+    "notes": "Appears only in third-party directories (knownagents); not in Google's fetcher list as of 2026-08-19. 'Any client can claim its identity'. Blocked by Amazon's robots.txt. Verify by Google IP feeds before attributing.",
+    "sources": [
+      "https://knownagents.com/agents/gemini-deep-research",
+      "docs/research/raw/providers-tier1.md#4.8"
+    ]
+  },
+  {
+    "id": "googleagent-unverified-tokens",
+    "provider": "google",
+    "product": "GoogleAgent-Mariner / GoogleAgent-URLContext / GoogleAgent-Shopping / Google-Gemini-CLI (unverified)",
+    "class": "computer-use-agent",
+    "kind": "unverifiable",
+    "uaPatterns": [
+      "GoogleAgent-Mariner",
+      "GoogleAgent-URLContext",
+      "GoogleAgent-Shopping",
+      "Google-Gemini-CLI"
+    ],
+    "uaExamples": [],
+    "ipRangeUrls": [
+      "https://developers.google.com/static/crawling/ipranges/user-triggered-agents.json"
+    ],
+    "rdnsSuffixes": [
+      ".google.com"
+    ],
+    "robotsTokens": [
+      "GoogleAgent-Mariner",
+      "GoogleAgent-URLContext",
+      "GoogleAgent-Shopping",
+      "Google-Gemini-CLI"
+    ],
+    "webBotAuth": {
+      "signs": false,
+      "coverage": "unknown"
+    },
+    "selfIdentifies": true,
+    "verification": [
+      "ip-range"
+    ],
+    "respectsRobots": "unknown",
+    "signal": "declared.ai-agent-ua",
+    "uaMatchConfidence": 0.5,
+    "evidence": "uncertain",
+    "notes": "Tokens seen in aggregator tables and in Amazon's robots.txt only; not in any Google page fetched. Treat as claimed, unverifiable.",
+    "sources": [
+      "docs/research/raw/providers-tier1.md#4.8",
+      "https://www.amazon.com/robots.txt"
+    ]
+  },
+  {
+    "id": "gemini-in-chrome",
+    "provider": "google",
+    "product": "Gemini in Chrome auto browse",
+    "class": "extension-agent",
+    "kind": "agent",
+    "uaPatterns": [],
+    "uaExamples": [],
+    "ipRangeUrls": [],
+    "rdnsSuffixes": [],
+    "robotsTokens": [],
+    "webBotAuth": {
+      "signs": false
+    },
+    "executesJs": true,
+    "selfIdentifies": false,
+    "verification": [
+      "none"
+    ],
+    "respectsRobots": "no",
+    "signal": "declared.ai-agent-ua",
+    "evidence": "confirmed",
+    "runsWhere": "user-device",
+    "notes": "Chrome's built-in Actor framework in the user's own browser (US, AI Pro/Ultra, since 2026-01-28): user's UA, cookies and IP; no token, no signing, no public DOM markers. Detect behaviourally.",
+    "sources": [
+      "docs/research/raw/providers-tier1.md#4.6",
+      "docs/research/raw/extension-agents.md#5"
+    ]
+  }
+]

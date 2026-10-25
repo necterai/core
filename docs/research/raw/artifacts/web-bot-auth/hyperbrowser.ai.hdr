@@ -1,0 +1,9 @@
+HTTP/2 307 
+cache-control: public, max-age=0, must-revalidate
+content-type: application/json
+date: Sat, 24 Oct 2026 22:30:00 GMT
+location: https://www.hyperbrowser.ai/.well-known/http-message-signatures-directory
+server: Vercel
+strict-transport-security: max-age=63072000
+x-vercel-id: iad1::8zs52-1792881000890-70d10c3f1d19
+

@@ -1,0 +1,217 @@
+[
+  {
+    "asn": 16509,
+    "name": "Amazon AWS",
+    "kind": "cloud",
+    "provider": "aws",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/16509/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 14618,
+    "name": "Amazon AWS (us-east-1)",
+    "kind": "cloud",
+    "provider": "aws",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/14618/aggregated.json",
+    "notes": "PerplexityBot / Amazonbot addresses are AWS us-east-1.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 396982,
+    "name": "Google Cloud",
+    "kind": "cloud",
+    "provider": "gcp",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/396982/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 15169,
+    "name": "Google LLC",
+    "kind": "cloud",
+    "provider": "google",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/15169/aggregated.json",
+    "notes": "Google's own network: also carries Googlebot, Google-Agent, Chrome prefetch proxy; verify agent ranges before treating as datacenter.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 8075,
+    "name": "Microsoft Azure",
+    "kind": "cloud",
+    "provider": "azure",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/8075/aggregated.json",
+    "notes": "OpenAI's crawler/agent prefixes and DuckDuckGo's bots sit inside Azure.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 31898,
+    "name": "Oracle Cloud",
+    "kind": "cloud",
+    "provider": "oci",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/31898/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 14061,
+    "name": "DigitalOcean",
+    "kind": "hosting",
+    "provider": "digitalocean",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/14061/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 63949,
+    "name": "Linode / Akamai Connected Cloud",
+    "kind": "hosting",
+    "provider": "linode",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/63949/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 20473,
+    "name": "Vultr",
+    "kind": "hosting",
+    "provider": "vultr",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/20473/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 24940,
+    "name": "Hetzner Online",
+    "kind": "hosting",
+    "provider": "hetzner",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/24940/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 213230,
+    "name": "Hetzner Online (cloud)",
+    "kind": "hosting",
+    "provider": "hetzner",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/213230/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 16276,
+    "name": "OVH",
+    "kind": "hosting",
+    "provider": "ovh",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/16276/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 45102,
+    "name": "Alibaba Cloud (US)",
+    "kind": "cloud",
+    "provider": "alibaba-cloud",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/45102/aggregated.json",
+    "notes": "Kimi crawler IPs (47.79.x) are Alibaba Cloud.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 37963,
+    "name": "Alibaba Cloud (Hangzhou)",
+    "kind": "cloud",
+    "provider": "alibaba-cloud",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/37963/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 132203,
+    "name": "Tencent Cloud",
+    "kind": "cloud",
+    "provider": "tencent-cloud",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/132203/aggregated.json",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1",
+      "docs/research/raw/server-fingerprints.md#5.3"
+    ]
+  },
+  {
+    "asn": 6939,
+    "name": "Hurricane Electric",
+    "kind": "hosting",
+    "provider": "diffbot",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/6939/aggregated.json",
+    "notes": "Observed carrying Diffbot's fetches for Microsoft Copilot live page reads (plain Linux Chrome UA).",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#1.4",
+      "docs/research/raw/providers-tier2.md#3.14"
+    ]
+  },
+  {
+    "asn": 13335,
+    "name": "Cloudflare",
+    "kind": "shared-egress",
+    "provider": "cloudflare",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/13335/aggregated.json",
+    "notes": "Proxy, Workers, Browser Rendering AND every WARP / Zero Trust user (shared egress): never score as datacenter alone.",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.4",
+      "docs/research/raw/false-positive-traps.md#8.2"
+    ]
+  },
+  {
+    "asn": 36183,
+    "name": "Akamai (iCloud Private Relay egress)",
+    "kind": "shared-egress",
+    "provider": "akamai",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/36183/aggregated.json",
+    "notes": "Sampled Private Relay ranges attribute to AS36183 \"AKAMAI-AS\".",
+    "sources": [
+      "docs/research/raw/false-positive-traps.md#8.1"
+    ]
+  },
+  {
+    "asn": 54113,
+    "name": "Fastly",
+    "kind": "cdn",
+    "provider": "fastly",
+    "prefixListUrl": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/54113/aggregated.json",
+    "notes": "ASN number is not stated in the research (carried over from the server fallback; well-known assignment, verify).",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#5.1"
+    ]
+  }
+]

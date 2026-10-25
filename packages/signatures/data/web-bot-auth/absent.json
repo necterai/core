@@ -1,0 +1,212 @@
+[
+  {
+    "origin": "https://openai.com",
+    "provider": "openai",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://operator.openai.com",
+    "provider": "openai",
+    "result": "NXDOMAIN (was the 2025 Operator Signature-Agent example)",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://anthropic.com",
+    "provider": "anthropic",
+    "result": "301 to site",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.anthropic.com",
+    "provider": "anthropic",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://claude.ai",
+    "provider": "anthropic",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://claude.com",
+    "provider": "anthropic",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://api.anthropic.com",
+    "provider": "anthropic",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.google.com",
+    "provider": "google",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://gemini.google.com",
+    "provider": "google",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://bot.goog",
+    "provider": "google",
+    "result": "400",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.perplexity.ai",
+    "provider": "perplexity",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://perplexity.ai",
+    "provider": "perplexity",
+    "result": "301 to www, then 404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.bing.com",
+    "provider": "microsoft",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.microsoft.com",
+    "provider": "microsoft",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://copilot.microsoft.com",
+    "provider": "microsoft",
+    "result": "302 to www.bing.com",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.apple.com",
+    "provider": "apple",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://commoncrawl.org",
+    "provider": "commoncrawl",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://mistral.ai",
+    "provider": "mistral",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://x.ai",
+    "provider": "xai",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://grok.com",
+    "provider": "xai",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://duckduckgo.com",
+    "provider": "duckduckgo",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://manus.im",
+    "provider": "manus",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.manus.im",
+    "provider": "manus",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://muse.ai",
+    "provider": "meta",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.facebook.com",
+    "provider": "meta",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://ai.meta.com",
+    "provider": "meta",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.kimi.com",
+    "provider": "moonshot",
+    "result": "soft-200 (HTML homepage)",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.amazon.com",
+    "provider": "amazon",
+    "result": "404 (503 in an earlier probe)",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://developer.amazon.com",
+    "provider": "amazon",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.genspark.ai",
+    "provider": "genspark",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://www.diffbot.com",
+    "provider": "diffbot",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://vercel.com",
+    "provider": "vercel",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://stytch.com",
+    "provider": "stytch",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://steel.dev",
+    "provider": "steel",
+    "result": "404",
+    "asOf": "2026-10-24"
+  },
+  {
+    "origin": "https://anchorbrowser.io",
+    "provider": "anchor",
+    "result": "404 (API host has one)",
+    "asOf": "2026-10-24"
+  }
+]

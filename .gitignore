@@ -1,0 +1,29 @@
+node_modules/
+dist/
+coverage/
+.next/
+*.log
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+.cache/
+__pycache__/
+apps/zoo/results/*
+!apps/zoo/results/.gitkeep
+apps/collector/data/
+
+# Necter Console is a separate, private repository (github.com/necterai/console).
+apps/console/
+
+# Local tooling and notes
+.claude/
+.agents/
+.taste-skill/
+skills-lock.json
+requirements.md
+v22.23.3
+
+# Third-party datasets: downloaded by `pnpm datasets`, not redistributed
+docs/research/datasets/**/*.csv

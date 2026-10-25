@@ -1,0 +1,18 @@
+HTTP/2 404 
+date: Sat, 24 Oct 2026 22:29:58 GMT
+content-type: text/html; charset=utf-8
+x-content-type-options: nosniff
+x-frame-options: DENY
+strict-transport-security: max-age=31536000; includeSubDomains
+permissions-policy: camera=(), microphone=(self), geolocation=(), browsing-topics=()
+referrer-policy: origin-when-cross-origin
+cache-control: private, no-cache, no-store, max-age=0, must-revalidate
+vary: rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch, Accept-Encoding
+link: <https://cdn.grok.com>; rel=dns-prefetch, <https://cdn.grok.com>; rel=preconnect, <https://cdn.grok.com>; rel=preconnect; crossorigin="", <https://cdn.grok.com/_next/static/chunks/04fx73_34obf_.css>; rel=preload; as="style", <https://cdn.grok.com/_next/static/chunks/1p1gu0lnks-7o.css>; rel=preload; as="style", <https://cdn.grok.com/_next/static/chunks/0c-d5t8wyinmo.css>; rel=preload; as="style", <https://cdn.grok.com/_next/static/chunks/1lnntixjzt6bq.css>; rel=preload; as="style", <https://cdn.grok.com/_next/static/chunks/3-38ivmrjin_e.css>; rel=preload; as="style"
+set-cookie: __cf_bm=JmJxe9_X10zcI7l4Atg0mNh9.l2yhEJgf4jS9jMdXY0-1792880998.676584-1.0.1.1-MbtW7CjZ3d3f8Itm5W7j9uO0.LyPdh13cLmoa4mY1hhfT4Bjlpt6HjR55K4gksuUFohXJJMN5JiKh7nE6KIG7.ojBIU1klzt42XKnOeQKfsLfDxrGCDuREm8vYE4t8Vr; HttpOnly; SameSite=None; Secure; Path=/; Domain=grok.com; Expires=Sat, 24 Oct 2026 22:59:58 GMT
+cf-cache-status: DYNAMIC
+speculation-rules: "/cdn-cgi/speculation"
+server: cloudflare
+cf-ray: a4fc6c61bb44fc8f-EWR
+alt-svc: h3=":443"; ma=86400
+

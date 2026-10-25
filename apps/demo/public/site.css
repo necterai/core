@@ -1,0 +1,14 @@
+:root{color-scheme:light dark;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+body{margin:0;background:#f8fafc;color:#0f172a}
+@media(prefers-color-scheme:dark){body{background:#0b1220;color:#e2e8f0}}
+header{display:flex;gap:16px;align-items:center;padding:14px 24px;border-bottom:1px solid #94a3b833}
+nav{display:flex;gap:12px}nav a{text-decoration:none;color:inherit;opacity:.8}nav a[aria-current]{opacity:1;font-weight:600}
+.mode{margin-left:auto;font-size:12px;opacity:.7}
+main{max-width:960px;margin:0 auto;padding:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.card{display:block;padding:16px;border:1px solid #94a3b833;border-radius:12px;text-decoration:none;color:inherit}
+.card:hover{border-color:#60a5fa}
+.price{font-weight:700;color:#2563eb}
+label{display:block;margin:10px 0}input,textarea{width:100%;max-width:420px;padding:8px;border-radius:8px;border:1px solid #94a3b866;background:transparent;color:inherit}
+button{padding:8px 14px;border-radius:8px;border:1px solid #2563eb;background:#2563eb;color:#fff;cursor:pointer}
+footer{padding:24px;text-align:center;opacity:.7;font-size:13px}

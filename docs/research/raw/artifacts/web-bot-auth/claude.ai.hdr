@@ -1,0 +1,23 @@
+HTTP/2 404 
+date: Sat, 24 Oct 2026 22:29:56 GMT
+content-type: text/plain; charset=UTF-8
+content-length: 9
+set-cookie: ion-vk=c0818705-a23b-4d27-9978-c8fef071d7ec; Path=/; Secure; SameSite=Lax; HttpOnly
+set-cookie: __cf_bm=UeIRkOWtSbgd187e1Cg5f3b.TBPYW1T1Ky8dJ_gFyQE-1792880996.7339559-1.0.1.1-rHlxZ0lepBFLaTQ271F6.R4ooRd1Ig4V0N7sSbI03kkgXMB3WQXdenXVIvzg_lxfX9z2ozT512ylaVuDMPQiZw9MLLxcxOSbLmjLYhAZbCFwj7cFb7d.WXDesPWpfUuc; HttpOnly; SameSite=None; Secure; Path=/; Domain=claude.ai; Expires=Sat, 24 Oct 2026 22:59:56 GMT
+set-cookie: _cfuvid=7AUzGGpo0TlCgxWdkK.getQFSRtjTU79ZfgIAthxgLA-1792880996.7339559-1.0.1.1-SJqpJajnrejCOEY0XqlgNv4xA6NJZ9NZoIqtG1UjwQ0; HttpOnly; SameSite=None; Secure; Path=/; Domain=claude.ai
+cache-control: no-store
+vary: accept-encoding
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+cross-origin-opener-policy: same-origin-allow-popups
+cross-origin-resource-policy: same-origin
+permissions-policy: accelerometer=self, attribution-reporting=*, autoplay=(self "https://www.youtube-nocookie.com"), bluetooth=self, browsing-topics=*, camera=(self "https://*.claudemcpcontent.com"), clipboard-read=self, clipboard-write=(self "https://*.claudemcpcontent.com"), compute-pressure=self, display-capture=self, encrypted-media=(self "https://*.claudemcpcontent.com"), fullscreen=(self "https://www.youtube-nocookie.com"), gamepad=self, geolocation=(self "https://*.claudemcpcontent.com"), gyroscope=self, hid=self, identity-credentials-get=self, idle-detection=self, local-fonts=self, magnetometer=self, microphone=(self "https://*.claudemcpcontent.com"), midi=self, otp-credentials=self, picture-in-picture=*, publickey-credentials-create=self, publickey-credentials-get=self, screen-wake-lock=self, serial=self, storage-access=*, unload=(), usb=self, web-share=self, window-management=self, xr-spatial-tracking=self
+referrer-policy: strict-origin-when-cross-origin
+x-content-type-options: nosniff
+x-frame-options: DENY
+x-xss-protection: 1; mode=block
+x-ion-version: fb50e7db-7b1c-45f0-b301-a00f14f14d0e
+x-robots-tag: none
+server: cloudflare
+cf-ray: a4fc6c559ee328c9-EWR
+alt-svc: h3=":443"; ma=86400
+

@@ -1,0 +1,152 @@
+[
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__browserUseClipboardBridge$",
+    "scope": "window",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Installed by the Codex driver via Page.addScriptToEvaluateOnNewDocument {runImmediately:true} without worldName (main world); object with bindingName, respond(), cleanup(). Present only when the driver sets up its virtual clipboard. Conflict: providers-tier1 says the ChatGPT extension kernel deny-lists Page.addScriptToEvaluateOnNewDocument, so this may only occur in OpenAI's in-app browser — needs a live run."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__browserUseClipboard_[0-9a-fA-F]{32}$",
+    "scope": "window",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "Runtime.addBinding {name:\"__browserUseClipboard_<32hex>\"} exposes a global function with this name (hex case not recorded). Same conditions/conflict as __browserUseClipboardBridge."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__codexNativeWebMcpState$",
+    "scope": "document",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "visibility": "conditional",
+    "confidence": "confirmed",
+    "notes": "document[\"__codexNativeWebMcpState\"] caches the Codex driver's WebMCP frame-probe state; set when it probes for page-provided WebMCP tools. Whether it is set from the main world when driving through the ChatGPT extension needs a live run."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__pw_resume$",
+    "scope": "window",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "visibility": "conditional",
+    "confidence": "uncertain",
+    "notes": "Playwright injected-script code bundled in the Codex driver; Playwright normally evaluates it in a utility world, so page visibility is uncertain."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__pwClock$",
+    "scope": "window",
+    "stack": "chatgpt-extension",
+    "provider": "openai",
+    "visibility": "conditional",
+    "confidence": "uncertain",
+    "notes": "Playwright clock helper bundled in the Codex driver; utility-world in Playwright normally — uncertain for this driver."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__cursorBrowserAutomationInjected$",
+    "scope": "window",
+    "stack": "cursor-browser-automation",
+    "provider": "cursor",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Set to true by injectBrowserUIScript via CDP Runtime.evaluate (main world), top-level frame only (Cursor.app bundle)."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__cursorAreaScreenshotInjected$",
+    "scope": "window",
+    "stack": "cursor-browser-automation",
+    "provider": "cursor",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Set by Cursor Browser Automation's area-screenshot injection via Runtime.evaluate (main world)."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__cursorAreaScreenshotCommand$",
+    "scope": "window",
+    "stack": "cursor-browser-automation",
+    "provider": "cursor",
+    "visibility": "main",
+    "confidence": "confirmed",
+    "notes": "Set by Cursor Browser Automation's area-screenshot injection via Runtime.evaluate (main world)."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__claudeElementMap$",
+    "scope": "window",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "Defined by content script assets/accessibility-tree.js-B-oUarrX.js in the extension ISOLATED world (v1.0.102); live test confirmed typeof window.__claudeElementMap === \"undefined\" in the main world. Do not probe from page JS."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__claudeElementReverseMap$",
+    "scope": "window",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "Defined by content script assets/accessibility-tree.js-B-oUarrX.js in the extension ISOLATED world (v1.0.102); live test confirmed typeof window.__claudeElementMap === \"undefined\" in the main world. Do not probe from page JS."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__claudeRefCounter$",
+    "scope": "window",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "Defined by content script assets/accessibility-tree.js-B-oUarrX.js in the extension ISOLATED world (v1.0.102); live test confirmed typeof window.__claudeElementMap === \"undefined\" in the main world. Do not probe from page JS."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__generateAccessibilityTree$",
+    "scope": "window",
+    "stack": "claude-in-chrome",
+    "provider": "anthropic",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "Defined by content script assets/accessibility-tree.js-B-oUarrX.js in the extension ISOLATED world (v1.0.102); live test confirmed typeof window.__claudeElementMap === \"undefined\" in the main world. Do not probe from page JS."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__stagehandExtensionWorld$",
+    "scope": "window",
+    "stack": "stagehand-runtime",
+    "provider": "browserbase",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "Defined by the Stagehand Runtime extension content script in world ISOLATED (automation-stacks.md §13); not visible to page JS."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__stagehandLocatorScripts$",
+    "scope": "window",
+    "stack": "stagehand-runtime",
+    "provider": "browserbase",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "Defined by the Stagehand Runtime extension content script in world ISOLATED (automation-stacks.md §13); not visible to page JS."
+  },
+  {
+    "signal": "probe.main-world-agent-global",
+    "pattern": "^__stagehandLocatorWorld$",
+    "scope": "window",
+    "stack": "stagehand-runtime",
+    "provider": "browserbase",
+    "visibility": "isolated",
+    "confidence": "confirmed",
+    "notes": "Defined by the Stagehand Runtime extension content script in world ISOLATED (automation-stacks.md §13); not visible to page JS."
+  }
+]

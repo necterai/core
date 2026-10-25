@@ -1,0 +1,18 @@
+{
+  "id": "mistralai-index",
+  "provider": "mistral",
+  "product": "MistralAI-Index",
+  "kind": "agent",
+  "source": "https://mistral.ai/mistralai-index-ips.json",
+  "fetchedAt": "2026-10-24",
+  "transcribedFrom": "docs/research/raw/providers-tier2.md#3.8",
+  "agentIds": [
+    "mistralai-index"
+  ],
+  "prefixes": [
+    "20.240.160.161/32",
+    "20.240.160.1/32",
+    "20.240.194.83/32",
+    "51.12.243.114/32"
+  ]
+}

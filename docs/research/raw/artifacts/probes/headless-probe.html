@@ -1,0 +1,69 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Input probe</title>
+<style>
+body{font-family:system-ui;margin:0;padding:24px;background:#fff;color:#111}
+#target{display:block;margin:40px 0 0 60px;width:241px;height:53px;font-size:18px}
+#field{display:block;margin:30px 0 0 60px;width:300px;height:32px;font-size:16px}
+#spacer{height:3000px;background:linear-gradient(#fff,#ddd)}
+#out{position:fixed;right:8px;top:8px;width:360px;max-height:90vh;overflow:auto;font:11px monospace;background:#f6f6f6;border:1px solid #ccc;padding:6px;white-space:pre-wrap}
+</style></head>
+<body>
+<h1 id="h">Input probe page</h1>
+<p>Click the button, type into the field, then scroll down. The log is in window.__log.</p>
+<button id="target">Click me</button>
+<input id="field" placeholder="type here">
+<div id="spacer"></div>
+<div id="out"></div>
+<script>
+(function(){
+  const log = window.__log = [];
+  const calls = window.__calls = {};
+  const stacks = window.__stacks = {};
+  const t0 = performance.now();
+  function sc(e){ return e.sourceCapabilities ? {fte: e.sourceCapabilities.firesTouchEvents} : null; }
+  function rec(e){
+    const now = performance.now();
+    const r = {t: e.type, trusted: e.isTrusted, ts: +e.timeStamp.toFixed(3), now: +now.toFixed(3), lat: +(now - e.timeStamp).toFixed(3), tgt: e.target && (e.target.id || e.target.tagName)};
+    if (e.clientX !== undefined) Object.assign(r, {cx: e.clientX, cy: e.clientY, sx: e.screenX, sy: e.screenY, px: e.pageX, py: e.pageY, mx: e.movementX, my: e.movementY, btn: e.button, btns: e.buttons, det: e.detail, sc: sc(e)});
+    if (e.pointerType !== undefined) Object.assign(r, {pt: e.pointerType, pid: e.pointerId, pr: e.pressure, w: e.width, h: e.height, prim: e.isPrimary, tp: e.tangentialPressure, tx: e.tiltX, ty: e.tiltY, tw: e.twist, coal: e.getCoalescedEvents ? e.getCoalescedEvents().length : null, pred: e.getPredictedEvents ? e.getPredictedEvents().length : null, pdid: e.persistentDeviceId});
+    if (e.deltaY !== undefined) Object.assign(r, {dx: e.deltaX, dy: e.deltaY, dm: e.deltaMode, wdy: e.wheelDeltaY, wdx: e.wheelDeltaX});
+    if (e.key !== undefined) Object.assign(r, {key: e.key, code: e.code, kc: e.keyCode, rep: e.repeat, comp: e.isComposing, loc: e.location});
+    if (e.inputType !== undefined) Object.assign(r, {it: e.inputType, dlen: e.data == null ? null : e.data.length, val: (e.target.value||'').length});
+    if (e.type === 'scroll') Object.assign(r, {sy: window.scrollY});
+    if (e.touches) Object.assign(r, {nt: e.touches.length, ct: e.changedTouches.length, r0: e.changedTouches[0] ? {rx: e.changedTouches[0].radiusX, ry: e.changedTouches[0].radiusY, f: e.changedTouches[0].force} : null});
+    log.push(r);
+    if (log.length % 25 === 0) render();
+  }
+  const types = ['pointerover','pointerenter','pointerdown','pointermove','pointerrawupdate','pointerup','pointerout','pointerleave','mouseover','mouseenter','mousemove','mousedown','mouseup','click','dblclick','auxclick','contextmenu','wheel','keydown','keypress','keyup','beforeinput','input','change','select','selectionchange','compositionstart','compositionend','focus','blur','focusin','focusout','scroll','scrollend','touchstart','touchmove','touchend','visibilitychange','resize'];
+  for (const t of types) window.addEventListener(t, rec, {capture:true, passive:true});
+  document.addEventListener('selectionchange', rec, true);
+  document.addEventListener('scroll', rec, true);
+  // prototype instrumentation
+  function wrap(obj, name, label, isGetter){
+    const d = Object.getOwnPropertyDescriptor(obj, name); if (!d) return;
+    const orig = isGetter ? d.get : d.value;
+    const fn = function(){ calls[label] = (calls[label]||0)+1; if (calls[label] % 16 === 1) { try { const s = new Error().stack.split('\n').slice(2,5).join(' | '); stacks[label] = (stacks[label]||[]); if (stacks[label].length < 6) stacks[label].push(s); } catch(e){} } return orig.apply(this, arguments); };
+    if (isGetter) Object.defineProperty(obj, name, {...d, get: fn}); else Object.defineProperty(obj, name, {...d, value: fn});
+  }
+  wrap(Element.prototype, 'getBoundingClientRect', 'gbcr');
+  wrap(Element.prototype, 'getClientRects', 'gcr');
+  wrap(window, 'getComputedStyle', 'gcs');
+  wrap(Document.prototype, 'elementFromPoint', 'efp');
+  wrap(Document.prototype, 'elementsFromPoint', 'esfp');
+  wrap(Document.prototype, 'querySelectorAll', 'qsa');
+  wrap(Element.prototype, 'checkVisibility', 'cv');
+  wrap(HTMLElement.prototype, 'innerText', 'innerText', true);
+  wrap(Node.prototype, 'textContent', 'textContent', true);
+  wrap(Element.prototype, 'scrollIntoView', 'siv');
+  wrap(HTMLElement.prototype, 'click', 'elclick');
+  wrap(EventTarget.prototype, 'dispatchEvent', 'dispatch');
+  function render(){ const o = document.getElementById('out'); o.textContent = 'events=' + log.length + '\ncalls=' + JSON.stringify(calls) + '\nhasFocus=' + document.hasFocus() + ' vis=' + document.visibilityState + ' dpr=' + devicePixelRatio + '\n' + JSON.stringify(log.slice(-12), null, 0); }
+  window.__summary = function(){
+    const byType = {}; for (const r of log) byType[r.t] = (byType[r.t]||0)+1;
+    return {events: log.length, byType, calls, stacks, hasFocus: document.hasFocus(), vis: document.visibilityState, dpr: devicePixelRatio, inner: [innerWidth, innerHeight], outer: [outerWidth, outerHeight], screen: [screen.width, screen.height, screenX, screenY], webdriver: navigator.webdriver, ua: navigator.userAgent, log};
+  };
+  setInterval(render, 1000);
+  render();
+})();
+</script>
+</body></html>

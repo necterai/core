@@ -1,0 +1,6 @@
+packages:
+  - 'packages/*'
+  - 'apps/*'
+  # The console is a standalone Next.js app with its own lockfile (apps/console/pnpm-lock.yaml),
+  # so installing it never touches the SDK packages or this workspace's lockfile.
+  - '!apps/console'

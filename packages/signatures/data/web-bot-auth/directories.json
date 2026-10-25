@@ -1,0 +1,646 @@
+[
+  {
+    "status": "live",
+    "asOf": "2026-10-24",
+    "origin": "https://chatgpt.com",
+    "provider": "openai",
+    "product": "ChatGPT agent / ChatGPT Work cloud browser",
+    "purpose": "ai",
+    "classes": {
+      "computer-use-agent": 3,
+      "fetch-agent": 1
+    },
+    "keys": 1,
+    "kids": [
+      "ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY"
+    ],
+    "kidStyle": "thumbprint",
+    "signatureAgent": "\"https://chatgpt.com\"",
+    "labelsSeen": [
+      "sig1"
+    ],
+    "cacheControl": "no-store, no-transform",
+    "quirks": [
+      "Signature-Agent sent in the older sf-string form (not a Dictionary)",
+      "exp is generated as now + 604800 s on every read (not a rotation date)",
+      "directory covers (\"@authority\";req \"content-digest\"); extra top-level fields signature_agent and purpose",
+      "www.chatgpt.com serves the same directory; operator.openai.com no longer resolves; openai.com 404"
+    ],
+    "sources": [
+      "docs/research/raw/providers-tier1.md#1.3",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/artifacts/web-bot-auth/chatgpt.com.hdr"
+    ]
+  },
+  {
+    "status": "live",
+    "asOf": "2026-10-24",
+    "origin": "https://www.chatgpt.com",
+    "provider": "openai",
+    "product": "ChatGPT agent / ChatGPT Work cloud browser",
+    "purpose": "ai",
+    "classes": {
+      "computer-use-agent": 3,
+      "fetch-agent": 1
+    },
+    "keys": 1,
+    "kidStyle": "thumbprint",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "status": "live",
+    "asOf": "2026-10-24",
+    "origin": "https://agent.bot.goog",
+    "provider": "google",
+    "product": "Google-Agent",
+    "classes": {
+      "computer-use-agent": 3,
+      "fetch-agent": 1
+    },
+    "keys": 5,
+    "kids": [
+      "mhxuPw",
+      "cYSMkA",
+      "bUCe2A",
+      "DYiMjA",
+      "Ggh50g"
+    ],
+    "kidStyle": "short",
+    "signatureAgent": "g=\"https://agent.bot.goog\"",
+    "labelsSeen": [
+      "g"
+    ],
+    "cacheControl": "public, max-age=3600",
+    "quirks": [
+      "kid values are 6-char labels, not JWK thumbprints: match keyid to kid first, then to the computed thumbprint",
+      "Dictionary-form Signature-Agent with label g",
+      "only one key (DYiMjA) signs the directory; directory signature valid 300 s",
+      "\"A subset of requests\" are signed (experimental)"
+    ],
+    "sources": [
+      "docs/research/raw/providers-tier1.md#1.3",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/artifacts/web-bot-auth/agent.bot.goog.hdr"
+    ]
+  },
+  {
+    "status": "live",
+    "asOf": "2026-10-24",
+    "origin": "https://www.meta.com",
+    "provider": "meta",
+    "product": "Meta (Meta-ExternalTest per survey; product mapping uncertain)",
+    "classes": {
+      "fetch-agent": 2,
+      "computer-use-agent": 1
+    },
+    "keys": 5,
+    "kidStyle": "none",
+    "labelsSeen": [
+      "sig1",
+      "sig2",
+      "sig3",
+      "sig4",
+      "sig5"
+    ],
+    "cacheControl": "must-revalidate, max-age=3600",
+    "quirks": [
+      "keys carry no kid/use/nbf/exp: compute RFC 8037 thumbprints to match keyid",
+      "five directory signatures, each with a nonce, expires = +65 min",
+      "meta.com 301s to www.meta.com",
+      "undocumented by Meta; may belong to Muse, meta-externalfetcher or meta-webindexer [uncertain]"
+    ],
+    "sources": [
+      "docs/research/raw/providers-tier2.md#1.2",
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/artifacts/web-bot-auth/www.meta.com.hdr"
+    ]
+  },
+  {
+    "status": "live",
+    "asOf": "2026-10-24",
+    "origin": "https://assistbot.duckduckgo.com",
+    "provider": "duckduckgo",
+    "product": "DuckAssistBot",
+    "classes": {
+      "fetch-agent": 3
+    },
+    "keys": 1,
+    "kids": [
+      "Ov3HDsa8JQ39dPEYFvFFN-cUpnz9yNI8LDvr-5LeiBM"
+    ],
+    "kidStyle": "thumbprint",
+    "cacheControl": "max-age=86340",
+    "quirks": [
+      "directory signed with a nonce",
+      "duckduckgo.com itself 404"
+    ],
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/artifacts/web-bot-auth/assistbot.duckduckgo.com.hdr"
+    ]
+  },
+  {
+    "status": "live",
+    "asOf": "2026-10-24",
+    "origin": "https://www.browserbase.com",
+    "provider": "browserbase",
+    "product": "Browserbase hosted browsers",
+    "purpose": "rag",
+    "classes": {
+      "browser-agent": 3
+    },
+    "keys": 2,
+    "kids": [
+      "NVhTndQWodGQ47Kmhm1bhTdt0swWS7EHmUEMo-opsXU",
+      "DJuTDnlBxNZzalQhhvktwvkF3lWss-T56g7s4xubuhU"
+    ],
+    "kidStyle": "thumbprint",
+    "labelsSeen": [
+      "binding0",
+      "binding1"
+    ],
+    "cacheControl": "public, max-age=3600",
+    "quirks": [
+      "directory components (\"@authority\") without ;req",
+      "browserbase.com 301s to www",
+      "a verified signature means \"someone's automation on a hosted browser\", not a known operator"
+    ],
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/artifacts/web-bot-auth/www.browserbase.com.hdr"
+    ]
+  },
+  {
+    "status": "live",
+    "asOf": "2026-10-24",
+    "origin": "https://cursorusercontent.com",
+    "provider": "xai",
+    "product": "Grok Bot (Cursor-hosted cloud computers; attribution per Cloudflare Radar, uncertain)",
+    "classes": {
+      "computer-use-agent": 3
+    },
+    "keys": 1,
+    "kids": [
+      "Vuxu4khgzIe0b30Nd6hq2envAuVBFMTDqorSNIUb_Oo"
+    ],
+    "kidStyle": "thumbprint",
+    "labelsSeen": [
+      "sig1"
+    ],
+    "cacheControl": "public, max-age=86400",
+    "quirks": [
+      "media type has \"; charset=utf-8\" suffix",
+      "x.ai and grok.com 404"
+    ],
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/artifacts/web-bot-auth/cursorusercontent.com.hdr"
+    ]
+  },
+  {
+    "status": "live",
+    "asOf": "2026-10-24",
+    "origin": "https://www.hyperbrowser.ai",
+    "provider": "hyperbrowser",
+    "product": "Hyperbrowser hosted browsers",
+    "classes": {
+      "browser-agent": 3
+    },
+    "keys": 1,
+    "kids": [
+      "YePX0F4cxl-0mgI3Z18LFJT8WB8KfTeKXF7oQnzqjBs"
+    ],
+    "kidStyle": "thumbprint",
+    "labelsSeen": [
+      "binding"
+    ],
+    "cacheControl": "public, max-age=86400",
+    "quirks": [
+      "directory signature has no alg parameter",
+      "apex hyperbrowser.ai 307s to www"
+    ],
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/artifacts/web-bot-auth/www.hyperbrowser.ai.hdr"
+    ]
+  },
+  {
+    "status": "live",
+    "asOf": "2026-10-24",
+    "origin": "https://www.kernel.sh",
+    "provider": "kernel",
+    "product": "Kernel hosted browsers",
+    "classes": {
+      "browser-agent": 3
+    },
+    "keys": 1,
+    "kids": [
+      "5z6F4EJybUfoygglZXiAYaS6O1GU8hA1JrA-m7lGURM"
+    ],
+    "kidStyle": "thumbprint",
+    "labelsSeen": [
+      "sig1"
+    ],
+    "cacheControl": "public, max-age=3600",
+    "quirks": [
+      "key nbf/exp is a 1 h window (short-lived key: refetch on unknown keyid)",
+      "onkernel.com 301s to www.kernel.sh"
+    ],
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/artifacts/web-bot-auth/www.kernel.sh.hdr"
+    ]
+  },
+  {
+    "origin": "https://search.bot.kernel.sh",
+    "provider": "kernel",
+    "product": "Kernel SearchBot",
+    "status": "live",
+    "classes": {
+      "ai-crawler": 2,
+      "fetch-agent": 1
+    },
+    "asOf": "2026-10-24",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "origin": "https://www.browserless.io",
+    "provider": "browserless",
+    "product": "Browserless",
+    "status": "broken",
+    "classes": {
+      "browser-agent": 3
+    },
+    "keys": 0,
+    "cacheControl": "public,max-age=3600",
+    "quirks": [
+      "Content-Type application/http-message-signatures-directory; charset=utf-8 (missing +json)",
+      "\"keys\": [] - claims to sign, cannot verify"
+    ],
+    "asOf": "2026-10-24",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/artifacts/web-bot-auth/www.browserless.io.hdr"
+    ]
+  },
+  {
+    "origin": "https://*.keydirectory.signer.*.on.aws",
+    "provider": "amazon",
+    "product": "Bedrock AgentCore Browser",
+    "status": "live",
+    "classes": {
+      "browser-agent": 3
+    },
+    "keys": 1,
+    "quirks": [
+      "9 regional hosts https://<id>.keydirectory.signer.{us-east-1,us-east-2,us-west-2,eu-west-1,eu-central-1,ap-south-1,ap-southeast-1,ap-southeast-2,ap-northeast-1}.on.aws (e.g. xhah6q48pbxb4.keydirectory.signer.us-east-1.on.aws), 1 key each",
+      "not Amazonbot; signing is off by default (opt-in at browser creation)"
+    ],
+    "asOf": "2026-10-24",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "docs/research/raw/providers-tier2.md#3.4"
+    ]
+  },
+  {
+    "origin": "https://search.ai.cloudflare.com",
+    "provider": "cloudflare",
+    "product": "Cloudflare AI Search",
+    "status": "live",
+    "classes": {
+      "ai-crawler": 3
+    },
+    "asOf": "2026-10-24",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "origin": "https://*.wba-bots.ai-audit.cfdata.org",
+    "provider": "cloudflare",
+    "product": "Cloudflare-issued identities for customer crawlers/agents [likely]",
+    "status": "live",
+    "keys": 4,
+    "quirks": [
+      "per-tenant <uuid> hosts with 1-4 EdDSA keys"
+    ],
+    "asOf": "2026-10-24",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "origin": "https://*.workers.dev",
+    "provider": "cloudflare",
+    "product": "Cloudflare Browser Rendering / Workers signers",
+    "status": "live",
+    "classes": {
+      "browser-agent": 3
+    },
+    "quirks": [
+      "observed hosts web-bot-auth{,-crawl}.cloudflare-browser-rendering-085.workers.dev (3 keys) and bot-auth-worker[-staging].product-sre.workers.dev",
+      "the wildcard also covers arbitrary customer Workers (PayPal's directory is on workers.dev): match exact hosts first"
+    ],
+    "asOf": "2026-10-24",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4"
+    ]
+  },
+  {
+    "origin": "https://api.anchorbrowser.io",
+    "provider": "anchor",
+    "product": "Anchor Browser",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ],
+    "classes": {
+      "browser-agent": 3
+    }
+  },
+  {
+    "origin": "https://api.apify.com",
+    "provider": "apify",
+    "product": "Apify",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ],
+    "classes": {
+      "ai-crawler": 2,
+      "browser-agent": 1
+    }
+  },
+  {
+    "origin": "https://api.manus.im",
+    "provider": "manus",
+    "product": "Manus",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ],
+    "classes": {
+      "computer-use-agent": 3
+    }
+  },
+  {
+    "origin": "https://crawler.exa.ai",
+    "provider": "exa",
+    "product": "Exa crawler",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ],
+    "classes": {
+      "ai-crawler": 3
+    },
+    "keys": 2
+  },
+  {
+    "origin": "https://you.com",
+    "provider": "you",
+    "product": "YouBot",
+    "status": "live",
+    "classes": {
+      "search-crawler": 3
+    },
+    "keys": 1,
+    "kidStyle": "none",
+    "quirks": [
+      "single key with only kty/crv/x (no kid)"
+    ],
+    "asOf": "2026-10-24",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#1.2",
+      "docs/research/raw/providers-tier2.md#3.12"
+    ]
+  },
+  {
+    "origin": "https://www.shopify.com",
+    "provider": "shopify",
+    "product": "Shopify",
+    "status": "live",
+    "keys": 1,
+    "kids": [
+      "SjjyXvQ2cGhsRXs9DXEaV6ClyCun0Pj5yxjV67dLGOk"
+    ],
+    "kidStyle": "thumbprint",
+    "signatureAgent": "\"https://shopify.com\"",
+    "quirks": [
+      "served as a single JWK, not a JWKS"
+    ],
+    "asOf": "2026-10-24",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#1.2",
+      "docs/research/raw/providers-tier2.md#1.1"
+    ]
+  },
+  {
+    "origin": "https://cloudsurf.shopify.io",
+    "provider": "shopify",
+    "product": "Shopify",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://www.klaviyo.com",
+    "provider": "klaviyo",
+    "product": "Klaviyo",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://agentic-crawler-directory.guidedcrawler.workers.dev",
+    "provider": "paypal",
+    "product": "PayPal",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://creators.spotify.com",
+    "provider": "spotify",
+    "product": "Spotify",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://api.wappalyzer.com",
+    "provider": "wappalyzer",
+    "product": "Wappalyzer",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://payroll-bot.adp.com",
+    "provider": "adp",
+    "product": "ADP",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://external-bot.payhawk.com",
+    "provider": "payhawk",
+    "product": "Payhawk",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://bot.trychannel3.com",
+    "provider": "channel3",
+    "product": "Channel3",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://rye.xyz",
+    "provider": "rye",
+    "product": "ryebot",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://signatures.cardsavr.io",
+    "provider": "strivve",
+    "product": "Strivve",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://api.firmly.online",
+    "provider": "firmly",
+    "product": "Firmly",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://app.bugduck.tech",
+    "provider": "qa-tech",
+    "product": "QA.tech",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://agent.webmesh.ai",
+    "provider": "webmesh",
+    "product": "Webmesh",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ],
+    "quirks": [
+      "EC P-256 + Ed25519 keys"
+    ]
+  },
+  {
+    "origin": "https://dnsdoc.webmesh.ai",
+    "provider": "webmesh",
+    "product": "Webmesh",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ],
+    "quirks": [
+      "EC P-256 + Ed25519 keys"
+    ]
+  },
+  {
+    "origin": "https://seo.webmesh.ai",
+    "provider": "webmesh",
+    "product": "Webmesh",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ],
+    "quirks": [
+      "EC P-256 + Ed25519 keys"
+    ]
+  },
+  {
+    "origin": "https://api.agi.tech",
+    "provider": "agi-inc",
+    "product": "AGI Inc",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  },
+  {
+    "origin": "https://api-staging.aone.dev",
+    "provider": "a1",
+    "product": "A1",
+    "status": "survey",
+    "asOf": "2026-10-19",
+    "sources": [
+      "docs/research/raw/server-fingerprints.md#7.4",
+      "https://modpagespeed.com/data/web-bot-auth-2026-10-19/results.tsv"
+    ]
+  }
+]

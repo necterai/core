@@ -1,0 +1,14 @@
+{
+ "label": "playwright_chromium1248_default",
+ "binary": "/Users/dev/Library/Caches/ms-playwright/chromium-1248/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+ "extra_args": [],
+ "date": "2026-10-24T18:53:27-0400",
+ "version": {
+  "Browser": "Chrome/156.0.8078.4",
+  "Protocol-Version": "1.3",
+  "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "V8-Version": "15.6.75",
+  "WebKit-Version": "537.36 (@f842f52ef39fd97b449eb27cff414bf05a98ddce)"
+ },
+ "__error": "Traceback (most recent call last):\n  File \"/private/tmp/claude-501/-Users-dev-Projects-necter/3044e935-0f92-4a55-99e9-6a0b4223c15f/scratchpad/cdpprobe/./probe.py\", line 391, in run\n    goto(origin)\n  File \"/private/tmp/claude-501/-Users-dev-Projects-necter/3044e935-0f92-4a55-99e9-6a0b4223c15f/scratchpad/cdpprobe/./probe.py\", line 387, in goto\n    cdp.call('Page.navigate', {'url': url}, sid)\n  File \"/private/tmp/claude-501/-Users-dev-Projects-necter/3044e935-0f92-4a55-99e9-6a0b4223c15f/scratchpad/cdpprobe/./probe.py\", line 121, in call\n    r = self.wait(self.send(method, params, sessionId), timeout)\n  File \"/private/tmp/claude-501/-Users-dev-Projects-necter/3044e935-0f92-4a55-99e9-6a0b4223c15f/scratchpad/cdpprobe/./probe.py\", line 117, in wait\n    self.pump(timeout)\n  File \"/private/tmp/claude-501/-Users-dev-Projects-necter/3044e935-0f92-4a55-99e9-6a0b4223c15f/scratchpad/cdpprobe/./probe.py\", line 105, in pump\n    m = json.loads(self.ws.recv())\n  File \"/private/tmp/claude-501/-Users-dev-Projects-necter/3044e935-0f92-4a55-99e9-6a0b4223c15f/scratchpad/cdpprobe/./probe.py\", line 65, in recv\n    b1, b2 = self._read_exact(2)\n  File \"/private/tmp/claude-501/-Users-dev-Projects-necter/3044e935-0f92-4a55-99e9-6a0b4223c15f/scratchpad/cdpprobe/./probe.py\", line 36, in _read_exact\n    chunk = self.sock.recv(1 << 20)\nsocket.timeout: timed out\n"
+}

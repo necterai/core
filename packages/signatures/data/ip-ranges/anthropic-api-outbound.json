@@ -1,0 +1,15 @@
+{
+  "id": "anthropic-api-outbound",
+  "provider": "anthropic",
+  "product": "Anthropic platform outbound (web_fetch, MCP connector, Claude-User)",
+  "kind": "agent",
+  "source": "https://platform.claude.com/docs/en/api/ip-addresses",
+  "fetchedAt": "2026-10-24",
+  "transcribedFrom": "docs/research/raw/providers-tier1.md#3.1",
+  "agentIds": [
+    "claude-user"
+  ],
+  "prefixes": [
+    "160.79.104.0/21"
+  ]
+}

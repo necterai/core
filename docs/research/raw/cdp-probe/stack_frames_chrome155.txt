@@ -1,0 +1,131 @@
+browser Chrome/155.0.8059.86 origin http://127.0.0.1:62178/
+
+--- selector: #inline
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at http://127.0.0.1:62178/stack:3:18
+
+--- selector: #p1
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at pageCaller (http://127.0.0.1:62178/app.js:8:41)
+    at http://127.0.0.1:62178/stack:3:44
+
+--- selector: #p2
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at eval (eval at <anonymous> (http://127.0.0.1:62178/app.js:10:33), <anonymous>:3:17)
+    at http://127.0.0.1:62178/stack:3:63
+
+--- selector: #p3
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at eval (eval at window.triggerFromEval (http://127.0.0.1:62178/app.js:11:47), <anonymous>:1:10)
+    at window.triggerFromEval (http://127.0.0.1:62178/app.js:11:47)
+    at http://127.0.0.1:62178/stack:3:89
+
+--- selector: #p4
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at <anonymous>:1:10
+
+--- selector: #p6
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at data:text/javascript,document.querySelector("%23p6"):1:10
+
+--- selector: #p5
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at blob:http://127.0.0.1:62178/840730fb-389e-4963-b951-052ea73b67f8:1:10
+
+--- selector: #cdp-evaluate
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at <anonymous>:1:10
+
+--- selector: #cdp-evaluate-pptr
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at pptr:evaluate;Page.evaluate:1:10
+
+--- selector: #cdp-evaluate-legacy
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at __puppeteer_evaluation_script__:1:10
+
+--- selector: #cdp-callFunctionOn
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at <anonymous>:1:30
+
+--- selector: #cdp-utilityscript-like
+Error: hook
+    at HTMLDocument.hookedQuerySelector [as querySelector] (http://127.0.0.1:62178/app.js:5:36)
+    at <anonymous>:1:109
+    at Object.evaluate (<anonymous>:1:85)
+    at <anonymous>:1:44
+    at <anonymous>:1:62
+
+=== CallSite structured view (last page-triggered hook call, and a CDP frame):
+{
+ "fromPage": [
+  {
+   "fn": "out.fromPage.document.querySelector",
+   "file": "",
+   "url": "",
+   "isEval": false,
+   "hash": "",
+   "native": false
+  },
+  {
+   "fn": "eval",
+   "isEval": true,
+   "evalOrigin": "eval at <anonymous> (http://127.0.0.1:62178/app.js:10:33)",
+   "hash": "e7f4bcf5334bfe9899185f0d79ecf123fc822cb5dd8790859daa9b42f0161228",
+   "native": false
+  },
+  {
+   "fn": null,
+   "file": "",
+   "url": "",
+   "isEval": false,
+   "hash": "",
+   "native": false
+  },
+  {
+   "fn": null,
+   "file": "",
+   "url": "",
+   "isEval": false,
+   "hash": "",
+   "native": false
+  },
+  {
+   "fn": null,
+   "file": "",
+   "url": "",
+   "isEval": false,
+   "hash": "",
+   "native": false
+  }
+ ],
+ "fromCdp": [
+  {
+   "fn": null,
+   "file": "",
+   "url": "",
+   "isEval": false,
+   "hash": "",
+   "native": false
+  },
+  {
+   "fn": null,
+   "file": "",
+   "url": "",
+   "isEval": false,
+   "hash": "",
+   "native": false
+  }
+ ]
+}

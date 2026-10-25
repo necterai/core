@@ -1,0 +1,592 @@
+[
+  {
+    "id": "fcoeoabgfenejglbffodgkkbkcdhcgfn",
+    "name": "Claude (Claude in Chrome)",
+    "provider": "anthropic",
+    "store": "chrome",
+    "version": "1.0.102",
+    "updated": "2026-10-21",
+    "users": "20,000,000",
+    "usesDebugger": true,
+    "inputPath": "mixed",
+    "permissions": [
+      "sidePanel",
+      "storage",
+      "activeTab",
+      "scripting",
+      "debugger",
+      "tabGroups",
+      "tabs",
+      "alarms",
+      "notifications",
+      "webNavigation",
+      "declarativeNetRequestWithHostAccess",
+      "offscreen",
+      "nativeMessaging",
+      "unlimitedStorage",
+      "downloads",
+      "identity"
+    ],
+    "webAccessibleResources": [
+      {
+        "version": "1.0.102",
+        "matches": "<all_urls>",
+        "paths": [
+          "assets/accessibility-tree.js-B-oUarrX.js",
+          "assets/agent-visual-indicator.js-uaVFxZ2f.js"
+        ],
+        "seen": "2026-10-24 local manifest (Default/Extensions/fcoeoabgfenejglbffodgkkbkcdhcgfn/1.0.102_0) + live fetch HTTP 200 from 127.0.0.1 probe page"
+      },
+      {
+        "version": "1.0.102",
+        "matches": "https://*.claude.ai/*, https://claude.ai/*",
+        "paths": [
+          "assets/onboarding-prompts-CJtFEMjA.js",
+          "assets/content-script.ts-C6lrM1Zv.js"
+        ],
+        "seen": "2026-10-24 local manifest; NOT probeable from third-party origins (fetch throws TypeError: Failed to fetch on the probe page)"
+      }
+    ],
+    "domMarkers": [
+      "#claude-agent-glow-border",
+      "#claude-agent-glow-border-inner",
+      "#claude-agent-stop-container",
+      "#claude-agent-stop-button",
+      "#claude-phantom-cursor",
+      "#claude-phantom-cursor-plain",
+      "#claude-phantom-cursor-styled",
+      "#claude-static-indicator-container",
+      "#claude-static-chat-button",
+      "#claude-static-close-button",
+      "#claude-screenshot-overlay",
+      "#claude-prompt-overlay",
+      "#claude-prompt-container",
+      "#claude-element-overlay",
+      "#claude-element-highlight",
+      "#claude-element-prompt-container",
+      "style#claude-agent-animation-styles"
+    ],
+    "mainWorldGlobals": [],
+    "relatedIds": [
+      {
+        "id": "dihbgbndebgnbjfmelmegjepbnkhlgni",
+        "store": "unlisted",
+        "note": "In allowed_origins of native host com.anthropic.claude_browser_extension (Claude Desktop/Cowork); Web Store returns an empty listing; treated as internal/unlisted build (uncertain)."
+      },
+      {
+        "id": "dngcpimnedloihjnnfngkgjoidhnaolf",
+        "store": "unlisted",
+        "note": "In allowed_origins of native host com.anthropic.claude_browser_extension (Claude Desktop/Cowork); internal/unlisted build (uncertain)."
+      }
+    ],
+    "notes": "Presence: fetch(chrome-extension://fcoeoabgfenejglbffodgkkbkcdhcgfn/<path>, {mode:\"no-cors\"}) on the two <all_urls> WAR paths -> ok && status 200 (type basic); non-WAR paths (manifest.json, the claude.ai-only WAR) throw TypeError. <img> probes fail (JS is not an image); not recorded in resource timing. use_dynamic_url:false. Hashes change per release: CHEQ saw hash suffix D39zjmMD in Feb 2026 (exact full paths not recorded, so not listed as a WAR entry); 1.0.101 hashes unknown. Active agent: a bare <div> (0 attributes, 0 childNodes, closed shadow -> shadowRoot === null, computed display \"contents\" from `:host { all: initial !important; display: contents !important; }`) appended to <body> (or documentElement) and re-appended to stay body.lastElementChild; appeared 47 ms after the tab became visible in the live test and was never removed (still present 5 min later). Created by agent-visual-indicator.js (isolated world, top frame only, document_idle); page-world attachShadow hooks do not see it. v1.0.102: all claude-agent-*/claude-phantom-*/claude-static-* ids live INSIDE the closed shadow root (not queryable). Side-panel overlays (#claude-screenshot-overlay, #claude-prompt-overlay, #claude-prompt-container, #claude-element-overlay) are light DOM but only during user-driven screenshot/element-picker flows; #claude-element-highlight and #claude-element-prompt-container come from providers-tier1 only. style#claude-agent-animation-styles and the [id^=\"claude-agent-\"] selector were reported by CHEQ (Feb 2026, third-party) and may be legacy. Element picker runs chrome.scripting.executeScript({world:\"MAIN\"}) walking React fiber internals and posts window.postMessage({type:\"CLAUDE_ELEMENT_SELECTION\"}) / \"CLAUDE_ELEMENT_SELECTION_CLEANUP\" with target \"*\" (page-observable message events). Visible strings: \"Stop Claude\", \"Claude is active in this tab group\", toast \"Stop didn’t reach Claude — close the side panel to stop.\". Input: CDP via chrome.debugger.attach(tab,\"1.3\") (Input.dispatchMouseEvent with force 0.5 -> pressure 0.5, Input.dispatchKeyEvent, Input.insertText); form_input sets values from content script -> isTrusted:false plain Event input/change; javascript_tool = Runtime.evaluate (replMode) in main world, no residue. Page.enable always; Runtime.enable only for read_console_messages; Network.enable only for read_network_requests; Emulation.setFocusEmulationEnabled {enabled:true} (document.hasFocus() true while unfocused/hidden). Debugger infobar: \"Claude\" started debugging this browser (from_webstore, so not suppressed). Isolated-world only (NOT visible to page JS, live-verified undefined): __claudeElementMap, __claudeElementReverseMap, __claudeRefCounter, __generateAccessibilityTree. No header added to third-party requests (dNR only sets anthropic-client-version on Anthropic API requests). UA/brands are stock Chrome; navigator.webdriver false. Same extension serves Claude Code --chrome (native host com.anthropic.claude_code_browser_extension) and Claude Desktop/Cowork (com.anthropic.claude_browser_extension). Session tab group \"Claude (MCP)\" (not page-visible). Enterprise policy blockedUrlPatterns / forceLoginOrgUUID.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#2.1",
+      "docs/research/raw/extension-agents.md#2.2",
+      "docs/research/raw/extension-agents.md#2.3",
+      "docs/research/raw/extension-agents.md#2.4",
+      "docs/research/raw/extension-agents.md#2.5",
+      "docs/research/raw/extension-agents.md#2.6",
+      "docs/research/raw/extension-agents.md#2.7",
+      "docs/research/raw/extension-agents.md#2.8",
+      "docs/research/raw/extension-agents.md#2.9",
+      "docs/research/raw/providers-tier1.md#3.4",
+      "https://chromewebstore.google.com/detail/fcoeoabgfenejglbffodgkkbkcdhcgfn",
+      "https://www.originhq.com/research/claude-for-chrome-takeover"
+    ]
+  },
+  {
+    "id": "hehggadaopoacecdllhhajmbjkdcmajg",
+    "name": "ChatGPT (OpenAI ChatGPT extension, driven by the Codex \"browser\" plugin / ChatGPT desktop & web)",
+    "provider": "openai",
+    "store": "chrome",
+    "version": "1.26.1020.11845",
+    "updated": "2026-10-22",
+    "users": "7,000,000",
+    "usesDebugger": true,
+    "inputPath": "cdp",
+    "permissions": [
+      "alarms",
+      "bookmarks",
+      "debugger",
+      "declarativeNetRequestWithHostAccess",
+      "downloads",
+      "favicon",
+      "history",
+      "nativeMessaging",
+      "notifications",
+      "offscreen",
+      "scripting",
+      "sessions",
+      "storage",
+      "tabGroups",
+      "tabs",
+      "topSites",
+      "webNavigation",
+      "contextMenus",
+      "sidePanel"
+    ],
+    "webAccessibleResources": [
+      {
+        "version": "1.26.1020.11845",
+        "matches": "<all_urls>",
+        "paths": [
+          "images/cursor-chat.png"
+        ],
+        "seen": "2026-10-24 public CRX unpacked locally (providers-tier1 §2.8); extension-agents.md had listed WAR as unknown because the CRX was not downloaded there"
+      }
+    ],
+    "domMarkers": [
+      "#codex-agent-overlay-root",
+      "link[rel=\"icon\"][data-codex-favicon-badge=\"true\"]"
+    ],
+    "mainWorldGlobals": [
+      "__browserUseClipboardBridge",
+      "document.__codexNativeWebMcpState"
+    ],
+    "requestHeaders": [
+      {
+        "name": "x-browser-agent",
+        "valuePattern": "^ChatGPT/.+$",
+        "condition": "Default value `ChatGPT/${sessionId}`, set via declarativeNetRequest session rules (MODIFY_HEADERS/SET) scoped to controlled tab ids (MAIN_FRAME, SUB_FRAME, OBJECT + all other types except extension-initiated) ONLY when the turn carries agent_request_header_enabled: true (sticky in chrome.storage.local[\"AGENT_REQUEST_HEADER_ENABLED\"]); server may instead supply custom request_headers. Whether production enables it is uncertain."
+      }
+    ],
+    "relatedIds": [
+      {
+        "id": "odlomjlbamekndcpllcnffbgeohgkmjh",
+        "store": "edge",
+        "note": "Edge Add-ons id from Codex plugin scripts/extension-ids.json."
+      },
+      {
+        "id": "lfkehkpjohcoelkpembgemeipeppanef",
+        "store": "unlisted",
+        "note": "Separate \"Codex\" extension id referenced in the bundle; Web Store listing did not render and CRX download returned HTTP 401 (unlisted/restricted, availability uncertain)."
+      }
+    ],
+    "notes": "Id confirmed identical in extension-agents.md §4.1 (Codex plugin extension-ids.json) and providers-tier1 §2.8. Chrome Web Store id also used for Brave, Opera, Vivaldi. Native messaging host com.openai.codexextension (.dev, .internal). Static content_scripts match only https://chatgpt.com/* (chatgpt-website.js, codex-work-preload.js in MAIN world, side-chat-tab-mentions.js); third-party pages driven via chrome.debugger (CDP 1.3) + chrome.scripting.executeScript. Presence: probe chrome-extension://hehggadaopoacecdllhhajmbjkdcmajg/images/cursor-chat.png (PNG, so <img> as well as fetch works). Controlled tabs (content-scripts/codex.js, injected on demand): root id codex-agent-overlay-root (exact tag uncertain), favicon badge <link rel=\"icon\" data-codex-favicon-badge=\"true\"> whose SVG data-URL contains data-codex-favicon-badge=\"codex-favicon-badge\" (states active/deliverable/handoff; colours #22c55e, #facc15, black), dataset keys codexFaviconBadgeCreated / codexOriginalFaviconHref, phantom cursor using images/cursor-chat.png. Legacy class name AtlasCommandError in bundle. Codex driver (browser-service.mjs, plugin 26.1021.31345): Runtime.addBinding {name:\"__browserUseClipboard_<32hex>\"} + Page.addScriptToEvaluateOnNewDocument (no worldName -> main world) installing globalThis.__browserUseClipboardBridge {bindingName, respond(), cleanup()}; WebMCP probe host: div appended to document.documentElement with closed shadow root containing <iframe name=\"codex-webmcp-probe-97adecab-75be-4770-bbe4-654cac643843\">, state on document[\"__codexNativeWebMcpState\"]; reads document.modelContext.getTools(). CONFLICT: providers-tier1 says the extension kernel deny-lists Page.addScriptToEvaluateOnNewDocument, so the clipboard bridge may only appear in OpenAI's in-app browser (\"Dot\") — needs a live run. Bundled Playwright injected-script strings (__pw_resume, __pwClock, x-pw-user-overlay) are probably utility-world (uncertain). CDP: Input.dispatchMouseEvent (mouseMoved button:\"none\", then mousePressed/mouseReleased), Input.dispatchKeyEvent, Input.insertText, Accessibility.getFullAXTree, DOMSnapshot.*, Target.setAutoAttach (flatten), per-frame Page.enable AND Runtime.enable, Emulation.setFocusEmulationEnabled {enabled:true}, Emulation.setDeviceMetricsOverride (deviceScaleFactor 1, mobile false), Fetch.enable. No UA override; Chrome debugger infobar shown. Isolated worlds \"browser-use-input-guard\" and \"browser-use-virtual-clipboard\" (not page-visible). Can work in background tabs without moving them into an agent tab group.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#0",
+      "docs/research/raw/extension-agents.md#4.1",
+      "docs/research/raw/extension-agents.md#4.2",
+      "docs/research/raw/extension-agents.md#11",
+      "docs/research/raw/providers-tier1.md#2.8",
+      "https://chromewebstore.google.com/detail/hehggadaopoacecdllhhajmbjkdcmajg",
+      "https://microsoftedge.microsoft.com/addons/detail/odlomjlbamekndcpllcnffbgeohgkmjh",
+      "https://extpose.com/ext/hehggadaopoacecdllhhajmbjkdcmajg"
+    ]
+  },
+  {
+    "id": null,
+    "name": "ChatGPT Atlas (macOS Chromium fork, agent mode)",
+    "provider": "openai",
+    "store": "builtin",
+    "usesDebugger": "unknown",
+    "inputPath": "unknown",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "requestHeaders": [
+      {
+        "name": "User-Agent",
+        "valuePattern": "ChatGPT%20Atlas/",
+        "condition": "Only on background favicon/logo fetches by the native CFNetwork fetcher (`ChatGPT%20Atlas/<build> CFNetwork/<ver> Darwin/<ver>`; exact build format uncertain; secondary, two independent reports). Page requests use a stock Chrome UA."
+      }
+    ],
+    "notes": "RETIRED: service ended 2026-08-09 (successors: ChatGPT desktop app browser mode, the ChatGPT Chrome extension, ChatGPT Work cloud browser). Page UA was stock Chrome (`Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36` at launch, later Chrome/142); UA-CH brands reported indistinguishable from Chrome (HUMAN, secondary). Agent mode is ARIA/accessibility-tree driven -> expect no DOM mutation and trusted input; input path (CDP-equivalent vs renderer) uncertain. No Web Bot Auth signing (only the cloud browser signs). Untested idea: getHighEntropyValues fullVersionList may reveal a non-Chrome entry.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#4.3",
+      "docs/research/raw/providers-tier1.md#2.7",
+      "https://www.chrisrcook.com/2025/10/22/chatgpt-atlas-user-agent/",
+      "https://simonwillison.net/2025/Oct/21/introducing-chatgpt-atlas/"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Gemini in Chrome (Chrome built-in \"Actor\" / Glic, auto browse)",
+    "provider": "google",
+    "store": "builtin",
+    "usesDebugger": false,
+    "inputPath": "unknown",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Not an extension: browser-process ActorKeyedService/ExecutionEngine/ToolController drives renderer tools (chrome/renderer/actor/*) that synthesize WebMouseEvent/WebKeyboardEvent via widget->HandleInputEvent (same entry point as real input -> isTrusted:true; pressure not measured). inputPath set to \"unknown\" because the schema has no renderer-synthesized option. Nothing page-visible: no extension id, no WAR, no content script, no debugger infobar, no header, no global, no DOM insertion; glow/overlay/handoff button are browser UI (actor_border_view_controller, actor_overlay_ui). Detect only behaviourally: constant keydown->keyup / inter-key durations (kGlicActorKeyDownDuration / kGlicActorKeyUpDuration, defaults unknown), occluded-target path element.SimulateAccessibilityClick() = click without pointerdown, paste fallback (single insertFromPaste), regular cadence from observation_delay_controller page-stability waits. Navigation: PAGE_TRANSITION_AUTO_TOPLEVEL, browser-initiated (hypothesis: Sec-Fetch-Site none, no Referer). Local feature names: GlicActor, GlicActorUi (study GlicActorRolloutControl), component ActorSafetyLists 9.8200.9609; disable with --disable-features=GlicActor,GlicActorUi. No site-level opt-out in site_policy.cc.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#5.1",
+      "docs/research/raw/extension-agents.md#5.2",
+      "docs/research/raw/extension-agents.md#5.3",
+      "docs/research/raw/providers-tier1.md#4.6",
+      "https://raw.githubusercontent.com/chromium/chromium/main/chrome/browser/actor/README.md",
+      "https://raw.githubusercontent.com/chromium/chromium/main/chrome/renderer/actor/click_dispatcher.cc",
+      "https://raw.githubusercontent.com/chromium/chromium/main/chrome/renderer/actor/key_dispatcher.cc",
+      "https://blog.google/security/architecting-security-for-agentic/"
+    ]
+  },
+  {
+    "id": "npclhjbddhklpbnacpjloidibaggcgon",
+    "name": "Comet Assistant (Perplexity Comet hidden internal extension)",
+    "provider": "perplexity",
+    "store": "component",
+    "usesDebugger": true,
+    "inputPath": "cdp",
+    "webAccessibleResources": [],
+    "domMarkers": [
+      "#pplx-agent-overlay",
+      "#pplx-agent-overlay-stop-button"
+    ],
+    "mainWorldGlobals": [],
+    "schemes": [
+      "comet-extension://",
+      "comet://"
+    ],
+    "notes": "Id confirmed by the local native-messaging manifest com.perplexity.comet.json (allowed_origins chrome-extension://npclhjbddhklpbnacpjloidibaggcgon/, host /Applications/Perplexity.app/Contents/MacOS/comet-native-host) and Hacktron/Castle/Security Boulevard (`const B = \"npclhjbddhklpbnacpjloidibaggcgon\";`, background comet-extension://npclhjbddhklpbnacpjloidibaggcgon/background.js). chrome://extensions redirects to comet://extensions where it is hidden. WAR list unknown (no manifest) — content script comet-agent/content.js and overlay.js (agent mode) are named by HUMAN/Security Boulevard but not confirmed as web-accessible, so not listed. DOM (Castle, Aug 2025): `const p = \"pplx-agent-overlay\", O = \"pplx-agent-overlay-stop-button\";` button text \"Stop Comet Assistant\", appended via document.body.appendChild, style position fixed, inset -1em, opacity 0, cursor progress; passive test works even when idle: create div#pplx-agent-overlay-stop-button styled background-color blue and check getComputedStyle(div).backgroundColor === \"rgb(255, 254, 251)\". Input: chrome.debugger.sendCommand \"Input.dispatchMouseEvent\" mousePressed with NO mousemove events (cursor teleports), isTrusted true (Castle; extension-agents.md had marked the input path uncertain). RUN_IDLE_TEST uses DOMSnapshot.captureSnapshot. Whether Comet shows or suppresses the debugger infobar is uncertain. externally_connectable *.perplexity.ai; message types COMET_CLOSE_SIDECAR, CALL_TOOL, etc. UA/brands identical to Chrome (Chrome/139 Aug 2025, Chrome/142 later); \"no obvious global variables like window.brave\"; HUMAN's \"Perplexity-specific headers\" claim is unspecified (uncertain).",
+    "sources": [
+      "docs/research/raw/extension-agents.md#1",
+      "docs/research/raw/extension-agents.md#6",
+      "docs/research/raw/providers-tier2.md#3.2",
+      "docs/research/raw/computer-use-agents.md#5",
+      "https://www.hacktron.ai/blog/perplexity-comet-uxss",
+      "https://blog.castle.io/from-detection-to-trust-the-evolving-challenge-of-ai-bot-authentication/",
+      "https://www.humansecurity.com/ai-agent/perplexity-comet/"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Microsoft Edge Copilot Mode / Copilot Actions (incl. Edge for Business agentic browsing)",
+    "provider": "microsoft",
+    "store": "builtin",
+    "usesDebugger": "unknown",
+    "inputPath": "unknown",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "No primary technical signal found. Inherits the user's Edge UA (Chromium UA + `Edg/<version>`; brands \"Microsoft Edge\"/\"Chromium\") with no signed identity (HUMAN, secondary; Nohacks: \"Uses standard Edge/Chromium user agents with no bot signal\"). Edge for Business agentic browsing (limited preview, 20 May 2026): \"clear visual indicators show when Copilot is taking action\" — indicator form undocumented. \"Copilot Mode\" brand reportedly retired 13 May 2026 (uncertain). Hook: Edge WebMCP (about://flags/#enable-webmcp-testing) — register a decoy tool via document.modelContext.registerTool and treat executeTool calls as agent-positive. Needs a live Edge Canary run.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#7",
+      "docs/research/raw/providers-tier2.md#3.3",
+      "https://explore.microsoft.com/en-us/edge/copilot-mode",
+      "https://learn.microsoft.com/en-us/microsoft-edge/web-platform/user-agent-guidance"
+    ]
+  },
+  {
+    "id": "mmlmfjhmonkocbjadbfplnigmagldckm",
+    "name": "Playwright Extension (Playwright MCP Bridge)",
+    "provider": "playwright",
+    "store": "chrome",
+    "version": "0.4.0",
+    "updated": "2026-09-01",
+    "users": "100,000",
+    "usesDebugger": true,
+    "inputPath": "cdp",
+    "permissions": [
+      "debugger",
+      "activeTab",
+      "tabs",
+      "tabGroups"
+    ],
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Manifest has NO content_scripts, NO web_accessible_resources, NO externally_connectable -> nothing to probe by URL, no DOM injection. Pure chrome.debugger relay (attach/detach/sendCommand, tabs.create/remove); all CDP (Runtime.enable per frame, init scripts, utility worlds) comes unfiltered from the @playwright/mcp --extension client. Detect via infobar burst (\"Playwright Extension\" started debugging this browser) and robotic trusted input (single mouse move unless steps set). Tab group \"Playwright · <clientName>\", green ✓ badge \"Connected to Playwright client\" (not page-visible). navigator.webdriver stays false (real profile). Playwright utility-world bindings (__playwright__binding__, __pwInitScripts) are described as not page-visible. Env PLAYWRIGHT_MCP_EXTENSION_TOKEN skips approval.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.1",
+      "docs/research/raw/automation-stacks.md#3",
+      "https://chromewebstore.google.com/detail/mmlmfjhmonkocbjadbfplnigmagldckm",
+      "https://raw.githubusercontent.com/microsoft/playwright/main/packages/extension/README.md"
+    ]
+  },
+  {
+    "id": "bjfgambnhccakkhmkepdoekmckoijdlc",
+    "name": "Browser MCP - Automate your browser using VS Code, Cursor, Claude, and more",
+    "provider": "browser-mcp",
+    "store": "chrome",
+    "version": "1.3.4",
+    "updated": "2025-05-07",
+    "users": "100,000",
+    "usesDebugger": true,
+    "inputPath": "cdp",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Id confirmed via browsermcp.io/install redirect. \"Adapted from the Playwright MCP server\"; uses the user's real profile. CDP attach + input dispatch is REPORTED (secondary review), not verified from source (automation-stacks: content-script vs chrome.debugger not verified). Manifest not public -> WAR unknown. Server<->extension WebSocket reportedly on port 9009 with no token (secondary; port constant in private @repo/config). Detect via infobar burst + robotic trusted input. Unrelated projects share the name (@agent360/browser-mcp, ports 9876–9895).",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.2",
+      "docs/research/raw/automation-stacks.md#16",
+      "https://chromewebstore.google.com/detail/bjfgambnhccakkhmkepdoekmckoijdlc",
+      "https://raw.githubusercontent.com/BrowserMCP/mcp/main/README.md"
+    ]
+  },
+  {
+    "id": "imbddededgmcgfhfpcjmijokokekbkal",
+    "name": "Nanobrowser",
+    "provider": "nanobrowser",
+    "store": "chrome",
+    "version": "0.3.0",
+    "updated": "2026-10-16",
+    "users": "70,000",
+    "usesDebugger": true,
+    "inputPath": "cdp",
+    "permissions": [
+      "storage",
+      "scripting",
+      "tabs",
+      "activeTab",
+      "debugger",
+      "unlimitedStorage",
+      "webNavigation",
+      "sidePanel"
+    ],
+    "webAccessibleResources": [],
+    "domMarkers": [
+      "[data-nanobrowser-border]"
+    ],
+    "mainWorldGlobals": [],
+    "relatedIds": [
+      {
+        "id": "ajdioenfpgabnjlclgckbbnjjhdnjkhn",
+        "store": "edge",
+        "note": "Edge Add-ons build (secondary in extension-agents.md; confirmed from src/ in automation-stacks.md §17)."
+      }
+    ],
+    "notes": "Permissions list is the REPORTED set (secondary) — wxt.config.ts spreads them from ./src/ui/manifest-permissions; host_permissions <all_urls>, minimum_chrome_version 125; PR #313 proposes moving debugger to optional_permissions. No content_scripts / web_accessible_resources in config -> nothing to probe. Drives tabs with puppeteer-core over chrome.debugger (Runtime.enable, Page.enable, Target.setAutoAttach; __puppeteer_utility_world__ and isolated probe world \"nanobrowser-probe\" with globalThis.__nbProbe are not page-visible). Visible overlay (automation-stacks §17): <div aria-hidden=\"true\" data-nanobrowser-border style=\"all:initial;position:fixed;inset:0;pointer-events:none;z-index:2147483647;…\"> with a closed shadow root, injected via chrome.scripting.executeScript. Old buildDomTree.js playwright-highlight-container is gone. Infobar burst applies.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.3",
+      "docs/research/raw/automation-stacks.md#17",
+      "https://chromewebstore.google.com/detail/imbddededgmcgfhfpcjmijokokekbkal",
+      "https://github.com/nanobrowser/nanobrowser",
+      "https://raw.githubusercontent.com/nanobrowser/nanobrowser/master/wxt.config.ts"
+    ]
+  },
+  {
+    "id": "eanggfilgoajaocelnaflolkadkeghjp",
+    "name": "HARPA AI: Web Automation with ChatGPT, Claude, Gemini, Grok",
+    "provider": "harpa",
+    "store": "chrome",
+    "version": "16.1.0",
+    "updated": "2026-10-24",
+    "users": "400,000",
+    "usesDebugger": "unknown",
+    "inputPath": "unknown",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Developer HARPA AI TECHNOLOGIES OY; requires \"On all sites\"; floating quick-access bar on text selection, popup UI, AI Commands (\"navigate to a page, click a button, extract data\"), Web Monitors with auto-refresh. DOM-based automation strongly implies content-script synthetic events (isTrusted:false) and injected (likely shadow-rooted) UI — UNCERTAIN, manifest not examined; WAR, DOM ids and debugger use unknown.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.4",
+      "https://chromewebstore.google.com/detail/eanggfilgoajaocelnaflolkadkeghjp",
+      "https://harpa.ai/welcome"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Chrome MCP Server (hangwin/mcp-chrome)",
+    "provider": "hangwin",
+    "store": "unpacked",
+    "usesDebugger": "partial",
+    "inputPath": "content-script",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Loaded unpacked from GitHub releases; no stable store id confirmed. Native host via npm mcp-chrome-bridge; Streamable HTTP at http://127.0.0.1:12306/mcp or STDIO. Tools chrome_click_element (ref/CSS selector/coordinates), chrome_fill_or_select, chrome_keyboard, chrome_inject_script + chrome_send_command_to_inject_script, chrome_network_capture_* (webRequest), chrome_network_debugger_* and background chrome_screenshot (CDP). Selector/ref clicks are content-script DOM events -> isTrusted:false (likely); chrome.debugger only for network-debugger / background screenshots -> infobar only in those modes. WXT + Vue; offscreen documents host a local semantic-similarity model.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.5",
+      "https://raw.githubusercontent.com/hangwin/mcp-chrome/master/README.md",
+      "https://raw.githubusercontent.com/hangwin/mcp-chrome/master/docs/ARCHITECTURE.md",
+      "https://raw.githubusercontent.com/hangwin/mcp-chrome/master/docs/TOOLS.md"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Taxy AI (Taxy AI Alpha, open-source)",
+    "provider": "taxy",
+    "store": "unpacked",
+    "usesDebugger": true,
+    "inputPath": "cdp",
+    "permissions": [
+      "tabs",
+      "activeTab",
+      "storage",
+      "clipboardWrite",
+      "debugger",
+      "management"
+    ],
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "No store id in the research. src/manifest.json: content script contentScript.bundle.js + content.styles.css on http://*/*, https://*/*, <all_urls>; web_accessible_resources with \"matches\": [] (NOT probeable); background background.bundle.js. Acts via chrome.debugger (infobar). Research suggests checking document.styleSheets for an href starting with chrome-extension:// — caveat: manifest-declared content-script CSS is normally not exposed in document.styleSheets, so verify before relying on it. Project largely dormant; low priority.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.6",
+      "https://raw.githubusercontent.com/TaxyAI/browser-extension/main/src/manifest.json"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Cursor Browser Automation (built into Cursor.app)",
+    "provider": "cursor",
+    "store": "builtin",
+    "version": "1.0.0",
+    "usesDebugger": false,
+    "inputPath": "runtime-evaluate",
+    "webAccessibleResources": [],
+    "domMarkers": [
+      "[data-cursor-ref]",
+      "[data-cursor-overlay]"
+    ],
+    "mainWorldGlobals": [
+      "__cursorBrowserAutomationInjected",
+      "__cursorAreaScreenshotInjected",
+      "__cursorAreaScreenshotCommand"
+    ],
+    "notes": "Cursor IDE extension at /Applications/Cursor.app/Contents/Resources/app/extensions/cursor-browser-automation/ (\"MCP server for browser automation in Cursor\"), not a Chrome extension: drives Cursor's embedded browser via CDP Runtime.evaluate (18 uses) and Page.captureScreenshot (usesDebugger=false means no chrome.debugger API); no Input.dispatch*, no remote-debugging-port, no Puppeteer/Playwright strings. injectBrowserUIScript sets window.__cursorBrowserAutomationInjected = true (\"Only inject in top-level frame\"), window.__cursorAreaScreenshotInjected, window.__cursorAreaScreenshotCommand; tags elements data-cursor-ref=\"e<N>\" (/^e\\d+$/, also inside open shadow roots) and draws a data-cursor-overlay. All main-world (Runtime.evaluate). Whether it can target a user's external Chrome is unknown.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.7",
+      "docs/research/raw/extension-agents.md#0"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Browser Use (no extension found)",
+    "provider": "browser-use",
+    "store": "unlisted",
+    "usesDebugger": false,
+    "inputPath": "cdp",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Placeholder: no Chrome extension and no extension id found (uncertain whether one exists). Browser Use drives Chrome over remote CDP (Browser.from_system_chrome() reuses a Chrome profile; can control an existing remote browser over CDP); Browser Use Cloud offers stealth browsers, residential proxies, CAPTCHA solving. Its framework DOM artifacts (data-browser-use-interaction-highlight etc., automation-stacks §12) belong to the automation-stack data, not here.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.8",
+      "https://raw.githubusercontent.com/browser-use/browser-use/main/README.md"
+    ]
+  },
+  {
+    "id": null,
+    "name": "MultiOn (now Please)",
+    "provider": "multion",
+    "store": "unlisted",
+    "usesDebugger": "unknown",
+    "inputPath": "unknown",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "please.ai now markets a mobile to-do/reminders app; no Chrome extension mentioned. Original MultiOn extension appears discontinued (uncertain); no extension id confirmed.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.8",
+      "https://please.ai/"
+    ]
+  },
+  {
+    "id": "mljmkmodkfigdopcpgboaalildgijkoc",
+    "name": "Manus Browser Operator (Manus Helper)",
+    "provider": "manus",
+    "store": "chrome",
+    "usesDebugger": true,
+    "inputPath": "cdp",
+    "webAccessibleResources": [
+      {
+        "version": "unknown",
+        "matches": "unknown (fetch from a third-party page reported to return 200)",
+        "paths": [
+          "content.ts.js"
+        ],
+        "seen": "HUMAN Security observation (secondary), via providers-tier2 §3.21; not verified locally"
+      }
+    ],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Id and probe come from HUMAN (OBSERVED, third-party): fetch(chrome-extension://mljmkmodkfigdopcpgboaalildgijkoc/content.ts.js) returns 200 when installed; console log \"Manus helper started\"; Manus-specific window properties exist but were not named (so none listed). CDP attach REPORTED by Arkose (\"attach via the Chrome DevTools Protocol … real, unmodified Chrome\"); Manus docs do not document permissions/dispatch. Works in a dedicated tab inside a task-named tab group; every session must be authorised; Chrome and Edge recommended; requests from the user's local IP. Cloud Manus agent is separate (UA suffix `; Manus-User/1.0`, datacenter IPs).",
+    "sources": [
+      "docs/research/raw/providers-tier2.md#3.21",
+      "docs/research/raw/computer-use-agents.md#6",
+      "https://manus.im/docs/features/browser-operator.md",
+      "https://manus.im/docs/integrations/manus-browser-operator.md"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Stagehand Runtime (Browserbase Stagehand v4 extension)",
+    "provider": "browserbase",
+    "store": "unpacked",
+    "usesDebugger": true,
+    "inputPath": "cdp",
+    "permissions": [
+      "debugger",
+      "offscreen",
+      "scripting",
+      "tabs"
+    ],
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "From automation-stacks.md §13 (not covered by extension-agents.md); no store id. MV3, minimum_chrome_version 116, host_permissions <all_urls>, content-script.js at document_start, all_frames, world ISOLATED. Isolated-only globals __stagehandExtensionWorld ({name:\"stagehand\", version:\"stagehand.v4\"}), __stagehandLocatorScripts, __stagehandLocatorWorld (not page-visible). Sends Runtime.enable liberally; pipelined click burst (mouseMoved/mousePressed/mouseReleased, zero delay); typing via single Input.insertText. Optional cursor overlay appended to page DOM (CURSOR_OVERLAY_ID value not captured). Infobar applies.",
+    "sources": [
+      "docs/research/raw/automation-stacks.md#13"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Opera Neon (Neon Do / Browser Operator)",
+    "provider": "opera",
+    "store": "builtin",
+    "usesDebugger": "unknown",
+    "inputPath": "unknown",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Neon Do / Browser Operator \"performs these tasks locally in the browser\" (user IP); Neon Make runs in a cloud VM (unknown egress). MIT AI Agent Index: \"regular browser UA strings that do not make the browser distinguishable\"; Opera UAs normally carry `OPR/<ver>` (identifies Opera, not the agent; whether Neon appends it is uncertain). No agent token, indicator, IP range or technical detail documented.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.8",
+      "docs/research/raw/providers-tier2.md#3.25",
+      "https://www.operaneon.com/"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Dia (The Browser Company / Atlassian)",
+    "provider": "browser-company",
+    "store": "builtin",
+    "usesDebugger": "unknown",
+    "inputPath": "unknown",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Chromium-based (Chromium 144 as of v1.14.0, Jan 2026), macOS only. Assistant gathers context across tabs (summarisation/chat over authenticated sessions) but does NOT click around pages -> no page actuation to detect. No distinct UA token found (Chrome UA; uncertain).",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.8",
+      "docs/research/raw/providers-tier2.md#3.24",
+      "https://www.diabrowser.com/"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Fellou (Deep Action agentic browser)",
+    "provider": "fellou",
+    "store": "builtin",
+    "usesDebugger": "unknown",
+    "inputPath": "unknown",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "Electron-based, Chromium underneath; \"Deep Action\" runs tasks in a \"shadow workspace\" (local vs cloud unspecified), claims to handle logins/CAPTCHA by \"simulating human behavior\". Reported no longer available (Arkose, 2026) — historical only. No UA token or indicator documented.",
+    "sources": [
+      "docs/research/raw/extension-agents.md#9.8",
+      "docs/research/raw/providers-tier2.md#3.23",
+      "https://fellou.ai/"
+    ]
+  },
+  {
+    "id": null,
+    "name": "Claude Cowork built-in browser (Claude desktop app)",
+    "provider": "anthropic",
+    "store": "builtin",
+    "usesDebugger": "unknown",
+    "inputPath": "unknown",
+    "webAccessibleResources": [],
+    "domMarkers": [],
+    "mainWorldGlobals": [],
+    "notes": "\"The built-in browser lives in the desktop app\" (user's machine, user's IP), separate profile, optional per-site login import from Chrome/Edge/Firefox; no UA/engine statement. Governed by the same admin allow/block list as Claude in Chrome. No page-level signal documented.",
+    "sources": [
+      "docs/research/raw/providers-tier1.md#3.4"
+    ]
+  }
+]

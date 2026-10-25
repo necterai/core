@@ -1,0 +1,7 @@
+<!doctype html><html><head><meta charset="utf-8"><title>click</title></head>
+<body style="margin:0"><button id="b" style="position:absolute;left:100px;top:100px;width:200px;height:60px">Click</button><input id="i" style="position:absolute;left:100px;top:200px">
+<script>
+window.__events = [];
+const rec = e => window.__events.push({type:e.type, isTrusted:e.isTrusted, pointerId:e.pointerId, pointerType:e.pointerType, width:e.width, height:e.height, pressure:e.pressure, tiltX:e.tiltX, tiltY:e.tiltY, twist:e.twist, isPrimary:e.isPrimary, button:e.button, buttons:e.buttons, detail:e.detail, clientX:e.clientX, clientY:e.clientY, screenX:e.screenX, screenY:e.screenY, movementX:e.movementX, movementY:e.movementY, timeStamp:e.timeStamp, tsInt:Number.isInteger(e.timeStamp), sc:e.sourceCapabilities?{firesTouchEvents:e.sourceCapabilities.firesTouchEvents}:null, key:e.key, code:e.code, keyCode:e.keyCode, isComposing:e.isComposing, repeat:e.repeat, data:e.data, inputType:e.inputType, activeAtEvent:navigator.userActivation.isActive, hasBeenActiveAtEvent:navigator.userActivation.hasBeenActive, target:e.target&&e.target.id});
+for (const t of ['pointerover','pointerenter','pointermove','pointerrawupdate','pointerdown','pointerup','mouseover','mouseenter','mousemove','mousedown','mouseup','click','auxclick','dblclick','contextmenu','keydown','keypress','keyup','beforeinput','input','focus','focusin','blur','touchstart','touchend']) document.addEventListener(t, rec, true);
+</script></body></html>

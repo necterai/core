@@ -1,0 +1,524 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html><html lang="en_US" class="a-no-js" data-19ax5a9jf="dingo">
+    
+
+
+
+
+
+
+
+
+
+
+
+    <head><script>var aPageStart = (new Date()).getTime();</script><meta charset="utf-8"/>
+        
+        
+            
+            
+                <title>404 Page not found</title>
+                
+            
+            
+        
+
+        
+        
+            
+            
+                
+            
+        
+
+        
+
+        
+
+        
+        
+        
+        <link rel="stylesheet" href="https://m.media-amazon.com/images/I/215CM2Cgm9L._RC|51FWJRVXGBL.css_.css?AUIClients/AmazonUI" />
+<link rel="stylesheet" href="https://m.media-amazon.com/images/I/11WsGYSItxL._RC|01DE6WSvLKL.css,512Cd-1VRsL.css,31VyBF3Z4EL.css,01dpRn7s1DL.css,21JMC7OC91L.css,01nO+AnUDyL.css,01oplyhwgTL.css,413Vvv3GONL.css,1170nDgl0uL.css,01Rw4F+QU6L.css,11GW2DCngTL.css,01dwEpLmO4L.css,01IdKcBuAdL.css,01iHqjS7YfL.css,21D3IemrALL.css,11XMsR-m2hL.css,51kR4v4RCcL.css,01FEnU2KM9L.css,11hdEXw-6rL.css,01GAxF7K5tL.css,01ZM-s8Z3xL.css,21gEzBqpmtL.css,11FeoxrgiyL.css,21Yuul0BcnL.css,01rSTIgNJIL.css,21HqyYwP3xL.css,31u+uM+C07L.css,019TAYpKRCL.css,01Lgkx7LWKL.css,31g3RABPKHL.css,11PDZ29p-PL.css,117zDsOznQL.css,215WpAjwzoL.css,11INh4d+2FL.css,114aTS6SjML.css,01Uw64cHNCL.css,21Z8uZLO-0L.css,21eFUYCYZkL.css,11+dbAV+b7L.css,211M4gA5ZJL.css,11GyUpf9PlL.css,119Cktja74L.css,11PMguLK6gL.css,01890+Vwk8L.css,11TZSntL0oL.css,01qiwJ7qDfL.css,21jZ2Hny6UL.css,01ONg56w3qL.css,0136+UFOtpL.css,31un+UKeIeL.css,21MLYj6O8gL.css,013-xYw+SRL.css_.css?AUIClients/AmazonUI#us.not-trident" />
+<link rel="stylesheet" href="https://m.media-amazon.com/images/I/71vQGtuTiCL.css?AUIClients/DeXWebsiteAUIAssets" />
+
+
+        
+        
+            
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="description" content="Try our search engine in the top right corner or check the links below." />
+                <meta name="keywords" content="">
+                <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+            
+            
+        
+
+        
+            
+            
+                
+            
+        
+
+        
+        
+        
+        
+        
+        <meta name="google-site-verification" content="wfEDah_6uJe9Y7uIfLrVycd_efr8wQ9YO-fM_5MI5w0" />
+        
+        <meta name="google-site-verification" content="Eu8BqTWMhRRdfCAdqUh2RYb3SjAiuFp4wmgTtGcteM0" />
+        
+        
+        
+        <meta name="google-site-verification" content="KHmp6TUPKc1gHlM9TuB842pcV7TxZVV6TgenZtsYoNY" />
+        
+        <meta name="msvalidate.01" content="9761B379C1B64F587D71BA40337FDD07" />
+
+        <script language="JavaScript" type="text/javascript">
+
+        var digitalData ={
+            page:{
+                pageInfo: {
+                    pageInstanceID: "\/404",
+                    path: "\/.well\-known\/http\-message\-signatures\-directory",
+                    pageID: "",
+                    pageTitle: "404 Page not found",
+                    pageType: "DeX",
+                    primaryCategory: "default",
+                    pageName: "",
+                    language: "en_US",
+                    pageUrl: "\/.well\-known\/http\-message\-signatures\-directory",
+                    subCategory1: "404",
+                    subCategory2: "",
+                    subCategory3: "",
+                    subCategory4: ""
+                }
+            },
+            user:{
+                userID: "",
+                ipAddress: "72.73.227.174",
+                userAgent: "necter\-research\/0.1 (+https:\/\/github.com\/catch\-me\-if\-you\-can)"
+            }
+        };
+        var urlSplit = "\/.well\-known\/http\-message\-signatures\-directory".split("/");
+        var trailingSlash = urlSplit.pop();
+        var pTitle = trailingSlash;
+        if (trailingSlash == ""){
+            pTitle = urlSplit.pop()
+        }
+
+        
+        if ("".indexOf("search") !== -1) {
+            digitalData.page.pageInfo.searchResultsNum = "";
+        }
+
+        if ("".indexOf("dex-home") !== -1){
+            digitalData.page.pageInfo.pageID = "Home";
+            digitalData.page.pageInfo.pageTitle = "Home";
+            digitalData.page.pageInfo.primaryCategory = "Home";
+        } else {
+            digitalData.page.pageInfo.pageID = pTitle;
+            pTitle = pTitle.replace(/(^|-)[a-z]/g,function(f){return f.toUpperCase();});
+            pTitle = pTitle.replace(/-/g, '');
+            digitalData.page.pageInfo.pageTitle = pTitle;
+            var pCat = digitalData.page.pageInfo.primaryCategory;
+            pCat = pCat.replace(/(^|-)[a-z]/g,function(f){return f.toUpperCase();});
+            pCat = pCat.replace(/-/g, '');
+            digitalData.page.pageInfo.primaryCategory = pCat;
+        }
+
+        var pageNameStr = "" + digitalData.page.pageInfo.primaryCategory;
+        //Todo: add in logic for sub-categories when AOI is implemented.
+        if (digitalData.page.pageInfo.pageTitle != null){
+        	if (pageNameStr != ""){
+        		pageNameStr += ":";
+        	}
+            pageNameStr += digitalData.page.pageInfo.pageTitle;
+        }
+        digitalData.page.pageInfo.pageName = pageNameStr;
+
+        
+        (function (w) {
+           w.URLSearchParams = w.URLSearchParams || function (searchString) {
+               var self = this;
+               self.searchString = searchString;
+               self.get = function (name) {
+                   var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(self.searchString);
+                   if (results == null) {
+                       return null;
+                   }
+                   else {
+                       return decodeURI(results[1]) || 0;
+                   }
+               };
+           }
+        })(window);
+
+        var isIAEnabled = true;
+        var service = "n";
+        var signInUrl = "\/settings\/console\/registration?return_to=\/.well\-known\/http\-message\-signatures\-directory";
+
+        </script>
+
+
+
+
+        <script src="https://m.media-amazon.com/images/G/01/envImprovement/js/jquery/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://ds6yc8t7pnx74.cloudfront.net/content/dam/developer-portal/analytics/prod/launch-d6fef6f5d06a.min.js" async></script>
+
+        <script src="https://df8gj0gzff79.cloudfront.net/amz-dev-portal/rendering-service/hydration.js"></script>
+
+        
+            <link rel="stylesheet" type="text/css" href="https://d20632htc2msyc.cloudfront.net/static/css/main.css" />
+        
+        <script defer src="https://d20632htc2msyc.cloudfront.net/static/js/main.js"></script>
+        
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('365-EFI-026');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+
+
+        
+        
+
+        
+    </head>
+
+
+    <body class="a-m-us a-aui_72554-c a-aui_template_weblab_cache_333406-c a-bw_aui_dark_mode_mshop_ios_1390013-c"><div id="a-page"><script type="a-state" data-a-state="{&quot;key&quot;:&quot;a-wlab-states&quot;}">{"AUI_72554":"C","AUI_TEMPLATE_WEBLAB_CACHE_333406":"C","BW_AUI_DARK_MODE_MSHOP_IOS_1390013":"C"}</script>
+        <div class="header-section"><script type="text/javascript">window.__POST_LOGIN_DATA__ = {initials: '', fullName: '', companyName: '', signInUrl: 'https://www.amazon.com/ap/signin?openid.pape.max_auth_age=3600&openid.return_to=https%3A%2F%2Fdeveloper.amazon.com%2F.well-known%2Fhttp-message-signatures-directory&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=mas_dev_portal&openid.mode=checkid_setup&language=en_US&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=amzn_developer_portal&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&language=en_US', signOutUrl: 'https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fdeveloper.amazon.com%2F.well-known%2Fhttp-message-signatures-directory&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=mas_dev_portal&openid.mode=logout&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&language=en_US', isAuthenticated: false, paymentOrTaxPending: false, vendorId: '', vendorIds: [], companyNameList: [], languageData: [{"nodes":null,"title":"English","locale":"en_US","url":"/.well-known/http-message-signatures-directory"},{"nodes":null,"title":"Japanese","locale":"ja_JP","url":"/ja/.well-known/http-message-signatures-directory"},{"nodes":null,"title":"Chinese","locale":"zh_CN","url":"/zh/.well-known/http-message-signatures-directory"}], isRegistration: false};</script><div data-resource-type="developer-portal/components/content/archie/header" data-props="{&quot;pageMenu&quot;:{&quot;parentLabel&quot;:&quot;Amazon Appstore&quot;,&quot;label&quot;:&quot;&quot;,&quot;navigation&quot;:[]},&quot;globalMenu&quot;:{&quot;logo&quot;:{&quot;src&quot;:&quot;https://ds6yc8t7pnx74.cloudfront.net/content/dam/Archie_Header.png&quot;,&quot;alt&quot;:&quot;Amazon Developer&quot;,&quot;url&quot;:&quot;/&quot;,&quot;target&quot;:&quot;_self&quot;},&quot;navigation&quot;:[{&quot;label&quot;:&quot;Alexa&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Alexa+ for Builders&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Home&quot;,&quot;url&quot;:&quot;/alexaplus&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Blog&quot;,&quot;url&quot;:&quot;/alexaplus/blogs&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Documentation&quot;,&quot;url&quot;:&quot;/docs/alexaplus/add-ons/home&quot;,&quot;target&quot;:&quot;_self&quot;}]},{&quot;label&quot;:&quot;Alexa Skills&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Home&quot;,&quot;url&quot;:&quot;/en-US/alexa&quot;,&quot;target&quot;:&quot;_self&quot;}]}]},{&quot;label&quot;:&quot;Amazon Appstore&quot;,&quot;url&quot;:&quot;/apps-and-games&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Ring&quot;,&quot;url&quot;:&quot;https://developer.ring.com/&quot;,&quot;target&quot;:&quot;_blank&quot;},{&quot;label&quot;:&quot;AWS&quot;,&quot;url&quot;:&quot;https://aws.amazon.com&quot;,&quot;target&quot;:&quot;_blank&quot;},{&quot;label&quot;:&quot;Documentation&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Alexa&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Alexa+ add-ons&quot;,&quot;url&quot;:&quot;/docs/alexaplus/add-ons/home&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Alexa+ Smart Home&quot;,&quot;url&quot;:&quot;/docs/alexaplus/smarthome/what-is-smart-home&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Skills kit&quot;,&quot;url&quot;:&quot;/docs/alexa/documentation-home.html&quot;,&quot;target&quot;:&quot;_self&quot;}]},{&quot;label&quot;:&quot;Appstore&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Get started&quot;,&quot;url&quot;:&quot;/docs/apps-and-games/documentation&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Fire OS&quot;,&quot;url&quot;:&quot;/docs/fire-os/documentation&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Vega OS&quot;,&quot;url&quot;:&quot;/docs/vega/vega&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Cloud App Program&quot;,&quot;url&quot;:&quot;/docs/cloud-app-program/amazon-cap&quot;,&quot;target&quot;:&quot;_self&quot;}]},{&quot;label&quot;:&quot;Ring&quot;,&quot;target&quot;:&quot;_self&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Get started&quot;,&quot;url&quot;:&quot;/docs/ring/get-started&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Develop&quot;,&quot;url&quot;:&quot;/docs/ring/develop&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Certify&quot;,&quot;url&quot;:&quot;/docs/ring/certify&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Publish&quot;,&quot;url&quot;:&quot;/docs/ring/publish&quot;,&quot;target&quot;:&quot;_self&quot;}]},{&quot;label&quot;:&quot;AWS&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Home&quot;,&quot;url&quot;:&quot;https://docs.aws.amazon.com/&quot;,&quot;target&quot;:&quot;_blank&quot;}]}]}]},&quot;theme&quot;:{&quot;textColor&quot;:&quot;#C5C6C9&quot;,&quot;backgroundColor&quot;:&quot;#161D26&quot;,&quot;subMenuBackgroundColor&quot;:&quot;#232F3E&quot;}}" class="slot-component-wrapper">
+    <style data-styled="true" data-styled-version="6.1.15">.jYcpAw{position:fixed;top:0;left:0;width:100%;display:flex;flex-direction:column;color:#C5C6C9;background:#161D26;transition:transform 0.2s ease-in-out;transform:translateY(0);z-index:1000;padding:0;}/*!sc*/
+data-styled.g1[id="sc-FEMpB"]{content:"jYcpAw,"}/*!sc*/
+.nIOIS{height:0px;}/*!sc*/
+data-styled.g2[id="sc-gjcoXW"]{content:"nIOIS,"}/*!sc*/
+.dPPsgg{position:relative;z-index:10;}/*!sc*/
+data-styled.g6[id="sc-jbAkgO"]{content:"dPPsgg,"}/*!sc*/
+.jPijJy{padding:18px 12px 0 12px;height:100%;display:flex;align-items:center;cursor:pointer;}/*!sc*/
+data-styled.g7[id="sc-gNZgCX"]{content:"jPijJy,"}/*!sc*/
+.xYSPR{font-size:14px;line-height:18px;font-weight:500;font-family:EmberModernText;color:#C5C6C9;white-space:nowrap;}/*!sc*/
+data-styled.g8[id="sc-kfeOyU"]{content:"xYSPR,"}/*!sc*/
+.hIEnoK{position:relative;padding:0 4px 20px 4px;display:flex;justify-content:center;}/*!sc*/
+.hIEnoK:hover .sc-kfeOyU{color:#FFFFFF;}/*!sc*/
+data-styled.g9[id="sc-hRDKVd"]{content:"hIEnoK,"}/*!sc*/
+.cpNglm{position:relative;padding:0 4px 20px 4px;display:flex;justify-content:center;text-decoration:none;color:inherit;}/*!sc*/
+.cpNglm:hover{text-decoration:none;color:inherit;}/*!sc*/
+.cpNglm:hover .sc-kfeOyU{color:#FFFFFF;}/*!sc*/
+data-styled.g10[id="sc-jBIHhB"]{content:"cpNglm,"}/*!sc*/
+.cayELl{position:absolute;width:100%;height:1px;border-radius:3px 3px 0 0;bottom:0;left:0;background:#C5C6C9;visibility:hidden;opacity:0;}/*!sc*/
+data-styled.g11[id="sc-cMqPwU"]{content:"cayELl,"}/*!sc*/
+.dxBiLe{display:flex;align-items:center;gap:4px;}/*!sc*/
+data-styled.g12[id="sc-jUkaYT"]{content:"dxBiLe,"}/*!sc*/
+.hiDKur{display:flex;align-items:center;transform:scaleY(1);transition:transform 0.2s ease;}/*!sc*/
+data-styled.g13[id="sc-deSjom"]{content:"hiDKur,"}/*!sc*/
+.cetsRs{display:flex;position:relative;background-color:#161D26;}/*!sc*/
+data-styled.g14[id="sc-jHswkR"]{content:"cetsRs,"}/*!sc*/
+.iMHfPQ{align-items:center;color:#C5C6C9;display:inline-flex;gap:6px;text-decoration:none!important;width:fit-content;}/*!sc*/
+.iMHfPQ:hover{color:#161D26;text-decoration:unset;}/*!sc*/
+.cUfBSh{align-items:center;color:#C5C6C9;display:inline-flex;gap:6px;text-decoration:none!important;width:fit-content;}/*!sc*/
+.cUfBSh:hover{color:#FFFFFF;text-decoration:underline;}/*!sc*/
+data-styled.g16[id="sc-jZTQcj"]{content:"iMHfPQ,cUfBSh,"}/*!sc*/
+.lhXMsM.lhXMsM{color:#C5C6C9;font-family:EmberModernText;font-weight:400;font-size:12px;line-height:16px;margin:0;font-size:14px;line-height:24px;}/*!sc*/
+.lhXMsM.lhXMsM:hover{color:#161D26;}/*!sc*/
+.dKGGwi.dKGGwi{color:#C5C6C9;font-family:EmberModernText;font-weight:400;font-size:12px;line-height:16px;margin:0;font-size:16px;line-height:18px;}/*!sc*/
+.dKGGwi.dKGGwi:hover{color:#FFFFFF;text-decoration:underline;}/*!sc*/
+.lkXsVP.lkXsVP{color:#C5C6C9;font-family:EmberModernText;font-weight:400;font-size:12px;line-height:16px;margin:0;font-size:16px;line-height:18px;}/*!sc*/
+.lkXsVP.lkXsVP:hover{color:#FFFFFF;}/*!sc*/
+data-styled.g18[id="sc-kXOizl"]{content:"lhXMsM,dKGGwi,lkXsVP,"}/*!sc*/
+.bMTClm{position:absolute;left:0;top:-100%;width:100%;background-color:#161D26;z-index:-1;visibility:hidden;transition:top 0.3s ease;}/*!sc*/
+@media (max-width: 1023px){.bMTClm{display:none;}}/*!sc*/
+data-styled.g24[id="sc-dVupuq"]{content:"bMTClm,"}/*!sc*/
+.cIOeZM{max-width:unset;height:18px;width:auto;}/*!sc*/
+data-styled.g26[id="sc-gpHbIA"]{content:"cIOeZM,"}/*!sc*/
+.eNETkm{background:none;border:none;cursor:pointer;display:inline-block;margin:0;padding:0;text-decoration:none;}/*!sc*/
+data-styled.g27[id="sc-hUAZgl"]{content:"eNETkm,"}/*!sc*/
+.fAldYp{border:1px solid #8A8E92;border-radius:16px;padding:3px 24px;cursor:pointer;font-weight:500;justify-content:center;align-items:center;width:fit-content;white-space:nowrap;}/*!sc*/
+.fAldYp:hover{border:1px solid #FFFFFF;background-color:#FFFFFF;color:#161D26!important;}/*!sc*/
+data-styled.g28[id="sc-flQbIK"]{content:"fAldYp,"}/*!sc*/
+.hFVEfa{display:flex;border:1px solid #8A8E92;border-radius:50%;align-items:center;justify-content:center;gap:3px;width:32px;height:32px;padding:14px 7px;cursor:default;background-color:transparent;}/*!sc*/
+data-styled.g29[id="sc-gQJZgv"]{content:"hFVEfa,"}/*!sc*/
+.gngtls{width:4px;height:4px;border-radius:50%;background-color:#8A8E92;}/*!sc*/
+data-styled.g30[id="sc-bCjwNj"]{content:"gngtls,"}/*!sc*/
+.drKwug{position:relative;}/*!sc*/
+data-styled.g31[id="sc-iXqmyu"]{content:"drKwug,"}/*!sc*/
+.bMVeYA{position:static;top:100%;right:0;width:86%;margin:auto;border-bottom:1px solid #2D333B;z-index:1001;}/*!sc*/
+data-styled.g32[id="sc-dJkDXt"]{content:"bMVeYA,"}/*!sc*/
+.fcdBMK{display:flex;padding:20px 0;align-items:center;font-size:16px;color:#B6B6B6;}/*!sc*/
+data-styled.g33[id="sc-lertIE"]{content:"fcdBMK,"}/*!sc*/
+.jynDwT{position:absolute;background:#161D26;border:1px solid #50565C;padding:4px 0;min-width:120px;max-width:fit-content;visibility:hidden;opacity:0;z-index:200;border-radius:8px;box-shadow:0px 8px 32px 0px #161D2633;margin-top:4px;}/*!sc*/
+.jymcUB{position:absolute;background:#161D26;border:1px solid #50565C;padding:4px 0;min-width:216px;max-width:fit-content;visibility:hidden;opacity:0;z-index:200;border-radius:8px;box-shadow:0px 8px 32px 0px #161D2633;margin-top:4px;}/*!sc*/
+data-styled.g34[id="sc-bHTlQz"]{content:"jynDwT,jymcUB,"}/*!sc*/
+.kqUksg{height:100%;}/*!sc*/
+data-styled.g35[id="sc-jdabBK"]{content:"kqUksg,"}/*!sc*/
+.bpFhJU{width:100%;color:#91979E;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:4px 12px;border-radius:24px;background:transparent;white-space:nowrap;border:unset;outline:none;font-family:EmberModernText;font-weight:500!important;}/*!sc*/
+.bpFhJU:hover{color:#FFFFFF;text-decoration:underline;}/*!sc*/
+.bpFhJU:hover svg[data-hover-type='fill'] path{fill:#FFFFFF;}/*!sc*/
+.bpFhJU:hover svg[data-hover-type='stroke'] path{stroke:#FFFFFF;}/*!sc*/
+data-styled.g36[id="sc-dOUtaJ"]{content:"bpFhJU,"}/*!sc*/
+.fAYAxu{width:100%;padding:8px 4px;background:#121D28;}/*!sc*/
+data-styled.g37[id="sc-lkbiLU"]{content:"fAYAxu,"}/*!sc*/
+.jGnpDl{display:flex;position:relative;background-color:#161D26;font-family:EmberModernText;font-weight:400;padding:0px 15px;margin:auto;cursor:default;color:#FFFFFF;}/*!sc*/
+.enEsLI{display:flex;position:relative;background-color:#161D26;font-family:EmberModernText;font-weight:400;padding:15px 0px;margin:0px 17px;cursor:default;color:#FFFFFF;border-bottom:1px solid #2D333B;}/*!sc*/
+data-styled.g39[id="sc-ktvNQe"]{content:"jGnpDl,enEsLI,"}/*!sc*/
+.csGYOj{border:1px solid #8A8E92;border-radius:50%;min-width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:16px;cursor:default;background-color:transparent;color:#C5C6C9;}/*!sc*/
+data-styled.g40[id="sc-dslWvo"]{content:"csGYOj,"}/*!sc*/
+.iLwbCr{position:relative;}/*!sc*/
+data-styled.g41[id="sc-eXfTSZ"]{content:"iLwbCr,"}/*!sc*/
+.csokZc{display:flex;gap:15px;align-self:end;margin-left:auto;align-items:center;margin-bottom:auto;margin-top:-5px;box-sizing:border-box;}/*!sc*/
+@media (max-width: 1023px){.csokZc{margin-top:0;}}/*!sc*/
+@media (max-width: 767px){.csokZc{display:none;}}/*!sc*/
+data-styled.g43[id="sc-fCSSOr"]{content:"csokZc,"}/*!sc*/
+.evhrts{position:relative;border:1px solid #8A8E92;border-radius:50%;background-color:transparent;width:32px;height:32px;display:flex;justify-content:center;align-items:center;}/*!sc*/
+.evhrts:hover{background-color:#FFFFFF;border:1px solid #FFFFFF;}/*!sc*/
+.evhrts:hover svg path{fill:#000000;}/*!sc*/
+data-styled.g44[id="sc-jcvEFQ"]{content:"evhrts,"}/*!sc*/
+.kmnWJv{position:relative;display:flex;align-items:center;justify-content:center;cursor:pointer;}/*!sc*/
+data-styled.g45[id="sc-kHpCdB"]{content:"kmnWJv,"}/*!sc*/
+.kskUza{background-color:inherit;display:flex;justify-content:space-between;align-items:center;padding:20px 0;width:86%;margin:auto;flex:1;border-bottom:1px solid #2D333B;}/*!sc*/
+data-styled.g48[id="sc-eOrxMY"]{content:"kskUza,"}/*!sc*/
+.cqHafT{display:flex;justify-content:end;}/*!sc*/
+data-styled.g49[id="sc-gtlvkJ"]{content:"cqHafT,"}/*!sc*/
+.jVFIiO{transform:rotate(90deg);transition:transform 0.2s ease;}/*!sc*/
+data-styled.g50[id="sc-beKSRx"]{content:"jVFIiO,"}/*!sc*/
+.dbJCJr{font-size:16px!important;text-align:left;color:#B6B6B6;}/*!sc*/
+data-styled.g51[id="sc-fEOKFM"]{content:"dbJCJr,"}/*!sc*/
+.bqMclt{width:100%;background:#161D26;}/*!sc*/
+data-styled.g63[id="sc-kHpflN"]{content:"bqMclt,"}/*!sc*/
+.bUOdUe{transition:opacity 0.3s ease,visibility 0.3s ease,max-height 0.3s ease;opacity:1;visibility:visible;max-height:1000px;overflow:hidden;}/*!sc*/
+data-styled.g64[id="sc-bcWuly"]{content:"bUOdUe,"}/*!sc*/
+.dNNzAo{position:relative;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;}/*!sc*/
+.dNNzAo::after{content:'';position:absolute;left:20px;right:20px;bottom:0;height:1px;background:#2D333B;}/*!sc*/
+data-styled.g65[id="sc-cHQrJj"]{content:"dNNzAo,"}/*!sc*/
+.iGlHPg{font-family:EmberModernText;font-weight:400;font-size:16px;color:#B6B6B6;cursor:pointer;}/*!sc*/
+data-styled.g66[id="sc-dxjgzI"]{content:"iGlHPg,"}/*!sc*/
+.dBnAWs{display:flex;align-items:center;transform:rotate(90deg);opacity:1;transition:opacity 0.2s ease;}/*!sc*/
+data-styled.g67[id="sc-fcddXt"]{content:"dBnAWs,"}/*!sc*/
+.jchmVe{width:100%;}/*!sc*/
+data-styled.g76[id="sc-WwxRR"]{content:"jchmVe,"}/*!sc*/
+.dSIPWO{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;position:relative;}/*!sc*/
+.dSIPWO::after{content:'';position:absolute;left:20px;right:20px;bottom:0;height:1px;background:#2D333B;}/*!sc*/
+data-styled.g77[id="sc-irDnDc"]{content:"dSIPWO,"}/*!sc*/
+.blgCqm{background:#000000;transition:max-height 0.3s ease,opacity 0.3s ease,visibility 0.3s ease;opacity:0;visibility:hidden;max-height:0;overflow:hidden;}/*!sc*/
+data-styled.g78[id="sc-fQMTnL"]{content:"blgCqm,"}/*!sc*/
+.jjetXJ{font-family:EmberModernText;font-weight:400;font-size:14px;color:#B6B6B6;padding:16px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}/*!sc*/
+.jjetXJ:hover{color:#FFFFFF;}/*!sc*/
+data-styled.g79[id="sc-bWxZAa"]{content:"jjetXJ,"}/*!sc*/
+.eodqxU{display:flex;align-items:center;transform:rotate(90deg);transition:transform 0.2s ease;}/*!sc*/
+data-styled.g82[id="sc-irzYNq"]{content:"eodqxU,"}/*!sc*/
+.czgfzU{padding:20px 0;width:86%;margin:auto;border-bottom:1px solid #2D333B;border-top:1px solid #2D333B;}/*!sc*/
+data-styled.g84[id="sc-hRwOVo"]{content:"czgfzU,"}/*!sc*/
+.hwtTrs{display:none;}/*!sc*/
+@media (max-width: 767px){.hwtTrs{display:flex;}}/*!sc*/
+data-styled.g85[id="sc-jwqMsZ"]{content:"hwtTrs,"}/*!sc*/
+.caPSep{flex-direction:column;display:none;}/*!sc*/
+@media (max-width: 767px){.caPSep{display:flex;}}/*!sc*/
+data-styled.g86[id="sc-ixjNQG"]{content:"caPSep,"}/*!sc*/
+.BNICR{position:fixed;top:0;left:0;min-width:304px;max-width:350px;background-color:#161D26;transform:translateX(-100%);transition:transform 0.3s ease-in-out;z-index:998;margin:70px 0 24px 0;display:flex;flex-direction:column;height:100vh;overflow-y:auto;}/*!sc*/
+data-styled.g87[id="sc-kcdLor"]{content:"BNICR,"}/*!sc*/
+.eFalLc{display:none;background:none;border:none;cursor:pointer;position:relative;z-index:999;outline:none;-webkit-tap-highlight-color:transparent;}/*!sc*/
+.eFalLc:focus{outline:none;}/*!sc*/
+.eFalLc:active{outline:none;}/*!sc*/
+@media (max-width: 1023px){.eFalLc{display:flex;justify-content:center;align-items:center;min-width:16px;padding:0;}}/*!sc*/
+data-styled.g88[id="sc-fZqnxA"]{content:"eFalLc,"}/*!sc*/
+.tWAmr{display:flex;align-items:center;position:relative;background:#161D26;border-bottom:1px solid #2D333B;padding:18px 24px 0 24px;min-height:57px;z-index:20;}/*!sc*/
+@media (max-width: 1023px){.tWAmr{padding:16px 24px 16px 20px;border-bottom:unset;}}/*!sc*/
+data-styled.g89[id="sc-hEkkVl"]{content:"tWAmr,"}/*!sc*/
+.jHEIln{position:relative;z-index:999;}/*!sc*/
+@media (max-width: 1023px){.jHEIln{margin-left:18px;}}/*!sc*/
+data-styled.g90[id="sc-fylWoh"]{content:"jHEIln,"}/*!sc*/
+.iXgFPu{display:none;position:fixed;top:70px;left:0;width:100vw;height:100vh;background:rgba(0, 0, 0, 0.8);}/*!sc*/
+data-styled.g91[id="sc-jYpOcw"]{content:"iXgFPu,"}/*!sc*/
+.eKNrEA{position:relative;z-index:999;display:flex;line-height:0;min-height:38px;background:#161D26;}/*!sc*/
+@media (max-width: 1023px){.eKNrEA{align-items:center;width:100%;}}/*!sc*/
+data-styled.g92[id="sc-fQNqfz"]{content:"eKNrEA,"}/*!sc*/
+.kpGGXu{padding:unset;margin-left:28px;margin-top:-18px;}/*!sc*/
+@media (max-width: 1023px){.kpGGXu{display:none;}}/*!sc*/
+data-styled.g93[id="sc-kqRhTO"]{content:"kpGGXu,"}/*!sc*/
+.ljYmuv{position:relative;z-index:20;}/*!sc*/
+data-styled.g94[id="sc-fDVLrx"]{content:"ljYmuv,"}/*!sc*/
+*{box-sizing:border-box!important;}/*!sc*/
+data-styled.g95[id="sc-global-iOvFBz1"]{content:"sc-global-iOvFBz1,"}/*!sc*/
+</style>
+    <div class="slot-component">
+      <link rel="preload" as="image" href="https://ds6yc8t7pnx74.cloudfront.net/content/dam/Archie_Header.png"><section data-testid="header-container" class="sc-FEMpB jYcpAw"><div class="sc-fDVLrx ljYmuv"><section class="sc-hEkkVl tWAmr"><div class="sc-fQNqfz eKNrEA"><button data-testid="hamburger-menu-icon" class="sc-fZqnxA eFalLc"><svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="16" height="2" rx="1" fill="#C5C6C9"></rect><rect y="5" width="16" height="2" rx="1" fill="#C5C6C9"></rect><rect y="10" width="16" height="2" rx="1" fill="#C5C6C9"></rect></svg></button><div data-testid="developer-logo" class="sc-fylWoh jHEIln"><a href="/" target="_self" class="sc-hUAZgl eNETkm"><img src="https://ds6yc8t7pnx74.cloudfront.net/content/dam/Archie_Header.png" alt="Amazon Developer" class="sc-gpHbIA cIOeZM"></a></div><section id="global-menu-options" class="sc-kqRhTO kpGGXu"><div class="sc-jHswkR cetsRs"><div><div toppadding="18" class="sc-gNZgCX jPijJy"><div class="sc-hRDKVd hIEnoK"><div class="sc-jUkaYT dxBiLe"><span class="sc-kfeOyU xYSPR">Alexa</span><div class="sc-deSjom hiDKur"><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.02458 0.683062C7.24774 0.438979 7.60947 0.438979 7.83263 0.683062C8.05579 0.927144 8.05579 1.32279 7.83263 1.56687L4.40398 5.31694C4.18082 5.56102 3.81909 5.56102 3.59593 5.31694L0.16728 1.56687L0.128217 1.51926C-0.0548443 1.27377 -0.0419333 0.911889 0.16728 0.683062C0.376494 0.454235 0.707359 0.440114 0.931806 0.640336L0.975334 0.683062L3.99995 3.99123L7.02458 0.683062Z" fill="#91979E"></path></svg></div></div><div class="sc-cMqPwU cayELl"></div></div></div></div><div><div toppadding="18" class="sc-gNZgCX jPijJy"><a href="/apps-and-games" target="_self" class="sc-jBIHhB cpNglm"><div class="sc-jUkaYT dxBiLe"><span class="sc-kfeOyU xYSPR">Amazon Appstore</span></div><div class="sc-cMqPwU cayELl"></div></a></div></div><div><div toppadding="18" class="sc-gNZgCX jPijJy"><a href="https://developer.ring.com/" target="_blank" class="sc-jBIHhB cpNglm"><div class="sc-jUkaYT dxBiLe"><span class="sc-kfeOyU xYSPR">Ring</span><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2918 7.28526C9.91596 7.28526 9.59796 7.58886 9.59796 7.96464V9.61248H1.35884V1.37328H3.00666C3.38245 1.37328 3.70046 1.06968 3.70046 0.679476C3.70035 0.289069 3.39686 0 3.02099 0H0.693795C0.318001 0 0 0.303601 0 0.693801V10.3062C0 10.682 0.303598 11 0.693795 11H10.3061C10.6819 11 10.9999 10.6964 10.9999 10.3062L11 7.96466C10.9856 7.58879 10.682 7.28529 10.2918 7.28529L10.2918 7.28526Z" fill="#91979E"></path><path d="M10.261 2.69549e-05H7.13738C6.74506 2.69549e-05 6.41308 0.317245 6.41308 0.724946C6.41308 1.13276 6.73003 1.44987 7.13738 1.44987H8.45018L4.60222 5.37666C4.33066 5.66364 4.33066 6.11673 4.61727 6.38856C4.75306 6.52447 4.93422 6.6 5.11525 6.6C5.29627 6.6 5.4925 6.52446 5.62828 6.38856L9.55169 2.38625V3.85125C9.55169 4.2439 9.86864 4.57617 10.276 4.57617C10.6834 4.57617 11.0003 4.25895 11.0003 3.85125L11.0004 0.724919C10.9853 0.317218 10.6684 0 10.261 0L10.261 2.69549e-05Z" fill="#91979E"></path></svg></div><div class="sc-cMqPwU cayELl"></div></a></div></div><div><div toppadding="18" class="sc-gNZgCX jPijJy"><a href="https://aws.amazon.com" target="_blank" class="sc-jBIHhB cpNglm"><div class="sc-jUkaYT dxBiLe"><span class="sc-kfeOyU xYSPR">AWS</span><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2918 7.28526C9.91596 7.28526 9.59796 7.58886 9.59796 7.96464V9.61248H1.35884V1.37328H3.00666C3.38245 1.37328 3.70046 1.06968 3.70046 0.679476C3.70035 0.289069 3.39686 0 3.02099 0H0.693795C0.318001 0 0 0.303601 0 0.693801V10.3062C0 10.682 0.303598 11 0.693795 11H10.3061C10.6819 11 10.9999 10.6964 10.9999 10.3062L11 7.96466C10.9856 7.58879 10.682 7.28529 10.2918 7.28529L10.2918 7.28526Z" fill="#91979E"></path><path d="M10.261 2.69549e-05H7.13738C6.74506 2.69549e-05 6.41308 0.317245 6.41308 0.724946C6.41308 1.13276 6.73003 1.44987 7.13738 1.44987H8.45018L4.60222 5.37666C4.33066 5.66364 4.33066 6.11673 4.61727 6.38856C4.75306 6.52447 4.93422 6.6 5.11525 6.6C5.29627 6.6 5.4925 6.52446 5.62828 6.38856L9.55169 2.38625V3.85125C9.55169 4.2439 9.86864 4.57617 10.276 4.57617C10.6834 4.57617 11.0003 4.25895 11.0003 3.85125L11.0004 0.724919C10.9853 0.317218 10.6684 0 10.261 0L10.261 2.69549e-05Z" fill="#91979E"></path></svg></div><div class="sc-cMqPwU cayELl"></div></a></div></div><div><div toppadding="18" class="sc-gNZgCX jPijJy"><div class="sc-hRDKVd hIEnoK"><div class="sc-jUkaYT dxBiLe"><span class="sc-kfeOyU xYSPR">Documentation</span><div class="sc-deSjom hiDKur"><svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.02458 0.683062C7.24774 0.438979 7.60947 0.438979 7.83263 0.683062C8.05579 0.927144 8.05579 1.32279 7.83263 1.56687L4.40398 5.31694C4.18082 5.56102 3.81909 5.56102 3.59593 5.31694L0.16728 1.56687L0.128217 1.51926C-0.0548443 1.27377 -0.0419333 0.911889 0.16728 0.683062C0.376494 0.454235 0.707359 0.440114 0.931806 0.640336L0.975334 0.683062L3.99995 3.99123L7.02458 0.683062Z" fill="#91979E"></path></svg></div></div><div class="sc-cMqPwU cayELl"></div></div></div></div></div></section></div><div class="sc-kcdLor BNICR"><div class="sc-ixjNQG caPSep"><div class="sc-hRwOVo czgfzU"><div class="sc-flQbIK fAldYp"><a href="/home.html" target="_self" class="sc-jZTQcj iMHfPQ"><p size="14" data-testid="link-text" class="sc-kXOizl lhXMsM">Console</p></a></div></div><div class="sc-WwxRR jchmVe"><div class="sc-irDnDc dSIPWO"><div style="display:flex;align-items:center"><div class="sc-dslWvo csGYOj"><span></span></div><div class="sc-ktvNQe jGnpDl"><p><span style="color:#91979E;margin-left:4px">as </span></p></div></div><div class="sc-irzYNq eodqxU"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11.0771L6 6.07715L1 1.07715" stroke="#B6B6B6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><div class="sc-fQMTnL blgCqm"><div><div class="sc-bWxZAa jjetXJ"><span>Settings</span></div></div><div><div class="sc-bWxZAa jjetXJ"><span>Sign out</span></div></div></div></div><div class="sc-eOrxMY kskUza"><div class="sc-fEOKFM dbJCJr">Notifications</div><div class="sc-gtlvkJ cqHafT"><div class="sc-beKSRx jVFIiO"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11.0771L6 6.07715L1 1.07715" stroke="#B6B6B6" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></div><div class="sc-kHpflN bqMclt"><div class="sc-bcWuly bUOdUe"><div class="sc-cHQrJj dNNzAo"><span class="sc-dxjgzI iGlHPg">Alexa<span style="padding-left:10px"></span></span><div class="sc-fcddXt dBnAWs"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11.0771L6 6.07715L1 1.07715" stroke="#91979E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div><div class="sc-bcWuly bUOdUe"><div class="sc-cHQrJj dNNzAo"><span class="sc-dxjgzI iGlHPg">Amazon Appstore<span style="padding-left:10px"></span></span></div></div><div class="sc-bcWuly bUOdUe"><div class="sc-cHQrJj dNNzAo"><span class="sc-dxjgzI iGlHPg">Ring<span style="padding-left:10px"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2918 7.28526C9.91596 7.28526 9.59796 7.58886 9.59796 7.96464V9.61248H1.35884V1.37328H3.00666C3.38245 1.37328 3.70046 1.06968 3.70046 0.679476C3.70035 0.289069 3.39686 0 3.02099 0H0.693795C0.318001 0 0 0.303601 0 0.693801V10.3062C0 10.682 0.303598 11 0.693795 11H10.3061C10.6819 11 10.9999 10.6964 10.9999 10.3062L11 7.96466C10.9856 7.58879 10.682 7.28529 10.2918 7.28529L10.2918 7.28526Z" fill="#C5C6C9"></path><path d="M10.261 2.69549e-05H7.13738C6.74506 2.69549e-05 6.41308 0.317245 6.41308 0.724946C6.41308 1.13276 6.73003 1.44987 7.13738 1.44987H8.45018L4.60222 5.37666C4.33066 5.66364 4.33066 6.11673 4.61727 6.38856C4.75306 6.52447 4.93422 6.6 5.11525 6.6C5.29627 6.6 5.4925 6.52446 5.62828 6.38856L9.55169 2.38625V3.85125C9.55169 4.2439 9.86864 4.57617 10.276 4.57617C10.6834 4.57617 11.0003 4.25895 11.0003 3.85125L11.0004 0.724919C10.9853 0.317218 10.6684 0 10.261 0L10.261 2.69549e-05Z" fill="#C5C6C9"></path></svg></span></span></div></div><div class="sc-bcWuly bUOdUe"><div class="sc-cHQrJj dNNzAo"><span class="sc-dxjgzI iGlHPg">AWS<span style="padding-left:10px"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2918 7.28526C9.91596 7.28526 9.59796 7.58886 9.59796 7.96464V9.61248H1.35884V1.37328H3.00666C3.38245 1.37328 3.70046 1.06968 3.70046 0.679476C3.70035 0.289069 3.39686 0 3.02099 0H0.693795C0.318001 0 0 0.303601 0 0.693801V10.3062C0 10.682 0.303598 11 0.693795 11H10.3061C10.6819 11 10.9999 10.6964 10.9999 10.3062L11 7.96466C10.9856 7.58879 10.682 7.28529 10.2918 7.28529L10.2918 7.28526Z" fill="#C5C6C9"></path><path d="M10.261 2.69549e-05H7.13738C6.74506 2.69549e-05 6.41308 0.317245 6.41308 0.724946C6.41308 1.13276 6.73003 1.44987 7.13738 1.44987H8.45018L4.60222 5.37666C4.33066 5.66364 4.33066 6.11673 4.61727 6.38856C4.75306 6.52447 4.93422 6.6 5.11525 6.6C5.29627 6.6 5.4925 6.52446 5.62828 6.38856L9.55169 2.38625V3.85125C9.55169 4.2439 9.86864 4.57617 10.276 4.57617C10.6834 4.57617 11.0003 4.25895 11.0003 3.85125L11.0004 0.724919C10.9853 0.317218 10.6684 0 10.261 0L10.261 2.69549e-05Z" fill="#C5C6C9"></path></svg></span></span></div></div><div class="sc-bcWuly bUOdUe"><div class="sc-cHQrJj dNNzAo"><span class="sc-dxjgzI iGlHPg">Documentation<span style="padding-left:10px"></span></span><div class="sc-fcddXt dBnAWs"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11.0771L6 6.07715L1 1.07715" stroke="#91979E" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div></div></div><div class="sc-jwqMsZ hwtTrs"><div class="sc-dJkDXt bMVeYA"><div class="sc-lertIE fcdBMK"><span style="cursor:pointer">Support</span></div><div class="sc-lertIE fcdBMK"><span style="cursor:pointer">Contact Us</span></div><div class="sc-lertIE fcdBMK"><span style="cursor:pointer">My Cases</span></div></div></div></div><div class="sc-jYpOcw iXgFPu"></div><div id="dex-search-header-bar"></div><div class="sc-fCSSOr csokZc"><div class="sc-flQbIK fAldYp"><a href="/home.html" target="_self" class="sc-jZTQcj iMHfPQ"><p size="14" data-testid="link-text" class="sc-kXOizl lhXMsM">Console</p></a></div><div class="sc-iXqmyu drKwug"><div class="sc-gQJZgv hFVEfa"><div class="sc-bCjwNj gngtls"></div><div class="sc-bCjwNj gngtls"></div><div class="sc-bCjwNj gngtls"></div></div><div class="sc-bHTlQz jynDwT"><div class="sc-jdabBK kqUksg"><div><div data-dropdown-container="true" class="sc-lkbiLU fAYAxu"><button class="sc-dOUtaJ bpFhJU"><a href="/support/" target="_self" class="sc-jZTQcj cUfBSh"><p size="16" data-testid="link-text" class="sc-kXOizl dKGGwi">Support</p></a></button></div></div><div><div data-dropdown-container="true" class="sc-lkbiLU fAYAxu"><button class="sc-dOUtaJ bpFhJU"><a href="/support/cases/new" target="_self" class="sc-jZTQcj cUfBSh"><p size="16" data-testid="link-text" class="sc-kXOizl dKGGwi">Contact Us</p></a></button></div></div><div><div data-dropdown-container="true" class="sc-lkbiLU fAYAxu"><button class="sc-dOUtaJ bpFhJU"><a href="/support/cases" target="_self" class="sc-jZTQcj cUfBSh"><p size="16" data-testid="link-text" class="sc-kXOizl dKGGwi">My Cases</p></a></button></div></div></div></div></div><div class="sc-jcvEFQ evhrts"><div data-testid="notifications-icon" class="sc-kHpCdB kmnWJv"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M13.81 3.067C13.23 2.92 12.626 2.833 12 2.833C11.374 2.833 10.77 2.92 10.191 3.067C10.1888 3.05028 10.1865 3.03356 10.1841 3.01682C10.1756 2.95642 10.167 2.89563 10.167 2.833C10.167 1.821 10.987 1 12 1C13.013 1 13.833 1.821 13.834 2.833C13.834 2.89482 13.8256 2.95426 13.8172 3.01408C13.8148 3.03166 13.8123 3.04928 13.81 3.067ZM15 21C15 22.105 13.657 23 12 23C10.343 23 9 22.105 9 21H15Z" fill="#C5C6C9"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M19 16V11.294C19 7.46102 16.047 4.11902 12.215 4.00402C8.251 3.88402 5 7.06202 5 11V16C5 16.552 4.552 17 4 17C3.448 17 3 17.448 3 18V19C3 19.552 3.448 20 4 20H20C20.552 20 21 19.552 21 19V18C21 17.448 20.552 17 20 17C19.448 17 19 16.552 19 16Z" fill="#C5C6C9"></path></svg></div></div><div class="sc-eXfTSZ iLwbCr"><div class="sc-dslWvo csGYOj"><span></span></div><div class="sc-bHTlQz jymcUB"><div class="sc-jdabBK kqUksg"><div class="sc-ktvNQe enEsLI"><p><span style="color:#91979E;margin-left:4px">as </span></p></div><div><div data-dropdown-container="true" class="sc-lkbiLU fAYAxu"><button class="sc-dOUtaJ bpFhJU"><a href="/myaccount.html" target="_self" class="sc-jZTQcj cUfBSh"><p size="16" data-testid="link-text" class="sc-kXOizl dKGGwi">Settings</p></a></button></div></div><div><div data-dropdown-container="true" class="sc-lkbiLU fAYAxu"><button class="sc-dOUtaJ bpFhJU"><p size="16" data-testid="link-text" class="sc-kXOizl lkXsVP">Sign out</p></button></div></div></div></div></div></div></section><div class="sc-dVupuq bMTClm"><div class="sc-fAomSb bJzkYN"></div></div></div><div class="sc-jbAkgO dPPsgg"><div class="sc-dVupuq bMTClm"><div class="sc-fAomSb bJzkYN"></div></div></div></section><div class="sc-gjcoXW nIOIS"></div>
+    </div>
+  </div>
+</div>
+        <script>
+(function(b,a,c,d){if((b=b.AmazonUIPageJS||b.P)&&b.when&&b.register){c=[];for(a=a.currentScript;a;a=a.parentElement)a.id&&c.push(a.id);return b.log("A copy of P has already been loaded on this page.","FATAL",c.join(" "))}})(window,document,Date);(function(a,b,c,d){"use strict";a._pSetI=function(){return null}})(window,document,Date);(function(c,e,I,B){"use strict";c._pd=function(){var a,u;return function(C,f,h,k,b,D,v,E,F){function w(d){try{return d()}catch(J){return!1}}function l(){if(m){var d={w:c.innerWidth||b.clientWidth,h:c.innerHeight||b.clientHeight};5<Math.abs(d.w-q.w)||50<d.h-q.h?(q=d,n=4,(d=a.mobile||a.tablet?450<d.w&&d.w>d.h:1250<=d.w)?k(b,"a-ws"):b.className=v(b,"a-ws")):0<n&&(n--,x=setTimeout(l,16))}}function G(d){(m=d===B?!m:!!d)&&l()}function H(){return m}if(!u){u=!0;var r=function(){var d=["O","ms","Moz","Webkit"],
+c=e.createElement("div");return{testGradients:function(){return!0},test:function(a){var b=a.charAt(0).toUpperCase()+a.substr(1);a=(d.join(b+" ")+b+" "+a).split(" ");for(b=a.length;b--;)if(""===c.style[a[b]])return!0;return!1},testTransform3d:function(){return!0}}}(),y=b.className,z=/(^| )a-mobile( |$)/.test(y),A=/(^| )a-tablet( |$)/.test(y);a={audio:function(){return!!e.createElement("audio").canPlayType},video:function(){return!!e.createElement("video").canPlayType},canvas:function(){return!!e.createElement("canvas").getContext},
+svg:function(){return!!e.createElementNS&&!!e.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect},offline:function(){return navigator.hasOwnProperty&&navigator.hasOwnProperty("onLine")&&navigator.onLine},dragDrop:function(){return"draggable"in e.createElement("span")},geolocation:function(){return!!navigator.geolocation},history:function(){return!(!c.history||!c.history.pushState)},webworker:function(){return!!c.Worker},autofocus:function(){return"autofocus"in e.createElement("input")},
+inputPlaceholder:function(){return"placeholder"in e.createElement("input")},textareaPlaceholder:function(){return"placeholder"in e.createElement("textarea")},localStorage:function(){return"localStorage"in c&&null!==c.localStorage},orientation:function(){return"orientation"in c},touch:function(){return"ontouchend"in e},gradients:function(){return r.testGradients()},hires:function(){var a=c.devicePixelRatio&&1.5<=c.devicePixelRatio||c.matchMedia&&c.matchMedia("(min-resolution:144dpi)").matches;E("hiRes"+
+(z?"Mobile":A?"Tablet":"Desktop"),a?1:0);return a},transform3d:function(){return r.testTransform3d()},touchScrolling:function(){return f(/Windowshop|android|OS ([5-9]|[1-9][0-9]+)(_[0-9]{1,2})+ like Mac OS X|SOFTWARE=([5-9]|[1-9][0-9]+)(.[0-9]{1,2})+.*DEVICE=iPhone|Chrome|Silk|Firefox|Trident.+?; Touch/i)},ios:function(){return f(/OS [1-9][0-9]*(_[0-9]*)+ like Mac OS X/i)&&!f(/trident|Edge/i)},android:function(){return f(/android.([1-9]|[L-Z])/i)&&!f(/trident|Edge/i)},mobile:function(){return z},
+tablet:function(){return A},rtl:function(){return"rtl"===b.dir}};for(var g in a)a.hasOwnProperty(g)&&(a[g]=w(a[g]));for(var t="textShadow textStroke boxShadow borderRadius borderImage opacity transform transition".split(" "),p=0;p<t.length;p++)a[t[p]]=w(function(){return r.test(t[p])});var m=!0,x=0,q={w:0,h:0},n=4;l();h(c,"resize",function(){clearTimeout(x);n=4;l()});b.className=v(b,"a-no-js");k(b,"a-js");!f(/OS [1-8](_[0-9]*)+ like Mac OS X/i)||c.navigator.standalone||f(/safari/i)||k(b,"a-ember");
+h=[];for(g in a)a.hasOwnProperty(g)&&a[g]&&h.push("a-"+g.replace(/([A-Z])/g,function(a){return"-"+a.toLowerCase()}));k(b,h.join(" "));b.setAttribute("data-aui-build-date",F);C.register("p-detect",function(){return{capabilities:a,localStorage:a.localStorage&&D,toggleResponsiveGrid:G,responsiveGridEnabled:H}});return a||{}}}}()})(window,document,Date);(function(a,p,q,k){function m(e,b,c,g){a.P.when.apply(a.P,b).register("flow:"+e,function(){var a=g.apply(this,arguments);return c||a})}function l(e){a.P.log(e,"FATAL","AmazonUIPageJS@AUIDefineJS")}function f(a,b,c){Object.defineProperty(a,b,{value:c,writable:!1})}function n(e,b,c){"string"!==typeof e&&a.P.error("Anonymous modules are not supported.");var g=c!==k?c:"function"===typeof b?b:k;g||a.P.error("A callback must be provided");var f,h=[];if(c&&Array.isArray(b)&&(h=b.reduce(function(b,d){if("module"===
+d||"require"===d)a.P.error('"module" or "require" injection is not supported.');else if("exports"===d){d=f={};var c="flow:"+e+"-exports";a.P.declare(c,d);b.push(c)}else 0!==d.lastIndexOf("@amzn/",0)?l("Dependency "+d+" does not begin with '@amzn/'"):b.push("flow:"+d);return b},[]),b.length!==h.length))return;m(e,h,f,g)}"use strict";Object.prototype.hasOwnProperty.call(a,"aui")?l("AUIDefineJS is already present globally"):(f(a,"aui",{}),f(a.aui,"amd_define",n))})(window,document,Date);(function(g,h,C,D){function K(a){l&&l.tag&&l.tag(p(":","aui",a))}function q(a,b){l&&l.count&&l.count("aui:"+a,0===b?0:b||(l.count("aui:"+a)||0)+1)}function L(a){try{return a.test(navigator.userAgent)}catch(b){return!1}}function x(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,c)}function p(a,b,c,f){b=b&&c?b+a+c:b||c;return f?p(a,b,f):b}function y(a,b,c){try{Object.defineProperty(a,b,{value:c,writable:!1})}catch(f){a[b]=c}return c}function M(a,b){a.className=
+N(a,b)+" "+b}function N(a,b){return(" "+a.className+" ").split(" "+b+" ").join(" ").replace(/^ | $/g,"")}function aa(a,b,c){var f=c=a.length,e=function(){f--||(E.push(b),F||(m?m.set(z):setTimeout(z,0),F=!0))};for(e();c--;)O[a[c]]?e():(u[a[c]]=u[a[c]]||[]).push(e)}function ba(a,b,c,f,e){var d=h.createElement(a?"script":"link");x(d,"error",f);e&&x(d,"load",e);a?(d.type="text/javascript",d.async=!0,c&&/AUIClients|images[/]I/.test(b)&&d.setAttribute("crossorigin","anonymous"),d.src=b):(d.rel="stylesheet",
+d.href=b);h.getElementsByTagName("head")[0].appendChild(d)}function P(a,b){return function(c,f){function e(){ba(b,c,d,function(b){G?q("resource_unload"):d?(d=!1,q("resource_retry"),e()):(q("resource_error"),a.log("Asset failed to load: "+c));b&&b.stopPropagation?b.stopPropagation():g.event&&(g.event.cancelBubble=!0)},f)}if(Q[c])return!1;Q[c]=!0;q("resource_count");var d=!0;return!e()}}function ca(a,b,c){for(var f={name:a,guard:function(c){return b.guardFatal(a,c)},guardTime:function(a){return b.guardTime(a)},
+logError:function(c,d,e){b.logError(c,d,e,a)}},e=[],d=0;d<c.length;d++)A.hasOwnProperty(c[d])&&(e[d]=H.hasOwnProperty(c[d])?H[c[d]](A[c[d]],f):A[c[d]]);return e}function v(a,b,c,f,e){return function(d,k){function n(){var a=null;f?a=k:"function"===typeof k&&(q.start=r(),a=k.apply(g,ca(d,h,l)),q.end=r());if(b){A[d]=a;a=d;for(O[a]=!0;(u[a]||[]).length;)u[a].shift()();delete u[a]}q.done=!0}var h=e||this;"function"===typeof d&&(k=d,d=D);b&&(d=d?d.replace(R,""):"__NONAME__",I.hasOwnProperty(d)&&h.error(p(", reregistered by ",
+p(" by ",d+" already registered",I[d]),h.attribution),d),I[d]=h.attribution);for(var l=[],m=0;m<a.length;m++)l[m]=a[m].replace(R,"");var q=w[d||"anon"+ ++da]={depend:l,registered:r(),namespace:h.namespace};d&&ea.hasOwnProperty(d);c?n():aa(l,h.guardFatal(d,n),d);return{decorate:function(a){H[d]=h.guardFatal(d,a)}}}}function S(a){return function(){var b=Array.prototype.slice.call(arguments);return{execute:v(b,!1,a,!1,this),register:v(b,!0,a,!1,this)}}}function J(a,b){return function(c,f){f||(f=c,c=
+D);var e=this.attribution;return function(){n.push(b||{attribution:e,name:c,logLevel:a});var d=f.apply(this,arguments);n.pop();return d}}}function B(a,b){this.load={js:P(this,!0),css:P(this)};y(this,"namespace",b);y(this,"attribution",a)}function T(){h.body?k.trigger("a-bodyBegin"):setTimeout(T,20)}"use strict";var t=C.now=C.now||function(){return+new C},r=function(a){return a&&a.now?a.now.bind(a):t}(g.performance),fa=r(),ea={},l=g.ue;K();K("aui_build_date:3.26.9-2026-10-23");var U={getItem:function(a){try{return g.localStorage.getItem(a)}catch(b){}},
+setItem:function(a,b){try{return g.localStorage.setItem(a,b)}catch(c){}}},m=g._pSetI(),E=[],ha=[],F=!1,ia=navigator.scheduling&&"function"===typeof navigator.scheduling.isInputPending;var z=function(){for(var a=m?m.set(z):setTimeout(z,0),b=t();ha.length||E.length;)if(E.shift()(),m&&ia){if(150<t()-b&&!navigator.scheduling.isInputPending()||50<t()-b&&navigator.scheduling.isInputPending())return}else if(50<t()-b)return;m?m.clear(a):clearTimeout(a);F=!1};var O={},u={},Q={},G=!1;x(g,"beforeunload",function(){G=
+!0;setTimeout(function(){G=!1},1E4)});var R=/^prv:/,I={},A={},H={},w={},da=0,ja=String.fromCharCode(92),n=[],V=!0,W=g.onerror;g.onerror=function(a,b,c,f,e){e&&"object"===typeof e||(e=Error(a,b,c),e.columnNumber=f,e.stack=b||c||f?p(ja,e.message,"at "+p(":",b,c,f)):D);var d=n.pop()||{};e.attribution=p(":",e.attribution||d.attribution,d.name);e.logLevel=d.logLevel;e.attribution&&console&&console.log&&console.log([e.logLevel||"ERROR",a,"thrown by",e.attribution].join(" "));n=[];W&&(d=[].slice.call(arguments),
+d[4]=e,W.apply(g,d))};B.prototype={logError:function(a,b,c,f){b={message:b,logLevel:c||"ERROR",attribution:p(":",this.attribution,f)};if(g.ueLogError)return g.ueLogError(a||b,a?b:null),!0;console&&console.error&&(console.log(b),console.error(a));return!1},error:function(a,b,c,f){a=Error(p(":",f,a,c));a.attribution=p(":",this.attribution,b);throw a;},guardError:J(),guardFatal:J("FATAL"),guardCurrent:function(a){var b=n[n.length-1];return b?J(b.logLevel,b).call(this,a):a},guardTime:function(a){var b=
+n[n.length-1],c=b&&b.name;return c&&c in w?function(){var b=r(),e=a.apply(this,arguments);w[c].async=(w[c].async||0)+r()-b;return e}:a},log:function(a,b,c){return this.logError(null,a,b,c)},declare:v([],!0,!0,!0),register:v([],!0),execute:v([]),AUI_BUILD_DATE:"3.26.9-2026-10-23",when:S(),now:S(!0),trigger:function(a,b,c){var f=t();this.declare(a,{data:b,pageElapsedTime:f-(g.aPageStart||NaN),triggerTime:f});c&&c.instrument&&X.when("prv:a-logTrigger").execute(function(b){b(a)})},handleTriggers:function(){this.log("handleTriggers deprecated")},
+attributeErrors:function(a){return new B(a)},_namespace:function(a,b){return new B(a,b)},setPriority:function(a){V?V=!1:this.log("setPriority only accept the first call.")}};var k=y(g,"AmazonUIPageJS",new B);var X=k._namespace("PageJS","AmazonUI");X.declare("prv:p-debug",w);k.declare("p-recorder-events",[]);k.declare("p-recorder-stop",function(){});y(g,"P",k);T();if(h.addEventListener){var Y;h.addEventListener("DOMContentLoaded",Y=function(){k.trigger("a-domready");h.removeEventListener("DOMContentLoaded",
+Y,!1)},!1)}var Z=h.documentElement,ka=g._pd(k,L,x,M,Z,U,N,q,"3.26.9-2026-10-23");L(/UCBrowser/i)||ka.localStorage&&M(Z,U.getItem("a-font-class"));k.declare("a-event-revised-handling",!1);k.declare("a-fix-event-off",!1);q("pagejs:pkgExecTime",r()-fa)})(window,document,Date);
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://m.media-amazon.com/images/I/11I0WXrZVoL._RC|61xJcNKKLXL.js,11Y+5x+kkTL.js,51IrWwn6GEL.js,115zbyk371L.js,11GgN1+C7hL.js,01+z+uIeJ-L.js,01Aie6L4uGL.js,21NadQlXUWL.js,01vRf9id2EL.js,31on-La90vL.js,11a7qqY8xXL.js,11PZSUl3FLL.js,51C4kaFbiAL.js,11FhdH2HZwL.js,11wb9K3sw0L.js,11BrgrMAHUL.js,11dKU9zhD1L.js,21F6z4HaEVL.js,01Svfxfy8OL.js,61lbT4bHNWL.js,01ikBbTAneL.js,31xywoXPfpL.js,01qXJuwGmxL.js,01WlsjNmqIL.js,11F929pmpYL.js,31dUhXzzjYL.js,01rpauTep4L.js,314M2Oak7hL.js,011FfPwYqHL.js,21P5VvHf-XL.js,01pTq+jF06L.js,21kN0q4IA-L.js,0105nvqLd4L.js,11vb6P5C5AL.js,01TH4kx3sSL.js_.js?AUIClients/AmazonUI');
+  (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://m.media-amazon.com/images/I/616qGtYUw7L.js?AUIClients/DeXWebsiteAUIAssets');
+</script>
+
+        <div class="error"/>
+            <div class="content-section">
+                <div class="error-title">
+                    404 Page not found
+                </div>
+                <div class="error-description">
+                    Try our search engine in the top right corner or check the links below.
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+<section class="dp-content-slot dp-content-pixel-tracker-slot">
+  <div class="dp-content-slot-inner container">
+    
+  </div>
+</section>
+        <div class="footer-section"><div data-resource-type="developer-portal/components/content/archie/footer" data-props="{&quot;navigation&quot;:{&quot;items&quot;:[{&quot;label&quot;:&quot;Legal&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Terms and agreement&quot;,&quot;url&quot;:&quot;/appsandservices/support/legal/da&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Amazon Developers Service Portal terms of use&quot;,&quot;url&quot;:&quot;/public/support/legal/tou&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Program Materials license agreement&quot;,&quot;url&quot;:&quot;/appsandservices/support/pml.html&quot;,&quot;target&quot;:&quot;_self&quot;}]},{&quot;label&quot;:&quot;Amazon Appstore&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Developer portal&quot;,&quot;url&quot;:&quot;/apps-and-games&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Amazon Fire TV&quot;,&quot;url&quot;:&quot;/apps-and-games/fire-tv&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Fire tablets&quot;,&quot;url&quot;:&quot;/apps-and-games/fire-tablets&quot;,&quot;target&quot;:&quot;_self&quot;}]},{&quot;label&quot;:&quot;Alexa&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Developer portal&quot;,&quot;url&quot;:&quot;/alexa&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Alexa Skills Kit&quot;,&quot;url&quot;:&quot;/alexa-skills-kit&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Alexa Voice Service&quot;,&quot;url&quot;:&quot;/alexa-voice-service&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Alexa Fund&quot;,&quot;url&quot;:&quot;/alexa-fund&quot;,&quot;target&quot;:&quot;_self&quot;}]},{&quot;label&quot;:&quot;Other services &amp; APIs&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Login with Amazon&quot;,&quot;url&quot;:&quot;/apps-and-games/login-with-amazon&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Amazon Data Portability&quot;,&quot;url&quot;:&quot;/docs/amazon-data-portability/overview&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Amazon Merch on Demand&quot;,&quot;url&quot;:&quot;/apps-and-games/merch&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Frustration-Free Setup&quot;,&quot;url&quot;:&quot;/frustration-free-setup&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Amazon Incentives API&quot;,&quot;url&quot;:&quot;/incentives-api&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Amazon Music&quot;,&quot;url&quot;:&quot;/docs/music/landing_home&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Just Walk Out technology by Amazon&quot;,&quot;url&quot;:&quot;/docs/physicalstores/welcome&quot;,&quot;target&quot;:&quot;_self&quot;}]},{&quot;label&quot;:&quot;Blogs&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Appstore Developer blog&quot;,&quot;url&quot;:&quot;/apps-and-games/blogs&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Alexa Developer blog&quot;,&quot;url&quot;:&quot;/en-US/blogs/alexa&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Alexa Science blog&quot;,&quot;url&quot;:&quot;https://www.amazon.science/tag/alexa&quot;,&quot;target&quot;:&quot;_blank&quot;}]},{&quot;label&quot;:&quot;Support&quot;,&quot;links&quot;:[{&quot;label&quot;:&quot;Amazon Developer support&quot;,&quot;url&quot;:&quot;/support/&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Appstore Developer Community&quot;,&quot;url&quot;:&quot;https://community.amazondeveloper.com/&quot;,&quot;target&quot;:&quot;_blank&quot;},{&quot;label&quot;:&quot;Alexa Skills community&quot;,&quot;url&quot;:&quot;https://stackoverflow.com/tags/alexa-skills-kit&quot;,&quot;target&quot;:&quot;_blank&quot;},{&quot;label&quot;:&quot;FAQs&quot;,&quot;url&quot;:&quot;/docs/app-submission/faq-landing&quot;,&quot;target&quot;:&quot;_self&quot;}]}],&quot;layout&quot;:{&quot;desktop&quot;:{&quot;columns&quot;:6,&quot;spacing&quot;:{&quot;column&quot;:24,&quot;row&quot;:16}},&quot;tablet&quot;:{&quot;columns&quot;:4,&quot;spacing&quot;:{&quot;column&quot;:16,&quot;row&quot;:12}}}},&quot;global&quot;:{&quot;logo&quot;:{&quot;src&quot;:&quot;https://df8gj0gzff79.cloudfront.net/amz-dev-portal/assets/logo/amazon_footer_logo.png&quot;,&quot;alt&quot;:&quot;amazon_developer_logo&quot;,&quot;url&quot;:&quot;/&quot;,&quot;target&quot;:&quot;_self&quot;},&quot;copyright&quot;:&quot;© 2010-2026, Amazon.com, Inc. or its affiliates. All Rights Reserved.&quot;,&quot;legal&quot;:[{&quot;label&quot;:&quot;Terms&quot;,&quot;url&quot;:&quot;/terms-and-agreements&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Amazon Developer Blog&quot;,&quot;url&quot;:&quot;/blogs/&quot;,&quot;target&quot;:&quot;_self&quot;},{&quot;label&quot;:&quot;Contact Us&quot;,&quot;url&quot;:&quot;/support/cases/new&quot;,&quot;target&quot;:&quot;_self&quot;}],&quot;language&quot;:{&quot;options&quot;:[{&quot;label&quot;:&quot;English&quot;,&quot;locale&quot;:&quot;en_US&quot;,&quot;prefix&quot;:&quot;en&quot;},{&quot;label&quot;:&quot;Chinese (中文)&quot;,&quot;locale&quot;:&quot;zh_CN&quot;,&quot;prefix&quot;:&quot;zh&quot;},{&quot;label&quot;:&quot;Japanese (日本語)&quot;,&quot;locale&quot;:&quot;ja_JP&quot;,&quot;prefix&quot;:&quot;ja&quot;}]}},&quot;social&quot;:{&quot;backToTopText&quot;:&quot;Back to Top&quot;,&quot;label&quot;:&quot;Follow us:&quot;,&quot;links&quot;:[{&quot;type&quot;:&quot;twitter&quot;,&quot;url&quot;:&quot;https://www.twitter.com/AmazonAppDev&quot;,&quot;target&quot;:&quot;_blank&quot;},{&quot;type&quot;:&quot;youtube&quot;,&quot;url&quot;:&quot;https://www.youtube.com/channel/UCT9ApARFgQJOeqD-ygmxnJQ&quot;,&quot;target&quot;:&quot;_blank&quot;},{&quot;type&quot;:&quot;linkedin&quot;,&quot;url&quot;:&quot;https://www.linkedin.com/showcase/amazon-appstore-developers&quot;,&quot;target&quot;:&quot;_blank&quot;},{&quot;type&quot;:&quot;github&quot;,&quot;url&quot;:&quot;https://github.com/AmazonAppDev&quot;,&quot;target&quot;:&quot;_blank&quot;}]}}" class="slot-component-wrapper">
+    <style data-styled="true" data-styled-version="6.1.15">.eSuhjV{display:flex;flex-direction:column;gap:16px;}/*!sc*/
+data-styled.g15[id="sc-cSaEAk"]{content:"eSuhjV,"}/*!sc*/
+.eHRNRE{align-items:center;color:#B6B6B6;display:inline-flex;gap:6px;text-decoration:none!important;width:fit-content;}/*!sc*/
+.eHRNRE:hover{color:#FFFFFF;text-decoration:underline;}/*!sc*/
+.oKmtI{align-items:center;color:#FFFFFF;display:inline-flex;gap:6px;text-decoration:none!important;width:fit-content;}/*!sc*/
+.oKmtI:hover{color:#FFFFFF;text-decoration:underline;}/*!sc*/
+data-styled.g16[id="sc-jZTQcj"]{content:"eHRNRE,oKmtI,"}/*!sc*/
+.kacGsL{margin-left:10px;text-decoration:none;}/*!sc*/
+data-styled.g17[id="sc-dkBYrC"]{content:"kacGsL,"}/*!sc*/
+.lagEPV.lagEPV{color:#FFFFFF;font-family:EmberModernText;font-weight:400;font-size:12px;line-height:16px;margin:0;font-size:16px;line-height:24px;}/*!sc*/
+.lagEPV.lagEPV:hover{color:#FFFFFF;}/*!sc*/
+.hPkKaV.hPkKaV{color:#B6B6B6;font-family:EmberModernText;font-weight:400;font-size:12px;line-height:16px;margin:0;font-size:14px;line-height:18px;}/*!sc*/
+.hPkKaV.hPkKaV:hover{color:#FFFFFF;text-decoration:underline;}/*!sc*/
+.ghZEJu.ghZEJu{color:#FFFFFF;font-family:EmberModernText;font-weight:400;font-size:12px;line-height:16px;margin:0;}/*!sc*/
+.ghZEJu.ghZEJu:hover{color:#FFFFFF;text-decoration:underline;}/*!sc*/
+data-styled.g18[id="sc-kXOizl"]{content:"lagEPV,hPkKaV,ghZEJu,"}/*!sc*/
+.cUmVuQ{color:inherit;display:flex;flex-direction:column;gap:12px!important;list-style:none;margin:0;padding:0px;}/*!sc*/
+data-styled.g19[id="sc-eiwqOE"]{content:"cUmVuQ,"}/*!sc*/
+.kpZLtu{align-items:center;display:flex;min-height:16px;}/*!sc*/
+data-styled.g20[id="sc-dPKAra"]{content:"kpZLtu,"}/*!sc*/
+.jLiJMY{display:grid;margin-top:0px;margin-bottom:0px;grid-template-columns:repeat(6, minmax(0, 1fr));gap:24px;}/*!sc*/
+@media (max-width: 1919px){.jLiJMY{grid-template-columns:repeat(6, minmax(0, 1fr));gap:24px;}}/*!sc*/
+@media (max-width: 1023px){.jLiJMY{grid-template-columns:repeat(4, minmax(0, 1fr));gap:24px;}}/*!sc*/
+@media (max-width: 767px){.jLiJMY{grid-template-columns:repeat(2, minmax(0, 1fr));gap:24px;}}/*!sc*/
+data-styled.g21[id="sc-fuExOL"]{content:"jLiJMY,"}/*!sc*/
+.kmTdmO{max-width:unset;height:30px;width:auto;}/*!sc*/
+data-styled.g26[id="sc-gpHbIA"]{content:"kmTdmO,"}/*!sc*/
+.eNETkm{background:none;border:none;cursor:pointer;display:inline-block;margin:0;padding:0;text-decoration:none;}/*!sc*/
+data-styled.g27[id="sc-hUAZgl"]{content:"eNETkm,"}/*!sc*/
+.fcVlHJ{padding:0;position:relative;}/*!sc*/
+data-styled.g96[id="sc-kdZDfM"]{content:"fcVlHJ,"}/*!sc*/
+.kDrGoj{background:#161D26;color:#232F3E;}/*!sc*/
+data-styled.g97[id="sc-fWxfiP"]{content:"kDrGoj,"}/*!sc*/
+.jgWkoP{padding:0 24px;}/*!sc*/
+@media (max-width: 1023px){.jgWkoP{margin-bottom:0;}}/*!sc*/
+data-styled.g98[id="sc-kwAWXe"]{content:"jgWkoP,"}/*!sc*/
+.fueswu{display:flex;justify-content:center;align-items:center;border-bottom:1px solid #2D333B;position:relative;min-height:74px;}/*!sc*/
+@media (max-width: 767px){.fueswu{padding:0 0 24px;flex-direction:column;align-items:center;}}/*!sc*/
+data-styled.g99[id="sc-dLPjTJ"]{content:"fueswu,"}/*!sc*/
+.vTsKi{font-family:EmberModernText;font-weight:500;font-size:14px;line-height:18px;width:300px;padding:32px 0 24px;color:white;border:none;cursor:pointer;transition:opacity 0.2s ease;text-align:center;background-color:unset;}/*!sc*/
+data-styled.g100[id="sc-ilTbHY"]{content:"vTsKi,"}/*!sc*/
+.gPGnJG{display:flex;align-items:center;position:absolute;right:0;}/*!sc*/
+@media (max-width: 767px){.gPGnJG{position:static;width:100%;justify-content:flex-start;}}/*!sc*/
+data-styled.g101[id="sc-kDeqfd"]{content:"gPGnJG,"}/*!sc*/
+.kXKbk{margin-right:16px;color:#C5C6C9;font-weight:400;font-family:EmberModernText;font-size:12px;line-height:16px;}/*!sc*/
+data-styled.g102[id="sc-UBoew"]{content:"kXKbk,"}/*!sc*/
+.iERQyQ{display:flex;align-items:center;}/*!sc*/
+.iERQyQ >*+*{margin-left:24px;}/*!sc*/
+.iERQyQ a{display:flex;align-items:center;justify-content:center;transition:opacity 0.2s ease;}/*!sc*/
+.iERQyQ a:hover{opacity:0.8;}/*!sc*/
+data-styled.g103[id="sc-edctFj"]{content:"iERQyQ,"}/*!sc*/
+.gXTFfM{padding:24px 40px 40px;}/*!sc*/
+@media (max-width: 1023px){.gXTFfM{padding:0 0 32px;}}/*!sc*/
+data-styled.g106[id="sc-OeHys"]{content:"gXTFfM,"}/*!sc*/
+.kqTIFr{align-items:center;background:#000000;color:#FFFFFF;display:flex;justify-content:space-between;padding:28px 24px 24px;width:100%;gap:16px;}/*!sc*/
+@media (max-width: 1919px){.kqTIFr{padding:28px 32px 24px;}}/*!sc*/
+@media (max-width: 1023px){.kqTIFr{align-items:flex-end;flex-direction:column;padding:28px 24px 36px;row-gap:20px;}}/*!sc*/
+@media (max-width: 767px){.kqTIFr{align-items:flex-start;padding:32px 24px 40px;row-gap:28px;}}/*!sc*/
+data-styled.g107[id="sc-dWFMZf"]{content:"kqTIFr,"}/*!sc*/
+.jHWNdD{align-items:center;display:flex;gap:40px;}/*!sc*/
+@media (max-width: 1023px){.jHWNdD{justify-content:space-between;width:100%;}}/*!sc*/
+@media (max-width: 767px){.jHWNdD{align-items:flex-start;flex-direction:column;gap:16px;}}/*!sc*/
+data-styled.g108[id="sc-fDyuxu"]{content:"jHWNdD,"}/*!sc*/
+.jyWBaY.jyWBaY{color:inherit;font-family:EmberModernText;font-size:12px;font-weight:400;letter-spacing:unset;line-height:16px;margin:0;width:fit-content;max-width:440px;}/*!sc*/
+@media (max-width: 1023px){.jyWBaY.jyWBaY{max-width:100%;}}/*!sc*/
+data-styled.g109[id="sc-biaZqF"]{content:"jyWBaY,"}/*!sc*/
+.fdYhGf{display:flex;gap:11px;margin-left:auto;}/*!sc*/
+@media (max-width: 1023px){.fdYhGf{margin-left:unset;}}/*!sc*/
+data-styled.g110[id="sc-cOTGOU"]{content:"fdYhGf,"}/*!sc*/
+.lhBtA-D{display:flex;align-items:center;}/*!sc*/
+.lhBtA-D:not(:last-child){border-right:1px solid #FFFFFF;padding-right:11px;}/*!sc*/
+data-styled.g111[id="sc-dNMyuw"]{content:"lhBtA-D,"}/*!sc*/
+.cmaZJZ{display:flex;width:100%;justify-content:space-between;max-width:608px;align-items:center;gap:16px;}/*!sc*/
+@media (max-width: 1023px){.cmaZJZ{max-width:unset;}}/*!sc*/
+@media (max-width: 767px){.cmaZJZ{align-items:flex-start;flex-direction:column;gap:28px;}}/*!sc*/
+data-styled.g112[id="sc-ijEwUV"]{content:"cmaZJZ,"}/*!sc*/
+</style>
+    <div class="slot-component">
+      <link rel="preload" as="image" href="https://df8gj0gzff79.cloudfront.net/amz-dev-portal/assets/logo/amazon_footer_logo.png"><section data-testid="footer-container" class="sc-kdZDfM fcVlHJ"><div class="sc-fWxfiP kDrGoj"><div class="sc-kwAWXe jgWkoP"><div class="sc-dLPjTJ fueswu"><button class="sc-ilTbHY vTsKi">Back to Top</button><div class="sc-kDeqfd gPGnJG"><span class="sc-UBoew kXKbk">Follow us:</span><div class="sc-edctFj iERQyQ"><a href="https://www.twitter.com/AmazonAppDev" target="_blank"><svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3204_46305)"><path d="M10.7242 7.61786L17.4251 0H15.8372L10.0188 6.61448L5.37164 0H0.0117188L7.0391 10.0023L0.0117188 17.9908H1.59971L7.74408 11.0056L12.6518 17.9908H18.0117L10.7238 7.61786H10.7242ZM8.54919 10.0904L7.83717 9.09439L2.17188 1.16911H4.61094L9.1829 7.56506L9.89492 8.56106L15.8379 16.8748H13.3989L8.54919 10.0908V10.0904Z" fill="#C5C6C9"></path></g><defs><clipPath id="clip0_3204_46305"><rect width="18" height="18" fill="white" transform="translate(0.0117188)"></rect></clipPath></defs></svg></a><a href="https://www.youtube.com/channel/UCT9ApARFgQJOeqD-ygmxnJQ" target="_blank"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3204_46307)"><g clip-path="url(#clip1_3204_46307)"><path d="M17.8436 5.40695C17.6183 3.94259 16.9425 2.92879 15.3654 2.7035C12.8873 2.25293 9.05739 2.25293 9.05739 2.25293C9.05739 2.25293 5.22751 2.25293 2.74935 2.7035C1.17234 2.92879 0.38383 3.94259 0.271186 5.40695C0.0458984 6.87132 0.0458984 9.01155 0.0458984 9.01155C0.0458984 9.01155 0.0458984 11.1518 0.271186 12.6161C0.496473 14.0805 1.17234 15.0943 2.74935 15.3196C5.22751 15.7702 9.05739 15.7702 9.05739 15.7702C9.05739 15.7702 12.8873 15.7702 15.3654 15.3196C16.9425 14.9817 17.6183 14.0805 17.8436 12.6161C18.0689 11.1518 18.0689 9.01155 18.0689 9.01155C18.0689 9.01155 18.0689 6.87132 17.8436 5.40695ZM6.80452 12.3909V5.63224L12.4367 9.01155L6.80452 12.3909Z" fill="#C5C6C9"></path></g></g><defs><clipPath id="clip0_3204_46307"><rect width="18.023" height="18.023" fill="white" transform="translate(0.0458984)"></rect></clipPath><clipPath id="clip1_3204_46307"><rect width="18.023" height="18.023" fill="white" transform="translate(0.0458984)"></rect></clipPath></defs></svg></a><a href="https://www.linkedin.com/showcase/amazon-appstore-developers" target="_blank"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3204_46308)"><g clip-path="url(#clip1_3204_46308)"><path d="M17.338 0H0.892021C0.441447 0 0.103516 0.337931 0.103516 0.788506V17.3471C0.103516 17.6851 0.441447 18.023 0.892021 18.023H17.4506C17.9012 18.023 18.2391 17.6851 18.2391 17.2345V0.788506C18.1265 0.337931 17.7886 0 17.338 0ZM5.39777 15.3195H2.80696V6.75862H5.51041V15.3195H5.39777ZM4.15869 5.63218C3.25754 5.63218 2.58168 4.84368 2.58168 4.05517C2.58168 3.15402 3.25754 2.47816 4.15869 2.47816C5.05984 2.47816 5.7357 3.15402 5.7357 4.05517C5.62306 4.84368 4.94719 5.63218 4.15869 5.63218ZM15.4231 15.3195H12.7196V11.1517C12.7196 10.1379 12.7196 8.89885 11.3679 8.89885C10.0162 8.89885 9.79087 10.0253 9.79087 11.1517V15.4322H7.08742V6.75862H9.67823V7.88506C10.0162 7.2092 10.9173 6.53333 12.1564 6.53333C14.8598 6.53333 15.3104 8.33563 15.3104 10.5885V15.3195H15.4231Z" fill="#C5C6C9"></path></g></g><defs><clipPath id="clip0_3204_46308"><rect width="18.023" height="18.023" fill="white" transform="translate(0.103516)"></rect></clipPath><clipPath id="clip1_3204_46308"><rect width="18.023" height="18.023" fill="white" transform="translate(0.103516)"></rect></clipPath></defs></svg></a><a href="https://github.com/AmazonAppDev" target="_blank"><svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3204_46309)"><g clip-path="url(#clip1_3204_46309)"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.17263 0.225586C4.21631 0.225586 0.161133 4.28076 0.161133 9.23708C0.161133 13.1796 2.75194 16.5589 6.35654 17.798C6.80711 17.9106 6.91975 17.5727 6.91975 17.3474C6.91975 17.1221 6.91975 16.5589 6.91975 15.7704C4.44159 16.3336 3.87837 14.644 3.87837 14.644C3.4278 13.6302 2.86458 13.2923 2.86458 13.2923C2.07608 12.729 2.97722 12.729 2.97722 12.729C3.87837 12.8417 4.32895 13.6302 4.32895 13.6302C5.11746 15.0946 6.46918 14.644 6.91975 14.4187C7.0324 13.8555 7.25768 13.4049 7.48297 13.1796C5.45539 12.9543 3.4278 12.1658 3.4278 8.67386C3.4278 7.66007 3.76573 6.87156 4.32895 6.30834C4.21631 6.08306 3.87837 5.18191 4.44159 3.94283C4.44159 3.94283 5.2301 3.71754 6.91975 4.84398C7.59562 4.61869 8.38412 4.50605 9.17263 4.50605C9.96113 4.50605 10.7496 4.61869 11.4255 4.84398C13.1152 3.71754 13.9037 3.94283 13.9037 3.94283C14.3542 5.18191 14.129 6.08306 14.0163 6.30834C14.5795 6.98421 14.9175 7.77271 14.9175 8.67386C14.9175 12.1658 12.7772 12.8417 10.7496 13.067C11.0876 13.5175 11.4255 14.0808 11.4255 14.8693C11.4255 16.1083 11.4255 17.0095 11.4255 17.3474C11.4255 17.5727 11.5381 17.9106 12.1014 17.798C15.706 16.5589 18.2968 13.1796 18.2968 9.23708C18.1841 4.28076 14.1289 0.225586 9.17263 0.225586Z" fill="#C5C6C9"></path></g></g><defs><clipPath id="clip0_3204_46309"><rect width="18.023" height="18.023" fill="white" transform="translate(0.161133)"></rect></clipPath><clipPath id="clip1_3204_46309"><rect width="18.023" height="18.023" fill="white" transform="translate(0.161133)"></rect></clipPath></defs></svg></a></div></div></div></div><div class="sc-OeHys gXTFfM"><div class="sc-fuExOL jLiJMY"><div><div class="sc-cSaEAk eSuhjV"><p size="16" data-testid="link-text" class="sc-kXOizl lagEPV">Legal</p><ul class="sc-eiwqOE cUmVuQ"><li class="sc-dPKAra kpZLtu"><a href="/appsandservices/support/legal/da" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Terms and agreement</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/public/support/legal/tou" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Amazon Developers Service Portal terms of use</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/appsandservices/support/pml.html" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Program Materials license agreement</p></a></li></ul></div></div><div><div class="sc-cSaEAk eSuhjV"><p size="16" data-testid="link-text" class="sc-kXOizl lagEPV">Amazon Appstore</p><ul class="sc-eiwqOE cUmVuQ"><li class="sc-dPKAra kpZLtu"><a href="/apps-and-games" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Developer portal</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/apps-and-games/fire-tv" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Amazon Fire TV</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/apps-and-games/fire-tablets" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Fire tablets</p></a></li></ul></div></div><div><div class="sc-cSaEAk eSuhjV"><p size="16" data-testid="link-text" class="sc-kXOizl lagEPV">Alexa</p><ul class="sc-eiwqOE cUmVuQ"><li class="sc-dPKAra kpZLtu"><a href="/alexa" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Developer portal</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/alexa-skills-kit" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Alexa Skills Kit</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/alexa-voice-service" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Alexa Voice Service</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/alexa-fund" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Alexa Fund</p></a></li></ul></div></div><div><div class="sc-cSaEAk eSuhjV"><p size="16" data-testid="link-text" class="sc-kXOizl lagEPV">Other services &amp; APIs</p><ul class="sc-eiwqOE cUmVuQ"><li class="sc-dPKAra kpZLtu"><a href="/apps-and-games/login-with-amazon" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Login with Amazon</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/docs/amazon-data-portability/overview" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Amazon Data Portability</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/apps-and-games/merch" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Amazon Merch on Demand</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/frustration-free-setup" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Frustration-Free Setup</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/incentives-api" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Amazon Incentives API</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/docs/music/landing_home" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Amazon Music</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/docs/physicalstores/welcome" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Just Walk Out technology by Amazon</p></a></li></ul></div></div><div><div class="sc-cSaEAk eSuhjV"><p size="16" data-testid="link-text" class="sc-kXOizl lagEPV">Blogs</p><ul class="sc-eiwqOE cUmVuQ"><li class="sc-dPKAra kpZLtu"><a href="/apps-and-games/blogs" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Appstore Developer blog</p></a></li><li class="sc-dPKAra kpZLtu"><a href="/en-US/blogs/alexa" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Alexa Developer blog</p></a></li><li class="sc-dPKAra kpZLtu"><a href="https://www.amazon.science/tag/alexa" target="_blank" rel="noopener noreferrer" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Alexa Science blog<span class="sc-dkBYrC kacGsL"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2918 7.28526C9.91596 7.28526 9.59796 7.58886 9.59796 7.96464V9.61248H1.35884V1.37328H3.00666C3.38245 1.37328 3.70046 1.06968 3.70046 0.679476C3.70035 0.289069 3.39686 0 3.02099 0H0.693795C0.318001 0 0 0.303601 0 0.693801V10.3062C0 10.682 0.303598 11 0.693795 11H10.3061C10.6819 11 10.9999 10.6964 10.9999 10.3062L11 7.96466C10.9856 7.58879 10.682 7.28529 10.2918 7.28529L10.2918 7.28526Z" fill="#C5C6C9"></path><path d="M10.261 2.69549e-05H7.13738C6.74506 2.69549e-05 6.41308 0.317245 6.41308 0.724946C6.41308 1.13276 6.73003 1.44987 7.13738 1.44987H8.45018L4.60222 5.37666C4.33066 5.66364 4.33066 6.11673 4.61727 6.38856C4.75306 6.52447 4.93422 6.6 5.11525 6.6C5.29627 6.6 5.4925 6.52446 5.62828 6.38856L9.55169 2.38625V3.85125C9.55169 4.2439 9.86864 4.57617 10.276 4.57617C10.6834 4.57617 11.0003 4.25895 11.0003 3.85125L11.0004 0.724919C10.9853 0.317218 10.6684 0 10.261 0L10.261 2.69549e-05Z" fill="#C5C6C9"></path></svg></span></p></a></li></ul></div></div><div><div class="sc-cSaEAk eSuhjV"><p size="16" data-testid="link-text" class="sc-kXOizl lagEPV">Support</p><ul class="sc-eiwqOE cUmVuQ"><li class="sc-dPKAra kpZLtu"><a href="/support/" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Amazon Developer support</p></a></li><li class="sc-dPKAra kpZLtu"><a href="https://community.amazondeveloper.com/" target="_blank" rel="noopener noreferrer" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Appstore Developer Community<span class="sc-dkBYrC kacGsL"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2918 7.28526C9.91596 7.28526 9.59796 7.58886 9.59796 7.96464V9.61248H1.35884V1.37328H3.00666C3.38245 1.37328 3.70046 1.06968 3.70046 0.679476C3.70035 0.289069 3.39686 0 3.02099 0H0.693795C0.318001 0 0 0.303601 0 0.693801V10.3062C0 10.682 0.303598 11 0.693795 11H10.3061C10.6819 11 10.9999 10.6964 10.9999 10.3062L11 7.96466C10.9856 7.58879 10.682 7.28529 10.2918 7.28529L10.2918 7.28526Z" fill="#C5C6C9"></path><path d="M10.261 2.69549e-05H7.13738C6.74506 2.69549e-05 6.41308 0.317245 6.41308 0.724946C6.41308 1.13276 6.73003 1.44987 7.13738 1.44987H8.45018L4.60222 5.37666C4.33066 5.66364 4.33066 6.11673 4.61727 6.38856C4.75306 6.52447 4.93422 6.6 5.11525 6.6C5.29627 6.6 5.4925 6.52446 5.62828 6.38856L9.55169 2.38625V3.85125C9.55169 4.2439 9.86864 4.57617 10.276 4.57617C10.6834 4.57617 11.0003 4.25895 11.0003 3.85125L11.0004 0.724919C10.9853 0.317218 10.6684 0 10.261 0L10.261 2.69549e-05Z" fill="#C5C6C9"></path></svg></span></p></a></li><li class="sc-dPKAra kpZLtu"><a href="https://stackoverflow.com/tags/alexa-skills-kit" target="_blank" rel="noopener noreferrer" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">Alexa Skills community<span class="sc-dkBYrC kacGsL"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.2918 7.28526C9.91596 7.28526 9.59796 7.58886 9.59796 7.96464V9.61248H1.35884V1.37328H3.00666C3.38245 1.37328 3.70046 1.06968 3.70046 0.679476C3.70035 0.289069 3.39686 0 3.02099 0H0.693795C0.318001 0 0 0.303601 0 0.693801V10.3062C0 10.682 0.303598 11 0.693795 11H10.3061C10.6819 11 10.9999 10.6964 10.9999 10.3062L11 7.96466C10.9856 7.58879 10.682 7.28529 10.2918 7.28529L10.2918 7.28526Z" fill="#C5C6C9"></path><path d="M10.261 2.69549e-05H7.13738C6.74506 2.69549e-05 6.41308 0.317245 6.41308 0.724946C6.41308 1.13276 6.73003 1.44987 7.13738 1.44987H8.45018L4.60222 5.37666C4.33066 5.66364 4.33066 6.11673 4.61727 6.38856C4.75306 6.52447 4.93422 6.6 5.11525 6.6C5.29627 6.6 5.4925 6.52446 5.62828 6.38856L9.55169 2.38625V3.85125C9.55169 4.2439 9.86864 4.57617 10.276 4.57617C10.6834 4.57617 11.0003 4.25895 11.0003 3.85125L11.0004 0.724919C10.9853 0.317218 10.6684 0 10.261 0L10.261 2.69549e-05Z" fill="#C5C6C9"></path></svg></span></p></a></li><li class="sc-dPKAra kpZLtu"><a href="/docs/app-submission/faq-landing" target="_self" class="sc-jZTQcj eHRNRE"><p size="14" data-testid="link-text" class="sc-kXOizl hPkKaV">FAQs</p></a></li></ul></div></div></div></div></div><section class="sc-dWFMZf kqTIFr"><div class="sc-fDyuxu jHWNdD"><a href="/" target="_self" class="sc-hUAZgl eNETkm"><img src="https://df8gj0gzff79.cloudfront.net/amz-dev-portal/assets/logo/amazon_footer_logo.png" alt="amazon_developer_logo" class="sc-gpHbIA kmTdmO"></a><p class="sc-biaZqF jyWBaY">© 2010-2026, Amazon.com, Inc. or its affiliates. All Rights Reserved.</p></div><div class="sc-ijEwUV cmaZJZ"><div class="sc-cOTGOU fdYhGf"><div class="sc-dNMyuw lhBtA-D"><a href="/terms-and-agreements" target="_self" class="sc-jZTQcj oKmtI"><p data-testid="link-text" class="sc-kXOizl ghZEJu">Terms</p></a></div><div class="sc-dNMyuw lhBtA-D"><a href="/blogs/" target="_self" class="sc-jZTQcj oKmtI"><p data-testid="link-text" class="sc-kXOizl ghZEJu">Amazon Developer Blog</p></a></div><div class="sc-dNMyuw lhBtA-D"><a href="/support/cases/new" target="_self" class="sc-jZTQcj oKmtI"><p data-testid="link-text" class="sc-kXOizl ghZEJu">Contact Us</p></a></div></div></div></section></section>
+    </div>
+  </div>
+</div>
+        
+    </div></body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe sandbox src="https://www.googletagmanager.com/ns.html?id=GTM-5LVXJD4"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>

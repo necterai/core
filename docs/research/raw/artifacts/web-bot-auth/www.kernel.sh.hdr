@@ -1,0 +1,13 @@
+HTTP/2 200 
+age: 514
+cache-control: public, max-age=3600
+content-type: application/http-message-signatures-directory+json
+date: Sat, 24 Oct 2026 22:30:24 GMT
+server: Vercel
+signature: sig1=:3VJ0qdvql/Xqark0eRrkJkykRj2kD5qnmpHy6Y5FGv6XrUy0aYa0FUyEP7EAsXu53FoMLXdJkckiWk0AuniSDA==:
+signature-input: sig1=("@authority";req);created=1792881024;keyid="5z6F4EJybUfoygglZXiAYaS6O1GU8hA1JrA-m7lGURM";alg="ed25519";expires=1792884624;tag="http-message-signatures-directory"
+strict-transport-security: max-age=63072000
+x-matched-path: /.well-known/http-message-signatures-directory
+x-vercel-cache: HIT
+x-vercel-id: iad1::iad1::d4rcj-1792881538399-a1e8c0e16d5b
+
